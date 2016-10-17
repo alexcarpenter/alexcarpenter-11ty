@@ -1,0 +1,28 @@
+title: Alex Carpenter
+email: im.alexcarpenter@gmail.com
+description: >
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: ""
+url: ""
+twitter_username: hybrid_alex
+github_username: alexcarpenter
+
+# Tachyons Version
+tv: "4.5.3" 
+
+# Build settings
+markdown: kramdown
+
+# Gems
+gems:
+  - jekyll-gist
+
+# Defaults
+defaults:
+  - scope:
+      type: posts
+    values:
+      layout: post
+      permalink: /:year/:month/:day/:title

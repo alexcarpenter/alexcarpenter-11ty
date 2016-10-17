@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@{{ site.tv }}/css/tachyons.min.css"/>
+</head>
+<body class="pv5 ph3 ph5-ns bg-near-white sans-serif f4-ns">
+  <main class="measure-wide lh-copy" role="main">
+    {{ content }}
+    {% include footer.html %}
+  </main>
+</body>
+</html>
