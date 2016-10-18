@@ -6,8 +6,9 @@
   <title>{{ site.title }}</title>
   <link rel="stylesheet" href="https://unpkg.com/tachyons@{{ site.tv }}/css/tachyons.min.css"/>
 </head>
-<body class="pv5 ph3 ph5-ns bg-near-white sans-serif f4-ns">
+<body class="pv5 ph3 ph5-ns bg-near-white sans-serif">
   <main class="measure-wide lh-copy" role="main">
+    {% include header.html %}
     {{ content }}
     {% include footer.html %}
   </main>

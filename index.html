@@ -1,29 +1,11 @@
 ---
 layout: default
+title: Home
 ---
-{% include header.html %}
-
-<!-- <section class="mb5">
-  <h2 class="f3">Work</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quod, nihil iste. Iusto, veritatis? Quidem, voluptate mollitia sapiente nemo! Expedita quisquam, quas nemo fugiat quasi odio nesciunt necessitatibus, in consectetur?</p>
-</section>
-
 <section class="mb5">
-  <h2 class="f3">Experience</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sint, reiciendis nisi expedita, modi autem voluptatem harum doloremque, perferendis natus temporibus molestiae voluptatum facilis vitae distinctio sit alias eligendi. Commodi?</p>
-</section>
-
-<section class="mb5">
-  <h2 class="f3">Projects</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sint, reiciendis nisi expedita, modi autem voluptatem harum doloremque, perferendis natus temporibus molestiae voluptatum facilis vitae distinctio sit alias eligendi. Commodi?</p>
-</section> -->
-
-<section class="mb5">
-  <h2 class="f3">Journal</h2>
-
   <ul>
   {% for post in site.posts %}
-    <li class="mb2"><a href="{{ post.url }}" class="link dim b">{{ post.title }}</a> </li>
+    <li class="mb2"><a href="{{ post.url }}" class="link dim b">{{ post.title }}</a> <time class="i gray">{{ post.date | date: '%B %d, %Y' }}</time></li>
   {% endfor %}
   </ul>
 </section>
