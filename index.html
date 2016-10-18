@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 <section class="mb5">
-  <ul>
+  <ul class="list pl0">
   {% for post in site.posts %}
     <li class="mb2"><a href="{{ post.url }}" class="link dim b">{{ post.title }}</a> <time class="i gray">{{ post.date | date: '%B %d, %Y' }}</time></li>
   {% endfor %}
