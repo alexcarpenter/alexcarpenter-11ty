@@ -2,10 +2,10 @@
 title: Uses This
 ---
 
-## Who are you, and what do you do?
+### Who are you, and what do you do?
 
-## What hardware do you use?
+### What hardware do you use?
 
-## And what software?
+### And what software?
 
-## What would be your dream setup?
+### What would be your dream setup?
