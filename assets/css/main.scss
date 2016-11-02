@@ -1,0 +1,59 @@
+---
+---
+@charset 'utf-8';
+
+
+// Variables
+$color-tan: #E2DCC6;
+$color-orange: #F25125;
+$color-dark-blue: #01294E;
+
+.tan { color: $color-tan };
+.orange { color: $color-orange };
+.dark-blue { color: $color-dark-blue; }
+
+
+// Base
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande";
+  line-height: 1.6;
+  background: $color-tan;
+  color: $color-dark-blue;
+  // border-left: 12px solid $color-orange;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  margin-top: 0;
+  line-height: 1.4;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: $color-dark-blue;
+}
+
+strong {
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}

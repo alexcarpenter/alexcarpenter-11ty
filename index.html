@@ -2,10 +2,33 @@
 layout: default
 title: Home
 ---
-<section class="mb5">
-  <ul class="list pl0">
+<!-- <section class="mb4">
+  <h2 class="mb1 h2">About ¬</h2>
+
+  <p class="h3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quisquam repudiandae iusto, sequi odit sint aliquam consequuntur necessitatibus fugiat asperiores totam eveniet, beatae maxime. Quis aliquid doloremque numquam earum quibusdam!</p>
+
+  <p class="h3">Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quisquam repudiandae iusto, sequi odit sint aliquam consequuntur necessitatibus fugiat asperiores totam eveniet, beatae maxime. Quis aliquid doloremque numquam earum quibusdam!</p>
+</section> -->
+
+<section class="mb4">
+  <h2 class="mb2 h2">Projects ¬</h2>
+
+  <ul class="mt0 mxn1 list-reset flex flex-wrap">
+  {% for project in site.data.projects %}
+    <li class="col sm-col-6 mb1 px1">
+      <h3 class="mb1 h4">{{ forloop.index | prepend: '0' }} &ndash; <a href="{{ project.link }}">{{ project.title }}</a></h3>
+      <p>{{ project.description }}</p>
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+
+<section class="mb4">
+  <h2 class="mb2 h2">Notes ¬</h2>
+
+  <ul class="mt0 list-reset">
   {% for post in site.posts %}
-    <li class="mb2"><a href="{{ post.url }}" class="link dim b">{{ post.title }}</a> <time class="i gray">{{ post.date | date: '%B %d, %Y' }}</time></li>
+    <li class="mb1"><a href="{{ post.url }}">{{ post.title }}</a> <time class="italic">{{ post.date | date: '%B %d, %Y' }}</time></li>
   {% endfor %}
   </ul>
 </section>

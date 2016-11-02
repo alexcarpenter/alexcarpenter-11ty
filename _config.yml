@@ -9,15 +9,16 @@ url: ""
 twitter_username: hybrid_alex
 github_username: alexcarpenter
 
-# Tachyons Version
-tv: "4.5.3" 
-
 # Build settings
 markdown: kramdown
 
 # Gems
 gems:
   - jekyll-gist
+
+# Sass settings
+sass:
+    style: :compressed
 
 # Defaults
 defaults:

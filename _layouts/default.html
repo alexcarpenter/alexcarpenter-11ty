@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.title }}</title>
-  <link rel="stylesheet" href="https://unpkg.com/tachyons@{{ site.tv }}/css/tachyons.min.css"/>
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+  <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
 </head>
-<body class="pv5 ph3 ph5-ns bg-near-white sans-serif">
-  <main class="measure-wide lh-copy" role="main">
+<body class="p3">
+  <main class="max-width-3" role="main">
     {% include header.html %}
     {{ content }}
     {% include footer.html %}
