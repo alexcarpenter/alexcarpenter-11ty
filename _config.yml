@@ -12,7 +12,6 @@ markdown: kramdown
 gems:
   - jekyll-gist
   - jemoji
-  - jekyll-twitter-plugin
 
 # Sass settings
 sass:
