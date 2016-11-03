@@ -57,3 +57,15 @@ img {
   max-width: 100%;
   vertical-align: top;
 }
+
+blockquote {
+  margin-top: 0;
+  margin-left: 0;
+  padding-left: 1.5rem;
+  font-style: italic;
+  border-left: 4px solid $color-dark-blue;
+}
+
+.emoji {
+  vertical-align: middle;
+}
