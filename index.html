@@ -2,13 +2,13 @@
 layout: default
 title: Home
 ---
-<!-- <section class="mb4">
+<section class="mb4">
   <h2 class="mb1 h2">About ¬</h2>
 
-  <p class="h3">I am a developer working at Mighty in the Midwest, making websites and experiences by way of HTML, SCSS/CSS, Javascript and CraftCMS.</p>
+  <p class="h3">I am a self-taught developer working at Mighty in the Midwest, making websites and experiences by way of HTML, SCSS/CSS, Javascript and CraftCMS.</p>
 
   <p class="h3">Outside of work I am currently exploring Vue.js, React.js, PostCSS and Styled Components. I also try and spend as much time fly fishing as I can.</p>
-</section> -->
+</section>
 
 <section class="mb4">
   <h2 class="mb2 h2">Projects ¬</h2>
@@ -17,7 +17,7 @@ title: Home
   {% for project in site.data.projects %}
     <li class="col sm-col-6 mb1 px1">
       <h3 class="mb1 h4">{{ forloop.index | prepend: '0' }} &ndash; <a href="{{ project.link }}">{{ project.title }}</a></h3>
-      <!-- <p>{{ project.description }}</p> -->
+      <p>{{ project.description | markdownify }}</p>
     </li>
   {% endfor %}
   </ul>

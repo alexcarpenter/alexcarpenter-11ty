@@ -1,11 +1,15 @@
+- title: Generative.scss
+  description: Generate responsive utility classes with Sass. Inspired by [inuitcss](https://github.com/inuitcss/inuitcss).
+  link: https://github.com/alexcarpenter/generative.scss
+
 - title: ButaneCSS
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis dolor omnis voluptatem, adipisci ea temporibus, optio dicta dolorem voluptates libero!
+  description: An exploration into the PostCSS ecosytem and ITCSS.
   link: https://github.com/alexcarpenter/butanecss
 
 - title: I Brew My Own Coffee Podcast
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis dolor omnis voluptatem, adipisci ea temporibus, optio dicta dolorem voluptates libero!
+  description: I started a podcast about brewing coffee at home. Now it is one of the most popular coffee podcasts on iTunes.
   link: http://www.ibrewmyowncoffee.com/
 
 - title: GR Field Guide
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis dolor omnis voluptatem, adipisci ea temporibus, optio dicta dolorem voluptates libero!
+  description: A simplified guide to finding great food and drinks in Grand Rapids, MI.
   link: https://dribbble.com/alexcarpenter/buckets/169273-GR-Field-Guide

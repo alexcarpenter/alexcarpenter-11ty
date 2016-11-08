@@ -39,6 +39,7 @@ h1, h2, h3,
 h4, h5, h6 {
   margin-top: 0;
   line-height: 1.4;
+  font-weight: 800;
 }
 
 p {
@@ -49,8 +50,9 @@ a {
   color: $color-dark-blue;
 }
 
-strong {
-  font-weight: 700;
+strong,
+.bold {
+  font-weight: 800;
 }
 
 img {
