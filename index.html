@@ -16,8 +16,8 @@ title: Home
   <ul class="mt0 mxn1 list-reset flex flex-wrap">
   {% for project in site.data.projects %}
     <li class="col sm-col-6 mb1 px1">
-      <h3 class="mb1 h4">{{ forloop.index | prepend: '0' }} &ndash; <a href="{{ project.link }}">{{ project.title }}</a></h3>
-      <p>{{ project.description | markdownify }}</p>
+      <h3 class="mb1 h4"><a href="{{ project.link }}">{{ project.title }}</a></h3>
+      {{ project.description | markdownify }}
     </li>
   {% endfor %}
   </ul>

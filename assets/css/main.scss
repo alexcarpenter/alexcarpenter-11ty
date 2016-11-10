@@ -30,8 +30,8 @@ body {
   margin: 0;
   font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande";
   line-height: 1.6;
-  background: $color-tan;
-  color: $color-dark-blue;
+  // background: $color-tan;
+  // color: $color-dark-blue;
   // border-left: 12px solid $color-orange;
 }
 
@@ -47,7 +47,8 @@ p {
 }
 
 a {
-  color: $color-dark-blue;
+  // color: $color-dark-blue;
+  color: blue;
 }
 
 strong,
@@ -70,4 +71,8 @@ blockquote {
 
 .emoji {
   vertical-align: middle;
+}
+
+h1 a {
+  color: #000;
 }
