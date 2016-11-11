@@ -1,7 +1,7 @@
 title: Alex Carpenter
 email: im.alexcarpenter@gmail.com
 baseurl: ""
-url: ""
+url: "http://alexcarpenter.me"
 twitter_username: hybrid_alex
 github_username: alexcarpenter
 
@@ -17,6 +17,12 @@ gems:
 sass:
     style: :compressed
 
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: :path
+
 # Defaults
 defaults:
   - scope:
@@ -24,3 +30,7 @@ defaults:
     values:
       layout: post
       permalink: /:year/:month/:day/:title
+  - scope:
+      type: pages
+    values:
+      layout: page
