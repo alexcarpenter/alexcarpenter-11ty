@@ -32,8 +32,12 @@ p {
   margin-top: 0;
 }
 
-a {
+a:not(h1 a) {
   color: blue;
+
+  &:visited {
+    color: purple;
+  }
 }
 
 strong,
