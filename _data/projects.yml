@@ -1,7 +1,3 @@
-- title: ThreePointSix
-  description: Something new..
-  link: https://github.com/alexcarpenter/threepointsix
-
 - title: Generative.scss
   description: Generate responsive utility classes with Sass. Inspired by [inuitcss](https://github.com/inuitcss/inuitcss).
   link: https://github.com/alexcarpenter/generative.scss
