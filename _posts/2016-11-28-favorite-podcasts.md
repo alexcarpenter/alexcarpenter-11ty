@@ -5,6 +5,7 @@ title: Favorite Podcasts
 ### Design
 
 - [Design Details](https://spec.fm/podcasts/design-details)
+- [DN FM](https://www.designernews.co/podcast)
 - [Layout.fm](http://layout.fm/)
 
 ### Development
