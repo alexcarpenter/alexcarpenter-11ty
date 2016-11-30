@@ -3,7 +3,11 @@ title: "Interview: Harry Roberts of CSS Wizardry"
 ---
 <figure>
   <img src="/assets/img/harry-roberts.jpg" alt="Harry Roberts">
-  <figcaption>Harry Roberts</figcaption>
+  <figcaption>
+    Harry Roberts.
+    <a href="http://www.flickr.com/photos/stn1978/8899790026/">Photo</a> by
+    <a href="https://twitter.com/stn1978">Stefan Nitzsche</a>.
+  </figcaption>
 </figure>
 
 ### Whats the easiest thing a front-end dev can start doing to write better CSS?
