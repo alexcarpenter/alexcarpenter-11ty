@@ -1,6 +1,11 @@
 ---
 title: "Interview: Harry Roberts of CSS Wizardry"
 ---
+<figure>
+  <img src="/assets/img/harry-roberts.jpg" alt="Harry Roberts">
+  <figcaption>Harry Roberts</figcaption>
+</figure>
+
 ### Whats the easiest thing a front-end dev can start doing to write better CSS?
 
 Start writing CSS like you’re writing it in a big team and on a big project. A lot of people treat CSS as ‘making a page look like a design’, but this short-sighted view leads to a lot of problems. Start thinking about how and where CSS fits into wider areas such performance, architecture, scalability, maintainability, team working.

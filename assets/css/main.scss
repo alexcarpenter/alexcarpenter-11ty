@@ -49,6 +49,16 @@ strong,
   font-weight: 800;
 }
 
+figure {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+figcaption {
+  margin-top: .5rem;
+  font-style: italic;
+}
+
 img {
   max-width: 100%;
   vertical-align: top;
