@@ -56,7 +56,7 @@ How is it related to other things? The namespace also allows developers to see w
 
 BEM basically gives developers a much more useful, bulletproof, and manageable way of naming things. I would strongly recommend that everyone tries it out at least once on a project.
 
-What piece of work of yours are you most proud of?
+### What piece of work of yours are you most proud of?
 
 It’s really hard to say. Really hard. I don’t really get that proud, because it’s just my job, and I could probably always do it better (and I often wish I had). inuitcss is something that I am proud of on the whole—there are certain implementation details that I would like to change, but I think I’ve done a pretty good job of packaging up the OOCSS way of thinking into a framework that people seem to be using quite a lot.
 
