@@ -24,6 +24,21 @@ title: Home
 </section>
 
 <section class="mb4">
+  <h2 class="mb2 h2">Experience ¬</h2>
+
+  <ul class="mt0 list-reset">
+  {% for job in site.data.experience %}
+    <li class="mb3">
+      <header class="mb1">
+        <h3 class="mb0 h4 regular"><span class="bold">{{ job.company }}</span> <span class="italic">{{ job.timeline }}</span></h3>
+        <span>{{ job.title }}</span>
+      </header>
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+
+<section class="mb4">
   <h2 class="mb2 h2">Journal ¬</h2>
 
   <ul class="mt0 list-reset">
