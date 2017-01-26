@@ -1,0 +1,128 @@
+<p>It has been a little bit over a year since I started working at Mighty. I have learned a lot this past year, be it front-end or back-end development. One thing I know I need to focus more attention to is Javascript. It has never really clicked with me, so it has been easy to rely on jQuery plugins to do the work for me.</p>
+
+<p>Moving forward into my second year, I really wanted to sit down and focus on learning vanilla Javascript and understand the basic concepts. Everyone says to just build something. So I decided to do just that. I saw a <a href="http://codepen.io/mariemosley/pen/rryaQA">CodePen</a> a while back from <a href="mariemosley">mariemosley</a> that really interested me and I decided to pick it apart and build it into a small library which I am calling <a href="https://github.com/alexcarpenter/trunkd.js">Trunkd.js</a>.</p>
+
+<h3 id="getting-started">Getting Started</h3>
+
+<p>To get started I did some reading a decided to make it into an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">ES6 Class</a> which is just <em>syntactical sugar over JavaScript’s existing prototype-based inheritance</em>. Below is a gist of the <em>messy</em> start to my initial commit. Like I mentioned above, a lot of this stuff is really new to me so I am going to use this blog to explain my findings and try and make sense of what I am trying to accomplish.</p>
+
+<!-- <noscript><pre>class Trunkd {
+  constructor(container, options = {}) {
+    this.container = container || &#39;.trunkd&#39;;
+    this.options = {
+      antecedent: options.antecedent || &#39;Recommended by:&#39;,
+      consequent: options.consequent || &#39;others&#39;,
+      seperator: options.seperator || &#39;,&#39;
+    }
+
+    const sum = arr =&gt; arr.reduce((a, b) =&gt; a + b);
+    const containerSelector = document.querySelector(this.container);
+    const itemSelector = containerSelector.children;
+
+    let availableWidth = containerSelector.clientWidth;
+    let totalItems = itemSelector.length;
+    let itemsWidths = this.makeArray(itemSelector);
+    let itemsWidth = sum(itemsWidths);
+
+    if (itemsWidth &gt;= availableWidth) {
+      let totalElement = containerSelector.appendChild(document.createElement(&#39;li&#39;));
+      totalElement.textContent = `and ${totalItems} ${this.options.consequent}`;
+    }
+    
+    console.log(this);
+    console.log(availableWidth);
+    console.log(itemsWidth);
+  }
+
+  // sum(arr) {
+  //   arr =&gt; arr.reduce((a, b) =&gt; a + b);
+  // }
+
+  makeArray(obj) {
+    let itemsArr = [];
+
+    for (var i=0; i &lt; obj.length; i++) {
+      itemsArr.push(obj[i].clientWidth);
+    }
+
+    return itemsArr;
+  }
+}
+
+// export default Trunkd;
+
+const trunkd = new Trunkd();
+
+
+
+
+// window.addEventListener(&#39;resize&#39;, function(event) {})
+
+// console.log(container.children.length)
+
+
+// const container = document.querySelector(&#39;.recommendr&#39;)
+// const rcmdr = new Recommendr(container, {
+//   // options...
+//   itemSelector: &#39;li&#39;
+// });
+
+
+
+
+
+// const sum = arr =&gt; arr.reduce((a, b) =&gt; a + b);
+
+// let containerSelector = document.querySelector(&#39;.recommendr&#39;);
+// let itemSelector = containerSelector.children;
+// let totalItems = itemSelector.length - 1;
+
+// let itemsArr = [];
+
+// for (var i = itemSelector.length - 1; i &gt;= 0; i--) {
+//   itemsArr.push(itemSelector[i].clientWidth);
+// }
+
+// let availableWidth = containerSelector.clientWidth;
+// let itemsWidth = sum(itemsArr);
+
+// if (itemsWidth &gt;= availableWidth) {
+//   let totalElement = containerSelector.appendChild(document.createElement(&#39;li&#39;));
+//   totalElement.textContent = `and ${totalItems} others`;
+// }
+
+// console.log(availableWidth);
+// console.log(itemsWidth);
+
+
+
+
+
+
+// totalElement.textContent = `and ${totalItems} others`;
+
+// for (var i = itemSelector.length - 1; i &gt;= 0; i--) {
+//   console.log(itemSelector[i].clientWidth);
+// }
+
+// for (var i = yearStart; i &lt; yearEnd+1; i++) {
+//     arr.push(i);
+// }
+
+// window.addEventListener(&#39;resize&#39;, function(event) {
+//   console.log(containerSelector.clientWidth);
+// });</pre></noscript><script src="https://gist.github.com/alexcarpenter/f0fc3af7625b2d0fa8345b445e80de55.js"> </script> -->
+
+<h3 id="available-width">Available Width</h3>
+
+<p>The available width will be calculated from the containing elements width. This should be a block level element filling the available space of its parent. It is recommended to make use of an unordered list for the document structure. To get the available width we use <code class="highlighter-rouge">.clientWidth</code> on the container selector.</p>
+
+<h3 id="items-width">Items width</h3>
+
+<p>The items width is the total width of each <code class="highlighter-rouge">&lt;li&gt;</code> nested within the container. To get this width, we need to first gather all of the containers children <code class="highlighter-rouge">&lt;li&gt;'s</code>. To do this we create a variable <code class="highlighter-rouge">itemSelector</code> which equals <code class="highlighter-rouge">containerSelector.children</code>. This gives us a list of all of the <code class="highlighter-rouge">&lt;li&gt;'s</code> that we will use to get the total items width. We then use that to make an array of the items individual widths using a function called <code class="highlighter-rouge">makeArray</code> on [line 33] of the gist.</p>
+
+<p>Once we have got an array of each li widths, we simply add those figures together to create the <code class="highlighter-rouge">itemsWidth</code>. I tried to create another function for the sum, similar to the <code class="highlighter-rouge">makeArray</code> function but it doesn’t seem to work using the code found on on <a href="https://gist.github.com/alexcarpenter/f0fc3af7625b2d0fa8345b445e80de55#file-trunkdjs-a9f1f17-js-L29">line 29</a>. I found that if I put that logic within the constructor like on <a href="https://gist.github.com/alexcarpenter/f0fc3af7625b2d0fa8345b445e80de55#file-trunkdjs-a9f1f17-js-L10">line 10</a> it works correctly, but I don’t think that is good practice. So I still have to figure out how to go about that.</p>
+
+<h3 id="initial-commit">Initial Commit</h3>
+
+<p>That is about as far as I got with the initial commit. It feels good to be understanding the concepts that I have started with here. I know there are probably things I could be doing better or different, so I am excited to explore those opportunities as well while I continue to work on this library. Next commit I hope to have a better way to get the items width.</p>
