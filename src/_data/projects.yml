@@ -1,3 +1,7 @@
+- title: The Fly Fishing Dictionary
+  description:
+  link: http://flyfishingdictionary.com
+
 - title: Generative.scss
   description: Generate responsive utility classes with Sass. Inspired by [inuitcss](https://github.com/inuitcss/inuitcss).
   link: https://github.com/alexcarpenter/generative.scss

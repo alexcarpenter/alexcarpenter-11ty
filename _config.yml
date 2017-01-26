@@ -1,21 +1,13 @@
 title: Alex Carpenter
-email: im.alexcarpenter@gmail.com
-baseurl: ""
+source: ./src
+destination: ./public
 url: "http://alexcarpenter.me"
-twitter_username: hybrid_alex
-github_username: alexcarpenter
-
-# Build settings
-markdown: kramdown
 
 # Gems
 gems:
   - jekyll-gist
   - jemoji
-
-# Sass settings
-sass:
-    style: :compressed
+  - jekyll-seo-tag
 
 # Collections
 collections:
@@ -23,14 +15,50 @@ collections:
     output: true
     permalink: :path
 
-# Defaults
-defaults:
-  - scope:
-      type: posts
-    values:
-      layout: post
-      permalink: /:year/:month/:day/:title
-  - scope:
-      type: pages
-    values:
-      layout: page
+# Build settings
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - README.md
+  - CNAME
+  - node_modules
+
+
+# title: Alex Carpenter
+# email: im.alexcarpenter@gmail.com
+# baseurl: ""
+# url: "http://alexcarpenter.me"
+# twitter_username: hybrid_alex
+# github_username: alexcarpenter
+
+# # Build settings
+# markdown: kramdown
+
+# # Gems
+# gems:
+#   - jekyll-gist
+#   - jemoji
+#   - jekyll-seo-tag
+
+# # Sass settings
+# sass:
+#     style: :compressed
+
+# # Collections
+# collections:
+#   pages:
+#     output: true
+#     permalink: :path
+
+# # Defaults
+# defaults:
+#   - scope:
+#       type: posts
+#     values:
+#       layout: post
+#       permalink: /:year/:month/:day/:title
+#   - scope:
+#       type: pages
+#     values:
+#       layout: page
