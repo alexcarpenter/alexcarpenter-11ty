@@ -1,19 +1,17 @@
 - title: The Fly Fishing Dictionary
-  description:
+  description: Online resource for fly fishing information
   link: http://flyfishingdictionary.com
-
-- title: Generative.scss
-  description: Generate responsive utility classes with Sass. Inspired by [inuitcss](https://github.com/inuitcss/inuitcss).
-  link: https://github.com/alexcarpenter/generative.scss
-
-- title: ButaneCSS
-  description: An exploration into the PostCSS ecosystem and ITCSS.
-  link: https://github.com/alexcarpenter/butanecss
+  date: '2017'
+  brand: '#f33'
 
 - title: I Brew My Own Coffee Podcast
-  description: I started a podcast about brewing coffee at home. Now it is one of the most popular coffee podcasts on iTunes.
+  description: A podcast for people who care about coffee
   link: http://www.ibrewmyowncoffee.com/
+  date: '2015'
+  brand: '#b99a54'
 
 - title: GR Field Guide
-  description: A simplified guide to finding great food and drinks in Grand Rapids, MI.
+  description: Food &amp; beverage guide for Grand Rapids, MI
   link: https://dribbble.com/alexcarpenter/buckets/169273-GR-Field-Guide
+  date: '2014'
+  brand: '#DB1D65'
