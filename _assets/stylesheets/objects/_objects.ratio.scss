@@ -1,0 +1,26 @@
+/* ==========================================================================
+   OBJECTS/RATIO
+   ========================================================================== */
+
+
+.o-ratio {
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+  }
+}
+
+.o-ratio__content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}

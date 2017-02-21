@@ -1,0 +1,37 @@
+/* ==========================================================================
+   COMPONENTS/BUTTONS
+   ========================================================================== */
+
+
+.c-btn {
+  display: inline-flex;
+  vertical-align: middle;
+  font: inherit;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+  padding: units(1) units(2);
+  border-radius: 4px;
+  transition: background-color ease-in-out 0.2s;
+}
+
+
+/* 
+   Variants
+   ========================================================================== */
+
+
+/**
+ * Primary
+ */
+
+.c-btn--primary {
+  background-color: $c-color-gray-0;
+  color: $c-color-gray-100;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: lighten($c-color-gray-0, 10%);
+  }
+}

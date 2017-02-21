@@ -1,19 +1,11 @@
 title: Alex Carpenter
 url: "http://alexcarpenter.me"
-
-# Gems
 gems:
-  - jekyll-gist
   - jemoji
   - jekyll-seo-tag
-
-# Collections
-collections:
-  pages:
-    output: true
-    permalink: :path
-
-# Build settings
+sass:
+  sass_dir: _assets/stylesheets
+  style: :compressed
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -21,4 +13,4 @@ exclude:
   - README.md
   - CNAME
   - node_modules
-  - ./assets/js/app.js
+  - webpack.config.js

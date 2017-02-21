@@ -1,0 +1,27 @@
+/* ==========================================================================
+   UTILITIES/WIDTHS
+   ========================================================================== */
+
+
+$total-columns: 12 !default;
+
+
+@mixin utility-widths($total-columns: $total-columns, $breakpoint: null) {
+  @for $i from 1 through $total-columns {
+    .u-width-#{$i}#{$breakpoint} {
+      width: calc(100% * #{$i} / #{$total-columns}) !important;
+    }
+  }
+}
+
+
+@include utility-widths($total-columns);
+
+
+@if (variable-exists(mq-breakpoints)) {
+  @each $name, $value in $mq-breakpoints {
+    @include mq($from: $name) {
+      @include utility-widths($total-columns, \@#{$name});
+    }
+  }
+}

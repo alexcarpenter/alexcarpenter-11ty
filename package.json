@@ -1,28 +1,19 @@
 {
-  "name": "alexcarpenter.github.io",
+  "name": "alexcarpenter.me",
   "version": "1.0.0",
-  "description": "",
-  "main": "webpack.config.js",
-  "scripts": {
-    "webpack": "export NODE_ENV=dev && webpack --hide-modules",
-    "dev": "export NODE_ENV=dev && webpack --hide-modules --watch",
-    "production": "export NODE_ENV=production && webpack --hide-modules"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexcarpenter/alexcarpenter.github.io.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alexcarpenter/alexcarpenter.github.io/issues"
-  },
-  "homepage": "https://github.com/alexcarpenter/alexcarpenter.github.io#readme",
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.22.0",
-    "baffle": "^0.3.6",
-    "webpack": "^2.2.0-rc.3"
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.1",
+    "lazysizes": "^3.0.0-rc4",
+    "swiper": "^3.4.1"
   }
 }
