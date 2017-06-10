@@ -1,6 +1,4 @@
-_site
 .sass-cache
 .jekyll-metadata
 .bundle
-.tweet-cache
 node_modules
