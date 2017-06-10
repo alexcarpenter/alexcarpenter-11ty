@@ -1,0 +1,234 @@
+/* ==========================================================================
+   ALEXCARPENTER-HUGO V0.1.0
+   ========================================================================== */
+/* ==========================================================================
+   SETTINGS/VARIABLES
+   ========================================================================== */
+/* ==========================================================================
+   TOOLS/FUNCTIONS
+   ========================================================================== */
+/* ==========================================================================
+   TOOLS/MIXINS
+   ========================================================================== */
+/* ==========================================================================
+   GENERIC/BASE
+   ========================================================================== */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 18px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -ms-text-size-adjust: 100%;
+  /* stylelint-disable-line */
+  -webkit-text-size-adjust: 100%;
+  /* stylelint-disable-line */
+  -webkit-font-smoothing: antialiased;
+  /* stylelint-disable-line */ }
+
+body {
+  margin: 0;
+  font-family: Consolas, monaco, monospace; }
+  .fonts-loaded body {
+    font-family: 'Roboto', Consolas, monaco, monospace; }
+
+/**
+ * A very simple reset
+ */
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Remove trailing margins from nested lists.
+ */
+li > ol,
+li > ul {
+  margin-bottom: 0; }
+
+/**
+ * Remove default table spacing.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
+ *    on fieldsets.
+ */
+fieldset {
+  min-width: 0;
+  /* [1] */
+  border: 0; }
+
+a {
+  color: currentcolor;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip: ink;
+  -webkit-text-decoration-color: #f33;
+          text-decoration-color: #f33; }
+
+/* ==========================================================================
+   GENERIC/HEADINGS
+   ========================================================================== */
+h1, h2, h3,
+h4, h5, h6 {
+  font-weight: 400;
+  line-height: 1.4; }
+
+/* ==========================================================================
+   OBJECTS/GRID
+   ========================================================================== */
+.o-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: -1.5rem;
+  margin-left: -1.5rem; }
+  @media (min-width: 46.25em) {
+    .o-grid {
+      margin-bottom: -3rem;
+      margin-left: -3rem; } }
+
+.o-grid__item {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  width: 100%; }
+  @media (min-width: 46.25em) {
+    .o-grid__item {
+      margin-bottom: 3rem;
+      padding-left: 3rem; } }
+
+/* ==========================================================================
+   OBJECTS/MOSAIC
+   ========================================================================== */
+/**
+ * Reference: https://markus.is/designing/image-grid/
+ */
+.o-mosaic {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  padding-bottom: 66.667%; }
+  .o-mosaic:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25px;
+    right: 0;
+    height: 100%;
+    background-color: #EDEDED;
+    z-index: 0; }
+
+.o-mosaic__row {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.o-mosaic__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0; }
+
+.o-mosaic__image {
+  height: 0; }
+
+.o-mosaic__flex-grow-e95f50 {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.o-mosaic__flex-grow-e3b447 {
+  -webkit-box-flex: 1.111;
+      -ms-flex-positive: 1.111;
+          flex-grow: 1.111; }
+
+.o-mosaic__flex-grow-c37c5b {
+  -webkit-box-flex: 1.5;
+      -ms-flex-positive: 1.5;
+          flex-grow: 1.5; }
+
+/* ==========================================================================
+   OBJECTS/WRAPPER
+   ========================================================================== */
+.o-wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  width: 100%;
+  max-width: 69.66667rem; }
+
+/* ==========================================================================
+   COMPONENTS/BORDERED-LIST
+   ========================================================================== */
+.c-bordered-list {
+  list-style: none; }
+
+.c-bordered-list__item {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem; }
+  .c-bordered-list__item:not(:last-of-type) {
+    border-bottom: 1px solid #eee; }
+
+/* ==========================================================================
+   COMPONENTS/PROSE
+   ========================================================================== */
+.c-prose > *:not(:last-child) {
+  margin-bottom: 0.75rem; }
+
+/* ==========================================================================
+   UTILITIES/WIDTHS
+   ========================================================================== */
+.u-width-6 {
+  width: calc(100% * 6 / 12) !important; }
+
+.u-width-12 {
+  width: calc(100% * 12 / 12) !important; }
+
+@media (min-width: 20em) {
+  .u-width-6\@sm {
+    width: calc(100% * 6 / 12) !important; }
+  .u-width-12\@sm {
+    width: calc(100% * 12 / 12) !important; } }
+
+@media (min-width: 46.25em) {
+  .u-width-6\@md {
+    width: calc(100% * 6 / 12) !important; }
+  .u-width-12\@md {
+    width: calc(100% * 12 / 12) !important; } }
+
+@media (min-width: 61.25em) {
+  .u-width-6\@lg {
+    width: calc(100% * 6 / 12) !important; }
+  .u-width-12\@lg {
+    width: calc(100% * 12 / 12) !important; } }

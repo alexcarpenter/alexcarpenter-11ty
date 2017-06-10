@@ -1,0 +1,27 @@
+/* ==========================================================================
+   UTILITIES/WIDTHS
+   ========================================================================== */
+
+
+$width-fractions: 6 12 !default;
+
+
+@mixin utility-widths($breakpoint: null) {
+  @each $value in $width-fractions {
+    .u-width-#{$value}#{$breakpoint} {
+      width: calc(100% * #{$value} / 12}) !important;
+    }
+  }
+}
+
+
+@include utility-widths();
+
+
+@if (variable-exists(mq-breakpoints)) {
+  @each $name, $value in $mq-breakpoints {
+    @include mq($from: $name) {
+      @include utility-widths(\@#{$name});
+    }
+  }
+}

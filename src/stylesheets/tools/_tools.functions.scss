@@ -1,0 +1,9 @@
+/* ==========================================================================
+   TOOLS/FUNCTIONS
+   ========================================================================== */
+
+
+// Output units as a measurable value
+@function units($count) {
+  @return ($u-spacing-unit * $count);
+}

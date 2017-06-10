@@ -1,0 +1,13 @@
+/* ==========================================================================
+   OBJECTS/WRAPPER
+   ========================================================================== */
+
+
+.o-wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: units(2);
+  padding-left: units(2);
+  width: 100%;
+  max-width: $u-wrapper-width + units(4);
+}

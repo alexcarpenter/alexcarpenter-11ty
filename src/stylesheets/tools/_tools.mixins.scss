@@ -1,0 +1,13 @@
+/* ==========================================================================
+   TOOLS/MIXINS
+   ========================================================================== */
+
+
+@mixin fontsLoaded {
+  font-family: Consolas, monaco, monospace;
+
+  .fonts-loaded & {
+    // font-family: 'Roboto Mono', Consolas, monaco, monospace;
+    font-family: 'Roboto', Consolas, monaco, monospace;
+  }
+}

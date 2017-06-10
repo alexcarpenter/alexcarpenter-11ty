@@ -1,0 +1,15 @@
+{
+  "short_name": "AlexCarpenter",
+  "name": "Alex Carpenter",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#42a385",
+  "theme_color": "#42a385"
+}
