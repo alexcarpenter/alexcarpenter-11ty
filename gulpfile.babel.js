@@ -44,6 +44,10 @@ const paths = {
   fonts: {
     glob: './src/fonts/*',
     dist: './dist/assets/fonts'
+  },
+  static: {
+    glob: './src/static/*',
+    dist: './dist'
   }
 }
 
@@ -120,6 +124,11 @@ export function icons () {
 export function fonts () {
   return gulp.src(paths.fonts.glob)
     .pipe(gulp.dest(paths.fonts.dist))
+}
+
+export function files () {
+  return gulp.src(paths.static.glob)
+    .pipe(gulp.dest(paths.static.dist))
 }
 
 export function watch () {
