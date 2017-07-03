@@ -7,7 +7,7 @@
     "build": "gulp build",
     "test": "standard --verbose | snazzy",
     "lint": "stylelint 'src/stylesheets/**/*.scss'",
-    "precommit": "npm test && npm run lint"
+    "deploy": "push-dir --dir=dist --branch=gh-pages"
   },
   "standard": {
     "ignore": [
@@ -52,6 +52,7 @@
     "inert-polyfill": "^0.2.3",
     "postcss-cssnext": "^2.7.0",
     "postcss-import": "^10.0.0",
+    "push-dir": "^0.4.1",
     "sass-mq": "^3.3.2",
     "snazzy": "^7.0.0",
     "url-loader": "^0.5.7",
