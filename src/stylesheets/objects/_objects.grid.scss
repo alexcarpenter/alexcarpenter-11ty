@@ -1,0 +1,17 @@
+/* ==========================================================================
+   OBJECTS/GRID
+   ========================================================================== */
+
+
+.o-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: units(-4);
+}
+
+.o-grid__item {
+  margin-bottom: units(4);
+  padding-right: units(4);
+  padding-left: units(4);
+  width: 100%;
+}

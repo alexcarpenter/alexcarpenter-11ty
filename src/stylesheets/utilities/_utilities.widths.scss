@@ -3,11 +3,11 @@
    ========================================================================== */
 
 
-$width-fractions: 6 12 !default;
+$width-values: 6 12 !default;
 
 
 @mixin utility-widths($breakpoint: null) {
-  @each $value in $width-fractions {
+  @each $value in $width-values {
     .u-width-#{$value}#{$breakpoint} {
       width: calc(100% * #{$value} / 12}) !important;
     }
