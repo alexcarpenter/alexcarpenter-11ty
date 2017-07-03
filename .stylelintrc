@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "ignoreFiles": [
+    "./src/stylesheets/tools/*.scss",
+    "./src/stylesheets/settings/*.scss",
+    "./src/stylesheets/vendor/*.scss",
+  ],
+  "rules": {
+    "indentation": 2
+  }
+}

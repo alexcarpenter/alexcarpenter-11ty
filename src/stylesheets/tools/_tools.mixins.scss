@@ -3,11 +3,18 @@
    ========================================================================== */
 
 
-@mixin fontsLoaded {
+@mixin primaryFontLoaded {
+  font-family: 'Helvetica', sans-serif;
+
+  .fonts-loaded & {
+    font-family: 'Roboto', Consolas, monaco, monospace;
+  }
+}
+
+@mixin secondaryFontLoaded {
   font-family: Consolas, monaco, monospace;
 
   .fonts-loaded & {
-    // font-family: 'Roboto Mono', Consolas, monaco, monospace;
-    font-family: 'Roboto', Consolas, monaco, monospace;
+    font-family: 'Roboto Mono', Consolas, monaco, monospace;
   }
 }

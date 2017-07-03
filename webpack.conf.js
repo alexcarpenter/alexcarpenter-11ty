@@ -5,33 +5,31 @@ export default {
   module: {
     rules: [
       {
-        test: /\.((png)|(eot)|(woff)|(woff2)|(ttf)|(svg)|(gif))(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "file-loader?name=/[hash].[ext]"
-      },
-      {test: /\.json$/, loader: "json-loader"},
-      {
-        loader: "babel-loader",
-        test: /\.js?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        query: {cacheDirectory: true}
+        use: [
+          'babel-loader'
+        ]
       }
     ]
   },
 
   plugins: [
-    new webpack.ProvidePlugin({
-      "fetch": "imports-loader?this=>global!exports?global.fetch!whatwg-fetch"
+    new webpack.optimize.CommonsChunkPlugin({
+      names: [ 'vendor' ]
     })
   ],
 
   context: path.join(__dirname, "src"),
   entry: {
-    app: ["./javascripts/app"]
+    vendor: [
+      'inert-polyfill'
+    ],
+    app: './javascripts/app'
   },
   output: {
     path: path.join(__dirname, "dist/assets/js"),
-    publicPath: "/",
+    publicPath: "./dist/assets/js/",
     filename: "[name].js"
-  },
-  externals:  [/^vendor\/.+\.js$/]
-};
+  }
+}

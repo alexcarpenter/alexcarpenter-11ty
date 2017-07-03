@@ -1,32 +1,76 @@
 import gulp from 'gulp'
-import cp from 'child_process'
 import gutil from 'gulp-util'
+import del from 'del'
+import plumber from 'gulp-plumber'
+import twig from 'gulp-twig'
+import stylelint from 'gulp-stylelint'
 import sass from 'gulp-sass'
 import autoprefixer from 'gulp-autoprefixer'
 import cssnano from 'gulp-cssnano'
+import imagemin from 'gulp-imagemin'
+import svgstore from 'gulp-svgstore'
+import rename from 'gulp-rename'
 import BrowserSync from 'browser-sync'
 import webpack from 'webpack'
 import webpackConfig from './webpack.conf'
 
 const browserSync = BrowserSync.create()
-const hugoBin = 'hugo'
-const defaultArgs = ['-d', '../dist', '-s', 'site', '-v']
 
-gulp.task('hugo', (cb) => buildSite(cb))
-gulp.task('hugo-preview', (cb) => buildSite(cb, ['--buildDrafts', '--buildFuture']))
+const paths = {
+  templates: {
+    entry: './src/templates/index.twig',
+    pages: [
+      './src/templates/index.twig'
+    ],
+    glob: './src/templates/**/*.twig',
+    dist: './dist'
+  },
+  styles: {
+    entry: './src/stylesheets/main.scss',
+    glob: './src/stylesheets/*/**.scss',
+    dist: './dist/assets/css'
+  },
+  scripts: {
+    glob: './src/javascripts/**/*.js'
+  },
+  images: {
+    glob: './src/images/*.{svg,png,jpg}',
+    dist: './dist/assets/img'
+  },
+  icons: {
+    glob: './src/icons/*.svg',
+    dist: './src/templates/_partials'
+  },
+  fonts: {
+    glob: './src/fonts/*',
+    dist: './dist/assets/fonts'
+  }
+}
 
-gulp.task('build', ['styles', 'scripts', 'hugo'])
-gulp.task('build-preview', ['styles', 'scripts', 'hugo-preview'])
+const clean = () => del([ 'dist' ])
+export { clean }
 
-gulp.task('styles', () => (
-  gulp.src('./src/stylesheets/main.scss')
+export function templates () {
+  gulp.src(paths.templates.pages)
+    .pipe(twig({
+      data: {
+        title: 'Alex Carpenter'
+      }
+    }))
+    .pipe(gulp.dest(paths.templates.dist))
+    browserSync.reload()
+}
+
+export function styles () {
+  gulp.src(paths.styles.entry)
     .pipe(sass())
     .pipe(autoprefixer(['last 2 versions', '> 5%'], { cascade: true }))
-    .pipe(gulp.dest('./dist/assets/css'))
+    .pipe(cssnano())
+    .pipe(gulp.dest(paths.styles.dist))
     .pipe(browserSync.stream())
-))
+}
 
-gulp.task('scripts', (cb) => {
+export function scripts () {
   const myConfig = Object.assign({}, webpackConfig)
 
   webpack(myConfig, (err, stats) => {
@@ -36,31 +80,56 @@ gulp.task('scripts', (cb) => {
       progress: true
     }))
     browserSync.reload()
-    cb()
   })
-})
+}
 
-gulp.task('server', ['hugo', 'styles', 'scripts'], () => {
+export function images () {
+  return gulp.src(paths.images.glob)
+    .pipe(imagemin({
+      progressive: true,
+      interlaced: true,
+      multipass: true,
+      svgoPlugins: [
+        { cleanupListOfValues: { floatPrecision: 2 } },
+        { cleanupNumericValues: { floatPrecision: 2 } },
+        { convertPathData: { floatPrecision: 2 } }
+      ]
+    }))
+    .pipe(gulp.dest(paths.images.dist))
+}
+
+export function icons () {
+  return gulp.src(paths.icons.glob)
+    .pipe(imagemin({
+      progressive: true,
+      interlaced: true,
+      multipass: true,
+      svgoPlugins: [
+        { cleanupListOfValues: { floatPrecision: 2 } },
+        { cleanupNumericValues: { floatPrecision: 2 } },
+        { convertPathData: { floatPrecision: 2 } }
+      ]
+    }))
+    .pipe(svgstore())
+    .pipe(rename(function (path) {
+      path.extname = ".twig"
+    }))
+    .pipe(gulp.dest(paths.icons.dist))
+}
+
+export function fonts () {
+  return gulp.src(paths.fonts.glob)
+    .pipe(gulp.dest(paths.fonts.dist))
+}
+
+export function watch () {
   browserSync.init({
+    notify: true,
     server: {
-      baseDir: './dist'
+      baseDir: 'dist/'
     }
   })
-  gulp.watch('./src/javascripts/**/*.js', ['scripts'])
-  gulp.watch('./src/stylesheets/**/*.scss', ['styles'])
-  gulp.watch('./site/**/*', ['hugo'])
-})
-
-function buildSite(cb, options) {
-  const args = options ? defaultArgs.concat(options) : defaultArgs
-
-  return cp.spawn(hugoBin, args, {stdio: 'inherit'}).on('close', (code) => {
-    if (code === 0) {
-      browserSync.reload()
-      cb()
-    } else {
-      browserSync.notify('Hugo build failed :(')
-      cb('Hugo build failed')
-    }
-  })
+  gulp.watch(paths.templates.glob, templates)
+  gulp.watch(paths.styles.glob, styles)
+  gulp.watch(paths.scripts.glob, scripts)
 }

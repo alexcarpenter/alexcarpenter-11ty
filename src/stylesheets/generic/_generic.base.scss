@@ -21,7 +21,16 @@ html {
 
 body {
   margin: 0;
-  @include fontsLoaded;
+  padding-top: units(4);
+  padding-bottom: units(4);
+  @include secondaryFontLoaded;
+  background-color: $c-midnight-blue;
+  color: #fff;
+
+  @include mq($from: md) {
+    padding-top: units(8);
+    padding-bottom: units(8);
+  }
 }
 
 
@@ -78,5 +87,13 @@ fieldset {
 a {
   color: currentcolor;
   text-decoration-skip: ink;
-  text-decoration-color: $c-primary;
+  text-decoration-color: $c-seafoam-green;
+}
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  vertical-align: middle;
 }

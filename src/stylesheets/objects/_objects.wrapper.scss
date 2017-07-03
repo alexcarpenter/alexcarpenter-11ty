@@ -11,3 +11,41 @@
   width: 100%;
   max-width: $u-wrapper-width + units(4);
 }
+
+
+
+.c-checkers {
+  margin-bottom: units(8);
+}
+
+.c-checkers__row {
+  // margin-bottom: units(8);
+  display: flex;
+}
+
+.c-checkers__row--reversed {
+  flex-direction: row-reverse;
+}
+
+.c-checkers__primary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  padding: units(4);
+  background-color: $c-seafoam-green;
+  color: #fff;
+
+  svg {
+    margin-left: auto;
+    width: 48px !important;
+    transform: scale(1.75);
+  }
+}
+
+.c-checkers__secondary {
+  width: 50%;
+  padding: units(4);
+  background-color: #fff;
+  color: #0A101D;
+}

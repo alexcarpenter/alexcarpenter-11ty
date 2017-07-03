@@ -1,16 +1,21 @@
 {
-  "name": "alexcarpenter-hugo",
+  "name": "alexcarpenter-me",
   "author": "Alex Carpenter",
   "version": "1.0.0",
-  "description": "",
   "scripts": {
-    "hugo": "gulp hugo",
+    "start": "gulp watch",
     "build": "gulp build",
-    "build-preview": "gulp build-preview",
-    "start": "gulp server",
-    "lint": "eslint src"
+    "test": "standard --verbose | snazzy",
+    "lint": "stylelint 'src/stylesheets/**/*.scss'",
+    "precommit": "npm test && npm run lint"
   },
-  "dependencies": {
+  "standard": {
+    "ignore": [
+      "gulpfile.babel.js",
+      "webpack.conf.js"
+    ]
+  },
+  "devDependencies": {
     "babel-eslint": "^6.1.2",
     "babel-loader": "^7.0.0",
     "babel-plugin-syntax-object-rest-spread": "^6.13.0",
@@ -22,24 +27,35 @@
     "browser-sync": "^2.13.0",
     "css-loader": "^0.28.2",
     "eslint": "^3.1.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.8.0",
     "eslint-plugin-import": "^1.11.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
     "exports-loader": "^0.6.3",
     "file-loader": "^0.11.1",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^6.1.2",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-nunjucks": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-stylelint": "^3.9.0",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-twig": "^0.7.0",
     "gulp-util": "^3.0.7",
     "imports-loader": "^0.7.1",
+    "inert-polyfill": "^0.2.3",
     "postcss-cssnext": "^2.7.0",
     "postcss-import": "^10.0.0",
+    "sass-mq": "^3.3.2",
+    "snazzy": "^7.0.0",
     "url-loader": "^0.5.7",
     "webpack": "^2.6.0",
     "whatwg-fetch": "^1.0.0"
-  },
-  "devDependencies": {
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-sass": "^3.1.0",
-    "sass-mq": "^3.3.2"
   }
 }
