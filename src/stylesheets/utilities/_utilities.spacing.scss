@@ -23,3 +23,14 @@
 .u-margin-bottom-8 {
   margin-bottom: units(8);
 }
+
+
+@include mq($from: md) {
+  .u-margin-bottom-4\@md {
+    margin-bottom: units(4);
+  }
+
+  .u-margin-bottom-8\@md {
+    margin-bottom: units(8);
+  }
+}

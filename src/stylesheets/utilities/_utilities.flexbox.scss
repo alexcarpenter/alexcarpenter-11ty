@@ -1,12 +1,12 @@
 /* ==========================================================================
-   COMPONENTS/FOOTER
+   UTILITIES/FLEXBOX
    ========================================================================== */
 
 
-.c-footer {
-
+.u-flex {
+  display: flex;
 }
 
-.c-footer__inner {
-  text-align: center;
+.u-space-between {
+  justify-content: space-between;
 }

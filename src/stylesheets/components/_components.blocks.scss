@@ -1,0 +1,53 @@
+/* ==========================================================================
+   COMPONENTS/BLOCKS
+   ========================================================================== */
+
+
+.c-blocks {
+  position: relative;
+}
+
+.c-blocks__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-blocks__row--reversed {
+  flex-direction: row-reverse;
+}
+
+.c-blocks__item {
+  width: 100%;
+  padding: units(2);
+
+  @include mq($from: md) {
+    padding: units(4);
+    width: 50%;
+  }
+}
+
+.c-blocks__item--primary {
+  display: flex;
+  justify-content: space-between;
+  background-color: $c-seafoam-green;
+  color: #fff;
+
+  @include mq($from: md) {
+    flex-direction: column;
+  }
+
+  svg {
+    align-self: center;
+    margin-left: auto;
+    transform: scale(1.25);
+
+    @include mq($from: md) {
+      transform: scale(1.75);
+    }
+  }
+}
+
+.c-blocks__item--secondary {
+  background-color: #fff;
+  color: $c-midnight-blue;
+}

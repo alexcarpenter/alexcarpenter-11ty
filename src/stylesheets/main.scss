@@ -24,13 +24,16 @@
 
 
 // COMPONENTS
+@import 'components/components.blocks';
 @import 'components/components.footer';
 @import 'components/components.intro';
+@import 'components/components.info-list';
 @import 'components/components.modal';
 @import 'components/components.prose';
 
 
 // UTILITIES
+@import 'utilities/utilities.flexbox';
 @import 'utilities/utilities.hidden';
 @import 'utilities/utilities.spacing';
 @import 'utilities/utilities.widths';
