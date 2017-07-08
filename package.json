@@ -5,6 +5,8 @@
   "scripts": {
     "start": "gulp watch",
     "build": "gulp build",
+    "jekyll start": "",
+    "jekyll build": "JEKYLL_ENV=production jekyll build",
     "test": "standard --verbose | snazzy",
     "lint": "stylelint 'src/stylesheets/**/*.scss'",
     "deploy": "push-dir --dir=dist --branch=gh-pages"

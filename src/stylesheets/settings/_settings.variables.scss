@@ -16,10 +16,15 @@ $u-spacing-unit: 0.75rem;
 $u-wrapper-width: 1200px / $u-base-font-size;
 
 // Font families
-$ff-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
-$ff-monospace: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+$ff-monospace-fallback: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+$ff-monospace: 'Roboto Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 
 // Colors
-$c-midnight-blue: #0A101D;
-$c-seafoam-green: #00ac47;
-$c-blue-grey: #607D8B;
+$c-sky-blue: #0055FF;
+$c-lime-7: #43cb00;
+
+$c-gray-0: #f8f9fa;
+$c-gray-7: #777777;
+$c-gray-9: #3a3f4a;
+
+$c-primary: $c-sky-blue;

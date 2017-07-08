@@ -14,17 +14,10 @@ export default {
     ]
   },
 
-  plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      names: [ 'vendor' ]
-    })
-  ],
+  plugins: [ ],
 
   context: path.join(__dirname, "src"),
   entry: {
-    vendor: [
-      'inert-polyfill'
-    ],
     app: './javascripts/app'
   },
   output: {

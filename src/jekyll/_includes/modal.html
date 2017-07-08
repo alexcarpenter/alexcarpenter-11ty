@@ -1,0 +1,36 @@
+<div id="contact-modal" class="js-modal c-modal" aria-hidden="true">
+  <div class="js-modal-hide c-modal__overlay" tabindex="-1" data-modal-hide></div>
+
+  <div class="c-modal__content" role="dialog" aria-labelledby="modal-title">
+    <header class="c-modal__header">
+      <button class="js-modal-hide c-modal__hide" data-modal-hide>Close</button>
+      <h1 id="modal-title">Contact</h1>
+    </header>
+
+    <form class="c-form" action="https://formspree.io/im.alexcarpenter@gmail.com"
+      method="POST">
+      <fieldset class="c-form__fieldset" role="group" aria-required="true">
+        <legend class="u-hidden">Contact</legend>
+        
+        <div class="c-form__field">
+          <label class="c-form__label" for="name">Your name</label>
+          <input class="c-form__input" type="text" name="name" id="name">
+        </div>
+        
+        <div class="c-form__field">
+          <label class="c-form__label" for="replyto">Your email</label>
+          <input class="c-form__input" type="email" name="_replyto" id="replyto">
+        </div>
+
+        <div class="c-form__field">
+          <label class="c-form__label" for="message">Message</label>
+          <textarea class="c-form__input" name="message" id="message" cols="30" rows="5"></textarea>
+        </div>
+        
+        <div class="c-form__field">
+          <input type="submit" value="Send Message" class="c-btn c-btn--primary">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+title: Alex Carpenter
+email: im.alexcarpenter@gmail.com
+baseurl: ""
+url: "http://alexcarpenter.me"
+# Directory tweaks
+source: src/jekyll
+destination: dist
+# Plugins
+gems:
+  - jekyll-seo-tag
+# Keep static files
+keep_files:
+  - assets
+  - CNAME
+  - favicon.ico
+  - humans.txt
+  - manifest.json
+  - robots.txt
+  - sw.js
+# SEO
+twitter:
+  username: hybrid_alex
+author:
+  twitter: hybrid_alex
+social:
+  name: Alex Carpenter
+  links:
+    - https://twitter.com/hybrid_alex
+    - https://www.linkedin.com/in/imalexcarpenter
+    - https://github.com/alexcarpenter

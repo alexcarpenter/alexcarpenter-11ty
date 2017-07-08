@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {{ content }}
+  {% include modal.html %}
+  <script src="{{ "/assets/js/app.js" | prepend: site.baseurl }}" async></script>
+</body>
+</html>

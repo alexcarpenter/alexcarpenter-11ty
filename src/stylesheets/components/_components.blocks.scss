@@ -29,7 +29,7 @@
 .c-blocks__item--primary {
   display: flex;
   justify-content: space-between;
-  background-color: $c-seafoam-green;
+  background-color: $c-primary;
   color: #fff;
 
   @include mq($from: md) {
@@ -47,7 +47,15 @@
   }
 }
 
+.c-blocks__title {
+  font-size: 1rem;
+
+  @include mq($from: md) {
+    font-size: 1.5rem;
+  }
+}
+
 .c-blocks__item--secondary {
   background-color: #fff;
-  color: $c-midnight-blue;
+  color: #000;
 }

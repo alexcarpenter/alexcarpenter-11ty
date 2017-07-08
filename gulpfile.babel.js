@@ -54,16 +54,16 @@ const paths = {
 const clean = () => del([ 'dist' ])
 export { clean }
 
-export function templates () {
-  gulp.src(paths.templates.pages)
-    .pipe(twig({
-      data: {
-        title: 'Alex Carpenter'
-      }
-    }))
-    .pipe(gulp.dest(paths.templates.dist))
-    browserSync.reload()
-}
+// export function templates () {
+//   gulp.src(paths.templates.pages)
+//     .pipe(twig({
+//       data: {
+//         title: 'Alex Carpenter'
+//       }
+//     }))
+//     .pipe(gulp.dest(paths.templates.dist))
+//     browserSync.reload()
+// }
 
 export function styles () {
   gulp.src(paths.styles.entry)
@@ -132,13 +132,12 @@ export function files () {
 }
 
 export function watch () {
-  browserSync.init({
-    notify: true,
-    server: {
-      baseDir: 'dist/'
-    }
-  })
-  gulp.watch(paths.templates.glob, templates)
+  // browserSync.init({
+  //   notify: true,
+  //   server: {
+  //     baseDir: 'dist/'
+  //   }
+  // })
   gulp.watch(paths.styles.glob, styles)
   gulp.watch(paths.scripts.glob, scripts)
 }

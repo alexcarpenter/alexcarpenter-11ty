@@ -11,7 +11,27 @@
 
 .o-grid__item {
   margin-bottom: units(4);
-  padding-right: units(4);
-  padding-left: units(4);
   width: 100%;
+
+  @include mq($from: md) {
+    padding-right: units(4);
+    padding-left: units(4);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  overflow: hidden;
+  grid-gap: 1px
+}
+
+.grid > div {
+  padding: 10px 15px;
+  border: solid rgba($c-gray-7, .25);
+  border-width: 0 1px 1px 0;
+  margin: 0 -1px -1px 0;
+  padding: units(4);
+  background-color: #000;
+  text-align: center;
 }

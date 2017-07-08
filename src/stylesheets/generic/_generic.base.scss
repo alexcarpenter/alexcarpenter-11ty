@@ -23,8 +23,8 @@ body {
   margin: 0;
   padding-top: units(4);
   padding-bottom: units(4);
-  @include secondaryFontLoaded;
-  background-color: $c-midnight-blue;
+  @include primaryFontLoaded;
+  background-color: #000;
   color: #fff;
 
   @include mq($from: md) {
@@ -87,7 +87,7 @@ fieldset {
 a {
   color: currentcolor;
   text-decoration-skip: ink;
-  text-decoration-color: $c-seafoam-green;
+  text-decoration-color: $c-primary;
 }
 
 img {

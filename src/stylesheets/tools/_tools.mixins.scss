@@ -4,17 +4,9 @@
 
 
 @mixin primaryFontLoaded {
-  font-family: 'Helvetica', sans-serif;
+  font-family: $ff-monospace-fallback;
 
   .fonts-loaded & {
-    font-family: 'Roboto', Consolas, monaco, monospace;
-  }
-}
-
-@mixin secondaryFontLoaded {
-  font-family: Consolas, monaco, monospace;
-
-  .fonts-loaded & {
-    font-family: 'Roboto Mono', Consolas, monaco, monospace;
+    font-family: $ff-monospace;
   }
 }

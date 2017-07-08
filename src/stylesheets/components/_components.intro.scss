@@ -24,15 +24,20 @@
 
 .c-intro__title {
   margin-bottom: 12.5rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
+
+  @include mq($from: md) {
+    font-size: 1.5rem;
+  }
 }
 
 .c-intro__blurb {
   margin-bottom: units(2);
-  font-size: 1.5rem;
+  font-size: 1rem;
 
   @include mq($from: md) {
     max-width: 50%;
+    font-size: 1.5rem;
   }
 }
 
@@ -42,6 +47,10 @@
 
   svg {
     margin-right: units(1);
+
+    path {
+      stroke: $c-gray-7;
+    }
   }
 }
 

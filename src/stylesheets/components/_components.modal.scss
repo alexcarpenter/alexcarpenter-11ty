@@ -8,6 +8,7 @@
   top: 0;
   left: 0;
   bottom: 0;
+  padding: units(2);
   width: 100%;
   min-height: 100%;
   display: flex;
@@ -29,7 +30,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba($c-midnight-blue, .95);
+  background-color: rgba(#000, .9);
   opacity: 0;
   transition: all ease-in-out 0.2s;
 
@@ -40,12 +41,13 @@
 
 .c-modal__content {
   position: relative;
+  padding: units(2);
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   background: #fff;
-  color: $c-midnight-blue;
+  color: #000;
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(50px) scale(.95);
   z-index: 10;
   transition: all 0.3s cubic-bezier(0, 0, 0.3, 1);
   margin: auto;
@@ -54,4 +56,12 @@
     transform: none;
     opacity: 1;
   }
+}
+
+.c-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-bottom: units(2);
 }

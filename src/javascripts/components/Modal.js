@@ -5,6 +5,9 @@ class Modal {
     this.showModalButtonEl = document.querySelectorAll('.js-modal-show')
     this.hideModalButtonEl = document.querySelectorAll('.js-modal-hide')
     this.modalEl = document.querySelector('.js-modal')
+    this.KEYCODE = {
+      ESC: 27
+    }
     // this.previousActiveElement
     // Set all modal focusable children to inert by default
     this.modalTabs = new Detabinator(this.modalEl)
@@ -12,6 +15,7 @@ class Modal {
 
     // this.previousActiveElement = this.previousActiveElement.bind(this)
     this.showModal = this.showModal.bind(this)
+    this.bindKeypress = this.bindKeypress.bind(this)
     this.hideModal = this.hideModal.bind(this)
 
     this.showModalButtonEl.forEach(child => {
@@ -25,15 +29,16 @@ class Modal {
     // this.previousActiveElement = document.activeElement
 
     // Remove modal show event listener
-    // this.showModalButtonEl.removeEventListener('click', this.showModal)
     this.showModalButtonEl.forEach(child => {
       child.removeEventListener('click', this.showModal)
     })
     // Add modal close event listener
-    // this.hideModalButtonEl.addEventListener('click', this.hideModal)
     this.hideModalButtonEl.forEach(child => {
       child.addEventListener('click', this.hideModal)
     })
+
+    // Watch for ESC keydown to close modal
+    document.addEventListener('keydown', this.bindKeypress)
 
     // Set all children elements of the body element to inert
     Array.from(document.body.children).forEach(child => {
@@ -49,17 +54,24 @@ class Modal {
     this.modalTabs._focusableElements[1].focus()
   }
 
+  bindKeypress (e) {
+    if (e.keyCode === this.KEYCODE.ESC) {
+      this.hideModal()
+    }
+  }
+
   hideModal () {
     // Reinitiate modal show event listener
-    // this.showModalButtonEl.addEventListener('click', this.showModal)
     this.showModalButtonEl.forEach(child => {
       child.addEventListener('click', this.showModal)
     })
     // Remove modal close event listener
-    // this.hideModalButtonEl.removeEventListener('click', this.hideModal)
     this.hideModalButtonEl.forEach(child => {
       child.removeEventListener('click', this.showModal)
     })
+
+    // Remove ESC keydown event listener
+    document.removeEventListener('keydown', this.bindKeypress)
 
     // Reset all children elements of the body element to inert
     Array.from(document.body.children).forEach(child => {
