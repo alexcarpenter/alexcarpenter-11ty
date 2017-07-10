@@ -1,19 +1,18 @@
 /* ==========================================================================
-   OBJECTS/WRAPPER
+   OBJECTS/SECTION
    ========================================================================== */
 
 
-.o-wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: units(2);
-  padding-left: units(2);
-  width: 100%;
-  max-width: $u-wrapper-width + units(4);
+.o-section {
+  margin-bottom: units(4);
+
+  @include mq($from: md) {
+    margin-bottom: units(8);
+  }
 }
 
-.o-wrapper__inner {
-  
+.o-section__inner {
+
   @include mq($from: md) {
     padding-right: units(4);
     padding-left: units(4);

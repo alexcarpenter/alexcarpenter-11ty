@@ -9,18 +9,26 @@
 
 .c-info-list__item {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-around;
 
   &:not(:last-of-type) {
     margin-bottom: units(2);
+    padding-bottom: units(2);
+    border-bottom: 1px solid rgba(#fff, .2);
   }
 }
 
 .c-info-list__primary {
-  
+  width: 50%;
+  // background: red;
 }
 
 .c-info-list__secondary {
-
+  flex: 1;
+  // background: blue;
 }
 
+.c-info-list__tertiary {
+  margin-left: auto;
+  // background: orange;
+}

@@ -1,11 +1,14 @@
 - title: Show Me Your Mic
   link: https://itunes.apple.com/us/podcast/alex-carpenter-show-me-your-coffee/id602836998?i=1000330208077&mt=2 
-  date: 2015 
+  date: 2015
+  action: Listen
 
 - title: How to Hold a Pencil
   link: https://itunes.apple.com/us/podcast/013-alex-carpenter/id738646287?i=1000264786894&mt=2 
   date: 2014
+  action: Listen
 
 - title: Statamic Series
   link: http://www.qdigitalstudio.com/library/statamic-series-alex-carpenter
   date: 2013
+  action: Read

@@ -1,0 +1,19 @@
+/* ==========================================================================
+   COMPONENTS/HEADING
+   ========================================================================== */
+
+
+.c-heading {
+  font-size: 1.25rem !important;
+
+  @include mq($from: md) {
+    font-size: 1.5rem !important;
+  }
+}
+
+.c-heading--decorate {
+
+  &:after {
+    content: ' ¬';
+  }
+}

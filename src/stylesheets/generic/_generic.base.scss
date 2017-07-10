@@ -96,4 +96,26 @@ img {
 
 svg {
   vertical-align: middle;
+  fill: currentColor;
+}
+
+blockquote {
+
+  p {
+    text-indent: -10px;
+
+    &:before {
+      content: '“';
+    }
+
+    &:after {
+      content: '”';
+    }
+  }
+
+  cite {
+    display: block;
+    padding-top: units(.5);
+    // font-style: normal;
+  }
 }

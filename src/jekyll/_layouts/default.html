@@ -4,8 +4,9 @@
   {% include head.html %}
 </head>
 <body>
+  <div class="u-hidden">{% include icons.html %}</div>
   {{ content }}
-  {% include modal.html %}
-  <script src="{{ "/assets/js/app.js" | prepend: site.baseurl }}" async></script>
+  {% include footer.html %}
+  <!-- <script src="{{ "/assets/js/app.js" | prepend: site.baseurl }}" async></script> -->
 </body>
 </html>

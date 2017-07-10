@@ -39,19 +39,12 @@
   svg {
     align-self: center;
     margin-left: auto;
-    transform: scale(1.25);
+    // opacity: .25;
 
     @include mq($from: md) {
-      transform: scale(1.75);
+      transform: scale(12);
+      transform-origin: right bottom;
     }
-  }
-}
-
-.c-blocks__title {
-  font-size: 1rem;
-
-  @include mq($from: md) {
-    font-size: 1.5rem;
   }
 }
 

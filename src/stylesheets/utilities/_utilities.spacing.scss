@@ -16,6 +16,10 @@
 
 // @include utility-spacing();
 
+.u-margin-bottom-2 {
+  margin-bottom: units(2);
+}
+
 .u-margin-bottom-4 {
   margin-bottom: units(4);
 }
@@ -26,6 +30,10 @@
 
 
 @include mq($from: md) {
+  .u-margin-bottom-2\@md {
+    margin-bottom: units(2);
+  }
+
   .u-margin-bottom-4\@md {
     margin-bottom: units(4);
   }

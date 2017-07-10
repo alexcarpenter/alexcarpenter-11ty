@@ -1,0 +1,36 @@
+/* ==========================================================================
+   COMPONENTS/TABLE
+   ========================================================================== */
+
+
+.c-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.c-table__row {
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $c-gray-9;
+  }
+}
+
+.c-table__cell {
+  display: block;
+  padding-top: units(1);
+  padding-bottom: units(1);
+
+  @include mq($from: md) {
+    display: table-cell;
+    padding-top: units(2);
+    padding-bottom: units(2);
+
+    &:first-of-type {
+      width: 50%;
+    }
+
+    &:last-of-type {
+      text-align: right;
+    }
+  }
+}

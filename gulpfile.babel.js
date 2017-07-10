@@ -39,7 +39,7 @@ const paths = {
   },
   icons: {
     glob: './src/icons/*.svg',
-    dist: './src/templates/_partials'
+    dist: './src/jekyll/_includes'
   },
   fonts: {
     glob: './src/fonts/*',
@@ -116,7 +116,7 @@ export function icons () {
     }))
     .pipe(svgstore())
     .pipe(rename(function (path) {
-      path.extname = ".twig"
+      path.extname = ".html"
     }))
     .pipe(gulp.dest(paths.icons.dist))
 }
