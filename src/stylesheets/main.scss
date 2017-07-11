@@ -20,7 +20,8 @@
 
 // OBJECTS
 @import 'objects/objects.columns';
-// @import 'objects/objects.grid';
+@import 'objects/objects.grid';
+@import 'objects/objects.media';
 @import 'objects/objects.section';
 @import 'objects/objects.wrapper';
 
@@ -40,4 +41,4 @@
 // UTILITIES
 @import 'utilities/utilities.hidden';
 @import 'utilities/utilities.spacing';
-// @import 'utilities/utilities.widths';
+@import 'utilities/utilities.widths';

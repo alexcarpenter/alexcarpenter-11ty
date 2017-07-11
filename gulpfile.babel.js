@@ -12,7 +12,7 @@ import svgstore from 'gulp-svgstore'
 import rename from 'gulp-rename'
 import BrowserSync from 'browser-sync'
 import webpack from 'webpack'
-import webpackConfig from './webpack.conf'
+import webpackConfig from './webpack.config'
 
 const browserSync = BrowserSync.create()
 
@@ -72,6 +72,15 @@ export function styles () {
     .pipe(cssnano())
     .pipe(gulp.dest(paths.styles.dist))
     .pipe(browserSync.stream())
+}
+
+export function lint () {
+  gulp.src(paths.styles.glob)
+    .pipe(stylelint({
+      reporters: [{
+        formatter: 'string', console: true
+      }]
+    }))
 }
 
 export function scripts () {

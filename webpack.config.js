@@ -8,7 +8,8 @@ export default {
         test: /\.js$/,
         exclude: /node_modules/,
         use: [
-          'babel-loader'
+          'babel-loader',
+          'eslint-loader'
         ]
       }
     ]
@@ -17,9 +18,11 @@ export default {
   plugins: [ ],
 
   context: path.join(__dirname, "src"),
+  
   entry: {
     app: './javascripts/app'
   },
+
   output: {
     path: path.join(__dirname, "dist/assets/js"),
     publicPath: "./dist/assets/js/",
