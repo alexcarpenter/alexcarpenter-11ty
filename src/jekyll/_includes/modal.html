@@ -1,9 +1,7 @@
-<div id="contact-modal" class="js-modal c-modal" aria-hidden="true">
-  <div class="js-modal-hide c-modal__overlay" tabindex="-1" data-modal-hide></div>
-
-  <div class="c-modal__content" role="dialog" aria-labelledby="modal-title">
-    <header class="c-modal__header">
-      <button class="js-modal-hide c-modal__hide" data-modal-hide>Close</button>
+<div id="contact-modal" class="c-dialog" aria-hidden="true">
+  <div class="c-dialog__content" role="dialog" aria-labelledby="modal-title">
+    <header class="c-dialog__header">
+      <button class="c-dialog__hide" data-hide-dialog>Close</button>
       <h1 id="modal-title">Contact</h1>
     </header>
 
@@ -33,4 +31,6 @@
       </fieldset>
     </form>
   </div>
+
+  <div class="c-dialog__overlay" tabindex="-1" data-hide-dialog></div>
 </div>

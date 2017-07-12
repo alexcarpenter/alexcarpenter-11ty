@@ -4,9 +4,11 @@
   {% include head.html %}
 </head>
 <body>
-  <div class="u-hidden">{% include icons.html %}</div>
-  {{ content }}
-  <!-- {% include footer.html %} -->
+  <main>
+    <div class="u-hidden">{% include icons.html %}</div>
+    {{ content }}
+    <!-- {% include footer.html %} -->
+  </main>
   <!-- <script src="{{ "/assets/js/app.js" | prepend: site.baseurl }}" async></script> -->
 </body>
 </html>

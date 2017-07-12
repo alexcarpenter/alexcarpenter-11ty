@@ -1,4 +1,3 @@
-import 'inert-polyfill'
-import Modal from './components/Modal'
+import Dialog from 'inclusive-dialog'
 
-new Modal() // eslint-disable-line 
+const dialog = new Dialog ()
