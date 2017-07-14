@@ -1,0 +1,5 @@
+:root {
+  --color: blue;
+}
+
+@import "general/general.base.css";

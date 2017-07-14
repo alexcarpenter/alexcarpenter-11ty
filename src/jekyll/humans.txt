@@ -1,9 +1,0 @@
-/* TEAM */
-  Design and development: Alex Carpenter
-  Twitter: @hybrid_alex
-  From: Grand Rapids, MI
-
-/* SITE */
-  Language: English
-  Doctype: HTML5
-  IDE: Sublime Text 3
