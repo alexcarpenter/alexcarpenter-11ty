@@ -3,7 +3,7 @@
   "author": "Alex Carpenter",
   "version": "1.0.0",
   "scripts": {
-    "styles": "postcss -c config/postcss/config.js",
+    "styles": "postcss src/stylesheets/main.css -o dist/assets/css/main.css",
     "scripts": "rollup -c config/rollup/config.js -w",
     "jekyll": "jekyll serve -c config/jekyll/config.yml",
     "deploy": "push-dir --dir=dist --branch=gh-pages"
@@ -14,6 +14,7 @@
     "babel-preset-latest": "^6.24.1",
     "cssnano": "^3.10.0",
     "fontfaceobserver": "^2.0.13",
+    "postcss": "^6.0.6",
     "postcss-cli": "^4.1.0",
     "postcss-import": "^10.0.0",
     "postcss-load-config": "^1.2.0",
@@ -24,6 +25,14 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1",
     "rollup-watch": "^3.2.2"
+  },
+  "postcss": {
+    "map": false,
+    "plugins": {
+      "postcss-import": {},
+      "autoprefixer": {},
+      "cssnano": {}
+    }
   },
   "babel": {
     "presets": [

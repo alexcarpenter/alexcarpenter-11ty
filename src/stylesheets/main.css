@@ -1,5 +1,10 @@
+@import 'general/_general.base';
+
 :root {
   --color: blue;
 }
 
-@import "general/general.base.css";
+
+body {
+  display: flex;
+}
