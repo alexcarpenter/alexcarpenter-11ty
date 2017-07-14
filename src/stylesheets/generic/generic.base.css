@@ -1,0 +1,116 @@
+/* ==========================================================================
+   GENERIC/BASE
+   ========================================================================== */
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: $u-base-font-size;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -ms-text-size-adjust: 100%; /* stylelint-disable-line */
+  -webkit-text-size-adjust: 100%; /* stylelint-disable-line */
+  -webkit-font-smoothing: antialiased; /* stylelint-disable-line */
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-fallback);
+}
+
+.fonts-loaded body {
+  font-family: var(--font-family-default);
+}
+
+
+/**
+ * A very simple reset
+ */
+
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend {
+  margin: 0;
+  padding: 0;
+}
+
+
+/**
+ * Remove trailing margins from nested lists.
+ */
+
+li > {
+
+  ol,
+  ul {
+    margin-bottom: 0;
+  }
+
+}
+
+
+/**
+ * Remove default table spacing.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/**
+ * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
+ *    on fieldsets.
+ */
+
+fieldset {
+  min-width: 0; /* [1] */
+  border: 0;
+}
+
+
+a {
+  color: currentcolor;
+  text-decoration-skip: ink;
+  text-decoration-color: $c-primary;
+}
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+blockquote {
+
+  p {
+    text-indent: -10px;
+
+    &:before {
+      content: '“';
+    }
+
+    &:after {
+      content: '”';
+    }
+  }
+
+  cite {
+    display: block;
+    padding-top: units(.5);
+    // font-style: normal;
+  }
+}

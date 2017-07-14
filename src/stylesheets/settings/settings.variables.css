@@ -1,0 +1,8 @@
+:root {
+  --font-family-fallback: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  --font-family-default: 'Roboto Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+  --color-sky-blue: #0055FF;
+  --color-gray-7: #777;
+  --color-primary: var(--color-sky-blue);
+}

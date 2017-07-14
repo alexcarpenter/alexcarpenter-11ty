@@ -1,10 +1,20 @@
-@import 'general/_general.base';
-
-:root {
-  --color: blue;
-}
+/* ==========================================================================
+   ALEXCARPENTER-ME V1.0.0
+   ========================================================================== */
 
 
-body {
-  display: flex;
-}
+/* SETTINGS */
+@import 'settings/settings.variables';
+
+
+/* GENERIC */
+@import 'generic/generic.base';
+
+
+/* OBJECTS */
+
+
+/* COMPONENTS */
+
+
+/* UTILITIES */

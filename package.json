@@ -3,7 +3,7 @@
   "author": "Alex Carpenter",
   "version": "1.0.0",
   "scripts": {
-    "styles": "postcss src/stylesheets/main.css -o dist/assets/css/main.css",
+    "styles": "postcss src/stylesheets/main.css -o dist/assets/css/main.css -w",
     "scripts": "rollup -c config/rollup/config.js -w",
     "jekyll": "jekyll serve -c config/jekyll/config.yml",
     "deploy": "push-dir --dir=dist --branch=gh-pages"
