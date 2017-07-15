@@ -1,0 +1,17 @@
+<section id="experience" class="u-margin-bottom-8">
+  <div class="o-wrapper">
+    <h2 class="u-margin-bottom-2 c-heading c-heading--decorate">Experience</h2>
+
+    <table class="c-table">
+      <tbody>
+        {% for item in site.data.experience %}
+        <tr class="c-table__row">
+          <td class="c-table__cell">{{ item.company }}</td>
+          <td class="c-table__cell">{{ item.title }}</td>
+          <td class="c-table__cell">{{ item.start_date }}&ndash;{% if item.end_date %}{{ item.end_date }}{% else %}Currently{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>

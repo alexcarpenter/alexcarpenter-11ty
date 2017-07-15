@@ -1,0 +1,10 @@
+{
+  "lang": "en-us",
+  "name": "Alex Carpenter",
+  "short_name": "ASC",
+  "theme_color": "#0055ff",
+  "background_color": "#000000",
+  "display": "minimal-ui",
+  "scope": "/",
+  "start_url": "/"
+}

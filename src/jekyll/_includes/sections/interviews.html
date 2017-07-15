@@ -1,0 +1,17 @@
+<section id="interviews">
+  <div class="o-wrapper">
+    <h2 class="u-margin-bottom-2 c-heading c-heading--decorate">Interviews</h2>
+
+    <table class="c-table">
+      <tbody>
+        {% for item in site.data.interviews %}
+        <tr class="c-table__row">
+          <td class="c-table__cell">{{ item.title }}</td>
+          <td class="c-table__cell">{{ item.date }}</td>
+          <td class="c-table__cell"><a href="{{ item.link }}">{{ item.action }}</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>

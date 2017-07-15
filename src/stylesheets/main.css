@@ -4,17 +4,24 @@
 
 
 /* SETTINGS */
+@import 'settings/settings.media-queries';
 @import 'settings/settings.variables';
 
 
 /* GENERIC */
 @import 'generic/generic.base';
+@import 'generic/generic.headings';
 
 
 /* OBJECTS */
+@import 'objects/objects.media';
+@import 'objects/objects.wrapper';
 
 
 /* COMPONENTS */
+@import 'components/components.heading';
+@import 'components/components.intro';
 
 
 /* UTILITIES */
+@import 'utilities/utilities.spacing';

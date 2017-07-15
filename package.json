@@ -3,21 +3,31 @@
   "author": "Alex Carpenter",
   "version": "1.0.0",
   "scripts": {
-    "styles": "postcss src/stylesheets/main.css -o dist/assets/css/main.css -w",
-    "scripts": "rollup -c config/rollup/config.js -w",
-    "jekyll": "jekyll serve -c config/jekyll/config.yml",
-    "deploy": "push-dir --dir=dist --branch=gh-pages"
+    "start": "concurrently 'npm run jekyll:dev' 'npm run styles:dev' 'npm run scripts:dev'",
+    "styles:dev": "postcss src/stylesheets/main.css -o dist/assets/css/main.css -w",
+    "scripts:dev": "rollup -c config/rollup/config.js -w",
+    "jekyll:dev": "jekyll serve -c config/jekyll/config.yml",
+    "styles:build": "postcss src/stylesheets/main.css -o src/jekyll/_includes/assets/main.css",
+    "scripts:build": "rollup -c config/rollup/config.js",
+    "jekyll:build": "JEKYLL_ENV=production jekyll build -c config/jekyll/config.yml",
+    "fonts:copy": "copy 'src/fonts/*.{woff2,woff}' dist/assets/fonts",
+    "clean:dist": "rm -rf dist",
+    "build": "npm run clean:dist && npm run fonts:copy && npm run styles:build && npm run scripts:build && npm run jekyll:build",
+    "push": "push-dir --dir=dist --branch=gh-pages",
+    "deploy": "npm run build && npm run push"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-latest": "^6.24.1",
+    "concurrently": "^3.5.0",
+    "copy": "^0.3.0",
     "cssnano": "^3.10.0",
     "fontfaceobserver": "^2.0.13",
+    "imagemin-cli": "^3.0.0",
     "postcss": "^6.0.6",
     "postcss-cli": "^4.1.0",
+    "postcss-cssnext": "^3.0.2",
     "postcss-import": "^10.0.0",
-    "postcss-load-config": "^1.2.0",
     "push-dir": "^0.4.1",
     "rollup": "^0.43.0",
     "rollup-plugin-babel": "^2.7.1",
@@ -30,7 +40,15 @@
     "map": false,
     "plugins": {
       "postcss-import": {},
-      "autoprefixer": {},
+      "postcss-cssnext": {
+        "warnForDuplicates": false,
+        "features": {
+          "customProperties": {
+            "preserve": true
+          },
+          "rem": false
+        }
+      },
       "cssnano": {}
     }
   },

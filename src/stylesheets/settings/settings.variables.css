@@ -1,8 +1,16 @@
 :root {
-  --font-family-fallback: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  --font-family-default: 'Roboto Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  --ff-fallback: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  --ff-primary: 'Roboto Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 
-  --color-sky-blue: #0055FF;
-  --color-gray-7: #777;
-  --color-primary: var(--color-sky-blue);
+  --c-sky-blue: #05F;
+  --c-gray-7: #777;
+  --c-primary: var(--c-sky-blue);
+
+  --u-spacing-unit-1: 0.75rem;
+  --u-spacing-unit-2: 1.5rem;
+  --u-spacing-unit-3: 2.25rem;
+  --u-spacing-unit-4: 3rem;
+  --u-spacing-unit-8: 6rem;
+
+  --u-max-width: 75rem;
 }
