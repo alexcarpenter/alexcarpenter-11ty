@@ -12,6 +12,7 @@
     "jekyll:build": "JEKYLL_ENV=production jekyll build -c config/jekyll/config.yml",
     "fonts:copy": "copy 'src/fonts/*.{woff2,woff}' dist/assets/fonts",
     "clean:dist": "rm -rf dist",
+    "test": "standard src/javascripts/**/*.js",
     "build": "npm run clean:dist && npm run fonts:copy && npm run styles:build && npm run scripts:build && npm run jekyll:build",
     "push": "push-dir --dir=dist --branch=gh-pages",
     "deploy": "npm run build && npm run push"
@@ -34,7 +35,8 @@
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1",
-    "rollup-watch": "^3.2.2"
+    "rollup-watch": "^3.2.2",
+    "standard": "^10.0.2"
   },
   "postcss": {
     "map": false,

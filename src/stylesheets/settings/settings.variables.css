@@ -3,7 +3,9 @@
   --ff-primary: 'Roboto Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 
   --c-sky-blue: #05F;
+  --c-gray-3: #303030;
   --c-gray-7: #777;
+  --c-border-color: var(--c-gray-3);
   --c-primary: var(--c-sky-blue);
 
   --u-spacing-unit-1: 0.75rem;

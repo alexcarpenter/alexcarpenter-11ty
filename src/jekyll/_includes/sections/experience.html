@@ -8,7 +8,7 @@
         <tr class="c-table__row">
           <td class="c-table__cell">{{ item.company }}</td>
           <td class="c-table__cell">{{ item.title }}</td>
-          <td class="c-table__cell">{{ item.start_date }}&ndash;{% if item.end_date %}{{ item.end_date }}{% else %}Currently{% endif %}</td>
+          <td class="c-table__cell">{{ item.start_date }} &ndash; {% if item.end_date %}{{ item.end_date }}{% else %}Currently{% endif %}</td>
         </tr>
         {% endfor %}
       </tbody>

@@ -21,6 +21,7 @@
 /* COMPONENTS */
 @import 'components/components.heading';
 @import 'components/components.intro';
+@import 'components/components.table';
 
 
 /* UTILITIES */
