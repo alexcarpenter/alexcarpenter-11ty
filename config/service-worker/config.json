@@ -1,0 +1,9 @@
+{
+  "staticFileGlobs": [
+    "dist/**.html",
+    "dist/assets/js/**.js",
+    "dist/assets/fonts/**.*"
+  ],
+  "stripPrefix": "dist",
+  "swFilePath": "dist/service-worker.js"
+}

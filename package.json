@@ -11,9 +11,10 @@
     "scripts:build": "rollup -c config/rollup/config.js",
     "jekyll:build": "JEKYLL_ENV=production jekyll build -c config/jekyll/config.yml",
     "fonts:copy": "copy 'src/fonts/*.{woff2,woff}' dist/assets/fonts",
+    "sw": "sw-precache --config=config/service-worker/config.json --verbose",
     "clean:dist": "rm -rf dist",
     "test": "standard src/javascripts/**/*.js",
-    "build": "npm run clean:dist && npm run fonts:copy && npm run styles:build && npm run scripts:build && npm run jekyll:build",
+    "build": "npm run clean:dist && npm run fonts:copy && npm run sw && npm run styles:build && npm run scripts:build && npm run jekyll:build",
     "push": "push-dir --dir=dist --branch=gh-pages",
     "deploy": "npm run build && npm run push"
   },
@@ -25,6 +26,7 @@
     "cssnano": "^3.10.0",
     "fontfaceobserver": "^2.0.13",
     "imagemin-cli": "^3.0.0",
+    "lazysizes": "^4.0.0-rc3",
     "postcss": "^6.0.6",
     "postcss-cli": "^4.1.0",
     "postcss-cssnext": "^3.0.2",
@@ -36,7 +38,8 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1",
     "rollup-watch": "^3.2.2",
-    "standard": "^10.0.2"
+    "standard": "^10.0.2",
+    "sw-precache": "^5.2.0"
   },
   "postcss": {
     "map": false,

@@ -20,7 +20,7 @@ keep_files:
   - humans.txt
   - manifest.json
   - robots.txt
-  - sw.js
+  - service-worker.js
 # SEO
 twitter:
   username: hybrid_alex
