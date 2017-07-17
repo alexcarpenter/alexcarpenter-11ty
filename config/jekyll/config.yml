@@ -4,7 +4,7 @@ description: >
 email: im.alexcarpenter@gmail.com
 location: Grand Rapids, MI
 baseurl: ""
-url: "http://alexcarpenter.me"
+url: "https://alexcarpenter.me"
 # Directory tweaks
 source: src/jekyll
 destination: dist

@@ -1,6 +1,6 @@
 # alexcarpenter.me
 
-> Source files for my personal website [alexcarpenter.me](http://alexcarpenter.me).
+> Source files for my personal website [alexcarpenter.me](https://alexcarpenter.me).
 
 ### Setup
 
