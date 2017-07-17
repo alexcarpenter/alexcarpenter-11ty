@@ -1,0 +1,28 @@
+/* ==========================================================================
+   COMPONENTS/FOOTER
+   ========================================================================== */
+
+
+.c-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: var(--u-spacing-unit-4);
+  border-top: 1px solid var(--c-border-color);
+}
+
+.c-footer__cell {
+  width: 100%;
+
+  @media (--mq-small) {
+    width: 50%;
+  }
+}
+
+.c-footer__links {
+  list-style: none;
+  display: flex;
+}
+
+.c-footer__link:not(:last-of-type) {
+  margin-right: var(--u-spacing-unit-2);
+}

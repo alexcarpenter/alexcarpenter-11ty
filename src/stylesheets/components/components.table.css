@@ -5,6 +5,7 @@
 
 .c-table__row {
   display: block;
+  margin-bottom: var(--u-spacing-unit-2);
 
   @media(--mq-small) {
     display: table-row;
@@ -17,11 +18,11 @@
 
 .c-table__cell {
   display: block;
-  padding-top: var(--u-spacing-unit-2);
   padding-bottom: var(--u-spacing-unit-2);
 
   @media (--mq-small) {
     display: table-cell;
+    padding-top: var(--u-spacing-unit-2);
 
     &:first-of-type {
       width: 50%;

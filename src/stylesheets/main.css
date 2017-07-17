@@ -19,6 +19,7 @@
 
 
 /* COMPONENTS */
+/* @import 'components/components.footer'; */
 @import 'components/components.heading';
 @import 'components/components.intro';
 @import 'components/components.table';
