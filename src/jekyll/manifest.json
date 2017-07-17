@@ -2,6 +2,11 @@
   "lang": "en-us",
   "name": "Alex Carpenter",
   "short_name": "ASC",
+  "icons": [{
+    "src": "/icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
   "theme_color": "#0055ff",
   "background_color": "#000000",
   "display": "minimal-ui",
