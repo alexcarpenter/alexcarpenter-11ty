@@ -14,7 +14,7 @@
     "sw": "sw-precache --config=config/service-worker/config.json --verbose",
     "clean:dist": "rm -rf dist",
     "test": "standard src/javascripts/**/*.js",
-    "build": "npm run clean:dist && npm run fonts:copy && npm run sw && npm run styles:build && npm run scripts:build && npm run jekyll:build",
+    "build": "npm run clean:dist && npm run fonts:copy && npm run styles:build && npm run scripts:build && npm run jekyll:build",
     "push": "push-dir --dir=dist --branch=gh-pages",
     "deploy": "npm run build && npm run push"
   },
