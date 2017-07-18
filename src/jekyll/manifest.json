@@ -2,6 +2,7 @@
   "lang": "en-us",
   "name": "Alex Carpenter",
   "short_name": "ASC",
+  "display": "standalone",
   "icons": [{
     "src": "/icon-512x512.png",
     "sizes": "512x512",
