@@ -39,6 +39,7 @@
     "rollup-plugin-uglify": "^2.0.1",
     "rollup-watch": "^3.2.2",
     "standard": "^10.0.2",
+    "stylelint": "^8.0.0",
     "sw-precache": "^5.2.0"
   },
   "postcss": {

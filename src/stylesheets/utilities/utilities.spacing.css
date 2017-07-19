@@ -3,6 +3,10 @@
    ========================================================================== */
 
 
+.u-margin-bottom-1 {
+  margin-bottom: var(--u-spacing-unit-1);
+}
+
 .u-margin-bottom-2 {
   margin-bottom: var(--u-spacing-unit-2);
 }
