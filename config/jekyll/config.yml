@@ -2,6 +2,7 @@ title: Alex Carpenter
 description: >
   I'm a front-end developer focused on performance and accessibility.
 email: im.alexcarpenter@gmail.com
+timezone: America/Detroit
 location: Grand Rapids, MI
 baseurl: ""
 url: "https://alexcarpenter.me"
@@ -9,7 +10,7 @@ url: "https://alexcarpenter.me"
 source: src/jekyll
 destination: dist
 # Plugins
-gems:
+plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 # Keep static files
