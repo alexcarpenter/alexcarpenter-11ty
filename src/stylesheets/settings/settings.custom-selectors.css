@@ -1,15 +1,6 @@
 /* ==========================================================================
-   UTILITIES/WIDTHS
+   SETTINGS/CUSTOM-SELECTORS
    ========================================================================== */
 
 
-.u-width-6 {
-  width: 50%;
-}
-
-
-@media (--mq-medium) {
-  .u-width-6\@md {
-    width: 50%;
-  }
-}
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;

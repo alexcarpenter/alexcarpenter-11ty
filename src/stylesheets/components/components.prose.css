@@ -1,0 +1,23 @@
+/* ==========================================================================
+   COMPONENTS/PROSE
+   ========================================================================== */
+
+
+.c-prose {
+
+  & > * {
+    margin-bottom: var(--u-spacing-unit-2);
+  }
+
+  :--headings {
+    font-weight: 700;
+  }
+
+  & p + :--headings {
+    padding-top: var(--u-spacing-unit-2);
+  }
+}
+
+.c-prose__lead {
+  font-size: 1.5rem;
+}
