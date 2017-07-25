@@ -90,6 +90,12 @@ a {
   color: currentcolor;
   text-decoration-skip: ink;
   text-decoration-color: var(--c-primary);
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: 1px solid var(--c-primary);
+  }
 }
 
 img {
