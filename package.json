@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "concurrently 'npm run jekyll:dev' 'npm run styles:dev' 'npm run scripts:dev'",
-    "styles:dev": "postcss src/stylesheets/main.css -o dist/assets/css/main.css -w",
+    "styles:dev": "postcss -w -c config/postcss/postcss.config.js src/stylesheets/main.css -o dist/assets/css/main.css",
     "scripts:dev": "rollup -c config/rollup/config.js -w",
     "jekyll:dev": "jekyll serve -c config/jekyll/config.yml",
     "styles:build": "postcss src/stylesheets/main.css -o src/jekyll/_includes/assets/main.css",
@@ -41,22 +41,6 @@
     "standard": "^10.0.2",
     "stylelint": "^8.0.0",
     "sw-precache": "^5.2.0"
-  },
-  "postcss": {
-    "map": false,
-    "plugins": {
-      "postcss-import": {},
-      "postcss-cssnext": {
-        "warnForDuplicates": false,
-        "features": {
-          "customProperties": {
-            "preserve": true
-          },
-          "rem": false
-        }
-      },
-      "cssnano": {}
-    }
   },
   "babel": {
     "presets": [
