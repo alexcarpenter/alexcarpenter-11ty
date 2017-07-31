@@ -15,9 +15,7 @@
 
 
 /* OBJECTS */
-/* @import 'objects/objects.columns'; */
 @import 'objects/objects.layout';
-/* @import 'objects/objects.media'; */
 @import 'objects/objects.ratio';
 @import 'objects/objects.wrapper';
 
@@ -30,7 +28,6 @@
 @import 'components/components.heading';
 @import 'components/components.intro';
 @import 'components/components.offline';
-@import 'components/components.pagination';
 @import 'components/components.post';
 @import 'components/components.prose';
 @import 'components/components.table';
@@ -38,6 +35,5 @@
 
 
 /* UTILITIES */
-/* @import 'utilities/utilities.flexbox'; */
 @import 'utilities/utilities.spacing';
 @import 'utilities/utilities.widths';
