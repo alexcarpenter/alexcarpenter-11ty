@@ -9,5 +9,22 @@
 }
 
 .o-layout__item {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+}
+
+
+/* 
+   Add gutters
+   ========================================================================== */
+
+.o-layout--gutters {
+  margin-right: calc(var(--u-spacing-unit-2) * -1);
+  margin-left: calc(var(--u-spacing-unit-2) * -1);
+
+  & > .o-layout__item {
+    padding-right: var(--u-spacing-unit-2);
+    padding-left: var(--u-spacing-unit-2);
+  }
 }

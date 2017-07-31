@@ -126,3 +126,8 @@ blockquote {
     padding-top: units(.5);
   }
 }
+
+time,
+figcaption {
+  color: var(--c-gray-7);
+}

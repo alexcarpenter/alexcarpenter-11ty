@@ -1,0 +1,46 @@
+/* ==========================================================================
+   COMPONENTS/ENTRY
+   ========================================================================== */
+
+
+/* .c-entry { } */
+
+
+/* 
+   Entry header
+   ========================================================================== */
+
+.c-entry__header {
+  margin-bottom: var(--u-spacing-unit-2);
+}
+
+.c-entry__time {
+  display: block;
+  margin-bottom: var(--u-spacing-unit-1);
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+
+.c-entry__title {
+  display: inline-flex;
+  font-weight: 700;
+
+  & a[href^="http"]::after {
+    display: inline-block;
+    font-weight: 400;
+    color: var(--c-gray-7);
+    content: "\2009\2192";
+  }
+}
+
+
+/* 
+   Entry body
+   ========================================================================== */
+
+/* .c-entry__body {
+  margin-bottom: var(--u-spacing-unit-2);
+} */

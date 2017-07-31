@@ -9,15 +9,44 @@
     margin-bottom: var(--u-spacing-unit-2);
   }
 
-  :--headings {
+  & :--headings {
     font-weight: 700;
   }
 
   & p + :--headings {
-    padding-top: var(--u-spacing-unit-2);
+    margin-bottom: var(--u-spacing-unit-1);
+  }
+
+  & blockquote > *:not(footer) {
+    padding-left: var(--u-spacing-unit-2);
+    border-left: 1px solid var(--c-border-color);
+    font-style: italic;
   }
 }
 
-.c-prose__lead {
-  font-size: 1.5rem;
+.c-prose--body {
+
+  & > *:not(figure) {
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (--mq-large) {
+      max-width: 50%;
+    }
+  }
+
+  & figure {
+    @media (--mq-large) {
+      display: grid;
+      grid-template-columns: auto 25%;
+    }
+  }
+
+  & figcaption {
+
+    @media (--mq-large) {
+      grid-column-start: 2;
+      padding-left: var(--u-spacing-unit-2);
+    }
+  }
 }
