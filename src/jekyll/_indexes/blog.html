@@ -27,6 +27,10 @@ pagination:
                   {% if entry.link %}{{ entry.content }}{% else %}{{ entry.excerpt }}{% endif %}
                 </div>
               </div>
+
+              <footer class="c-entry__footer">
+                <span>Tagged: {{ entry.tags | array_to_sentence_string }}</span>
+              </footer>
             </article>
           </li>
           {% endfor %}
