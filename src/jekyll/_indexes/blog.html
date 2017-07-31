@@ -37,13 +37,13 @@ pagination:
         </ul>
 
         {% if paginator.total_pages > 1 %}
-        <nav class="c-pagination">
+        <nav class="c-pagination" role="pagination">
           {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Previous</a>
+          <a class="c-pagination__previous" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Previous</a>
           {% endif %}
 
           {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a>
+          <a class="c-pagination__next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a>
           {% endif %}
         </nav>
         {% endif %}

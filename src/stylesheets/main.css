@@ -28,6 +28,7 @@
 @import 'components/components.heading';
 @import 'components/components.intro';
 @import 'components/components.offline';
+@import 'components/components.pagination';
 @import 'components/components.post';
 @import 'components/components.prose';
 @import 'components/components.table';
