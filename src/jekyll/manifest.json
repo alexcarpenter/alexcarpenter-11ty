@@ -23,8 +23,8 @@
     "sizes": "144x144",
     "type": "image/png"
   }],
-  "theme_color": "#0055FF",
-  "background_color": "#000000",
+  "theme_color": "#FF3300",
+  "background_color": "#161B21",
   "display": "minimal-ui",
   "scope": "/",
   "start_url": "/"
