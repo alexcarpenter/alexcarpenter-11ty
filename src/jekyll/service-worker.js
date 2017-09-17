@@ -1,6 +1,6 @@
 'use strict';
 
-const version = 'v1.1::';
+const version = 'v1.2::';
 const staticCacheName = version + 'static';
 const pagesCacheName = version + 'pages';
 const imagesCacheName = version + 'images';
@@ -14,7 +14,7 @@ function updateStaticCache() {
         .then( cache => {
             // These items must be cached for the Service Worker to complete installation
             return cache.addAll([
-                'http://res.cloudinary.com/alexcarpenter/image/upload/v1505686914/banner_teos6l.jpg',
+                'https://res.cloudinary.com/alexcarpenter/image/upload/v1505686914/banner_teos6l.jpg',
                 '/assets/js/main.js',
                 '/assets/fonts/roboto-v16-latin-900.woff',
                 '/assets/fonts/roboto-v16-latin-900.woff2',
