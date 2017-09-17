@@ -19,14 +19,16 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: var(--u-spacing-unit-4) var(--u-spacing-unit-2);
-  background-color: #000;
+  margin: 0 auto;
+  padding-right: var(--u-spacing-unit-2);
+  padding-left: var(--u-spacing-unit-2);
+  padding-bottom: var(--u-spacing-unit-4);
+  background-color: var(--c-background);
   color: #fff;
   font-family: var(--ff-fallback);
 
   @media (--mq-small) {
-    padding: var(--u-spacing-unit-8) var(--u-spacing-unit-4);
+    padding-bottom: var(--u-spacing-unit-8);
   }
 }
 
@@ -60,7 +62,6 @@ li > {
   ul {
     margin-bottom: 0;
   }
-
 }
 
 
@@ -68,33 +69,21 @@ li > {
  * Remove default table spacing.
  */
 
-table {
+/* table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-
-/**
- * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
- *    on fieldsets.
- */
-
-fieldset {
-  min-width: 0; /* [1] */
-  border: 0;
-}
-
+} */
 
 a {
   color: currentcolor;
   text-decoration-skip: ink;
-  text-decoration-color: var(--c-primary);
+  text-decoration-color: #f30;
 
   &:hover,
   &:focus {
     text-decoration: none;
-    outline: 1px solid var(--c-primary);
+    outline: 1px solid #f30;
   }
 }
 
@@ -107,7 +96,7 @@ svg {
   fill: currentColor;
 }
 
-blockquote {
+/* blockquote {
 
   p {
     text-indent: -10px;
@@ -125,9 +114,11 @@ blockquote {
     display: block;
     padding-top: units(.5);
   }
-}
+} */
 
-time,
-figcaption {
-  color: var(--c-gray-7);
-}
+/* hr {
+  border: none;
+  width: 100%;
+  height: 1px;
+  background-color: var(--c-border-color);
+} */

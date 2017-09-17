@@ -1,0 +1,39 @@
+<section class="c-section">
+  <header class="c-section__header">
+    <h2 class="c-section__title">Open Source</h2>
+  </header>
+
+  <div class="c-section__content">
+    {% for item in site.data.oss %}
+      {% if item.public == true %}
+      <article class="c-entry">
+        <div class="c-entry__main">
+          <header class="c-entry__header">
+            <h2 class="c-entry__title">{{ item.title }}</h2>
+          </header>
+          {% if item.description %}
+          <div class="c-entry__excerpt">
+            {{ item.description | markdownify }}
+          </div>
+          {% endif %}
+        </div>
+
+        <aside class="c-entry__aside">
+          {% if item.github %}<a href="{{ item.github }}">Github</a>{% endif %}
+          {% if item.demo %}/ <a href="{{ item.demo }}">Demo</a>{% endif %}
+        </aside>
+      </article>
+      {% endif %}
+    {% endfor %}
+
+    <div class="c-section__extra">
+      <h3 class="c-section__extra-title">Other Projects</h3>
+
+      <p>
+        {% for item in site.data.oss-archived %}
+        <a href="{{ item.github }}">{{ item.title }}</a>{% if forloop.last == false %}, {% endif %}
+        {% endfor %}
+      </p>
+    </div>
+  </div>
+</section>

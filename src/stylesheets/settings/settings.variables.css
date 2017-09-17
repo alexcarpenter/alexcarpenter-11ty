@@ -1,12 +1,15 @@
 :root {
-  --ff-fallback: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  --ff-primary: 'Roboto Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  --ff-fallback: helvetica neue, helvetica, arial, sans-serif;
+  --ff-primary: 'Roboto', var(--ff-fallback);
 
+  --c-saffron: #FFBF32;
   --c-sky-blue: #05F;
   --c-gray-3: #303030;
   --c-gray-7: #777;
-  --c-border-color: var(--c-gray-3);
-  --c-primary: var(--c-sky-blue);
+
+  --c-background: #161B21;
+  --c-border: #738395;
+  --c-primary: #f30;
 
   --u-spacing-unit-1: 0.75rem;
   --u-spacing-unit-2: 1.5rem;
@@ -14,5 +17,5 @@
   --u-spacing-unit-4: 3rem;
   --u-spacing-unit-8: 6rem;
 
-  --u-max-width: 75rem;
+  --u-max-width: 50rem;
 }

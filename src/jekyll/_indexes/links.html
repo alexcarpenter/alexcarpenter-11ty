@@ -1,26 +1,34 @@
+---
+layout: page
+title: Links
+permalink: /links/
+---
 <section class="c-section">
   <header class="c-section__header">
-    <h2 class="c-section__title">Interviews</h2>
+    <h2 class="c-section__title">{{ page.title }}</h2>
   </header>
 
   <div class="c-section__content">
-    {% for item in site.data.interviews %}
+    {% for item in site.links %}
     <article class="c-entry">
       <div class="c-entry__main">
         <header class="c-entry__header">
           <h2 class="c-entry__title">{{ item.title }}</h2>
-          <!-- <span>↳ <time>{{ item.date }}</time></span> -->
         </header>
+        {% if item.content %}
         <div class="c-entry__excerpt">
-          {{ item.description | markdownify }}
+          {{ item.content | markdownify }}
         </div>
+        {% endif %}
       </div>
 
       <aside class="c-entry__aside">
-        <a href="{{ item.link }}">{{ item.action }}</a>
+        <span><a href="{{ item.link }}">Visit Link</a></span>
       </aside>
     </article>
     {% endfor %}
   </div>
 </section>
+
+
 

@@ -3,22 +3,10 @@
    ========================================================================== */
 
 
-/* .c-footer { }
-
-
-.c-footer__primary {
-  padding-top: var(--u-spacing-unit-4);
-  padding-bottom: var(--u-spacing-unit-4);
-  border-top: 1px solid var(--c-border-color);
-} */
-
-
-.c-footer__secondary {
+.c-footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: var(--u-spacing-unit-4);
-  border-top: 1px solid var(--c-border-color);
 }
 
 .c-footer__social {

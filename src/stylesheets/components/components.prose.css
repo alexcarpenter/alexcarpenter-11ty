@@ -17,10 +17,24 @@
     margin-bottom: var(--u-spacing-unit-1);
   }
 
+  /* & h2 a[href^="http"]::after,
+  & h3 a[href^="http"]::after {
+    display: inline-block;
+    font-weight: 400;
+    color: var(--c-gray-7);
+    content: "\2009\2192";
+    white-space: nowrap;
+  } */
+
   & blockquote > *:not(footer) {
     padding-left: var(--u-spacing-unit-2);
     border-left: 1px solid var(--c-border-color);
     font-style: italic;
+  }
+
+  & ul,
+  & ol {
+    list-style-position: inside;
   }
 }
 
@@ -46,7 +60,9 @@
 
     @media (--mq-large) {
       grid-column-start: 2;
-      padding-left: var(--u-spacing-unit-2);
+      margin-left: var(--u-spacing-unit-2);
+      padding-top: var(--u-spacing-unit-2);
+      border-top: 1px solid var(--c-border-color);
     }
   }
 }

@@ -9,14 +9,22 @@
 }
 
 .c-bordered-list__item {
+  display: flex;
+  padding-top: var(--u-spacing-unit-2);
+  padding-bottom: var(--u-spacing-unit-2);
+
+  /* &:not(:first-of-type) {
+    padding-top: var(--u-spacing-unit-2);
+  } */
 
   &:not(:last-of-type) {
+    /* padding-bottom: var(--u-spacing-unit-2); */
     border-bottom: 1px solid var(--c-border-color);
   }
 }
 
 
-/* 
+/*
    Bordered list variants
    ========================================================================== */
 

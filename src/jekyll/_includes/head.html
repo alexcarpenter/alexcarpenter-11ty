@@ -7,28 +7,31 @@
 {% seo %}
 <style>
   @font-face {
-    font-family: 'Roboto Mono';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    src: local('Roboto Mono'), local('RobotoMono-Regular'),
-         url('{{ "/assets/fonts/roboto-mono-v4-latin-regular.woff2" | prepend: site.baseurl }}') format('woff2'),
-         url('{{ "/assets/fonts/roboto-mono-v4-latin-regular.woff" | prepend: site.baseurl }}') format('woff');
+    src: local('Roboto'), local('Roboto-Regular'),
+         url('{{ "/fonts/roboto-v16-latin-regular.woff2" | prepend: site.baseurl }}') format('woff2'),
+         url('{{ "/fonts/roboto-v16-latin-regular.woff" | prepend: site.baseurl }}') format('woff');
+    font-display: optional;
   }
   @font-face {
-    font-family: 'Roboto Mono';
+    font-family: 'Roboto';
     font-style: italic;
     font-weight: 400;
-    src: local('Roboto Mono Italic'), local('RobotoMono-Italic'),
-         url('{{ "/assets/fonts/roboto-mono-v4-latin-italic.woff2" | prepend: site.baseurl }}') format('woff2'),
-         url('{{ "/assets/fonts/roboto-mono-v4-latin-italic.woff" | prepend: site.baseurl }}') format('woff');
+    src: local('Roboto Italic'), local('Roboto-Italic'),
+         url('{{ "/fonts/roboto-v16-latin-italic.woff2" | prepend: site.baseurl }}') format('woff2'),
+         url('{{ "/fonts/roboto-v16-latin-italic.woff" | prepend: site.baseurl }}') format('woff');
+    font-display: optional;
   }
   @font-face {
-    font-family: 'Roboto Mono';
+    font-family: 'Roboto';
     font-style: normal;
-    font-weight: 700;
-    src: local('Roboto Mono Bold'), local('RobotoMono-Bold'),
-         url('{{ "/assets/fonts/roboto-mono-v4-latin-700.woff2" | prepend: site.baseurl }}') format('woff2'),
-         url('{{ "/assets/fonts/roboto-mono-v4-latin-700.woff" | prepend: site.baseurl }}') format('woff');
+    font-weight: 900;
+    src: local('Roboto Black'), local('Roboto-Black'),
+         url('{{ "/fonts/roboto-v16-latin-900.woff2" | prepend: site.baseurl }}') format('woff2'),
+         url('{{ "/fonts/roboto-v16-latin-900.woff" | prepend: site.baseurl }}') format('woff');
+    font-display: optional;
   }
 </style>
 <script>
@@ -45,16 +48,16 @@ A.prototype.load=function(a,b){var c=this,k=a||"BESbswy",q=0,D=b||3E3,H=(new Dat
 f&&-1!=g||-1!=f&&-1!=h||-1!=g&&-1!=h)(b=f!=g&&f!=h&&g!=h)||(null===B&&(b=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),B=!!b&&(536>parseInt(b[1],10)||536===parseInt(b[1],10)&&11>=parseInt(b[2],10))),b=B&&(f==v&&g==v&&h==v||f==w&&g==w&&h==w||f==x&&g==x&&h==x)),b=!b;b&&(d.parentNode&&d.parentNode.removeChild(d),clearTimeout(q),a(c))}function I(){if((new Date).getTime()-H>=D)d.parentNode&&d.parentNode.removeChild(d),b(c);else{var a=document.hidden;if(!0===a||void 0===a)f=e.a.offsetWidth,
 g=n.a.offsetWidth,h=p.a.offsetWidth,u();q=setTimeout(I,50)}}var e=new r(k),n=new r(k),p=new r(k),f=-1,g=-1,h=-1,v=-1,w=-1,x=-1,d=document.createElement("div");d.dir="ltr";t(e,L(c,"sans-serif"));t(n,L(c,"serif"));t(p,L(c,"monospace"));d.appendChild(e.a);d.appendChild(n.a);d.appendChild(p.a);document.body.appendChild(d);v=e.a.offsetWidth;w=n.a.offsetWidth;x=p.a.offsetWidth;I();z(e,function(a){f=a;u()});t(e,L(c,'"'+c.family+'",sans-serif'));z(n,function(a){g=a;u()});t(n,L(c,'"'+c.family+'",serif'));
 z(p,function(a){h=a;u()});t(p,L(c,'"'+c.family+'",monospace'))})})};"undefined"!==typeof module?module.exports=A:(window.FontFaceObserver=A,window.FontFaceObserver.prototype.load=A.prototype.load);}());
-  var regular = new FontFaceObserver('Roboto Mono', {
+  var regular = new FontFaceObserver('Roboto', {
     weight: 'normal',
     style: 'normal'
   });
-  var italic = new FontFaceObserver('Roboto Mono', {
+  var italic = new FontFaceObserver('Roboto', {
     weight: 'normal',
     style: 'italic'
   });
-  var semibold = new FontFaceObserver('Roboto Mono', {
-    weight: 700,
+  var semibold = new FontFaceObserver('Roboto', {
+    weight: 900,
     style: 'normal'
   });
   Promise.all([regular.load(), italic.load(), semibold.load()]).then(function () {

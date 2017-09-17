@@ -1,0 +1,12 @@
+<section id="changelog" class="u-margin-bottom-8">
+  <div class="o-wrapper">
+    <h2 class="u-margin-bottom-2 c-heading c-heading--decorate">Changelog</h2>
+    <ul class="c-bordered-list">
+    {% for item in site.data.changelog %}
+      <li class="c-bordered-list__item">
+        {{ item.date }} &ndash; {{ item.text | markdownify }}
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>

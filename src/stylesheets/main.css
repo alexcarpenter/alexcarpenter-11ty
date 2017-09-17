@@ -21,7 +21,13 @@
 
 
 /* COMPONENTS */
-@import 'components/components.bordered-list';
+@import 'components/components.entry';
+@import 'components/components.footer';
+@import 'components/components.intro';
+@import 'components/components.offline';
+@import 'components/components.nav';
+@import 'components/components.section';
+/* @import 'components/components.bordered-list';
 @import 'components/components.card';
 @import 'components/components.entry';
 @import 'components/components.footer';
@@ -32,9 +38,9 @@
 @import 'components/components.post';
 @import 'components/components.prose';
 @import 'components/components.table';
-@import 'components/components.title';
+@import 'components/components.title'; */
 
 
 /* UTILITIES */
-@import 'utilities/utilities.spacing';
+/* @import 'utilities/utilities.spacing'; */
 @import 'utilities/utilities.widths';

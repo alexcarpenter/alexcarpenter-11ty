@@ -1,6 +1,6 @@
 'use strict';
 
-const version = 'v1.0::';
+const version = 'v1.1::';
 const staticCacheName = version + 'static';
 const pagesCacheName = version + 'pages';
 const imagesCacheName = version + 'images';
@@ -14,13 +14,14 @@ function updateStaticCache() {
         .then( cache => {
             // These items must be cached for the Service Worker to complete installation
             return cache.addAll([
+                'http://res.cloudinary.com/alexcarpenter/image/upload/v1505686914/banner_teos6l.jpg',
                 '/assets/js/main.js',
-                '/assets/fonts/roboto-mono-v4-latin-700.woff',
-                '/assets/fonts/roboto-mono-v4-latin-700.woff2',
-                '/assets/fonts/roboto-mono-v4-latin-italic.woff',
-                '/assets/fonts/roboto-mono-v4-latin-italic.woff2',
-                '/assets/fonts/roboto-mono-v4-latin-regular.woff',
-                '/assets/fonts/roboto-mono-v4-latin-regular.woff2'
+                '/assets/fonts/roboto-v16-latin-900.woff',
+                '/assets/fonts/roboto-v16-latin-900.woff2',
+                '/assets/fonts/roboto-v16-latin-italic.woff',
+                '/assets/fonts/roboto-v16-latin-italic.woff2',
+                '/assets/fonts/roboto-v16-latin-regular.woff',
+                '/assets/fonts/roboto-v16-latin-regular.woff2'
             ]);
         });
 }
