@@ -11,6 +11,7 @@
   padding: var(--u-spacing-unit-1);
   background-color: var(--c-primary);
   color: #fff;
+  z-index: 10;
 
   & a {
     text-decoration-color: inherit;
