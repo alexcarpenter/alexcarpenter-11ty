@@ -5,18 +5,10 @@
 
 .c-intro {
   margin-bottom: var(--u-spacing-unit-4);
-
-  @media (--mq-medium) {
-    margin-bottom: var(--u-spacing-unit-8);
-  }
 }
 
 .c-intro--page {
   padding-top: var(--u-spacing-unit-4);
-
-  @media (--mq-medium) {
-    padding-top: var(--u-spacing-unit-8);
-  }
 }
 
 .c-intro__media {
