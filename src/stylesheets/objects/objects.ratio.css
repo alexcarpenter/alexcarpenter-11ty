@@ -29,5 +29,9 @@
 
 
 .o-ratio--16x9:before {
-  padding-bottom: calc((16 / 9) * 100%);
+  padding-bottom: 56.25%;
+}
+
+.o-ratio--4x3:before {
+  padding-bottom: 75%;
 }

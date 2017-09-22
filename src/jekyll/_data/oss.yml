@@ -13,10 +13,10 @@
 
 - title: Butane Side-Nav
   description: >
-
+    A modern side-nav javascript library that makes use of the inert attribute to help assistive technology users navigate webpages.
   github: https://github.com/alexcarpenter/butane-sidenav
   demo: https://alexcarpenter.github.io/butane-sidenav/
-  public: false
+  public: true
 
 - title: Butane Tabs
   description: >

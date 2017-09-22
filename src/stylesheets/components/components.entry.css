@@ -46,7 +46,7 @@
   margin-bottom: var(--u-spacing-unit-1);
 }
 
-.c-entry__title {}
+/* .c-entry__title {} */
 
 .c-entry__excerpt {
   color: #999;

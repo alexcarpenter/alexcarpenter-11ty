@@ -16,11 +16,12 @@
 
 /* OBJECTS */
 @import 'objects/objects.layout';
-@import 'objects/objects.ratio';
+/* @import 'objects/objects.ratio'; */
 @import 'objects/objects.wrapper';
 
 
 /* COMPONENTS */
+@import 'components/components.device';
 @import 'components/components.entry';
 @import 'components/components.footer';
 @import 'components/components.intro';
