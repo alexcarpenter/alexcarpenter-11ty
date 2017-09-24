@@ -9,7 +9,6 @@
   margin-bottom: var(--u-spacing-unit-4);
   padding-bottom: var(--u-spacing-unit-4);
   border-bottom: 1px solid var(--c-border);
-  outline: none;
 }
 
 .c-section__header {
@@ -25,6 +24,7 @@
     white-space: nowrap;
     writing-mode: vertical-rl;
     line-height: 1;
+    outline: none;
   }
 
 .c-section__content {
