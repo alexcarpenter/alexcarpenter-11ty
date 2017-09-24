@@ -20,7 +20,7 @@
 
 - title: Butane Accordion
   description: >
-    A lightweight accessbile JavaScript accodion library.
+    A lightweight accessbile JavaScript accordion library.
   github: https://github.com/alexcarpenter/butane-accordion
   demo: https://alexcarpenter.github.io/butane-accordion/
   public: true

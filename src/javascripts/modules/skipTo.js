@@ -1,5 +1,10 @@
 export default function () {
   const skipTo = document.querySelector('[data-skip-to]')
+
+  if (!skipTo) {
+    return
+  }
+
   const skipToLinks = skipTo.children
   const skipToFirst = skipToLinks[0]
   const skipToLast = skipToLinks[skipToLinks.length - 1]
@@ -8,10 +13,8 @@ export default function () {
     downArrow: 38
   }
 
-  if (skipTo) {
-    skipTo.addEventListener('click', focusElement)
-    skipTo.addEventListener('keydown', bindKeyPress)
-  }
+  skipTo.addEventListener('click', focusElement)
+  skipTo.addEventListener('keydown', bindKeyPress)
 
   function focusElement (event) {
     const target = event.target
