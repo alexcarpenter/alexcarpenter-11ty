@@ -64,26 +64,19 @@ li > {
   }
 }
 
-
-/**
- * Remove default table spacing.
- */
-
-/* table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-} */
+main:focus {
+  outline: none;
+}
 
 a {
   color: currentcolor;
   text-decoration-skip: ink;
-  text-decoration-color: #f30;
+  text-decoration-color: var(--c-primary);
 
   &:hover,
   &:focus {
     text-decoration: none;
-    outline: 1px solid #f30;
+    outline: 1px solid var(--c-primary);
   }
 }
 

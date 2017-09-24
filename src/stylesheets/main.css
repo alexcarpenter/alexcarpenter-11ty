@@ -28,6 +28,7 @@
 @import 'components/components.offline';
 @import 'components/components.nav';
 @import 'components/components.section';
+@import 'components/components.skip-to';
 /* @import 'components/components.bordered-list';
 @import 'components/components.card';
 @import 'components/components.entry';

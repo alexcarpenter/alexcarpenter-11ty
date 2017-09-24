@@ -9,6 +9,7 @@
   margin-bottom: var(--u-spacing-unit-4);
   padding-bottom: var(--u-spacing-unit-4);
   border-bottom: 1px solid var(--c-border);
+  outline: none;
 }
 
 .c-section__header {

@@ -5,7 +5,13 @@
 </head>
 <body>
   <div class="o-wrapper">
-    {{ content }}
+    {% if page.url == "/" %}
+      {% include skip-to/homepage.html %}
+      {% include sections/intro.html %}
+    {% endif %}
+    <main id="main" tabindex="-1">
+      {{ content }}
+    </main>
     {% include footer.html %}
   </div>
   {% include offline.html %}
