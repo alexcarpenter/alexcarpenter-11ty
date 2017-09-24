@@ -49,7 +49,7 @@
         "warnForDuplicates": false,
         "features": {
           "customProperties": {
-            "preserve": true
+            "preserve": false
           },
           "rem": false
         }
