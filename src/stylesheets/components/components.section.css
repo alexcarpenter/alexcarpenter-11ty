@@ -27,7 +27,7 @@
   }
 
 .c-section__content {
-  width: 100%;
+  /* width: 100%; */
   padding-left: var(--u-spacing-unit-1);
 
   @media (--mq-medium) {

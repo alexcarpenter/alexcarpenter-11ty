@@ -6,17 +6,24 @@
 
 - title: Butane Dialog
   description: >
-    A modern lightweight accessible dialog javascript library.
+    A modern lightweight accessible dialog JavaScript library.
   github: https://github.com/alexcarpenter/butane-dialog
   demo: https://alexcarpenter.github.io/butane-dialog/
   public: false
 
 - title: Butane Side-Nav
   description: >
-    A modern side-nav javascript library that makes use of the inert attribute to help assistive technology users navigate webpages.
+    A modern side-nav JavaScript library that makes use of the inert attribute to help assistive technology users navigate webpages.
   github: https://github.com/alexcarpenter/butane-sidenav
   demo: https://alexcarpenter.github.io/butane-sidenav/
-  public: false
+  public: true
+
+- title: Butane Accordion
+  description: >
+    A lightweight accessbile JavaScript accodion library.
+  github: https://github.com/alexcarpenter/butane-accordion
+  demo: https://alexcarpenter.github.io/butane-accordion/
+  public: true
 
 - title: Butane Tabs
   description: >
