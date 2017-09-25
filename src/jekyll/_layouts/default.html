@@ -6,10 +6,9 @@
 <body>
   <div class="o-wrapper">
     {% if page.url == "/" %}
-      {% include skip-to/homepage.html %}
       {% include sections/intro.html %}
     {% endif %}
-    <main id="main" tabindex="-1">
+    <main id="main">
       {{ content }}
     </main>
     {% include footer.html %}
