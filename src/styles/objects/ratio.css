@@ -1,0 +1,44 @@
+/* ==========================================================================
+   OBJECTS/RATIO
+   ========================================================================== */
+
+
+.o-ratio {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.o-ratio:before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+
+/* 
+   Modifiers
+   ========================================================================== */
+
+.o-ratio--4by3:before {
+  padding-bottom: 75%;
+}
+
+.o-ratio--16by9:before {
+  padding-bottom: 56.25%;
+}
+
+
+/**
+ * Fit the content to the aspect ratio
+ */
+
+.o-ratio__content {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

@@ -1,21 +1,11 @@
 ---
 layout: default
 ---
-<section class="u-margin-bottom-8">
-  <div class="o-wrapper">
-    <article class="c-post">
-      <header class="c-post__header">
-        <h1 class="u-margin-bottom-2 c-title">{{ page.title }}</h1>
-        <time class="c-post__time" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
-      </header>
+<article>
+  <header class="c-intro">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+    <h1 class="c-intro__heading">{{ page.title }}</h1>
+  </header>
 
-      <div class="c-prose c-prose--body">
-        {{ page.content }}
-      </div>
-
-      <footer class="c-post__footer">
-        
-      </footer>
-    </article>
-  </div>
-</section>
+  {{ page.content }}
+</article>

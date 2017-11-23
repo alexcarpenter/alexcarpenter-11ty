@@ -1,8 +1,0 @@
-/* ==========================================================================
-   SETTINGS/MEDIA-QUERIES
-   ========================================================================== */
-
-
-@custom-media --mq-small screen and (min-width: 35rem);
-@custom-media --mq-medium screen and (min-width: 48rem);
-@custom-media --mq-large screen and (min-width: 57.75rem);

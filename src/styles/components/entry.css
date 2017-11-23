@@ -1,0 +1,23 @@
+/* ==========================================================================
+   COMPONENTS/ENTRY
+   ========================================================================== */
+
+
+.c-entry {
+
+  &:not(:last-of-type) {
+    margin-bottom: var(--spacing-unit-large);
+    padding-bottom: var(--spacing-unit-large);
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
+.c-entry__header {
+  margin-bottom: var(--spacing-unit-base);
+
+  @media (--mq-from-md) {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+  }
+}

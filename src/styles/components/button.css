@@ -1,0 +1,13 @@
+/* ==========================================================================
+   COMPONENTS/BUTTON
+   ========================================================================== */
+
+
+.c-button {
+  display: inline-flex;
+  padding: var(--spacing-unit-small) var(--spacing-unit-large);
+  background-color: var(--button-background-color);
+  color: var(--button-color);
+  font: inherit;
+  text-decoration: none;
+}

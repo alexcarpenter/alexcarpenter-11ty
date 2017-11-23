@@ -36,7 +36,7 @@ social:
 
 # Collections
 collections:
-  links:
+  work:
     output: true
 
 # Defaults
@@ -45,6 +45,11 @@ defaults:
       type: posts
     values:
       layout: post
+  - scope:
+      type: work
+    values:
+      permalink: /work/:title
+      layout: work
 
 # Pagination
 # pagination:

@@ -1,0 +1,63 @@
+/* ==========================================================================
+   COMPONENTS/TEASER
+   ========================================================================== */
+
+
+.c-teaser {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  padding-top: var(--spacing-unit-large);
+  padding-left: var(--spacing-unit-large);
+  color: #fff;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.c-teaser__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: var(--spacing-unit-large);
+  padding-bottom: var(--spacing-unit-large);
+}
+
+.c-teaser__meta {
+  text-decoration: none;
+}
+
+.c-teaser__figure {
+  margin-top: auto;
+  margin-left: auto;
+  width: 100%;
+  border-top-left-radius: 4px;
+  overflow: hidden;
+}
+
+
+.c-teaser--large {
+
+  @media (--mq-from-md) {
+    flex-direction: row;
+
+    & .c-teaser__header {
+      width: calc(100% * 5 / 12) !important;
+    }
+
+    & .c-teaser__figure {
+      width: calc(100% * 7 / 12) !important;
+    }
+  }
+  
+  @media (--mq-from-lg) {
+    & .c-teaser__title {
+        font-size: 54px;
+    }
+      
+    & .c-teaser__meta {
+      font-size: 24px;
+    }
+  }
+}

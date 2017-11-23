@@ -1,0 +1,28 @@
+/* ==========================================================================
+   COMPONENTS/PROSE
+   ========================================================================== */
+
+
+.c-prose {
+
+  & > * {
+    margin-bottom: 1rem;
+  }
+
+  & p + :--headings {
+    padding-top: 1rem;
+  }
+
+  & h3 {
+    font-size: 24px;
+  }
+
+  & ul,
+  & ol {
+    padding-left: 1.2rem;
+  }
+
+  & ul {
+    list-style-type: square;
+  }
+}

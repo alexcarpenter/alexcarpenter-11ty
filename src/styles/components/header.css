@@ -1,0 +1,30 @@
+/* ==========================================================================
+   COMPONENTS/HEADER
+   ========================================================================== */
+
+
+.c-header {
+  margin-bottom: var(--spacing-unit-large);
+  
+  @media (--mq-from-md) {
+    margin-bottom: var(--spacing-unit-huge);
+  }
+}
+
+.c-header__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: var(--spacing-unit-large);
+  border-bottom: 1px solid var(--border-color);
+
+  @media (--mq-from-md) {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.c-header__title {
+  font-size: 24px;
+}

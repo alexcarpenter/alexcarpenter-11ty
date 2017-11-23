@@ -1,0 +1,20 @@
+/* ==========================================================================
+   COMPONENTS/NAVIGATION
+   ========================================================================== */
+
+
+.c-navigation {
+  
+  @media (--mq-until-md) {
+    margin-top: var(--spacing-unit-base);
+  }
+  
+  & ul {
+    list-style: none;
+    display: flex;
+  }
+
+  & li:not(:first-of-type) {
+    margin-left: var(--spacing-unit-large);
+  }
+}

@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="{% if page.theme %}t-{{ page.theme }}{% endif %}">
 <head>
   {% include head.html %}
 </head>
 <body>
-  <div class="o-wrapper">
-    {% if page.url == "/" %}
-      {% include sections/intro.html %}
-    {% endif %}
-    <main id="main">
-      {{ content }}
-    </main>
-    {% include footer.html %}
-  </div>
-  {% include offline.html %}
-  {% include scripts.html %}
+  {% include header.html %}
+  <main class="o-wrapper">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script>
+    (function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
+    ;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
+    ;c.parentNode.insertBefore(a,c)
+    })(window,document,"galite","script","https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
+    
+    galite('create', 'UA-43034013-1', 'auto');
+    galite('send', 'pageview');
+  </script>
+  <!-- <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}" async></script> -->
 </body>
 </html>
