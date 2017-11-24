@@ -5,9 +5,16 @@
 
 .c-button {
   display: inline-flex;
-  padding: var(--spacing-unit-small) var(--spacing-unit-large);
+  justify-content: center;
+  padding: var(--spacing-unit-base) var(--spacing-unit-large);
+  // background-color: #333;
   background-color: var(--button-background-color);
   color: var(--button-color);
   font: inherit;
   text-decoration: none;
+  text-align: center;
+}
+
+.c-button--secondary {
+  background-color: var(--button-background-color);
 }

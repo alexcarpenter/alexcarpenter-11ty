@@ -21,7 +21,7 @@
 
   --link-border-color: #f30;
 
-  --button-color: inherit;
+  --button-color: #fff;
   --button-background-color: var(--link-border-color);
 
   --wrapper-max-width: 1000px;

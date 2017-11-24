@@ -117,7 +117,7 @@
     padding: 0 calc(0.5 * var(--grid-gutter-size-large));
   }
 
-  @media (--mq-from-md) {
+  @media (--mq-from-lg) {
     margin: 0 calc(-0.5 * var(--grid-gutter-size-huge)) calc(-1 * var(--grid-gutter-size-huge));
     
     & > .o-grid__cell {

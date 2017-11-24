@@ -7,11 +7,9 @@ permalink: /
   <h2 class="c-intro__heading">I’m a front-end developer focused on performance and accessibility.</h2>
 </header>
 
-{% include cta.html %}
-
-<!-- <section class="u-margin-bottom-large u-margin-bottom-huge@md">
+<section class="u-margin-bottom-large u-margin-bottom-huge@md">
   {% include cta.html %}
-</section> -->
+</section>
 
 <!-- <section class="u-margin-bottom-large u-margin-bottom-huge@md">
   <h2 class="u-heading-label">Recent work</h2>
@@ -35,7 +33,7 @@ permalink: /
   </div>
 </section> -->
 
-<!-- <section>
+<section>
   <div class="o-grid o-grid--guttersHuge">
     <div class="o-grid__cell u-width-8of12@md">
       <h2 class="u-heading-label">Lastest blog posts</h2>
@@ -46,7 +44,7 @@ permalink: /
             <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
             <time datetime="{{ post.date | date_to_xmlschema }}">&ndash;&nbsp;{{ post.date | date: "%B %d, %Y" }}</time>
           </header>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor aut, hic incidunt, id, est quos dolorum excepturi dicta doloribus vero impedit ex sit cupiditate doloremque magni ullam autem? Facere, tenetur.</p>
+          <p>{{ post.excerpt }}</p>
         </article>
       {% endfor %}
     </div>
@@ -55,7 +53,7 @@ permalink: /
       <div class="u-margin-bottom-large">
         <h2 class="u-heading-label">Lastest screencast</h2>
 
-        {% include video.html id="7HE_ByY4hDo" %}
+        {% include video.html id="iSaBRUgAXnk" %}
       </div>
 
       <h2 class="u-heading-label">Interviews</h2>
@@ -69,4 +67,4 @@ permalink: /
       </div>
     </div>
   </div>
-</section> -->
+</section>

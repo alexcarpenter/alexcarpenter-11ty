@@ -16,7 +16,7 @@ permalink: /blog/
           <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
           <time datetime="{{ post.date | date_to_xmlschema }}">&ndash;&nbsp;{{ post.date | date: "%B %d, %Y" }}</time>
         </header>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor aut, hic incidunt, id, est quos dolorum excepturi dicta doloribus vero impedit ex sit cupiditate doloremque magni ullam autem? Facere, tenetur.</p>
+        <p>{{ post.excerpt }}</p>
       </article>
     {% endfor %}
   </div>
