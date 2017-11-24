@@ -1,7 +1,7 @@
 ---
 title: "Interview: Ryan Irelan of Mijingo"
 date: 2014-08-13
-excerpt: 
+excerpt: Interview with Ryan Irelan, the creator of Mijingo.com
 tags:
   - Interview
 ---

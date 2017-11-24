@@ -1,7 +1,7 @@
 ---
 title: "Interview: Tim Smith"
 date: 2014-01-16
-excerpt: 
+excerpt: Interview with Tim Smith of brightlycolored.org.com
 tags:
   - Interview
 ---

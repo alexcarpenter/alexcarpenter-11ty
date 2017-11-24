@@ -1,7 +1,7 @@
 ---
 title: "Interview: Harry Roberts of CSS Wizardry"
 date: 2014-01-06
-excerpt: 
+excerpt: Interview with Harry Roberts of csswizardry.com
 tags:
   - Interview
 ---
