@@ -1,0 +1,13 @@
+{
+  "title": "Alex Carpenter",
+  "navigation": [{
+    "label": "Blog",
+    "href": "/blog/"
+  }, {
+    "label": "Screencasts",
+    "href": "/screencasts/"
+  }, {
+    "label": "About",
+    "href": "/about/"
+  }]
+}
