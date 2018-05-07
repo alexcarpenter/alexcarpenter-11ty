@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- {% include 'global/font-loading.liquid' %} -->
+  <link href="https://micro.blog/alexcarpenter" rel="me">
   <link rel="stylesheet" href="/assets/styles/app.css">
   <script src="/assets/scripts/app.js" async></script>
   <title>{{ app.title }}</title>
 </head>
 <body>
   {% include 'global/header.liquid' %}
-  <main>
+  <main class="o-wrapper">
     {% block main -%}
     {%- endblock %}
   </main>

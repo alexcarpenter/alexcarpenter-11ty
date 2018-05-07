@@ -2,7 +2,7 @@ const commonjs = require('rollup-plugin-commonjs')
 const resolve = require('rollup-plugin-node-resolve')
 
 module.exports = {
-  input: 'src/_assets/scripts/app.js',
+  input: 'src/assets/scripts/app.js',
   plugins: [
     resolve({
       browser: true,

@@ -1,0 +1,8 @@
+<header>
+  <h1>{{ title }}</h1>
+  {% if excerpt -%}
+    <div>
+      {{ excerpt | markdownify }}
+    </div>
+  {%- endif %}
+</header>

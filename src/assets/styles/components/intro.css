@@ -1,0 +1,21 @@
+/* ==========================================================================
+   COMPONENTS/INTRO
+   ========================================================================== */
+
+
+.c-intro {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.c-intro__title {
+  font-size: 3rem;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.c-intro__lead {
+  max-width: 66ch;
+  padding-top: 0.5rem;
+  font-size: 1.5rem;
+}

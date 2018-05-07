@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/page",
+  "permalink": "screencasts/{{ page.fileSlug }}.html",
+  "type": "screencast"
+}
