@@ -4,8 +4,7 @@
 
 
 .c-header {
-  padding: 1rem;
-  border-bottom: 1px solid #eee;
+  padding: 2rem;
 }
 
 .c-header__inner {
@@ -14,8 +13,9 @@
   align-items: flex-end;
 }
 
-.c-header [rel="home"] {
+.c-header__lockup a {
   display: block;
+  font-size: 1.3rem;
   font-weight: 900;
   text-decoration: none;
   line-height: 1;

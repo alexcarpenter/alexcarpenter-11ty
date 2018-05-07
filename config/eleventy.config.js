@@ -5,6 +5,14 @@ const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(pluginSyntaxHighlight)
 
+  function parseDate(str) {
+    if (str instanceof Date) {
+      return str
+    }
+    const date = DateTime.fromISO(str, { zone: 'utc' })
+    return date.toJSDate()
+  }
+
   const markdown = require('markdown-it')({
     html: true,
     breaks: true,
@@ -15,7 +23,7 @@ module.exports = eleventyConfig => {
     .use(require('markdown-it-anchor'), {
       permalink: true,
       permalinkClass: 'permalink',
-      permalinkSymbol: '§'
+      permalinkSymbol: '#'
     })
     .use(require('markdown-it-attrs'))
     .use(require('markdown-it-deflist'))
@@ -23,6 +31,18 @@ module.exports = eleventyConfig => {
     .use(require('markdown-it-table-of-contents'))
 
   eleventyConfig.setLibrary('md', markdown)
+
+  eleventyConfig.addCollection('all', collection => {
+    return collection
+      .getFilteredByGlob('**/+(bookmarks|screencasts)/**/!(index)*.md')
+      .reverse()
+  })
+
+  eleventyConfig.addCollection('bookmarks', collection => {
+    return collection
+      .getFilteredByGlob('**/bookmarks/**/!(index)*.md')
+      .reverse()
+  })
 
   eleventyConfig.addCollection('screencasts', collection => {
     return collection
@@ -55,6 +75,26 @@ module.exports = eleventyConfig => {
       /<script.*?<\/script>|<!--.*?-->|<style.*?<\/style>|<.*?>/g,
       ''
     )
+  })
+
+  eleventyConfig.addFilter('date_to_long_string', obj => {
+    const date = parseDate(obj)
+    return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_FULL)
+  })
+
+  eleventyConfig.addFilter('date_to_short_string', obj => {
+    const date = parseDate(obj)
+    return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_SHORT)
+  })
+
+  eleventyConfig.addFilter('datetime_to_long_string', obj => {
+    const date = parseDate(obj)
+    return DateTime.fromJSDate(date).toLocaleString(DateTime.DATETIME_FULL)
+  })
+
+  eleventyConfig.addFilter('datetime_to_iso', obj => {
+    const date = parseDate(obj)
+    return DateTime.fromJSDate(date).toISO()
   })
 
   eleventyConfig.setLiquidOptions({

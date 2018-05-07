@@ -1,7 +1,14 @@
 /* ==========================================================================
-   SETTINGS/CUSTOM-SELECTORS
+   COMPONENTS/ENTRY
    ========================================================================== */
 
 
-@custom-selector :--heading h1, h2, h3, h4, h5, h6;
-@custom-selector :--enter :hover, :focus;
+.c-entry {}
+
+.c-entry__title {
+  font-size: 1.3rem;
+}
+
+.c-entry__footer {
+  font-size: 0.9rem;
+}

@@ -1,0 +1,17 @@
+<article class="c-entry c-entry--bookmark">
+  <header class="c-entry__header">
+    <h3 class="c-entry__title">
+      <a rel="external" href="{{ item.data.link }}">{{ item.data.title | markdownify_inline }}</a>
+    </h3>
+  </header>
+
+  <div class="c-entry__body">
+    {{ item.templateContent }}
+  </div>
+
+  <footer class="c-entry__footer">
+    <a rel="bookmark" href="{{ item.url | permalink }}">
+      <time datetime="{{ item.date | datetime_to_iso }}" aria-label="{{ item.date | date_to_long_string }}">{{ item.date | date_to_short_string }}</time>
+    </a>
+  </footer>
+</article>

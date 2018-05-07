@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/bookmark",
+  "permalink": "bookmarks/{{ page.date | date: '%Y/%m' }}/{{ page.fileSlug }}.html",
+  "type": "bookmark"
+}

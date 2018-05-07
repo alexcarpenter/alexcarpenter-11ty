@@ -8,3 +8,7 @@
   margin-left: auto;
   max-width: 66ch;
 }
+
+.c-prose p + p {
+  text-indent: 2rem;
+}

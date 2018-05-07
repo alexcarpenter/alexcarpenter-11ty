@@ -1,8 +1,9 @@
 {%- layout 'layouts/default.liquid' -%}
+{%- assign entrytype = type | prepend: 'entry/' | append: '.liquid' -%}
 {% block main -%}
   {%- include 'components/intro.liquid' -%}
   {{ content }}
   {% for item in pagination.items -%}
-    <a rel="bookmark" href="{{ item.url | permalink }}">{{ item.data.title | markdownify_inline }}</a>
+    {%- include entrytype %}
   {%- endfor -%}
 {%- endblock %}

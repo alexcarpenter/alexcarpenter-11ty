@@ -33,6 +33,16 @@ fieldset, legend {
   padding: 0;
 }
 
-h1, h2, h3 {
+:--heading {
   font-weight: 900;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: #2E6BFB;
+  transition: color ease-in-out 0.2s;
+}
+
+a:--enter {
+  color: #2E6BFB;
 }
