@@ -1,6 +1,6 @@
 ---
+layout: layouts/index
 title: Screencasts
-layout: layouts/page
 excerpt: Weekly web development screencasts about HTML, CSS, and Javascript.
 type: screencast
 pagination:

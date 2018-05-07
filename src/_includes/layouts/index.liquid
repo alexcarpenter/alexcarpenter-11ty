@@ -1,0 +1,8 @@
+{%- layout 'layouts/default.liquid' -%}
+{% block main -%}
+  {%- include 'components/intro.liquid' -%}
+  {{ content }}
+  {% for item in pagination.items -%}
+    <a rel="bookmark" href="{{ item.url | permalink }}">{{ item.data.title | markdownify_inline }}</a>
+  {%- endfor -%}
+{%- endblock %}

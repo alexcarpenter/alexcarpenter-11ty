@@ -1,9 +1,6 @@
 /* ==========================================================================
-   APP
+   SETTINGS/CUSTOM-MEDIA
    ========================================================================== */
 
 
-@import './settings/*.css';
-@import './generic/*.css';
-@import './objects/*.css';
-@import './components/*.css';
+@custom-media --small-viewport (min-width: 30em);

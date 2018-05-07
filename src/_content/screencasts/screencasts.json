@@ -1,5 +1,5 @@
 {
-  "layout": "layouts/page",
+  "layout": "layouts/screencast",
   "permalink": "screencasts/{{ page.fileSlug }}.html",
   "type": "screencast"
 }

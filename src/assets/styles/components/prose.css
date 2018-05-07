@@ -1,9 +1,10 @@
 /* ==========================================================================
-   APP
+   COMPONENTS/PROSE
    ========================================================================== */
 
 
-@import './settings/*.css';
-@import './generic/*.css';
-@import './objects/*.css';
-@import './components/*.css';
+.c-prose {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 66ch;
+}

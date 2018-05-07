@@ -3,17 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://micro.blog/alexcarpenter" rel="me">
+  <meta property="og:title" content="{% if title != '' %}{{ title | markdownify_inline | strip_html }}{% else %}{{ app.title }}{% endif %}">
+  <meta property="og:description" content="{% if excerpt %}{{ excerpt | markdownify | strip_html | strip_newlines }}{% elsif content %}{{ content | strip_html | strip_newlines | truncate: 200 }}{% else %}{{ app.description }}{% endif %}">
+  <meta property="og:url" content="{% if link %}{{ link }}{% else %}{{ page.url | prepend: app.url | permalink }}{% endif %}">
+  <meta name="twitter:creator" content="{% if creator %}@{{ creator }}{% else %}@hybrid_alex{% endif %}">
+  <meta name="twitter:site" content="@hybrid_alex">
+
+  <link rel="preload" href="/assets/fonts/roboto-v16-latin-regular.woff2" type="font/woff2" as="font" crossorigin/>
+  <link rel="preload" href="/assets/fonts/roboto-v16-latin-900.woff2" type="font/woff2" as="font" crossorigin/>
   <link rel="stylesheet" href="/assets/styles/app.css">
+
   <script src="/assets/scripts/app.js" async></script>
-  <title>{{ app.title }}</title>
+
+  <title>{% if title != '' %}{{ title | markdownify_inline | strip_html }} – {% endif %}{{ app.title }}</title>
 </head>
 <body>
-  {% include 'global/header.liquid' %}
+  {% include 'components/header.liquid' %}
   <main class="o-wrapper">
     {% block main -%}
     {%- endblock %}
   </main>
-  {% include 'global/footer.liquid' %}
+  {% include 'components/footer.liquid' %}
 </body>
 </html>
