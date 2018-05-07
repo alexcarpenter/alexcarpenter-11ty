@@ -1,0 +1,22 @@
+/* ==========================================================================
+   COMPONENTS/HEADER
+   ========================================================================== */
+
+
+.c-header {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.c-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.c-header [rel="home"] {
+  display: block;
+  font-weight: 900;
+  text-decoration: none;
+  line-height: 1;
+}

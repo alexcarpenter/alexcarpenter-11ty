@@ -1,0 +1,38 @@
+/* ==========================================================================
+   GENERIC/BASE
+   ========================================================================== */
+
+
+html {
+  box-sizing: border-box;
+  font-size: 125%;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+}

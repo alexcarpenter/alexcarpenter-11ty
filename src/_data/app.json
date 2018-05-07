@@ -1,0 +1,12 @@
+{
+  "title": "Alex Carpenter",
+  "description": "Front-end Web Developer",
+  "url": "https://v4.alexcarpenter.me",
+  "navigation": [{
+    "label": "Screencasts",
+    "href": "/screencasts/"
+  }, {
+    "label": "About",
+    "href": "/about/"
+  }]
+}
