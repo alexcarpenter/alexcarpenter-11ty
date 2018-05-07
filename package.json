@@ -17,7 +17,8 @@
     "watch:scripts": "rollup --config config/rollup.config.js --watch",
     "build:styles": "postcss src/assets/styles/app.css -o www/assets/styles/app.css --config config/postcss.config.js",
     "watch:styles": "postcss src/assets/styles/app.css -o www/assets/styles/app.css --config config/postcss.config.js --watch",
-    "debug": "DEBUG=* npx eleventy"
+    "debug": "DEBUG=* npx eleventy",
+    "deploy": "push-dir --dir=www --branch=gh-pages"
   },
   "devDependencies": {
     "@11ty/eleventy": "github:11ty/eleventy",
@@ -42,6 +43,7 @@
     "postcss-custom-selectors": "^4.0.1",
     "postcss-easy-import": "^3.0.0",
     "postcss-logical": "^1.1.1",
+    "push-dir": "^0.4.1",
     "rollup": "^0.58.2",
     "rollup-plugin-commonjs": "^9.1.3",
     "rollup-plugin-node-resolve": "^3.3.0",
