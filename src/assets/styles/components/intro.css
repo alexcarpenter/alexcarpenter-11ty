@@ -16,5 +16,7 @@
 }
 
 .c-intro__lead {
+  max-width: 55ch;
   font-size: 1.5rem;
+  font-weight: 400;
 }
