@@ -4,9 +4,15 @@
   "url": "https://v4.alexcarpenter.me",
   "navigation": [{
     "label": "Screencasts",
-    "href": "/screencasts/"
+    "href": "/screencasts/",
+    "type": "screencast"
+  }, {
+    "label": "Notes",
+    "href": "/notes/",
+    "type": "note"
   }, {
     "label": "Bookmarks",
-    "href": "/bookmarks/"
+    "href": "/bookmarks/",
+    "type": "bookmark"
   }]
 }

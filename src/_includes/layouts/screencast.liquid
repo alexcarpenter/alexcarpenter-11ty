@@ -1,6 +1,6 @@
 {%- layout 'layouts/default.liquid' -%}
 {% block main -%}
   {%- include 'components/intro.liquid' -%}
-  {%- include 'components/video.liquid' ratio: '16/9' -%}
+  {% include 'components/video.liquid', url: link, title: title %}
   {{ content }}
 {%- endblock %}

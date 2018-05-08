@@ -9,6 +9,9 @@
   font-size: 1.3rem;
 }
 
-.c-entry__footer {
-  font-size: 0.9rem;
+.c-entry__title [rel='external']:after {
+  display: inline-block;
+  font-weight: normal;
+  color: #bbb;
+  content: '\2009\2192';
 }

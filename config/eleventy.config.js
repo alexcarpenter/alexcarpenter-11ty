@@ -34,13 +34,19 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addCollection('all', collection => {
     return collection
-      .getFilteredByGlob('**/+(bookmarks|screencasts)/**/!(index)*.md')
+      .getFilteredByGlob('**/+(bookmarks|notes|screencasts)/**/!(index)*.md')
       .reverse()
   })
 
   eleventyConfig.addCollection('bookmarks', collection => {
     return collection
       .getFilteredByGlob('**/bookmarks/**/!(index)*.md')
+      .reverse()
+  })
+
+  eleventyConfig.addCollection('notes', collection => {
+    return collection
+      .getFilteredByGlob('**/notes/**/!(index)*.md')
       .reverse()
   })
 

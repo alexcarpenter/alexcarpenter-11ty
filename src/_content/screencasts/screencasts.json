@@ -1,5 +1,6 @@
 {
   "layout": "layouts/screencast",
-  "permalink": "screencasts/{{ page.fileSlug }}.html",
+  "permalink": "screencasts/{{ page.date | date: '%Y/%m' }}/{{ page.fileSlug }}.html",
+  "embed": true,
   "type": "screencast"
 }

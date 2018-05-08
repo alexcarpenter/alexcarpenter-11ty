@@ -13,3 +13,5 @@
 .c-nav__list-item:not(:last-of-type) {
   margin-right: 1rem;
 }
+
+.c-nav__list-anchor[aria-current='page'] {}

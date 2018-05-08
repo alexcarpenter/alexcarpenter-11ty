@@ -3,4 +3,4 @@
    ========================================================================== */
 
 
-@custom-media --small-viewport (min-width: 30em);
+@custom-media --small-viewport (min-width: 720px);

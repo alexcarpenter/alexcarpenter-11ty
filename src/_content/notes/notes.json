@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/note",
+  "permalink": "notes/{{ page.date | date: '%Y/%m/%d-%H%M' }}.html",
+  "type": "note"
+}

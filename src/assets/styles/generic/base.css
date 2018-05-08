@@ -15,8 +15,10 @@ html {
 
 body {
   margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.5;
+  padding: 3rem 1rem;
+  max-width: calc(1000px + 2rem);
+  font-family: 'Roboto', system-ui, sans-serif;
+  line-height: 1.3;
 }
 
 img {
@@ -39,10 +41,10 @@ fieldset, legend {
 
 a {
   color: inherit;
-  text-decoration-color: #2E6BFB;
+  text-decoration-color: #bbb;
   transition: color ease-in-out 0.2s;
 }
 
-a:--enter {
-  color: #2E6BFB;
-}
+/* a:--enter {
+  color: #ccc;
+} */

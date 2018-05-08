@@ -1,5 +1,8 @@
 <header class="c-intro">
-  <h1 class="c-intro__title">{{ title }}</h1>
+  {% if title != '' -%}
+    <h1 class="c-intro__title">{{ title }}</h1>
+  {%- endif %}
+
   {% if excerpt -%}
     <div class="c-intro__lead">
       {{ excerpt | markdownify }}

@@ -4,6 +4,6 @@
   {%- include 'components/intro.liquid' -%}
   {{ content }}
   {% for item in pagination.items -%}
-    {%- include entrytype %}
+    {%- include 'components/entry.liquid' %}
   {%- endfor -%}
 {%- endblock %}

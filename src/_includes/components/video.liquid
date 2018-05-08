@@ -1,3 +1,14 @@
-<div style="--aspect-ratio: {{ ratio }};">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video }}?showinfo=0" frameborder="0" allowfullscreen=""></iframe>
-</div>
+{%- assign src = url -%}
+{%- unless ratio -%}
+  {%- assign ratio = '16/9' -%}
+{%- endunless -%}
+{%- if src contains 'vimeo' -%}
+  {%- assign action = 'Watch on Vimeo' -%}
+  {%- capture src %}{{ url | replace: 'vimeo.com','player.vimeo.com/video' }}?color={{ app.theme_color | replace: '#','' }}&title=0&byline=0&badge=0&portrait=0{% endcapture -%}
+{%- elsif src contains 'youtube' -%}
+  {%- assign action = 'Watch on YouTube' -%}
+  {%- capture src %}{{ url | replace: 'www.youtube.com/video','www.youtube-nocookie.com/embed' }}?showinfo=0&rel=0&modestbranding=1{% endcapture -%}
+{%- else -%}
+  {%- assign action = 'Visit' -%}
+{%- endif -%}
+<a href="{{ url }}" data-embed-src="{{ src }}" data-embed-ratio="{{ ratio }}">{{ action }}: ’{{ title }}’</a>

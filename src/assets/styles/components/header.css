@@ -4,13 +4,10 @@
 
 
 .c-header {
-  padding: 2rem;
-}
-
-.c-header__inner {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: flex-end;
+  justify-content: space-between;
 }
 
 .c-header__lockup a {
@@ -18,5 +15,4 @@
   font-size: 1.3rem;
   font-weight: 900;
   text-decoration: none;
-  line-height: 1;
 }
