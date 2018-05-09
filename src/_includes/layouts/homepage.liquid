@@ -1,16 +1,12 @@
 {%- layout 'layouts/default.liquid' -%}
 {% block main -%}
-  <div class="c-banner">
-    <div class="c-banner__intro">
-      <h1>I’m a front-end web developer focused on performance and accessibility.</h1>
+  <div class="c-billboard">
+    <div class="c-billboard__content">
+      <h1 class="c-billboard__headline">I’m a front-end web developer focused on performance and accessibility.</h1>
     </div>
 
-    <div class="c-banner__media" style="--aspect-ratio: 4/3;">
+    <div class="c-billboard__media" style="--aspect-ratio: 4/3;">
       <img src="/assets/images/billboard-background.jpg" alt="">
     </div>
-  </div>
-  <!-- {%- include 'components/intro.liquid' -%} -->
-  <div class="c-prose">
-    {{ content }}
   </div>
 {%- endblock %}

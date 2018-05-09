@@ -14,11 +14,16 @@
 .c-intro__title:after {
   content: '\2009\00AC';
   display: inline-block;
-  color: var(--body-color);
+  color: currentColor;
   opacity: 0.5;
+}
+
+.c-intro__headline {
+  font-size: 2rem;
 }
 
 .c-intro__lead {
   max-width: 55ch;
   font-size: 1.5rem;
+  color: #aaa;
 }

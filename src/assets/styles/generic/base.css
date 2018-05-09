@@ -81,28 +81,3 @@ kbd {
   background-color: #111;
   border-radius: 4px;
 }
-
-.c-banner {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.c-banner__intro {
-  grid-column: 1 / span 2;
-  grid-row: 1;
-  display: flex;
-  align-items: flex-end;
-  padding-left: 3rem;
-  padding-bottom: 3rem;
-  z-index: 10;
-}
-
-.c-banner__intro h1 {
-  font-weight: 400;
-}
-
-.c-banner__media {
-  grid-column: 1 / span 3;
-  grid-row: 1;
-  opacity: 0.5;
-}

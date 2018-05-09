@@ -11,6 +11,7 @@
 @supports (--custom:property) {
   [style*="--aspect-ratio"] {
     position: relative;
+    background-color: #000;
   }
 
   [style*="--aspect-ratio"]::before {

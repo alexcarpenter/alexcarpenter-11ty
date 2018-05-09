@@ -18,6 +18,6 @@
   text-decoration-color: transparent;
 }
 
-.c-header [rel='home']:--enter {
-  text-decoration-color: var(--text-decoration-color);
+.c-header__lockup span {
+  color: #aaa;
 }

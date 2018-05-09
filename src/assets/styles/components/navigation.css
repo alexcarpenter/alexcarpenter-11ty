@@ -3,7 +3,7 @@
    ========================================================================== */
 
 
-.c-navigation {}
+/* .c-navigation {} */
 
 .c-navigation__list {
   display: flex;
@@ -15,9 +15,13 @@
   margin-right: 1rem;
 }
 
+.c-navigation__list-anchor {
+  color: #fff;
+}
+
 .c-navigation__list-anchor:after {
   content: '\2009\00AC';
   display: inline-block;
-  color: var(--body-color);
+  color: currentColor;
   opacity: 0.5;
 }
