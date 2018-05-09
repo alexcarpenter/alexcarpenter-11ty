@@ -18,7 +18,8 @@
     "build:styles": "postcss src/assets/styles/app.css -o www/assets/styles/app.css --config config/postcss.config.js",
     "watch:styles": "postcss src/assets/styles/app.css -o www/assets/styles/app.css --config config/postcss.config.js --watch",
     "debug": "DEBUG=* npx eleventy",
-    "deploy": "push-dir --dir=www --branch=master"
+    "deploy": "push-dir --dir=www --branch=master",
+    "clean": "rm -rf www"
   },
   "devDependencies": {
     "@11ty/eleventy": "github:11ty/eleventy",

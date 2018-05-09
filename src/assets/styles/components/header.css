@@ -5,14 +5,19 @@
 
 .c-header {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
 }
 
-.c-header__lockup a {
+.c-header [rel='home'] {
   display: block;
   font-size: 1.3rem;
   font-weight: 900;
-  text-decoration: none;
+  text-decoration-color: transparent;
+}
+
+.c-header [rel='home']:--enter {
+  text-decoration-color: #ccc;
 }

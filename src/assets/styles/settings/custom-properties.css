@@ -4,5 +4,7 @@
 
 
 :root {
-
+  --font-family-sans: 'Roboto', system-ui, sans-serif;
+  --font-family-system: system-ui, sans-serif;
+  --font-family-monospace: Consolas, monaco, monospace;
 }

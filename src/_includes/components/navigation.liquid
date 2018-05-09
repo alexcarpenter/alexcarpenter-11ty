@@ -1,0 +1,7 @@
+<nav class="c-navigation">
+  <ul class="c-navigation__list">
+  {%- for item in app.navigation %}
+    <li class="c-navigation__list-item"><a class="c-navigation__list-anchor" href="{{ item.href }}"{% if item.type contains type %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+  {%- endfor %}
+  </ul>
+</nav>

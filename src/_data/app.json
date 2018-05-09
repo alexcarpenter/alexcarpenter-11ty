@@ -2,6 +2,24 @@
   "title": "Alex Carpenter",
   "description": "Front-end Web Developer",
   "url": "https://v4.alexcarpenter.me",
+  "author": {
+    "name": "Alex Carpenter",
+    "url": "https://alexcarpenter.me",
+    "email": "im.alexcarpenter@gmail.com",
+    "social": [{
+      "label": "GitHub",
+      "url": "https://github.com/alexcarpenter"
+    },{
+      "label": "Twitter",
+      "url": "https://twitter.com/hybrid_alex"
+    },{
+      "label": "YouTube",
+      "url": "https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg"
+    },{
+      "label": "Codepen",
+      "url": "https://codepen.io/alexcarpenter"
+    }]
+  },
   "navigation": [{
     "label": "Screencasts",
     "href": "/screencasts/",

@@ -3,4 +3,22 @@
    ========================================================================== */
 
 
-.c-footer {}
+.c-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.c-footer__social {
+  display: flex;
+  align-items: center;
+}
+
+.c-footer__social a {
+  text-decoration: none;
+}
+
+.c-footer__social a:not(:last-of-type) {
+  margin-right: 1rem;
+}

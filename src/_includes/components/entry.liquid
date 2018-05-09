@@ -13,7 +13,7 @@
 
   <div class="c-entry__body">
     {% if embed -%}
-      {% include 'components/video.liquid', url: item.data.link, title: item.data.title %}
+      {% include 'embed.liquid', url: item.data.link, title: item.data.title %}
     {%- endif %}
 
     {%- if item.data.excerpt -%}

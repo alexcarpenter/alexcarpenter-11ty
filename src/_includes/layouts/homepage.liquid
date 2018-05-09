@@ -1,6 +1,7 @@
 {%- layout 'layouts/default.liquid' -%}
 {% block main -%}
   {%- include 'components/intro.liquid' -%}
-  {% include 'embed.liquid', url: link, title: title %}
-  {{ content }}
+  <div class="c-prose">
+    {{ content }}
+  </div>
 {%- endblock %}

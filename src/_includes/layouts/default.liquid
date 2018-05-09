@@ -18,11 +18,11 @@
   <title>{% if title != '' %}{{ title | markdownify_inline | strip_html }} – {% endif %}{{ app.title }}</title>
 </head>
 <body>
-  {% include 'components/header.liquid' %}
+  {%- include 'components/header.liquid' -%}
   <main>
     {% block main -%}
     {%- endblock %}
   </main>
-  {% include 'components/footer.liquid' %}
+  {%- include 'components/footer.liquid' -%}
 </body>
 </html>

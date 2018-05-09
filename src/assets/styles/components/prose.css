@@ -3,12 +3,20 @@
    ========================================================================== */
 
 
-.c-prose {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 66ch;
+.c-prose > *:not(img) {
+  max-width: 60ch;
 }
 
-.c-prose p + p {
-  text-indent: 2rem;
+.c-prose > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.c-prose :--heading {
+  position: relative;
+  padding-top: 1rem;
+}
+
+.c-prose blockquote {
+  padding-left: 1rem;
+  border-left: 1px solid #eee;
 }
