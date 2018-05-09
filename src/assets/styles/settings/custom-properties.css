@@ -7,4 +7,7 @@
   --font-family-sans: 'Roboto', system-ui, sans-serif;
   --font-family-system: system-ui, sans-serif;
   --font-family-monospace: Consolas, monaco, monospace;
+  --body-background-color: #000;
+  --body-color: #fff;
+  --text-decoration-color: rgba(255, 255, 255, 0.5);
 }

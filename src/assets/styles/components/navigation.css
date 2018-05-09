@@ -18,5 +18,6 @@
 .c-navigation__list-anchor:after {
   content: '\2009\00AC';
   display: inline-block;
-  color: #aaa;
+  color: var(--body-color);
+  opacity: 0.5;
 }

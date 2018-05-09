@@ -19,5 +19,5 @@
 }
 
 .c-header [rel='home']:--enter {
-  text-decoration-color: #ccc;
+  text-decoration-color: var(--text-decoration-color);
 }

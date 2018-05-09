@@ -14,7 +14,8 @@
 .c-intro__title:after {
   content: '\2009\00AC';
   display: inline-block;
-  color: #aaa;
+  color: var(--body-color);
+  opacity: 0.5;
 }
 
 .c-intro__lead {
