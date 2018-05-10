@@ -16,7 +16,8 @@
   padding-top: 1rem;
 }
 
-.c-prose blockquote {
+.c-prose blockquote:not([class]) {
   padding-left: 1rem;
+  font-style: italic;
   border-left: 1px solid #eee;
 }

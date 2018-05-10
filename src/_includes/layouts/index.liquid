@@ -5,5 +5,4 @@
     {%- assign entrytype = item.data.type | prepend: 'entry/' | append: '.liquid' -%}
     {%- include entrytype %}
   {%- endfor -%}
-  {%- include 'components/pagination.liquid' %}
 {%- endblock %}
