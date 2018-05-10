@@ -1,5 +1,7 @@
 const commonjs = require('rollup-plugin-commonjs')
 const resolve = require('rollup-plugin-node-resolve')
+const uglify = require('rollup-plugin-uglify')
+
 
 module.exports = {
   input: 'src/assets/scripts/app.js',
@@ -9,12 +11,13 @@ module.exports = {
       jsnext: true,
       main: true
     }),
-    commonjs()
+    commonjs(),
+    uglify()
   ],
   output: {
     file: 'www/assets/scripts/app.js',
     format: 'iife',
-    sourcemap: true,
+    sourcemap: false,
     name: 'app'
   }
 }
