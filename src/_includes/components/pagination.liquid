@@ -1,1 +1,16 @@
-<nav class="c-pagination"></nav>
+<nav class="c-pagination">
+  {% if pagination.nextPageLink -%}
+    {%- assign nextPageNumber = pagination.pageNumber | plus: 1 -%}
+    {%- assign nextPageLink = nextPageNumber | prepend: 'page/' -%}
+    <a class="c-pagination__item" href="{{ page.url }}{{ nextPageLink }}" rel="prev">Older</a>
+  {%- endif %}
+  {% if pagination.previousPageLink -%}
+    {%- assign previousPageNumber = pagination.pageNumber | minus: 1 -%}
+  {%- if pagination.pageNumber == 1 -%}
+    {%- assign previousPageLink = page.url -%}
+  {%- else -%}
+    {%- assign previousPageLink = previousPageNumber | prepend: 'page/' -%}
+  {%- endif -%}
+    <a class="c-pagination__item" href="{{ page.url }}{{ previousPageLink }}" rel="next">Newer</a>
+  {%- endif %}
+</nav>

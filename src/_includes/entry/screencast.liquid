@@ -1,6 +1,11 @@
+{%- if forloop.index > 2 -%}
+  {%- assign lazyload = true -%}
+{%- else -%}
+  {%- assign lazyload = false -%}
+{%- endif -%}
 <article class="c-entry c-entry--screencast">
   <div class="c-entry__embed">
-    {% include 'video.liquid', url: item.data.video, lazyload: true %}
+    {% include 'video.liquid', url: item.data.video, lazyload: lazyload %}
   </div>
 
   <header class="c-entry__header">
