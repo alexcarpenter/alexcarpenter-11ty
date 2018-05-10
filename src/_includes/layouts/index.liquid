@@ -1,9 +1,9 @@
 {%- layout 'layouts/default.liquid' -%}
-{%- assign entrytype = type | prepend: 'entry/' | append: '.liquid' -%}
 {% block main -%}
   {%- include 'components/intro.liquid' -%}
-  {{ content }}
   {% for item in pagination.items -%}
-    {%- include 'components/entry.liquid' %}
+    {%- assign entrytype = item.data.type | prepend: 'entry/' | append: '.liquid' -%}
+    {%- include entrytype %}
   {%- endfor -%}
+  {%- include 'components/pagination.liquid' %}
 {%- endblock %}

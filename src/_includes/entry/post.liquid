@@ -1,21 +1,13 @@
-<article class="c-entry c-entry--{{ type }}">
+<article class="c-entry c-entry--post">
   {% if item.data.title != '' -%}
     <header class="c-entry__header">
       <h3 class="c-entry__title">
-        {% if type == 'bookmark' -%}
-          <a rel="external" href="{{ item.data.link }}">{{ item.data.title | markdownify_inline }}</a>
-        {% else %}
-          <a rel="bookmark" href="{{ item.url | permalink }}">{{ item.data.title | markdownify_inline }}</a>
-        {%- endif %}
+        <a rel="bookmark" href="{{ item.url | permalink }}">{{ item.data.title | markdownify_inline }}</a>
       </h3>
     </header>
   {%- endif %}
 
   <div class="c-entry__body">
-    {% if embed -%}
-      {% include 'embed.liquid', url: item.data.link, title: item.data.title %}
-    {%- endif %}
-
     {%- if item.data.excerpt -%}
       {{ item.data.excerpt }}
     {%- else -%}

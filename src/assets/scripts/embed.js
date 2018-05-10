@@ -1,3 +1,4 @@
+// <a href="[url]" data-embed-src="[embed url]" data-embed-ratio="[ratio]">[Fallback text]</a>
 export default function embed() {
   const embeds = document.querySelectorAll('[data-embed-src]')
 

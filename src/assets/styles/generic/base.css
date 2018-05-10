@@ -5,8 +5,13 @@
 
 html {
   box-sizing: border-box;
-  font-size: 125%;
   -webkit-font-smoothing: antialiased;
+}
+
+@media (--from-small-viewport) {
+  html {
+    font-size: 125%;
+  }
 }
 
 *, *:before, *:after {
@@ -18,20 +23,20 @@ body {
   flex-direction: column;
   margin: 0 auto;
   padding: 3rem 1rem;
-  max-width: calc(1000px + 2rem);
+  max-width: calc(900px + 2rem);
   min-height: 100vh;
   font-family: 'Roboto', system-ui, sans-serif;
   line-height: 1.3;
-  background-color: var(--body-background-color);
-  color: var(--body-color);
 }
 
 main {
   margin-bottom: 3rem;
 }
 
-img {
+img,
+svg {
   max-width: 100%;
+  vertical-align: middle;
 }
 
 :--heading {

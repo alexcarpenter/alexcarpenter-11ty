@@ -1,6 +1,6 @@
 {%- layout 'layouts/default.liquid' -%}
 {% block main -%}
-  {%- include 'components/intro.liquid' -%}
-  {% include 'embed.liquid', url: link, title: title %}
+  {% include 'video.liquid', url: video %}
+  {%- include 'components/intro.liquid' heading: true -%}
   {{ content }}
 {%- endblock %}

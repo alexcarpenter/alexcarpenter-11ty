@@ -1,3 +1,1 @@
-import embed from './embed'
-
-embed()
+import 'lazysizes'

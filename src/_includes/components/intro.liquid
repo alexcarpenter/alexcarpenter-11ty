@@ -1,6 +1,12 @@
+{%- if heading -%}
+  {%- assign display = 'heading' -%}
+{%- else -%}
+  {%- assign display = 'title' -%}
+{%- endif -%}
+
 <header class="c-intro">
   {% if title != '' -%}
-    <h1 class="c-intro__title">{{ title }}</h1>
+    <h1 class="c-intro__{{ display }}">{{ title }}</h1>
   {%- endif %}
 
   {% if excerpt -%}

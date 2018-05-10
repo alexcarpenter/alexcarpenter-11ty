@@ -15,9 +15,9 @@
   margin-right: 1rem;
 }
 
-.c-navigation__list-anchor {
+/* .c-navigation__list-anchor {
   color: #fff;
-}
+} */
 
 .c-navigation__list-anchor:after {
   content: '\2009\00AC';

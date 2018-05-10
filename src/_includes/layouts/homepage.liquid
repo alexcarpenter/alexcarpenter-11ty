@@ -1,12 +1,8 @@
 {%- layout 'layouts/default.liquid' -%}
 {% block main -%}
-  <div class="c-billboard">
-    <div class="c-billboard__content">
-      <h1 class="c-billboard__headline">I’m a front-end web developer focused on performance and accessibility.</h1>
-    </div>
-
-    <div class="c-billboard__media" style="--aspect-ratio: 4/3;">
-      <img src="/assets/images/billboard-background.jpg" alt="">
-    </div>
-  </div>
+  {%- include 'components/intro.liquid' -%}
+  {% for item in collections.all limit: 10 -%}
+    {%- assign entrytype = item.data.type | prepend: 'entry/' | append: '.liquid' -%}
+    {%- include entrytype %}
+  {%- endfor -%}
 {%- endblock %}

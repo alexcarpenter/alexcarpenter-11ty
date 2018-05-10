@@ -8,7 +8,7 @@
     "not op_mini all"
   ],
   "scripts": {
-    "build": "npm run build:styles && npm run build:scripts && npm run build:files",
+    "build": "npm run clean && npm run build:styles && npm run build:scripts && npm run build:files",
     "watch": "npm-run-all --parallel serve watch:*",
     "serve": "browser-sync start --config config/browsersync.config.js",
     "build:files": "eleventy --config config/eleventy.config.js --quiet",
@@ -27,6 +27,7 @@
     "autoprefixer": "^8.4.1",
     "browser-sync": "^2.24.4",
     "cssnano": "^3.10.0",
+    "lazysizes": "^4.0.2",
     "luxon": "^1.2.0",
     "markdown-it": "^8.4.1",
     "markdown-it-abbr": "^1.0.4",

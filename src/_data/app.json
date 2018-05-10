@@ -25,9 +25,9 @@
     "href": "/screencasts/",
     "type": "screencast"
   }, {
-    "label": "Notes",
-    "href": "/notes/",
-    "type": "note"
+    "label": "Posts",
+    "href": "/posts/",
+    "type": "post"
   }, {
     "label": "Bookmarks",
     "href": "/bookmarks/",

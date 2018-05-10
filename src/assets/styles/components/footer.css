@@ -9,6 +9,8 @@
   align-items: center;
   flex-wrap: wrap;
   margin-top: auto;
+  padding-top: 3rem;
+  border-top: 1px solid #eee;
 }
 
 .c-footer__social {
@@ -19,8 +21,4 @@
 .c-footer__social a {
   margin-right: 1rem;
   text-decoration: none;
-}
-
-.c-footer__copy {
-  color: #aaa;
 }

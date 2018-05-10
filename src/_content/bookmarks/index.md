@@ -1,7 +1,7 @@
 ---
 layout: layouts/index
 title: Bookmarks
-excerpt:
+excerpt: Collecting useful web development links and resources for my future self.
 type: bookmark
 pagination:
   data: collections.bookmarks

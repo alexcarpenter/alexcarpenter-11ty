@@ -1,0 +1,8 @@
+{%- assign src = url -%}
+<div style="--aspect-ratio: 16/9;">
+  {%- if lazyload -%}
+    <iframe frameborder="0" class="lazyload" allowfullscreen="" data-src="{{ src }}"></iframe>
+  {%- else -%}
+    <iframe frameborder="0" allowfullscreen="" src="{{ src }}"></iframe>
+  {%- endif -%}
+</div>
