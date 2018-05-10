@@ -4,10 +4,11 @@
 
 
 :root {
-  --font-family-sans: 'Roboto', system-ui, sans-serif;
-  --font-family-system: system-ui, sans-serif;
+  --font-family-sans: 'Roboto', Helvetica, Arial, sans-serif;
+  --font-family-system: system-ui, Helvetica, Arial, sans-serif;
   --font-family-monospace: Consolas, monaco, monospace;
   --body-background-color: #fff;
   --body-color: #000;
+  --color-primary: #35bc60;
   --text-decoration-color: #aaa;
 }

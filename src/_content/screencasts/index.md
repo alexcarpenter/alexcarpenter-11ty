@@ -1,7 +1,7 @@
 ---
 layout: layouts/index
 title: Screencasts
-excerpt: Weekly web development screencasts about HTML, CSS, and Javascript.
+excerpt: 'Web development screencasts about HTML, CSS, and Javascript. Subscribe on [YouTube](https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg).'
 type: screencast
 pagination:
   data: collections.screencasts

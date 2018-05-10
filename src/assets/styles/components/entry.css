@@ -42,6 +42,7 @@
 .c-entry__title [rel='external']:after {
   content: '\2009\2192';
   display: inline-block;
+  font-family: var(--font-family-system);
   font-weight: 400;
   color: currentColor;
   opacity: 0.5;

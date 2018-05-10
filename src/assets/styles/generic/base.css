@@ -25,7 +25,7 @@ body {
   padding: 3rem 1rem;
   max-width: calc(900px + 2rem);
   min-height: 100vh;
-  font-family: 'Roboto', system-ui, sans-serif;
+  font-family: var(--font-family-sans);
   line-height: 1.4;
 }
 
@@ -54,7 +54,7 @@ figure {
 a {
   color: inherit;
   text-decoration-color: var(--text-decoration-color);
-  transition: color ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
 }
 
 hr {
@@ -85,4 +85,10 @@ kbd {
   color: #fff;
   background-color: #111;
   border-radius: 4px;
+}
+
+mark {
+  padding-right: 1px;
+  padding-left: 1px;
+  background-color: #fffeca;
 }

@@ -5,7 +5,7 @@
 {%- endif -%}
 <article class="c-entry c-entry--screencast">
   <div class="c-entry__embed">
-    {% include 'video.liquid', url: item.data.video, lazyload: lazyload %}
+    {% include 'video.liquid', url: item.data.video, title: item.data.title, lazyload: lazyload %}
   </div>
 
   <header class="c-entry__header">
