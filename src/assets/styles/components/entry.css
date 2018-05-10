@@ -19,6 +19,10 @@
   margin-bottom: 3rem;
 }
 
+.c-entry--screencast {
+  padding-top: 1rem;
+}
+
 
 /* Embed */
 .c-entry__embed {

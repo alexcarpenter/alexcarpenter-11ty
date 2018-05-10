@@ -3,7 +3,9 @@
    ========================================================================== */
 
 
-/* .c-navigation {} */
+.c-navigation {
+  padding-top: 1rem;
+}
 
 .c-navigation__list {
   display: flex;
