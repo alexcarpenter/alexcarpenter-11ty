@@ -22,7 +22,7 @@
     "clean": "rm -rf www"
   },
   "devDependencies": {
-    "@11ty/eleventy": "github:11ty/eleventy",
+    "@11ty/eleventy": "^0.3.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^1.0.4",
     "autoprefixer": "^8.4.1",
     "browser-sync": "^2.24.4",

@@ -5,6 +5,6 @@ excerpt: 'Web development screencasts about HTML, CSS, and Javascript. Subscribe
 type: screencast
 pagination:
   data: collections.screencasts
-  size: 12
+  size: 10
 permalink: screencasts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}{% else %}index{% endif %}.html
 ---

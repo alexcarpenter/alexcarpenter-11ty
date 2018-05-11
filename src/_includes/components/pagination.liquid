@@ -2,16 +2,16 @@
   {% if pagination.nextPageLink -%}
     {%- assign nextPageNumber = pagination.pageNumber | plus: 1 -%}
     {%- assign nextPageLink = nextPageNumber | prepend: 'page/' -%}
-    <a class="c-pagination__item" href="{{ page.url }}{{ nextPageLink }}" rel="prev">Older</a>
+    <a class="c-pagination__item" href="/{{ page.fileSlug }}/{{ nextPageLink }}" rel="prev">Older</a>
   {%- endif %}
+
   {% if pagination.previousPageLink -%}
     {%- assign previousPageNumber = pagination.pageNumber | minus: 1 -%}
   {%- if pagination.pageNumber == 1 -%}
-    <!-- How do I get back to landing paginated page -->
-    {%- assign previousPageLink = page.url -%}
+    {%- assign previousPageLink = '' -%}
   {%- else -%}
     {%- assign previousPageLink = previousPageNumber | prepend: 'page/' -%}
   {%- endif -%}
-    <a class="c-pagination__item" href="{{ previousPageLink }}" rel="next">Newer</a>
+    <a class="c-pagination__item" href="/{{ page.fileSlug }}/{{ previousPageLink }}" rel="next">Newer</a>
   {%- endif %}
 </nav>

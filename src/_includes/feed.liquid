@@ -1,0 +1,7 @@
+{% if  item.data.video %}
+  <iframe frameborder="0" allowfullscreen="" src="{{ item.data.video }}"></iframe>
+{% endif %}
+{{- item.templateContent | safe -}}
+{%- if item.data.link -%}
+  <a href="{{ app.url }}{{ item.url }}" title="Permalink">#</a>
+{%- endif -%}

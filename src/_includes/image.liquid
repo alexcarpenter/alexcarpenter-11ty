@@ -1,0 +1,7 @@
+{%- assign src = url -%}
+{%- unless ratio -%}
+  {%- assign ratio = '16/9' -%}
+{%- endunless -%}
+<div style="--aspect-ratio: {{ ratio }};">
+  <img src="{{ src }}" alt="{{ alt }}">
+</div>

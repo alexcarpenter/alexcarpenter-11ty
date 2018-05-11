@@ -5,4 +5,7 @@
     {%- assign entrytype = item.data.type | prepend: 'entry/' | append: '.liquid' -%}
     {%- include entrytype %}
   {%- endfor -%}
+  <nav class="c-pagination">
+    <a class="c-pagination__item" href="/archives/page/1" rel="prev">Older</a>
+  </nav>
 {%- endblock %}
