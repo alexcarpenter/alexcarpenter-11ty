@@ -8,6 +8,7 @@
   {% if pagination.previousPageLink -%}
     {%- assign previousPageNumber = pagination.pageNumber | minus: 1 -%}
   {%- if pagination.pageNumber == 1 -%}
+    <!-- How do I get back to landing paginated page -->
     {%- assign previousPageLink = page.url -%}
   {%- else -%}
     {%- assign previousPageLink = previousPageNumber | prepend: 'page/' -%}
