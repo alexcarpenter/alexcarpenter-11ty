@@ -1,5 +1,4 @@
 <nav class="c-pagination">
-  {{ page.permalink }}
   {% if pagination.nextPageLink -%}
     {%- assign nextPageNumber = pagination.pageNumber | plus: 1 -%}
     {%- assign nextPageLink = nextPageNumber | prepend: 'page/' -%}
