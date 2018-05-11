@@ -1,5 +1,7 @@
 {%- layout 'layouts/default.liquid' -%}
 {% block main -%}
   {%- include 'components/intro.liquid' heading: true -%}
-  {{ content }}
+  <div class="c-prose">
+    {{ content }}
+  </div>
 {%- endblock %}
