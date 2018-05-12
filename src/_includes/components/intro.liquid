@@ -14,4 +14,8 @@
       {{ excerpt | markdownify }}
     </div>
   {%- endif %}
+
+  {% if  time %}
+    <p class="c-intro__time">&ndash;&nbsp;<time datetime="{{ date | datetime_to_iso }}" aria-label="{{ date | date_to_long_string }}">{{ date | date_to_short_string }}</time></p>
+  {% endif %}
 </header>

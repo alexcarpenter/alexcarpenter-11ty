@@ -35,7 +35,9 @@
 
 .c-prose hr {
   max-width: 10%;
+  margin-bottom: 2rem !important;
   margin-left: 0;
+  padding-top: 1rem;
   border-bottom: 1px solid #eee;
 }
 

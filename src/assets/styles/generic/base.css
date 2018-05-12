@@ -57,6 +57,10 @@ a {
   transition: all ease-in-out 0.2s;
 }
 
+a:--enter {
+  text-decoration-color: #35bc60;
+}
+
 hr {
   border: 0;
 }
