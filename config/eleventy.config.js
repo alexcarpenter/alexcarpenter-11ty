@@ -115,7 +115,8 @@ module.exports = eleventyConfig => {
       'liquid',
       'md',
       'png',
-      'jpg'
+      'jpg',
+      'json'
     ],
     dir: {
       input: 'src',
