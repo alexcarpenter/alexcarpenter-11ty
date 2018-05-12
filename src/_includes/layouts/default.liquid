@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff" />
   <meta name="robots" content="index,follow" />
+  <title>{% if title != '' %}{{ title | markdownify_inline | strip_html }} – {% endif %}{{ app.title }}</title>
+  <meta name="description" content="{% if excerpt %}{{ excerpt | markdownify | strip_html | strip_newlines }}{% elsif content %}{{ content | strip_html | strip_newlines | truncate: 200 }}{% else %}{{ app.description }}{% endif %}" />
   <meta property="og:title" content="{% if title != '' %}{{ title | markdownify_inline | strip_html }}{% else %}{{ app.title }}{% endif %}">
   <meta property="og:description" content="{% if excerpt %}{{ excerpt | markdownify | strip_html | strip_newlines }}{% elsif content %}{{ content | strip_html | strip_newlines | truncate: 200 }}{% else %}{{ app.description }}{% endif %}">
   <meta property="og:url" content="{% if link %}{{ link }}{% else %}{{ page.url | prepend: app.url | permalink }}{% endif %}">
@@ -31,8 +33,6 @@
   <link rel="stylesheet" href="/assets/styles/app.css">
 
   <script src="/assets/scripts/app.js" async></script>
-
-  <title>{% if title != '' %}{{ title | markdownify_inline | strip_html }} – {% endif %}{{ app.title }}</title>
 </head>
 <body>
   {%- include 'components/header.liquid' -%}
