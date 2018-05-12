@@ -109,6 +109,7 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addPassthroughCopy('./src/assets/fonts')
   eleventyConfig.addPassthroughCopy('./src/CNAME')
+  eleventyConfig.addPassthroughCopy('./src/serviceworker.js')
 
   return {
     templateFormats: [
