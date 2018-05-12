@@ -6,9 +6,14 @@
   <meta property="og:title" content="{% if title != '' %}{{ title | markdownify_inline | strip_html }}{% else %}{{ app.title }}{% endif %}">
   <meta property="og:description" content="{% if excerpt %}{{ excerpt | markdownify | strip_html | strip_newlines }}{% elsif content %}{{ content | strip_html | strip_newlines | truncate: 200 }}{% else %}{{ app.description }}{% endif %}">
   <meta property="og:url" content="{% if link %}{{ link }}{% else %}{{ page.url | prepend: app.url | permalink }}{% endif %}">
-  <meta property="og:image" content="/assets/images/og-image.png">
+  <meta property="og:image" content="{{ app.url }}/og-image.png">
   <meta name="twitter:creator" content="{% if creator %}@{{ creator }}{% else %}@hybrid_alex{% endif %}">
   <meta name="twitter:site" content="@hybrid_alex">
+
+  <link rel="icon apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" type="image/png" />
+  <link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png" />
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
 
   <link rel="preconnect" href="https://www.youtube.com">
   <link rel="preconnect" href="https://i.ytimg.com">
