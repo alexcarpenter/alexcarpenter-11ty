@@ -108,16 +108,15 @@ module.exports = eleventyConfig => {
   })
 
   eleventyConfig.addPassthroughCopy('./src/assets/fonts')
-  eleventyConfig.addPassthroughCopy('./src/assets/images')
   eleventyConfig.addPassthroughCopy('./src/CNAME')
-  eleventyConfig.addPassthroughCopy('./src/apple-touch.png')
-  eleventyConfig.addPassthroughCopy('./src/favicon-16x16.png')
-  eleventyConfig.addPassthroughCopy('./src/favicon-32x32.png')
-  eleventyConfig.addPassthroughCopy('./src/favicon-96x96.png')
-  eleventyConfig.addPassthroughCopy('./src/og-image.png')
 
   return {
-    templateFormats: ['liquid', 'md'],
+    templateFormats: [
+      'liquid',
+      'md',
+      'png',
+      'jpg'
+    ],
     dir: {
       input: 'src',
       includes: '_includes',
