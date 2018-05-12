@@ -1,21 +1,21 @@
 {
-  lang: "en",
-  short_name: "ASC",
-  name: "Alex Carpenter",
-  icons: [
+  "lang": "en",
+  "short_name": "ASC",
+  "name": "Alex Carpenter",
+  "icons": [
     {
-      src: "/og-image.png",
-      sizes: "300x300",
-      type: "image/png"
+      "src": "/og-image.png",
+      "sizes": "300x300",
+      "type": "image/png"
     },
     {
-      src: "/apple-touch-icon.png",
-      sizes: "180x180",
-      type: "image/png"
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
     }
   ],
-  start_url: "/",
-  display: "minimal-ui",
-  background_color: "#ffffff",
-  theme_color: "#ffffff"
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
 }
