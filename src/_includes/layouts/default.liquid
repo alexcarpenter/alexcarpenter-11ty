@@ -42,9 +42,9 @@
   </main>
   {%- include 'components/footer.liquid' -%}
   <script>
-  if (navigator.serviceWorker && !navigator.serviceWorker.controller) {
-    navigator.serviceWorker.register('/serviceworker.js');
-  }
+    if (navigator.serviceWorker && !navigator.serviceWorker.controller) {
+      navigator.serviceWorker.register('/serviceworker.js');
+    }
   </script>
 </body>
 </html>
