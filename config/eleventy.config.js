@@ -109,6 +109,7 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addPassthroughCopy('./src/assets/fonts')
   eleventyConfig.addPassthroughCopy('./src/CNAME')
+  eleventyConfig.addPassthroughCopy('./src/manifest.json')
   eleventyConfig.addPassthroughCopy('./src/serviceworker.js')
 
   return {
@@ -116,8 +117,7 @@ module.exports = eleventyConfig => {
       'liquid',
       'md',
       'png',
-      'jpg',
-      'json'
+      'jpg'
     ],
     dir: {
       input: 'src',

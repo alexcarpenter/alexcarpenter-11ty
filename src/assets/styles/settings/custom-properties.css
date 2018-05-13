@@ -6,7 +6,7 @@
 :root {
   --font-family-sans: 'Roboto', Helvetica, Arial, sans-serif;
   --font-family-system: system-ui, Helvetica, Arial, sans-serif;
-  --font-family-monospace: Consolas, monaco, monospace;
+  --font-family-monospace: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
   --body-background-color: #fff;
   --body-color: #000;
   --color-primary: #35bc60;
