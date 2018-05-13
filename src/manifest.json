@@ -4,14 +4,29 @@
   "name": "Alex Carpenter",
   "icons": [
     {
-      "src": "/og-image.png",
-      "sizes": "300x300",
-      "type": "image/png"
+      "src": "/assets/images/photo-150.jpg",
+      "sizes": "150x150",
+      "type": "image/jpeg"
     },
     {
-      "src": "/manifest-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "/assets/images/photo-200.jpg",
+      "sizes": "200x200",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/assets/images/photo-300.jpg",
+      "sizes": "300x300",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/assets/images/photo-500.jpg",
+      "sizes": "500x500",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/assets/images/photo-600.jpg",
+      "sizes": "600x600",
+      "type": "image/jpeg"
     },
     {
       "src": "/apple-touch-icon.png",
