@@ -62,7 +62,7 @@
 .c-entry__body blockquote {
   padding-left: 1rem;
   font-style: italic;
-  border-left: 1px solid var(--border-color);
+  border-left: 2px solid var(--border-color);
 }
 
 
