@@ -12,7 +12,13 @@
 }
 
 .c-intro__title {
-  font-size: 3rem;
+  font-size: 2rem;
+}
+
+@media (--from-medium-viewport) {
+  .c-intro__title {
+    font-size: 3rem;
+  }
 }
 
 .c-intro__title:after {
