@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   margin-top: auto;
   padding-top: 3rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-color);
 }
 
 .c-footer__social {

@@ -1,6 +1,6 @@
 ---
 title: Craft Link List
-date: 2018-05-01 21:27:05
+date: 2018-05-01
 link: http://craftlinklist.com/
 ---
 > Craft Link List is a curated publication collecting interesting links about Craft CMS.

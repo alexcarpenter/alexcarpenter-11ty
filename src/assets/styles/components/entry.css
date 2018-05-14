@@ -12,7 +12,7 @@
     'header'
     'body'
     'meta';
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-color);
 }
 
 .c-entry:not(:last-of-type) {
@@ -62,7 +62,7 @@
 .c-entry__body blockquote {
   padding-left: 1rem;
   font-style: italic;
-  border-left: 1px solid #eee;
+  border-left: 1px solid var(--border-color);
 }
 
 

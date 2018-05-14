@@ -1,6 +1,6 @@
 ---
 title: Back to static
-date: 2018-05-11 17:30:24
+date: 2018-05-11
 excerpt: Towards the beginning of the year I had migrated my personal site setup from Jekyll over to Craft CMS.
 ---
 Around that time I was interested in improving my Craft CMS development skills, so it made sense to use my website as a playground to learn.

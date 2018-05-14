@@ -1,6 +1,6 @@
 ---
 title: Design Systems by Figma
-date: 2018-05-14 10:18:19
+date: 2018-05-14
 link: https://www.designsystems.com/
 ---
 > The best resource for learning, creating and evangelizing Design Systems.
