@@ -7,8 +7,10 @@
   --font-family-sans: 'Roboto', Helvetica, Arial, sans-serif;
   --font-family-system: system-ui, Helvetica, Arial, sans-serif;
   --font-family-monospace: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+  --color-green: #2fb37f;
+  --color-purple: #6875e2;
+
   --body-background-color: #fff;
   --body-color: #000;
-  --color-primary: #35bc60;
-  --text-decoration-color: #aaa;
 }

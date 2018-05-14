@@ -53,12 +53,16 @@ figure {
 
 a {
   color: inherit;
-  text-decoration-color: var(--text-decoration-color);
+  text-decoration-color: var(--color-purple);
   transition: all ease-in-out 0.2s;
 }
 
+a:visited {
+  text-decoration-color: #aaa;
+}
+
 a:--enter {
-  text-decoration-color: #35bc60;
+  text-decoration-color: #aaa;
 }
 
 hr {
