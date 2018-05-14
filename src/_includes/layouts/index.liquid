@@ -1,6 +1,6 @@
 {%- layout 'layouts/default.liquid' -%}
 {% block main -%}
-  {%- include 'components/intro.liquid' -%}
+  {%- include 'components/intro.liquid' heading: false, time: false -%}
   {% for item in pagination.items -%}
     {%- assign entrytype = item.data.type | prepend: 'entry/' | append: '.liquid' -%}
     {%- include entrytype %}

@@ -54,11 +54,12 @@ figure {
 a {
   color: inherit;
   text-decoration-color: #aaa;
+  text-decoration-color: var(--color-purple);
   transition: all ease-in-out 0.2s;
 }
 
 a:--enter {
-  text-decoration-color: #000;
+  text-decoration-color: currentColor;
 }
 
 hr {
@@ -99,4 +100,8 @@ mark {
   padding-right: 1px;
   padding-left: 1px;
   background-color: #fffeca;
+}
+
+dt {
+  font-weight: 900;
 }

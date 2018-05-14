@@ -30,7 +30,7 @@
 .c-prose blockquote:not([class]) {
   padding-left: 1rem;
   font-style: italic;
-  border-left: 2px solid var(--border-color);
+  border-left: 3px solid var(--border-color);
 }
 
 .c-prose hr {
@@ -38,7 +38,7 @@
   margin-bottom: 2rem !important;
   margin-left: 0;
   padding-top: 1rem;
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 3px solid var(--border-color);
 }
 
 .c-prose [rel='external']:after {

@@ -1,6 +1,7 @@
 {%- layout 'layouts/default.liquid' -%}
 {% block main -%}
-  {% include 'video.liquid', url: video, title: title %}
-  {%- include 'components/intro.liquid' heading: true -%}
-  {{ content }}
+  {%- include 'components/intro.liquid' -%}
+  <div class="c-prose">
+    {{ content }}
+  </div>
 {%- endblock %}

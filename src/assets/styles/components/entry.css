@@ -39,6 +39,10 @@
   font-size: 1.3rem;
 }
 
+.c-entry__title [rel='external'] {
+  font-size: 1rem;
+}
+
 .c-entry__title [rel='external']:after {
   content: '\2009\2192';
   display: inline-block;
@@ -62,7 +66,7 @@
 .c-entry__body blockquote {
   padding-left: 1rem;
   font-style: italic;
-  border-left: 2px solid var(--border-color);
+  border-left: 3px solid var(--border-color);
 }
 
 

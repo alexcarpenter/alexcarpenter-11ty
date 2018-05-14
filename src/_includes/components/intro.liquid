@@ -5,6 +5,20 @@
 {%- endif -%}
 
 <header class="c-intro">
+  {% if video -%}
+    <figure class="c-intro__media">
+      {% include 'video.liquid', url: video, title: title %}
+    </figure>
+  {%- endif %}
+
+  {% if image -%}
+    <figure class="c-intro__media">
+      <div style="--aspect-ratio: 16/9;">
+        <img src="{{ image.url }}" alt="{{ image.alt }}">
+      </div>
+    </figure>
+  {%- endif %}
+
   {% if title != '' -%}
     <h1 class="c-intro__{{ display }}">{{ title }}</h1>
   {%- endif %}

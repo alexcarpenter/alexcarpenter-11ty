@@ -1,5 +1,7 @@
 {
   "layout": "layouts/post",
   "permalink": "posts/{{ page.date | date: '%Y/%m' }}/{{ page.fileSlug }}.html",
-  "type": "post"
+  "type": "post",
+  "heading": true,
+  "time": true
 }
