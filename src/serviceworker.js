@@ -1,44 +1,49 @@
-// Refs: https://adactio.com/journal/13540
-const cacheName = 'files';
-const offlinePage = '/offline/index.html';
+// Refs: https://github.com/csswizardry/csswizardry.github.com/blob/master/sw.js
+var cacheName = 'alexcarpenter:0001';
+var cacheFiles = [
+  '/',
+  '/offline/'
+];
 
-addEventListener('install', installEvent => {
-  skipWaiting();
-  installEvent.waitUntil(
+self.addEventListener('install', function(event) {
+  event.waitUntil(
     caches.open(cacheName)
-    .then( cache => {
-      return cache.add(offlinePage);
+      .then(function(cache) {
+        return cache.addAll(cacheFiles);
+      })
+  );
+});
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        // Grab the asset from SW cache.
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+    }).catch(function() {
+      // Can't access the network return an offline page from the cache
+      return caches.match('/offline/');
     })
   );
 });
 
-addEventListener('activate', activateEvent => {
-  clients.claim();
-});
+// Empty out any caches that don’t match the ones listed.
+self.addEventListener('activate', function(event) {
 
-addEventListener('fetch',  fetchEvent => {
-  const request = fetchEvent.request;
-  if (request.method !== 'GET') {
-    return;
-  }
-  fetchEvent.respondWith(async function() {
-    const responseFromFetch = fetch(request);
-    fetchEvent.waitUntil(async function() {
-      const responseCopy = (await responseFromFetch).clone();
-      const myCache = await caches.open(cacheName);
-      await myCache.put(request, responseCopy);
-    }());
-    if (request.headers.get('Accept').includes('text/html')) {
-      try {
-        return await responseFromFetch;
-      }
-      catch(error) {
-        const responseFromCache = await caches.match(request);
-        return responseFromCache || caches.match(offlinePage);
-      }
-    } else {
-      const responseFromCache = await caches.match(request);
-      return responseFromCache || responseFromFetch;
-    }
-  }());
+  var cacheWhitelist = ['alexcarpenter:0001'];
+
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
 });

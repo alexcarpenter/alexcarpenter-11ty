@@ -8,7 +8,9 @@
   --font-family-system: system-ui, Helvetica, Arial, sans-serif;
   --font-family-monospace: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
-  --color-green: #2fb37f;
+  --color-green: #5cba9c;
+  --color-red: #e36b6d;
+  --color-blue: #61b7d0;
   --color-purple: #6875e2;
 
   --body-background-color: #fff;

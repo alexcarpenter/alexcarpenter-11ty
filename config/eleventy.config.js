@@ -21,6 +21,7 @@ module.exports = eleventyConfig => {
   })
     .use(require('markdown-it-abbr'))
     .use(require('markdown-it-anchor'), {
+      level: [2],
       permalink: true,
       permalinkClass: 'permalink',
       permalinkSymbol: '#'
