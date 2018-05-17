@@ -1,0 +1,18 @@
+/* ==========================================================================
+   COMPONENTS/SKIP
+   ========================================================================== */
+
+
+.c-skip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5rem;
+  background-color: var(--color-purple);
+  color: #fff;
+  transform: translateY(-100%);
+}
+
+.c-skip:focus {
+  transform: none;
+}

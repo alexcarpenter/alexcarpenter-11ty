@@ -1,5 +1,5 @@
 // Refs: https://github.com/csswizardry/csswizardry.github.com/blob/master/sw.js
-var cacheName = 'alexcarpenter:0002';
+var cacheName = 'alexcarpenter:0003';
 var cacheFiles = [
   '/',
   '/offline/'
@@ -33,7 +33,7 @@ self.addEventListener('fetch', function(event) {
 // Empty out any caches that don’t match the ones listed.
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['alexcarpenter:0002'];
+  var cacheWhitelist = ['alexcarpenter:0003'];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {

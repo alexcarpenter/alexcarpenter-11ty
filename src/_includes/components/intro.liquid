@@ -13,7 +13,7 @@
 
   {% if image -%}
     <figure class="c-intro__media">
-      <div style="--aspect-ratio: 16/9;">
+      <div style="--aspect-ratio: {%- if image.ratio -%}{{ image.ratio }}{%- else -%}16/9;{%- endif -%}">
         <img src="{{ image.url }}" alt="{{ image.alt }}">
       </div>
     </figure>

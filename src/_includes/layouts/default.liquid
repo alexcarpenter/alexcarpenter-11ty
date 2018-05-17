@@ -33,10 +33,12 @@
   <link rel="stylesheet" href="/assets/styles/app.css">
 
   <script src="/assets/scripts/app.js" async></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
 <body>
+  <a href="#content" class="c-skip">Skip to main content</a>
   {%- include 'components/header.liquid' -%}
-  <main>
+  <main id="content" tabindex="-1">
     {% block main -%}
     {%- endblock %}
   </main>
