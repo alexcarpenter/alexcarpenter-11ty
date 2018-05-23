@@ -5,8 +5,8 @@
 ## Installation
 
 ```bash
-$ git clone https://github.com/alexcarpenter/alexcarpenter.github.io
-$ cd alexcarpenter.github.io
+$ git clone https://github.com/alexcarpenter/alexcarpenter.me
+$ cd alexcarpenter.me
 $ npm install
 $ npm run build
 ```
