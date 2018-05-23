@@ -10,13 +10,13 @@
   "scripts": {
     "build": "npm run clean && npm run build:styles && npm run build:scripts && npm run build:files",
     "watch": "npm-run-all --parallel serve watch:*",
-    "serve": "browser-sync start --config=config/browsersync.config.js",
+    "serve": "browser-sync start --config config/browsersync.config.js",
     "build:files": "npx eleventy --config=config/eleventy.config.js --quiet",
     "watch:files": "npx eleventy --config=config/eleventy.config.js --serve",
-    "build:scripts": "rollup --config=config/rollup.config.js",
-    "watch:scripts": "rollup --config=config/rollup.config.js --watch",
-    "build:styles": "NODE_ENV=production postcss src/assets/styles/app.css -o www/assets/styles/app.css --config=config/postcss.config.js",
-    "watch:styles": "postcss src/assets/styles/app.css -o www/assets/styles/app.css --config=config/postcss.config.js --watch",
+    "build:scripts": "rollup --config config/rollup.config.js",
+    "watch:scripts": "rollup --config config/rollup.config.js --watch",
+    "build:styles": "NODE_ENV=production postcss src/assets/styles/app.css -o www/assets/styles/app.css --config config/postcss.config.js",
+    "watch:styles": "postcss src/assets/styles/app.css -o www/assets/styles/app.css --config config/postcss.config.js --watch",
     "debug": "DEBUG=* npx eleventy",
     "deploy": "push-dir --dir=www --branch=master",
     "clean": "rm -rf www"
