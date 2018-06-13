@@ -9,9 +9,8 @@
   --font-family-monospace: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
   --color-green: #5cba9c;
-  --color-red: #e36b6d;
-  --color-blue: #61b7d0;
   --color-purple: #6875e2;
+  --color-primary: var(--color-green);
 
   --body-background-color: #fff;
   --body-color: #000;

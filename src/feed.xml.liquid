@@ -1,0 +1,27 @@
+---
+permalink: /feed.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>{{ app.url }}{{ page.url }}</id>
+  <title>{{ app.title }}</title>
+  <author>
+    <name>{{ app.author.name }}</name>
+    <email>{{ app.author.email }}</email>
+    <uri>{{ app.author.url }}</uri>
+  </author>
+  <link href="{{ app.url }}/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ app.url }}" rel="alternate" type="text/html"/>
+  <icon>{{ app.url }}{{ app.icon }}</icon>
+  <rights>&#169; {{ 'now' | date: '%Y' }} {{ app.author.name }}. Content Creative Commons licensed unless otherwise stated.</rights>
+{%- for item in collections.posts limit: 25 %}
+  <entry>
+    <id>{{ item.url | permalink | prepend: app.url }}</id>
+    <title>{{ item.data.title | markdownify_inline | escape | strip_html | strip_newlines }}</title>
+    <updated>{{ item.data.date | date: '%Y-%m-%dT%H:%M:%S%z' }}</updated>
+    <content type="html"><![CDATA[
+      {{- item.templateContent | safe -}}
+    ]]></content>
+  </entry>
+{% endfor -%}
+</feed>

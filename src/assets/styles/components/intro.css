@@ -11,6 +11,10 @@
   margin-bottom: 1rem;
 }
 
+.c-intro__time {
+  color: #767676;
+}
+
 .c-intro__title {
   font-size: 2rem;
 }
@@ -35,9 +39,4 @@
 .c-intro__lead {
   max-width: 55ch;
   font-size: 1.3rem;
-}
-
-.c-intro__time {
-  padding-top: 0.5rem;
-  font-style: italic;
 }

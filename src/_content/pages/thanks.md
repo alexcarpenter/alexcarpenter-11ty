@@ -1,0 +1,6 @@
+---
+layout: layouts/page
+title: Thanks
+excerpt: Thanks for contacting me. I typically respond to emails within a couple of days. Should your enquiry be more urgent, please send me a message on [Twitter](https://twitter.com/hybrid_alex).
+permalink: /contact/thanks/index.html
+---

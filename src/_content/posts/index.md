@@ -1,8 +1,7 @@
 ---
 layout: layouts/index
 title: Posts
-excerpt: Articles, notes, and other short ramblings.
-type: post
+excerpt: Sharing what I have learned. Subscribe via [RSS](/feed.xml).
 pagination:
   data: collections.posts
   size: 10

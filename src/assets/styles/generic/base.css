@@ -54,7 +54,7 @@ figure {
 a {
   color: inherit;
   text-decoration-color: #aaa;
-  text-decoration-color: var(--color-purple);
+  text-decoration-color: var(--color-primary);
   transition: all ease-in-out 0.2s;
 }
 

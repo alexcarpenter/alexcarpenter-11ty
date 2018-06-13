@@ -4,7 +4,7 @@
 
 
 @media (--from-medium-viewport) {
-  .c-prose > * {
+  .c-prose > *:not(.u-extend) {
     max-width: 700px;
   }
 }
@@ -15,22 +15,34 @@
 
 .c-prose :--heading {
   position: relative;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
+  margin-bottom: 0.5rem !important;
 }
 
-.c-prose :--heading .permalink {
+/* .c-prose :--heading .permalink {
   text-decoration: none;
   opacity: 0.5;
-}
+} */
 
-.c-prose :--heading .permalink:--enter {
+/* .c-prose :--heading .permalink:--enter {
   opacity: 1;
-}
+} */
 
 .c-prose blockquote:not([class]) {
   padding-left: 1rem;
   font-style: italic;
   border-left: 3px solid var(--border-color);
+}
+
+.c-prose ul,
+.c-prose ol {
+  padding-left: 1.2rem;
+  list-style-type: square;
+}
+
+.c-prose ul li:not(:last-of-type),
+.c-prose ol li:not(:last-of-type) {
+  margin-bottom: 0.1rem;
 }
 
 .c-prose hr {

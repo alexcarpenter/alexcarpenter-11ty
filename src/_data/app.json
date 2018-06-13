@@ -21,16 +21,13 @@
     }]
   },
   "navigation": [{
-    "label": "Screencasts",
-    "href": "/screencasts/",
-    "type": "screencast"
-  }, {
+    "label": "Home",
+    "href": "/"
+  },{
     "label": "Posts",
-    "href": "/posts/",
-    "type": "post"
+    "href": "/posts/"
   }, {
-    "label": "Bookmarks",
-    "href": "/bookmarks/",
-    "type": "bookmark"
+    "label": "Contact",
+    "href": "/contact/"
   }]
 }

@@ -1,0 +1,21 @@
+<form action="https://formspree.io/im.alexcarpenter@gmail.com" method="POST">
+  <input type="hidden" name="_next" value="/contact/thanks" />
+  <input type="text" name="_gotcha" style="display:none" />
+
+  <div class="c-form__field">
+    <label class="c-form__label" for="name">Your name</label>
+    <input class="c-form__input" type="text" name="name" id="name" required>
+  </div>
+
+  <div class="c-form__field">
+    <label class="c-form__label" for="email">Your email</label>
+    <input class="c-form__input" type="email" name="_replyto" id="email" required>
+  </div>
+
+  <div class="c-form__field">
+    <label class="c-form__label" for="message">Message</label>
+    <textarea class="c-form__input" name="message" id="message" cols="10" rows="5" required></textarea>
+  </div>
+
+  <input class="c-button" type="submit" value="Send Message">
+</form>

@@ -20,12 +20,12 @@ module.exports = eleventyConfig => {
     typographer: true
   })
     .use(require('markdown-it-abbr'))
-    .use(require('markdown-it-anchor'), {
-      level: [2],
-      permalink: true,
-      permalinkClass: 'permalink',
-      permalinkSymbol: '#'
-    })
+    // .use(require('markdown-it-anchor'), {
+    //   level: [2],
+    //   permalink: true,
+    //   permalinkClass: 'permalink',
+    //   permalinkSymbol: '#'
+    // })
     .use(require('markdown-it-attrs'))
     .use(require('markdown-it-deflist'))
     .use(require('markdown-it-footnote'))
@@ -33,27 +33,9 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.setLibrary('md', markdown)
 
-  eleventyConfig.addCollection('all', collection => {
-    return collection
-      .getFilteredByGlob('**/+(bookmarks|posts|screencasts)/**/!(index)*.md')
-      .reverse()
-  })
-
-  eleventyConfig.addCollection('bookmarks', collection => {
-    return collection
-      .getFilteredByGlob('**/bookmarks/**/!(index)*.md')
-      .reverse()
-  })
-
   eleventyConfig.addCollection('posts', collection => {
     return collection
       .getFilteredByGlob('**/posts/**/!(index)*.md')
-      .reverse()
-  })
-
-  eleventyConfig.addCollection('screencasts', collection => {
-    return collection
-      .getFilteredByGlob('**/screencasts/**/!(index)*.md')
       .reverse()
   })
 

@@ -1,3 +1,8 @@
+{%- if forloop.index > 2 -%}
+  {%- assign lazyload = true -%}
+{%- else -%}
+  {%- assign lazyload = false -%}
+{%- endif -%}
 <article class="c-entry c-entry--post">
   {% if item.data.title != '' -%}
     <header class="c-entry__header">
@@ -16,6 +21,8 @@
   </div>
 
   <footer class="c-entry__footer">
-    <time datetime="{{ item.date | datetime_to_iso }}" aria-label="{{ item.date | date_to_long_string }}">{{ item.date | date_to_short_string }}</time>
+    <a rel="bookmark" href="{{ item.url | permalink }}">
+      <time datetime="{{ item.date | datetime_to_iso }}" aria-label="{{ item.date | date_to_long_string }}">{{ item.date | date_to_short_string }}</time>
+    </a>
   </footer>
 </article>
