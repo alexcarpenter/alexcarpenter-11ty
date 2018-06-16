@@ -10,6 +10,7 @@ excerpt: In my continual quest to give back to the community that has provided s
 * How to build your first personal website
 * How to get started as a front-end developer
 * General advice for entry level developers
+* Marketing yourself as a front-end developer
 
 ## Scheduling
 
