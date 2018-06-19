@@ -106,6 +106,10 @@ dt {
   font-weight: 900;
 }
 
+ins {
+  text-decoration-color: #767676;
+}
+
 [tabindex='-1'] {
   outline: none;
 }

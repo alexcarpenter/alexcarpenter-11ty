@@ -10,7 +10,7 @@
   font: inherit;
   font-size: 0.8888888889rem;
   font-weight: 700;
-  background-color: #111;
+  background-color: var(--color-primary);
   border-radius: 3px;
   color: #fff;
   cursor: pointer;

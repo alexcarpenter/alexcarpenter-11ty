@@ -14,4 +14,4 @@ excerpt: In my continual quest to give back to the community that has provided s
 
 ## Scheduling
 
-To start I am offering a free 10 minute 1-on-1 session every Monday morning at 8:00am EDT. If you are interested in signing up for a session, checkout my availability at [officehours.io/people/alexcarpenter](https://officehours.io/people/alexcarpenter).
+To start I am offering a free 10 minute 1-on-1 session every <del datetime="2018-06-18 15:08:57">Monday</del> <ins datetime="2018-06-18 15:08:57">Tuesday</ins> morning at 8:00am EDT. If you are interested in signing up for a session, checkout my availability at [officehours.io/people/alexcarpenter](https://officehours.io/people/alexcarpenter).

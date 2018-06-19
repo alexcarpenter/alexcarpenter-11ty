@@ -10,7 +10,8 @@
 
   --color-green: #5cba9c;
   --color-purple: #6875e2;
-  --color-primary: var(--color-green);
+  --color-blue: #306cfb;
+  --color-primary: var(--color-blue);
 
   --body-background-color: #fff;
   --body-color: #000;
