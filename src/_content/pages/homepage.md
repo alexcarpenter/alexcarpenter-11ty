@@ -10,10 +10,9 @@ Currently, I am a senior developer at [Mighty in the Midwest](http://mightyinthe
 
 Here is a short list of what I am currently up to [now](https://nownownow.com/about).
 
-* Building a trio of sites for a well-known bowling brand.
-* Learning Vue.js and integrating into my daily work.
-* Exploring Headless Craft CMS setups.
+* Hosting weekly [office hours](/posts/2018/06/office-hours) for entry level front-end developers.
 * Producing front-end development [screencasts](https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg).
+* Learning Vue.js and integrating into my daily work.
 * Reading [Going Offline](https://abookapart.com/products/going-offline) by Jeremy Keith.
 
 ## Tools of choice
