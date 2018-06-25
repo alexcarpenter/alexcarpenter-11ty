@@ -10,6 +10,7 @@ Currently, I am a senior developer at [Mighty in the Midwest](http://mightyinthe
 
 Here is a short list of what I am currently up to [now](https://nownownow.com/about).
 
+* Building a community for entry level front-end developers at [frontend-foundations.org](https://frontend-foundations.com/)
 * Hosting weekly [office hours](/posts/2018/06/office-hours) for entry level front-end developers.
 * Producing front-end development [screencasts](https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg).
 * Learning Vue.js and integrating into my daily work.
