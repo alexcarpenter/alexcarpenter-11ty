@@ -1,15 +1,15 @@
 const { DateTime } = require('luxon')
 const CleanCSS = require('clean-css')
+const pluginRss = require('@11ty/eleventy-plugin-rss')
 const markdown = require('markdown-it')({
   html: true,
   breaks: true,
   linkify: true,
   typographer: true
+}).use(require('markdown-it-anchor'), {
+  level: [2],
+  permalink: false
 })
-  .use(require('markdown-it-anchor'), {
-    level: [2],
-    permalink: false
-  })
 
 module.exports = function(eleventyConfig) {
   const parseDate = str => {
@@ -19,6 +19,9 @@ module.exports = function(eleventyConfig) {
     const date = DateTime.fromISO(str, { zone: 'utc' })
     return date.toJSDate()
   }
+
+  // Plugins
+  eleventyConfig.addPlugin(pluginRss)
 
   eleventyConfig.setLibrary('md', markdown)
 
@@ -49,6 +52,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('date_formatted', obj => {
     const date = parseDate(obj)
     return DateTime.fromJSDate(date).toFormat('yyyy/MM/dd')
+  })
+
+  eleventyConfig.addFilter('date_to_med', obj => {
+    const date = parseDate(obj)
+    return DateTime.fromJSDate(date).toFormat('MMM yyyy')
   })
 
   eleventyConfig.addFilter('permalink', str => {
