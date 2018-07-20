@@ -1,9 +1,0 @@
-/* ==========================================================================
-   SETTINGS/CUSTOM-MEDIA
-   ========================================================================== */
-
-
-@custom-media --until-small-viewport (max-width: 500px);
-@custom-media --until-medium-viewport (max-width: 720px);
-@custom-media --from-small-viewport (min-width: 500px);
-@custom-media --from-medium-viewport (min-width: 720px);

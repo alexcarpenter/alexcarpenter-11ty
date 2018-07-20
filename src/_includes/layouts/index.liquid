@@ -1,8 +1,0 @@
-{%- layout 'layouts/default.liquid' -%}
-{% block main -%}
-  {%- include 'components/intro.liquid' heading: false, time: false -%}
-  {% for item in pagination.items -%}
-    {%- include 'entry/post' %}
-  {%- endfor -%}
-  {%- include 'components/pagination.liquid' -%}
-{%- endblock %}

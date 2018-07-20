@@ -1,0 +1,21 @@
+---
+title: Posts
+permalink: /posts/index.html
+---
+{% extends 'layouts/default.njk' %}
+
+{% block main %}
+  <ul class="c-listing">
+    {% for entry in collections.posts %}
+    <li>
+      <article>
+        <header class="c-entry__header">
+          <time class="c-entry__date">{{ entry.date | date_formatted }}</time>
+          <h2><a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a></h2>
+        </header>
+        {{ entry.data.description | safe }}
+      </article>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

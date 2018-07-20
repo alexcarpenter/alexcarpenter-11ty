@@ -1,11 +1,18 @@
 const { DateTime } = require('luxon')
-const typogr = require('typogr')
-const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const CleanCSS = require('clean-css')
+const markdown = require('markdown-it')({
+  html: true,
+  breaks: true,
+  linkify: true,
+  typographer: true
+})
+  .use(require('markdown-it-anchor'), {
+    level: [2],
+    permalink: false
+  })
 
-module.exports = eleventyConfig => {
-  eleventyConfig.addPlugin(pluginSyntaxHighlight)
-
-  function parseDate(str) {
+module.exports = function(eleventyConfig) {
+  const parseDate = str => {
     if (str instanceof Date) {
       return str
     }
@@ -13,100 +20,53 @@ module.exports = eleventyConfig => {
     return date.toJSDate()
   }
 
-  const markdown = require('markdown-it')({
-    html: true,
-    breaks: true,
-    linkify: true,
-    typographer: true
-  })
-    .use(require('markdown-it-abbr'))
-    // .use(require('markdown-it-anchor'), {
-    //   level: [2],
-    //   permalink: true,
-    //   permalinkClass: 'permalink',
-    //   permalinkSymbol: '#'
-    // })
-    .use(require('markdown-it-attrs'))
-    .use(require('markdown-it-deflist'))
-    .use(require('markdown-it-footnote'))
-    .use(require('markdown-it-table-of-contents'))
-
   eleventyConfig.setLibrary('md', markdown)
 
-  eleventyConfig.addCollection('posts', collection => {
-    return collection
-      .getFilteredByGlob('**/posts/**/!(index)*.md')
-      .reverse()
+  // Filters
+  eleventyConfig.addFilter(
+    'cssmin',
+    code => new CleanCSS({}).minify(code).styles
+  )
+
+  eleventyConfig.addFilter('markdownify', str => markdown.render(str))
+
+  eleventyConfig.addFilter('markdownify_inline', str =>
+    markdown.renderInline(str)
+  )
+
+  eleventyConfig.addFilter('date_to_permalink', obj => {
+    const date = parseDate(obj)
+    return DateTime.fromJSDate(date).toFormat('yyyy/MM')
   })
 
-  eleventyConfig.addFilter('jsonify', str => {
-    return JSON.stringify(str)
-  })
-
-  eleventyConfig.addFilter('typogrify', str => {
-    return typogr(str).typogrify()
-  })
-
-  eleventyConfig.addFilter('markdownify', str => {
-    return markdown.render(str)
-  })
-
-  eleventyConfig.addFilter('markdownify_inline', str => {
-    return markdown.renderInline(str)
+  eleventyConfig.addFilter('date_formatted', obj => {
+    const date = parseDate(obj)
+    return DateTime.fromJSDate(date).toFormat('yyyy/MM/dd')
   })
 
   eleventyConfig.addFilter('permalink', str => {
     return str.replace(/\.html/g, '')
   })
 
-  eleventyConfig.addFilter('strip_html', str => {
-    return str.replace(
-      /<script.*?<\/script>|<!--.*?-->|<style.*?<\/style>|<.*?>/g,
-      ''
-    )
+  // Collections
+  eleventyConfig.addCollection('posts', collection => {
+    return collection.getFilteredByGlob('**/posts/*.md').reverse()
   })
 
-  eleventyConfig.addFilter('date_to_short_string', obj => {
-    const date = parseDate(obj)
-    return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_SHORT)
-  })
-
-  eleventyConfig.addFilter('date_to_medium_string', obj => {
-    const date = parseDate(obj)
-    return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_MED)
-  })
-
-  eleventyConfig.addFilter('datetime_to_long_string', obj => {
-    const date = parseDate(obj)
-    return DateTime.fromJSDate(date).toLocaleString(DateTime.DATETIME_FULL)
-  })
-
-  eleventyConfig.addFilter('datetime_to_iso', obj => {
-    const date = parseDate(obj)
-    return DateTime.fromJSDate(date).toISO()
-  })
-
-  eleventyConfig.setLiquidOptions({
-    dynamicPartials: true
-  })
-
-  eleventyConfig.addPassthroughCopy('./src/assets/fonts')
-  eleventyConfig.addPassthroughCopy('./src/CNAME')
-  eleventyConfig.addPassthroughCopy('./src/manifest.json')
-  eleventyConfig.addPassthroughCopy('./src/serviceworker.js')
+  // ETC.
+  eleventyConfig.addPassthroughCopy('src/assets')
 
   return {
-    templateFormats: [
-      'liquid',
-      'md',
-      'png',
-      'jpg'
-    ],
+    templateFormats: ['njk', 'md', 'html'],
     dir: {
       input: 'src',
       includes: '_includes',
       data: '_data',
       output: 'www'
-    }
+    },
+    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
+    dataTemplateEngine: false,
+    passthroughFileCopy: true
   }
 }

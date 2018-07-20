@@ -1,0 +1,51 @@
+---
+title: Newsletter
+description: A curated newsletter highlighting foundational HTML, CSS, and Javascript resources and tutorials. The first issue is scheduled to go out on July 23. Subscribe now and never miss an issue.
+permalink: /newsletter/index.html
+---
+{% extends 'layouts/default.njk' %}
+{% from 'components/reference.njk' import reference %}
+
+{% block main %}
+  <section>
+    <form
+      action="https://buttondown.email/api/emails/embed-subscribe/alexcarpenter"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://buttondown.email/alexcarpenter', 'popupwindow')"
+      class="embeddable-buttondown-form c-form"
+    >
+      <input type="hidden" value="1" name="embed"/>
+      <div class="c-form__row">
+        <label class="c-form__label" for="bd-email">Enter your email</label>
+        <div class="c-form__input-group">
+          <input class="c-form__input" type="email" name="email" id="bd-email" required>
+          <input class="c-form__button" type="submit" value="Join Now" />
+        </div>
+        <small class="c-form__info"><a href="https://buttondown.email" target="_blank">Powered by Buttondown.</a></small>
+      </div>
+    </form>
+  </section>
+
+  {# <section>
+    <ul class="c-listing">
+      <li>
+        {{ reference({
+          body: 'I would recommend Alex to any forward-thinking web team. His passion for web standards along with his friendly attitude made him an invaluable part of our development team. I’m always especially impressed with his commitment to continuous learning and I hope to have the chance to work with him again!',
+          avatar: '/assets/images/melissa-taylor.jpeg',
+          cite: 'Melissa Taylor',
+          title: 'Director of Client Services'
+        }) }}
+      </li>
+
+      <li>
+        {{ reference({
+          body: 'I would recommend Alex to any forward-thinking web team. His passion for web standards along with his friendly attitude made him an invaluable part of our development team. I’m always especially impressed with his commitment to continuous learning and I hope to have the chance to work with him again!',
+          avatar: '/assets/images/danielle-dunn.jpeg',
+          cite: 'Danielle Dunn',
+          title: 'Senior Project Manager'
+        }) }}
+      </li>
+    </ul>
+  </section> #}
+{% endblock %}

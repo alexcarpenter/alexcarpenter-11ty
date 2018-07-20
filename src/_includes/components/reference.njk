@@ -1,0 +1,9 @@
+{% macro reference(params) %}
+  <blockquote class="c-reference">
+    {% if params.avatar %}
+      <img class="c-reference__avatar" src="{{ params.avatar | safe }}" alt="" width="80">
+    {% endif %}
+    <p class="c-reference__body">“{{ params.body | safe }}”</p>
+    <cite class="c-reference__cite">&ndash; {{ params.cite }}{% if params.title %}, {{ params.title }}{% endif %}</cite>
+  </blockquote>
+{% endmacro %}

@@ -1,0 +1,322 @@
+/* ==========================================================================
+   SETTINGS
+   ========================================================================== */
+
+:root {
+  --color-blue: #306cfb;
+  --color-gray-0: #111;
+}
+
+
+/* ==========================================================================
+   GENERIC
+   ========================================================================== */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 43.75rem;
+  padding: 2rem 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--color-gray-0);
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    padding: 4rem;
+  }
+}
+
+section + section {
+  margin-top: 2rem;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--color-blue);
+}
+
+ul {
+  list-style-type: square;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+time {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  color: #767676;
+}
+
+[tabindex="-1"] {
+  outline: 0;
+}
+
+
+
+
+/* ==========================================================================
+   OBJECTS
+   ========================================================================== */
+
+
+/**
+ * Aspect Ratio
+ */
+
+[style*="--aspect-ratio"] > :first-child {
+  height: auto;
+  width: 100%;
+}
+
+@supports (--custom:property) {
+  [style*="--aspect-ratio"] {
+    position: relative;
+  }
+
+  [style*="--aspect-ratio"]::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+  }
+
+  [style*="--aspect-ratio"] > :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}
+
+
+
+
+/* ==========================================================================
+   COMPONENTS
+   ========================================================================== */
+
+
+/**
+ * Skip link
+ */
+
+.c-skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-blue);
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-100%);
+}
+
+.c-skip-link:focus {
+  transform: none;
+}
+
+
+/**
+ * Navigation
+ */
+
+.c-nav {
+  margin-bottom: 2rem;
+}
+
+.c-nav__list {
+  list-style: none;
+  display: flex;
+}
+
+.c-nav__list-item:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+
+/**
+ * Page header
+ */
+
+.c-page-header {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 500px) {
+  .c-page-header__title {
+    font-size: 3rem;
+  }
+}
+
+.c-page-header__title:after {
+  content: "\2009\00AC";
+  display: inline-block;
+  color: currentColor;
+  opacity: .25;
+}
+
+.c-page-header__description {
+  padding-top: 1rem;
+}
+
+
+/**
+ * Listing
+ */
+
+.c-listing {
+  list-style: none;
+}
+
+.c-listing > *:not(:last-child) {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+
+/**
+ * Prose
+ */
+
+.c-prose > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.c-prose * + h2,
+.c-prose * + h3 {
+  padding-top: 1rem;
+}
+
+.c-prose ul, ol {
+  padding-left: 1.2rem;
+}
+
+.c-prose li + li {
+  margin-top: 0.25rem;
+}
+
+
+/**
+ * Entry
+ */
+
+.c-entry__header {
+  margin-bottom: 1rem;
+}
+
+.c-entry__date {
+  color: #767676;
+}
+
+
+/**
+ * Form
+ */
+
+.c-form {
+  display: block;
+}
+
+.c-form__field {
+  margin-bottom: 1rem;
+}
+
+.c-form__label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.c-form__input {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+  font: inherit;
+  resize: none;
+}
+
+.c-form__button {
+  appearance: none;
+  padding: 1rem;
+  font: inherit;
+  color: #fff;
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.c-form__button:hover,
+.c-form__button:focus {
+  background-color: var(--color-gray-0);
+  border-color: var(--color-gray-0);
+}
+
+.c-form__input-group {
+  display: flex;
+}
+
+.c-form__help {
+  padding-top: 0.25rem;
+  display: block;
+}
+
+
+/**
+ * Footer
+ */
+
+.c-footer {
+  padding-top: 4rem;
+}
+
+.c-footer__social a {
+  text-decoration: none;
+}
+
+.c-footer__social a:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+
+/**
+ * Reference
+ */
+
+.c-reference {
+  position: relative;
+  display: block;
+}
+
+.c-reference__avatar {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  float: right;
+  border-radius: 50%;
+}
+
+.c-reference__body {
+  margin-bottom: 1rem;
+}
+
+
+.c-reference__cite {
+  display: block;
+}

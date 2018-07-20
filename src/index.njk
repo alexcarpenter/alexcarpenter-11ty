@@ -1,0 +1,27 @@
+---
+title: "I’m Alex Carpenter, a front-end web developer focused on performance and accessibility."
+heading: true
+description: "Currently, I am a senior developer at [Mighty in the Midwest](http://mightyinthemidwest.com), based out of Grand Rapids, MI. I enjoy finding simple solutions for our clients complex problems. I aim to produce semantic accessible markup, with modular CSS, and progressively enhance the experience with unobtrusive JavaScript."
+permalink: /index.html
+---
+{% extends 'layouts/default.njk' %}
+
+{% block main %}
+  <section>
+    <div class="c-prose">
+      <h2>Interviews</h2>
+      <ul>
+        {% for interview in site.interviews %}
+          <li><strong><a href="{{ interview.url }}">{{ interview.title }}</a></strong> &ndash; {{ interview.description }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="c-prose">
+      <h2>Colophon</h2>
+      <p>This site is built using the static site generator <a href="https://www.11ty.io/">Eleventy</a> and hosted on <a href="https://www.netlify.com/">Netlify</a>. Styles are written in vanilla CSS and inlined for performance. Take a peak behind the scenes on <a href="https://github.com/alexcarpenter/alexcarpenter.me">Github</a>.</p>
+    </div>
+  </section>
+{% endblock %}
