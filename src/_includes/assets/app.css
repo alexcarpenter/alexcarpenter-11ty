@@ -46,7 +46,8 @@ h4, h5, h6 {
 
 a {
   color: inherit;
-  text-decoration-color: var(--color-blue);
+  -webkit-text-decoration-color: var(--color-blue);
+          text-decoration-color: var(--color-blue);
 }
 
 ul {
@@ -123,11 +124,13 @@ time {
   background-color: var(--color-blue);
   color: #fff;
   text-decoration: none;
-  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .c-skip-link:focus {
-  transform: none;
+  -webkit-transform: none;
+          transform: none;
 }
 
 
@@ -243,6 +246,9 @@ time {
 }
 
 .c-form__input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   display: block;
   width: 100%;
   padding: 1rem;
@@ -253,7 +259,9 @@ time {
 }
 
 .c-form__button {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   padding: 1rem;
   font: inherit;
   color: #fff;
