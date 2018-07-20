@@ -253,6 +253,7 @@ time {
   width: 100%;
   padding: 1rem;
   border: 1px solid #ccc;
+  border-radius: 0;
   background-color: #fafafa;
   font: inherit;
   resize: none;
@@ -267,6 +268,7 @@ time {
   color: #fff;
   background-color: var(--color-blue);
   border: 1px solid var(--color-blue);
+  border-radius: 0;
   cursor: pointer;
   transition: all ease-in-out 0.2s;
 }
