@@ -34,6 +34,13 @@ module.exports = function(eleventyConfig) {
     markdown.renderInline(str)
   )
 
+  eleventyConfig.addFilter('strip_html', str => {
+    return str.replace(
+      /<script.*?<\/script>|<!--.*?-->|<style.*?<\/style>|<.*?>/g,
+      ''
+    )
+  })
+
   eleventyConfig.addFilter('date_to_permalink', obj => {
     const date = parseDate(obj)
     return DateTime.fromJSDate(date).toFormat('yyyy/MM')
@@ -55,6 +62,7 @@ module.exports = function(eleventyConfig) {
 
   // ETC.
   eleventyConfig.addPassthroughCopy('src/assets')
+  eleventyConfig.addPassthroughCopy('src/manifest.json')
 
   return {
     templateFormats: ['njk', 'md', 'html'],
