@@ -1,6 +1,6 @@
 ---
 title: Newsletter
-description: A curated newsletter highlighting foundational HTML, CSS, and Javascript resources and tutorials. The first issue is scheduled to go out on July 23. Subscribe now and never miss an issue.
+description: A curated newsletter highlighting foundational HTML, CSS, and JavaScript resources and tutorials. Subscribe now and never miss an issue.
 permalink: /newsletter/index.html
 ---
 {% extends 'layouts/default.njk' %}
@@ -25,6 +25,17 @@ permalink: /newsletter/index.html
         <small class="c-form__info"><a href="https://buttondown.email" target="_blank">Powered by Buttondown.</a></small>
       </div>
     </form>
+  </section>
+
+  <section>
+    <div class="c-prose">
+      <h2>Previous Issues</h2>
+      <ul>
+        {% for issue in newsletter.issues %}
+          <li>{{ issue.date | date_formatted }} - <a href="{{ issue.url }}">{{ issue.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
   </section>
 
   {# <section>
