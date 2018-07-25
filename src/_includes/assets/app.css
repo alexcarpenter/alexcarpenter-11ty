@@ -35,7 +35,7 @@ body {
 }
 
 section + section {
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 h1, h2, h3,
@@ -183,12 +183,13 @@ time {
  */
 
 .c-listing {
+  padding-left: 0 !important;
   list-style: none;
 }
 
 .c-listing > *:not(:last-child) {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid #eee;
 }
 
@@ -207,11 +208,18 @@ time {
 }
 
 .c-prose ul, ol {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 0.25rem;
+  grid-column-gap: 2rem;
   padding-left: 1.2rem;
 }
 
-.c-prose li + li {
-  margin-top: 0.25rem;
+@media screen and (min-width: 600px) {
+  .c-prose__columns {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
@@ -286,6 +294,14 @@ time {
 .c-form__help {
   padding-top: 0.25rem;
   display: block;
+}
+
+/**
+ * Section heading
+ */
+
+.c-section-heading {
+  margin-bottom: 1rem;
 }
 
 

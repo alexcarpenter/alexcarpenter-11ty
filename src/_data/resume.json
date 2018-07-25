@@ -1,0 +1,75 @@
+{
+  "description": "Currently, I am a senior developer at Mighty in the Midwest, based out of Grand Rapids, MI. I enjoy finding simple solutions for our clients complex problems. I aim to produce semantic accessible markup, with modular CSS, and progressively enhance the experience with unobtrusive JavaScript.",
+  "experience": [
+    {
+      "startDate": "2015-10-20",
+      "company": "Mighty in the Midwest",
+      "title": "Senior Developer",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur possimus cumque necessitatibus unde praesentium deleniti at voluptatibus quidem neque! Nostrum?",
+      "highlights": [
+        "Built a tool for boaters to find the perfect prop for their boat. Data is provided via a CraftCMS driven API and consumed by a Vue.js app within Shopify.",
+        "Strategized and built a platform for an outdoor conservation corp to support each of their eight programs. Each program has their own themeing capabilities and pages are built using a modular content builder within CraftCMS."
+      ]
+    },
+    {
+      "startDate": "2012-02-10",
+      "endDate": "2015-10-22",
+      "company": "Masuga Design",
+      "title": "Front-end Developer & Designer",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa iure incidunt ipsa tempora, alias deleniti. Cupiditate, voluptatibus veniam. Voluptatibus, blanditiis.",
+      "highlights": [
+        "Lead the design and front-end development of our internal project tools, placeimg.com and lamplighter.io."
+      ]
+    },
+    {
+      "startDate": "2010-01-29",
+      "endDate": "2012-03-18",
+      "company": "Hybrid Media Co.",
+      "title": "Creative Director",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique voluptas fugiat hic iusto. Saepe recusandae, debitis dignissimos dolores nesciunt explicabo.",
+      "highlights": [
+        "Lead the creative direction for online video marketing content for local businesses.",
+        "Produced an award winning video for legendary hat making company Stormy Kromer.",
+        "Small collection of videos have been viewed over 150k times on Vimeo."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Front-end Foundations",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, quaerat!"
+    },
+    {
+      "title": "I Brew My Own Coffee Podcast",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, quaerat!"
+    }
+  ],
+  "skills": [
+    "Craft CMS, Eleventy, Jekyll",
+    "Front-end Performance",
+    "Accessibility",
+    "CSS, Sass, PostCSS",
+    "Javascript, ES6, Vue.js",
+    "NPM Scripts, Webpack, Gulp"
+  ],
+  "references": [
+    {
+      "body": "I would recommend Alex to any forward-thinking web team. His passion for web standards along with his friendly attitude made him an invaluable part of our development team. I’m always especially impressed with his commitment to continuous learning and I hope to have the chance to work with him again!",
+      "avatar": "/assets/images/melissa-taylor.jpeg",
+      "cite": "Melissa Taylor",
+      "title": "Director of Client Services at Mighty"
+    },
+    {
+      "body": "Alex and I have worked together on several projects over the course of the last few years and it's been great to have him on my project teams. He is incredibly thorough and thoughtful with his work and is always seeking out improving in his craft. He's conscious of meeting deadlines and communicates concerns early so that project teams can be proactive in problem solving. Alex's passion for learning is contagious. He seeks out and initiates collaboration and through this passion he's taught me a ton about web development, performance, and accessibility. Working with him has made me a better in my work.",
+      "avatar": "/assets/images/danielle-dunn.jpeg",
+      "cite": "Danielle Dunn",
+      "title": "Senior Project Manager at Mighty"
+    },
+    {
+      "body": "Alex is a true autodidact that is dedicated to keeping up with the latest development tools, methods and trends.",
+      "avatar": "/assets/images/ben-kohl.jpg",
+      "cite": "Benjamin Kohl",
+      "title": "Back-end developer at Masuga Design"
+    }
+  ]
+}

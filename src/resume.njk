@@ -1,0 +1,79 @@
+---
+title: Resume
+description: "Currently, I am a senior developer at Mighty in the Midwest, based out of Grand Rapids, MI. I enjoy finding simple solutions for our clients complex problems. I aim to produce semantic accessible markup, with modular CSS, and progressively enhance the experience with unobtrusive JavaScript."
+permalink: /resume/index.html
+---
+{% extends 'layouts/default.njk' %}
+{% from 'components/reference.njk' import reference %}
+
+{% block main %}
+  <section id="experience">
+    <h2 class="c-section-heading">Experience</h2>
+    <ul class="c-listing">
+      {% for item in resume.experience %}
+      <li>
+        <div class="c-entry">
+          <header class="c-entry__header">
+            <time>{{ item.startDate | date_to_med }} - {% if item.endDate %}{{ item.endDate | date_to_med }}{% else %}Present{% endif %}</time>
+            <h3>{{ item.title }} at {{ item.company }}</h3>
+          </header>
+          <div class="c-prose">
+            {# {{ item.description | markdownify | safe }} #}
+            {% if item.highlights %}
+              <ul>
+                {% for highlight in item.highlights %}
+                  <li>{{ highlight }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="c-section-heading">Skills/Proficiencies</h2>
+    <div class="c-prose">
+      <ul class="c-prose__columns">
+        {% for item in resume.skills %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  {# <section>
+    <h2 class="c-section-heading">Projects</h2>
+    <ul class="c-listing">
+      {% for item in resume.projects %}
+      <li>
+        <div class="c-entry">
+          <header class="c-entry__header">
+            <time>{{ item.startDate | date_to_med }} - {% if item.endDate %}{{ item.endDate | date_to_med }}{% else %}Present{% endif %}</time>
+            <h3>{{ item.title }}</h3>
+          </header>
+          <div class="c-prose">
+            {{ item.description | markdownify | safe }}
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section> #}
+
+  <section id="references">
+    <h2 class="c-section-heading">References</h2>
+    <ul class="c-listing">
+      {% for item in resume.references %}
+        {{ reference({
+          body: item.body,
+          avatar: item.avatar,
+          cite: item.cite,
+          title: item.title
+        }) }}
+      {% endfor %}
+    </ul>
+  </section>
+{% endblock %}
