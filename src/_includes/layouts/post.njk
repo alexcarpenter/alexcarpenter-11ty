@@ -1,7 +1,11 @@
----
-heading: true
----
 {% extends 'layouts/default.njk' %}
+
 {% block main %}
-  <div class="c-prose">{{ content | safe }}</div>
+  <article>
+    <header class="c-page-header">
+      <time>{{ date | date_formatted }}</time>
+      <h1 class="c-page-header__heading">{{ title }}</h1>
+    </header>
+    <div class="c-prose">{{ content | safe }}</div>
+  </article>
 {% endblock %}

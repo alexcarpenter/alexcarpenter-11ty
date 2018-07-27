@@ -3,6 +3,8 @@ title: Office Hours
 date: 2018-06-16
 description: In my continual quest to give back to the community that has provided so much for me, I decided to signup up for a service called Office Hours.
 ---
+{{ description }}
+
 [Office Hours](https://officehours.io/) provides a seamless way for me to schedule time with folks who are looking to gather advice about getting started as a front-end developer.
 
 ## Here are some things I can help you with

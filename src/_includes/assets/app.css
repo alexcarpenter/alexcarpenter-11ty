@@ -173,6 +173,10 @@ time {
   opacity: .25;
 }
 
+.c-page-header__heading {
+  font-size: 2.25rem;
+}
+
 .c-page-header__description {
   padding-top: 1rem;
 }

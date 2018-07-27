@@ -6,6 +6,13 @@ permalink: /index.html
 ---
 {% extends 'layouts/default.njk' %}
 
+{% block pageTop %}
+  <header class="c-page-header">
+    <h1 class="c-page-header__heading">{{ title }}</h1>
+    <p class="c-page-header__description">{{ description | markdownify_inline | safe }}</p>
+  </header>
+{% endblock %}
+
 {% block main %}
   <section>
     <div class="c-prose">

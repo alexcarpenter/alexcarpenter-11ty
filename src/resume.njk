@@ -3,7 +3,7 @@ title: Resume
 description: "Currently, I am a senior developer at Mighty in the Midwest, based out of Grand Rapids, MI. I enjoy finding simple solutions for our clients complex problems. I aim to produce semantic accessible markup, with modular CSS, and progressively enhance the experience with unobtrusive JavaScript."
 permalink: /resume/index.html
 ---
-{% extends 'layouts/default.njk' %}
+{% extends 'layouts/page.njk' %}
 {% from 'components/reference.njk' import reference %}
 
 {% block main %}
@@ -34,7 +34,8 @@ permalink: /resume/index.html
   </section>
 
   <section>
-    <h2 class="c-section-heading">Skills/Proficiencies</h2>
+    {# <h2 class="c-section-heading">Skills/Proficiencies</h2> #}
+    <h2 class="c-section-heading">Proficiencies/Interests</h2>
     <div class="c-prose">
       <ul class="c-prose__columns">
         {% for item in resume.skills %}

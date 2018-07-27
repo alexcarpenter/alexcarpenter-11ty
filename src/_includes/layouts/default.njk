@@ -23,7 +23,7 @@
   <a class="c-skip-link" href="#main-content">Skip to main content</a>
   {% include "components/navigation.njk" %}
   <main id="main-content" tabindex="-1">
-    {% include 'components/pageHeader.njk' %}
+    {% block pageTop %}{% endblock %}
     {% block main %}{% endblock %}
   </main>
   {% include "components/footer.njk" %}

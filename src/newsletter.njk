@@ -3,7 +3,7 @@ title: Newsletter
 description: A curated newsletter highlighting foundational HTML, CSS, and JavaScript resources and tutorials. Subscribe now and never miss an issue.
 permalink: /newsletter/index.html
 ---
-{% extends 'layouts/default.njk' %}
+{% extends 'layouts/page.njk' %}
 {% from 'components/reference.njk' import reference %}
 
 {% block main %}
@@ -21,26 +21,4 @@ permalink: /newsletter/index.html
       </ul>
     </div>
   </section>
-
-  {# <section>
-    <ul class="c-listing">
-      <li>
-        {{ reference({
-          body: 'I would recommend Alex to any forward-thinking web team. His passion for web standards along with his friendly attitude made him an invaluable part of our development team. I’m always especially impressed with his commitment to continuous learning and I hope to have the chance to work with him again!',
-          avatar: '/assets/images/melissa-taylor.jpeg',
-          cite: 'Melissa Taylor',
-          title: 'Director of Client Services'
-        }) }}
-      </li>
-
-      <li>
-        {{ reference({
-          body: 'I would recommend Alex to any forward-thinking web team. His passion for web standards along with his friendly attitude made him an invaluable part of our development team. I’m always especially impressed with his commitment to continuous learning and I hope to have the chance to work with him again!',
-          avatar: '/assets/images/danielle-dunn.jpeg',
-          cite: 'Danielle Dunn',
-          title: 'Senior Project Manager'
-        }) }}
-      </li>
-    </ul>
-  </section> #}
 {% endblock %}
