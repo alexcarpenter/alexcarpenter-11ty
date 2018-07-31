@@ -3,6 +3,13 @@
   "description": "A curated newsletter highlighting foundational HTML, CSS, and JavaScript resources and tutorials.",
   "issues": [
     {
+      "id": 2,
+      "title": "Don't follow someone else's map",
+      "date": "2018-07-31",
+      "url": "https://buttondown.email/alexcarpenter/archive/ac736ff6-7d35-48e1-a747-1cca03537986"
+    },
+    {
+      "id": 1,
       "title": "Getting Started",
       "date": "2018-07-23",
       "url": "https://buttondown.email/alexcarpenter/archive/7eb6a6b5-2a75-46d5-867b-203204d34c7b"
