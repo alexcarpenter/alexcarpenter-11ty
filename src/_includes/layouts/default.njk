@@ -16,7 +16,10 @@
   <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png" />
   <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png" />
   <link rel="manifest" href="/manifest.json" />
-  {% set css %}{% include "assets/app.css" %}{% endset %}
+  {% set css %}
+    {% include "assets/app.css" %}
+    {% include "assets/prism.css" %}
+  {% endset %}
   <style>{{ css | cssmin | safe }}</style>
 </head>
 <body>

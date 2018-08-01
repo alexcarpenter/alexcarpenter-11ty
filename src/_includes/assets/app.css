@@ -68,6 +68,11 @@ time {
   outline: 0;
 }
 
+code:not([class]) {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  color: #ef3b7d;
+}
+
 
 
 
