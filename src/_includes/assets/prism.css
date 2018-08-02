@@ -186,8 +186,8 @@ pre[data-line] .line-highlight[data-end]:after {
     background-color: hsla(0, 0%, 27%, .8);
 }
 .highlight-line-add {
-    background-color: #45844b;
+    background-color: hsla(126, 31%, 39%, 0.5);
 }
 .highlight-line-remove {
-    background-color: #902f2f;
+    background-color: hsla(0, 51%, 37%, 0.5);
 }

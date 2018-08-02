@@ -1,8 +1,12 @@
 ---
-title: Event Delegation Gotcha
+title: Event delegation gotcha
 date: 2018-08-01
 description: While making a few small Javascript libraries, I discovered this one small event delegation gotcha and found a one line CSS fix to solve the problem.
 ---
+**Notice:** Since posting this, Chris shared with me the `closest()` method which works without having to remove pointer events from nested elements. Read about the difference [here](/posts/2018/08/event-delegation-gotcha-follow-up/).
+
+---
+
 While making an effort to learn Javascript over the past year I made a couple of small JS libraries. When possible I have always resorted to using event delegation to keep things performant.
 
 While making a small accordion library, I found it common to include an svg icon within the accordion toggle to designate its open and closed state. As an example, you can see I marked up the accordion toggle using a `button` element and inside of the button I included an plus icon svg as well.
