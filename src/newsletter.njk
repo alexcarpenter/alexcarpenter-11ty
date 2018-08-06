@@ -13,6 +13,14 @@ permalink: /newsletter/index.html
 
   <section>
     <div class="c-prose">
+      {{ reference({
+        avatar: '/assets/images/claire-gersabeck.jpeg',
+        body: 'The Front-End Foundations Newsletter helps fill in the gaps of my knowledge with well-chosen resources that would be hard to seek out on my own. It has helped me improve as a developer!',
+        link: 'https://www.linkedin.com/in/claire-gersabeck/',
+        cite: 'Claire Gersabeck',
+        title: 'Front-end Developer'
+      }) }}
+
       <h2>Previous Issues</h2>
       <ul>
         {% for issue in newsletter.issues %}
