@@ -3,6 +3,12 @@
   "description": "A curated newsletter highlighting foundational HTML, CSS, and JavaScript resources and tutorials.",
   "issues": [
     {
+      "id": 3,
+      "title": "Tis a gift to be simple",
+      "date": "2018-08-06",
+      "url": "https://buttondown.email/alexcarpenter/archive/c04b364f-476c-4829-97eb-4287dec462ab"
+    },
+    {
       "id": 2,
       "title": "Don't follow someone else's map",
       "date": "2018-07-31",
