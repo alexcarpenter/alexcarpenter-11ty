@@ -5,6 +5,7 @@ description: "Currently, I am a senior developer at [Mighty in the Midwest](http
 permalink: /index.html
 ---
 {% extends 'layouts/default.njk' %}
+{% from 'components/reference.njk' import reference %}
 
 {% block pageTop %}
   <header class="c-page-header">
@@ -16,19 +17,16 @@ permalink: /index.html
 {% block main %}
   <section>
     <div class="c-prose">
-      <h2>Interviews</h2>
-      <ul>
-        {% for interview in site.interviews %}
-          <li><strong><a href="{{ interview.url }}">{{ interview.title }}</a></strong> &ndash; {{ interview.description }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <div class="c-prose">
-      <h2>Colophon</h2>
-      <p>This site is built using the static site generator <a href="https://www.11ty.io/">Eleventy</a> and hosted on <a href="https://www.netlify.com/">Netlify</a>. Styles are written in vanilla CSS and inlined for performance. Take a peak behind the scenes on <a href="https://github.com/alexcarpenter/alexcarpenter.me">Github</a>.</p>
+      <h2>Join my weekly newsletter</h2>
+      <p>A curated newsletter highlighting foundational HTML, CSS, and JavaScript resources and tutorials. Subscribe now and never miss an issue.</p>
+      {% include 'components/newsletter.njk' %}
+      {{ reference({
+        avatar: '/assets/images/claire-gersabeck.jpeg',
+        body: 'The Front-End Foundations Newsletter helps fill in the gaps of my knowledge with well-chosen resources that would be hard to seek out on my own. It has helped me improve as a developer!',
+        link: 'https://www.linkedin.com/in/claire-gersabeck/',
+        cite: 'Claire Gersabeck',
+        title: 'Front-end Developer'
+      }) }}
     </div>
   </section>
 {% endblock %}

@@ -8,11 +8,8 @@ permalink: /newsletter/index.html
 
 {% block main %}
   <section>
-    {% include 'components/newsletter.njk' %}
-  </section>
-
-  <section>
     <div class="c-prose">
+      {% include 'components/newsletter.njk' %}
       {{ reference({
         avatar: '/assets/images/claire-gersabeck.jpeg',
         body: 'The Front-End Foundations Newsletter helps fill in the gaps of my knowledge with well-chosen resources that would be hard to seek out on my own. It has helped me improve as a developer!',
@@ -20,11 +17,10 @@ permalink: /newsletter/index.html
         cite: 'Claire Gersabeck',
         title: 'Front-end Developer'
       }) }}
-
       <h2>Previous Issues</h2>
       <ul>
         {% for issue in newsletter.issues %}
-          <li>{{ issue.date | date_formatted }} - <a href="{{ issue.url }}">{{ issue.title }}</a></li>
+          <li>#{{ issue.id }} - <a href="{{ issue.url }}">{{ issue.title }}</a></li>
         {% endfor %}
       </ul>
     </div>
