@@ -18,7 +18,7 @@ permalink: /index.html
   <section>
     <div class="c-prose">
       <h2>Join my weekly newsletter</h2>
-      <p>A curated newsletter highlighting foundational HTML, CSS, and JavaScript resources and tutorials. Subscribe now and never miss an issue.</p>
+      <p>{{ newsletter.description }}</p>
       {% include 'components/newsletter.njk' %}
       {{ reference({
         avatar: '/assets/images/claire-gersabeck.jpeg',

@@ -1,0 +1,14 @@
+---
+title: Now
+permalink: /now/index.html
+description: This is my [now page](https://nownownow.com/about), inspired by Derek Sivers.
+---
+{% extends 'layouts/page.njk' %}
+
+{% set content %}{% endset %}
+
+{% block main %}
+  <div class="c-prose">
+    {{ content | markdownify | safe }}
+  </div>
+{% endblock %}
