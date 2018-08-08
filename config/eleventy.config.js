@@ -71,8 +71,9 @@ module.exports = function(eleventyConfig) {
   })
 
   // ETC.
-  eleventyConfig.addPassthroughCopy('src/assets')
-  eleventyConfig.addPassthroughCopy('src/manifest.json')
+  eleventyConfig
+    .addPassthroughCopy('src/assets')
+    .addPassthroughCopy('src/manifest.json')
 
   return {
     templateFormats: ['njk', 'md', 'html'],
