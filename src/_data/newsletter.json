@@ -3,6 +3,12 @@
   "description": "A curated newsletter highlighting foundational HTML, CSS, and JavaScript resources and tutorials.",
   "issues": [
     {
+      "id": 4,
+      "title": "Progressive Enhancement",
+      "date": "2018-08-14",
+      "url": "https://buttondown.email/alexcarpenter/archive/9c7eef3c-c31a-4413-bc0c-1758b82b1684"
+    },
+    {
       "id": 3,
       "title": "Tis a gift to be simple",
       "date": "2018-08-06",
