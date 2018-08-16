@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "npx eleventy --config=config/eleventy.config.js --quiet",
+    "build": "npx eleventy --config=config/eleventy.config.js",
     "serve": "npx eleventy --config=config/eleventy.config.js --serve"
   },
   "devDependencies": {
