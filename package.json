@@ -7,10 +7,11 @@
     "serve": "npx eleventy --config=config/eleventy.config.js --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.5.0",
+    "@11ty/eleventy": "^0.5.2",
     "@11ty/eleventy-plugin-rss": "^1.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^1.0.5",
     "clean-css": "^4.1.11",
+    "html-minifier": "^3.5.19",
     "luxon": "^1.3.1",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.0.2"

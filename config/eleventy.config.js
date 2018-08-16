@@ -1,5 +1,6 @@
 const { DateTime } = require('luxon')
 const CleanCSS = require('clean-css')
+const htmlmin = require('html-minifier')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const markdown = require('markdown-it')({
@@ -12,7 +13,7 @@ const markdown = require('markdown-it')({
   permalink: false
 })
 
-module.exports = function(eleventyConfig) {
+module.exports = eleventyConfig => {
   const parseDate = str => {
     if (str instanceof Date) {
       return str
@@ -32,6 +33,19 @@ module.exports = function(eleventyConfig) {
     'cssmin',
     code => new CleanCSS({}).minify(code).styles
   )
+
+  // Minify HTML output
+  eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
+    if (outputPath.indexOf('.html') > -1) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      })
+      return minified
+    }
+    return content
+  })
 
   eleventyConfig.addFilter('markdownify', str => markdown.render(str))
 
@@ -70,6 +84,12 @@ module.exports = function(eleventyConfig) {
     return collection.getFilteredByGlob('**/posts/*.md').reverse()
   })
 
+  // eleventyConfig.addCollection('posts', collection => {
+  //   return collection.getAllSorted().filter(item => {
+  //     return item.inputPath.match(/^\.\/posts\//) !== null
+  //   })
+  // })
+
   // ETC.
   eleventyConfig
     .addPassthroughCopy('src/assets')
@@ -85,7 +105,7 @@ module.exports = function(eleventyConfig) {
     },
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
-    dataTemplateEngine: false,
+    dataTemplateEngine: 'njk',
     passthroughFileCopy: true
   }
 }

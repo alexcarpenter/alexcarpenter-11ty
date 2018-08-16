@@ -2,6 +2,8 @@
 title: Event delegation gotcha
 date: 2018-08-01
 description: While making a few small Javascript libraries, I discovered this one small event delegation gotcha and found a one line CSS fix to solve the problem.
+tags:
+  - javascript
 ---
 **Notice:** Since posting this, Chris shared with me the `closest()` method which works without having to remove pointer events from nested elements. Read about the difference [here](/posts/2018/08/event-delegation-gotcha-follow-up/).
 

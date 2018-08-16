@@ -2,6 +2,8 @@
 title: Event delegation gotcha follow-up
 date: 2018-08-02
 description: Yesterday I wrote about an event delegation gotcha that I ran into while building a few small JS libraries. Since posting, Chris Ferdinandi shared with me another alternative solution.
+tags:
+  - javascript
 ---
 Yesterday I wrote about an [event delegation gotcha](/posts/2018/08/event-delegation-gotcha/) that I ran into while building a few small JS libraries. I ran the post by [Chris Ferdinandi](https://gomakethings.com/) and he pointed out I could make use of a different method called `closest()` instead of `matches()` as seen below.
 

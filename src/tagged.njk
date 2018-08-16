@@ -1,16 +1,23 @@
 ---
-title: Posts
-description: 'Subscribe via [RSS](/feed.xml).'
 pagination:
-  data: collections.posts
-  size: 10
-permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html
+  data: collections
+  size: 1
+  alias: tag
+title: Tagged Posts
+permalink: /posts/tagged/{{ tag }}/index.html
 ---
-{% extends 'layouts/page.njk' %}
+{% extends 'layouts/default.njk' %}
+
+{% block pageTop %}
+  <header class="c-page-header">
+    <h1 class="c-page-header__title">Posts tagged “{{ tag }}”</h1>
+  </header>
+{% endblock %}
 
 {% block main %}
   <ul class="c-listing">
-    {% for entry in pagination.items %}
+    {% set taglist = collections[ tag ] %}
+    {% for entry in taglist | reverse %}
     <li>
       <article>
         <header class="c-entry__header">
@@ -22,6 +29,4 @@ permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
     </li>
     {% endfor %}
   </ul>
-
-  {% include "components/pagination.njk" %}
 {% endblock %}

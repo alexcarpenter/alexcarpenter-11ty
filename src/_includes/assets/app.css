@@ -55,6 +55,13 @@ a {
           text-decoration-color: var(--color-primary);
 }
 
+a[rel~="external"]::after {
+  display: inline-block;
+  font-weight: normal;
+  color: var(--color-gray-70);
+  content: "\2009\2192";
+}
+
 ul {
   list-style-type: square;
 }
@@ -259,6 +266,33 @@ hr {
 
 .c-entry__date {
   color: #767676;
+}
+
+
+/**
+ * Pagination
+ */
+
+.c-pagination {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.c-pagination__item[rel="prev"]::before {
+  display: inline-block;
+  font-weight: normal;
+  content: "\2190\2009";
+}
+
+.c-pagination__item[rel="next"] {
+  margin-left: auto;
+}
+
+.c-pagination__item[rel="next"]::after {
+  display: inline-block;
+  font-weight: normal;
+  content: "\2009\2192";
 }
 
 
