@@ -17,7 +17,12 @@ permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
           <time class="c-entry__date">{{ entry.date | date_formatted }}</time>
           <h2><a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a></h2>
         </header>
-        {{ entry.data.description | safe }}
+        <div class="c-prose">
+          <p>{{ entry.data.description | safe }}</p>
+          {% if entry.data.tags %}
+            <p>Tagged: {% for tag in entry.data.tags %}<a href="/posts/tagged/{{ tag }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+          {% endif %}
+        </div>
       </article>
     </li>
     {% endfor %}
