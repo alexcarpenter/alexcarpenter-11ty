@@ -10,7 +10,7 @@ permalink: /posts/tagged/{{ tag }}/index.html
 
 {% block pageTop %}
   <header class="c-page-header">
-    <h1 class="c-page-header__headline">Posts tagged “{{ tag }}”</h1>
+    <h1 class="c-page-header__title">Posts tagged “{{ tag }}”</h1>
   </header>
 {% endblock %}
 
@@ -19,13 +19,7 @@ permalink: /posts/tagged/{{ tag }}/index.html
     {% set taglist = collections[ tag ] %}
     {% for entry in taglist | reverse %}
     <li>
-      <article>
-        <header class="c-entry__header">
-          <time class="c-entry__date">{{ entry.date | date_formatted }}</time>
-          <h2><a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a></h2>
-        </header>
-        <p>{{ entry.data.description | safe }}</p>
-      </article>
+      {% include "components/entry.njk" %}
     </li>
     {% endfor %}
   </ul>
