@@ -3,6 +3,12 @@
   "description": "A curated newsletter highlighting foundational HTML, CSS, and JavaScript resources and tutorials.",
   "issues": [
     {
+      "id": 5,
+      "title": "Either “HELL YEAH!” or “no.”",
+      "date": "2018-08-21",
+      "url": "https://buttondown.email/alexcarpenter/archive/a5c3251b-f323-4673-a77a-15e166dd11fc"
+    },
+    {
       "id": 4,
       "title": "Progressive Enhancement",
       "date": "2018-08-14",
