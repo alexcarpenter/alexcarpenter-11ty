@@ -1,0 +1,15 @@
+---
+title: Offline
+permalink: /offline/index.html
+description: Sorry. It looks like the network connection isn’t working right now.
+---
+{% extends 'layouts/page.njk' %}
+
+{% set content %}
+{% endset %}
+
+{% block main %}
+  <div class="c-prose">
+    {{ content | markdownify | safe }}
+  </div>
+{% endblock %}

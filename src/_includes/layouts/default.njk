@@ -30,5 +30,12 @@
     {% block main %}{% endblock %}
   </main>
   {% include "components/footer.njk" %}
+  <script>
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register('/sw.js', {
+        scope: '/'
+      });
+    }
+  </script>
 </body>
 </html>

@@ -94,6 +94,7 @@ module.exports = eleventyConfig => {
   eleventyConfig
     .addPassthroughCopy('src/assets')
     .addPassthroughCopy('src/manifest.json')
+    .addPassthroughCopy('src/sw.js')
 
   return {
     templateFormats: ['njk', 'md', 'html'],
