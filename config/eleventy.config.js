@@ -84,6 +84,10 @@ module.exports = eleventyConfig => {
     return collection.getFilteredByGlob('**/posts/*.md').reverse()
   })
 
+  eleventyConfig.addCollection('latestPosts', collection => {
+    return collection.getFilteredByGlob('**/posts/*.md').slice(-5).reverse()
+  })
+
   // eleventyConfig.addCollection('posts', collection => {
   //   return collection.getAllSorted().filter(item => {
   //     return item.inputPath.match(/^\.\/posts\//) !== null
