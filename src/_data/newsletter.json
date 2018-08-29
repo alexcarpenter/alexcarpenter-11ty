@@ -3,6 +3,12 @@
   "description": "A curated newsletter highlighting foundational HTML, CSS, and JavaScript resources and tutorials.",
   "issues": [
     {
+      "id": 6,
+      "title": "Design is still about words",
+      "date": "2018-08-29",
+      "url": "https://buttondown.email/alexcarpenter/archive/89649441-50e6-4ff8-a777-c4df73922882"
+    },
+    {
       "id": 5,
       "title": "Either “HELL YEAH!” or “no.”",
       "date": "2018-08-21",
