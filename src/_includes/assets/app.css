@@ -46,13 +46,18 @@ section + section {
 h1, h2, h3,
 h4, h5, h6 {
   line-height: 1.2;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 a {
   color: inherit;
   -webkit-text-decoration-color: var(--color-primary);
           text-decoration-color: var(--color-primary);
+}
+
+a:hover:not(.c-skip-link),
+a:focus:not(.c-skip-link) {
+  color: var(--color-primary);
 }
 
 a[rel~="external"]::after {
@@ -345,8 +350,8 @@ hr {
   padding: 1rem;
   font: inherit;
   color: #fff;
-  background-color: var(--color-blue);
-  border: 1px solid var(--color-blue);
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
   border-radius: 0;
   cursor: pointer;
   transition: all ease-in-out 0.2s;
