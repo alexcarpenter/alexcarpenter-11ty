@@ -10,7 +10,7 @@
   <meta property="og:title" content="{% if title and page.fileSlug != '' %}{{ title }} - {% endif %}{{ site.title }}">
   <meta property="og:description" content="{% if description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ page.url | permalink }}">
-  <meta property="og:image" content="{{ app.url }}/assets/images/og-image.png">
+  <meta property="og:image" content="{{ site.url }}/assets/images/og-image.png">
   <meta name="twitter:card" content="summary">
   <link rel="icon apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180" type="image/png" />
   <link rel="icon" href="/assets/images/favicon-96x96.png" sizes="96x96" type="image/png" />
