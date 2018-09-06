@@ -77,7 +77,6 @@ strong, b {
 
 time {
   display: inline-block;
-  margin-bottom: 0.25rem;
   color: var(--color-gray-70);
 }
 
@@ -172,10 +171,6 @@ hr {
   margin-bottom: 2rem;
 }
 
-.c-nav__brand a {
-  text-decoration: none;
-}
-
 .c-nav__list {
   list-style: none;
   display: flex;
@@ -248,7 +243,7 @@ hr {
 .c-prose ul, ol {
   display: -ms-grid;
   display: grid;
-  grid-row-gap: 0.25rem;
+  grid-row-gap: 0.5rem;
   grid-column-gap: 2rem;
   padding-left: 1.2rem;
 }
@@ -270,6 +265,7 @@ hr {
 }
 
 .c-entry__date {
+  margin-bottom: 0.25rem;
   color: #767676;
 }
 
