@@ -88,11 +88,12 @@ module.exports = eleventyConfig => {
     return collection.getFilteredByGlob('**/posts/*.md').slice(-5).reverse()
   })
 
-  // eleventyConfig.addCollection('posts', collection => {
-  //   return collection.getAllSorted().filter(item => {
-  //     return item.inputPath.match(/^\.\/posts\//) !== null
-  //   })
-  // })
+  // Shortcodes
+  eleventyConfig.addShortcode('video', (id) => {
+    return `<div style="--aspect-ratio: 16/9">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>`
+  })
 
   // ETC.
   eleventyConfig

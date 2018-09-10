@@ -117,6 +117,7 @@ hr {
 @supports (--custom:property) {
   [style*="--aspect-ratio"] {
     position: relative;
+    background-color: var(--color-gray-30);
   }
 
   [style*="--aspect-ratio"]::before {
@@ -246,6 +247,12 @@ hr {
   grid-row-gap: 0.5rem;
   grid-column-gap: 2rem;
   padding-left: 1.2rem;
+}
+
+.c-prose blockquote {
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-gray-30);
+  font-style: italic;
 }
 
 @media screen and (min-width: 600px) {
