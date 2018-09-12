@@ -3,6 +3,9 @@ const CleanCSS = require('clean-css')
 const htmlmin = require('html-minifier')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const Figure = require('../src/_includes/components/Figure.js')
+const Mark = require('../src/_includes/components/Mark.js')
+const Youtube = require('../src/_includes/components/Youtube.js')
 const markdown = require('markdown-it')({
   html: true,
   breaks: true,
@@ -89,11 +92,9 @@ module.exports = eleventyConfig => {
   })
 
   // Shortcodes
-  eleventyConfig.addShortcode('video', (id) => {
-    return `<div style="--aspect-ratio: 16/9">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>`
-  })
+  eleventyConfig.addShortcode('Figure', Figure)
+  eleventyConfig.addShortcode('Mark', Mark)
+  eleventyConfig.addShortcode('Youtube', Youtube)
 
   // ETC.
   eleventyConfig

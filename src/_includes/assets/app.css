@@ -97,6 +97,11 @@ hr {
   background-color: var(--color-gray-30);
 }
 
+figcaption {
+  text-align: center;
+  font-style: italic;
+}
+
 
 
 
@@ -253,6 +258,18 @@ hr {
   padding-left: 1rem;
   border-left: 2px solid var(--color-gray-30);
   font-style: italic;
+}
+
+.c-prose dl {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 1rem;
+  width: 100%;
+}
+
+.c-prose dt {
+  grid-column: 1;
+  font-weight: 700;
 }
 
 @media screen and (min-width: 600px) {

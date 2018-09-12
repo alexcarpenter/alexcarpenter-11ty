@@ -1,0 +1,42 @@
+---
+title: Uses
+description: A short list of the tools and software I use daily to get work done.
+permalink: /uses/index.html
+updated: 2018-09-05
+---
+{% extends 'layouts/page.njk' %}
+
+{% set content %}
+## Software
+* All of my work coding is done in **[Sublime Text 3]()**. The performance and simplicity wins for me when compared to similiar editors.
+* **[iTerm 2]()** is my prefered terminal along with a custom OH-MY-ZSH setup.
+* **[Text Expander]()** is probably my favorite but underused app I use. Right now it is just used to manage the different email address I use.
+* I have never been one to rely on a todo app but I have tried to make use of **[Todoist]()** as of lately. Works great, no complaints.
+* I wouldn't consider myself a power user when it comes to email. **[Spark]()** has worked great for my simple needs.
+* **[Bear]()** has recently replace simplenote for me. I love being able to copy a link and paste it in Bear and have it automatically formatted for me.
+* **[Fantastical]()**
+* **[Flycut]()**
+* **[Spectacle]()**
+* **[Shuttle]()**
+* **[Frank DeLoupe]()**
+
+## Hardware
+* **iPhone 7**
+* **2015 MacBook Air**
+* **Apple Magic Keyboard**
+* **Apple Magic Trackpad**
+
+## Code
+* **[Vue.js]()**
+* **[Craft CMS]()**
+* **[Eleventy]()**
+* **[Laravel Mix]()**
+{% endset %}
+
+{% block main %}
+  <div class="c-prose">
+    {{ content | markdownify | safe }}
+    <hr>
+    <p>Last updated: <time>{{ updated | date_formatted }}</time></p>
+  </div>
+{% endblock %}

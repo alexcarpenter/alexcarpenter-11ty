@@ -6,7 +6,7 @@ tags:
   - javascript
   - screencast
 ---
-{% video "Uwnmn65cMec" %}
+{% Youtube "Uwnmn65cMec" %}
 
 Lazy loading is a technique used to improve the performance of a website by defering loading of imagery at page load time. Instead these images are loaded only when needed.
 

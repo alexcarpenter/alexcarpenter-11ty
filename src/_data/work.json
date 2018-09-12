@@ -1,0 +1,37 @@
+{
+  "featured": [
+    {
+      "title": "Brunswick Bowling",
+      "thumbnail": "/assets/images/brunswickbowling.png",
+      "description": "",
+      "url": "brunswickbowling.com",
+      "meta": {
+        "year": "2018",
+        "role": "Front-end Development",
+        "notes": ""
+      }
+    },
+    {
+      "title": "Conservation Legacy",
+      "thumbnail": "/assets/images/conservationlegacy.png",
+      "description": "",
+      "url": "conservationlegacy.org",
+      "meta": {
+        "year": "2018",
+        "role": "Front-end Development, Strategy",
+        "notes": ""
+      }
+    },
+    {
+      "title": "Amway Global",
+      "thumbnail": "/assets/images/amwayglobal.png",
+      "description": "",
+      "url": "amwayglobal.com",
+      "meta": {
+        "year": "2017",
+        "role": "Front-end Development",
+        "notes": ""
+      }
+    }
+  ]
+}
