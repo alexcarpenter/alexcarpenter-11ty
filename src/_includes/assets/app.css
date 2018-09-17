@@ -3,24 +3,26 @@
    ========================================================================== */
 
 :root {
-  --font-family-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  --font-family-code: Menlo, Monaco, "Courier New", monospace;
+  --font-family-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  --font-family-code: Menlo, Monaco, 'Courier New', monospace;
   --color-blue: #306cfb;
+  --color-highlight: #fffeca;
   --color-primary: var(--color-blue);
   --color-gray-0: #111;
   --color-gray-70: #767676;
   --color-gray-30: #eee;
 }
 
-
 /* ==========================================================================
    GENERIC
    ========================================================================== */
 
-
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -43,8 +45,12 @@ section + section {
   padding-top: 2rem;
 }
 
-h1, h2, h3,
-h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2;
   font-weight: 700;
 }
@@ -52,7 +58,7 @@ h4, h5, h6 {
 a {
   color: inherit;
   -webkit-text-decoration-color: var(--color-primary);
-          text-decoration-color: var(--color-primary);
+  text-decoration-color: var(--color-primary);
 }
 
 a:hover:not(.c-skip-link),
@@ -60,18 +66,19 @@ a:focus:not(.c-skip-link) {
   color: var(--color-primary);
 }
 
-a[rel~="external"]::after {
+a[rel~='external']::after {
   display: inline-block;
   font-weight: normal;
   color: var(--color-gray-70);
-  content: "\2009\2192";
+  content: '\2009\2192';
 }
 
 ul {
   list-style-type: square;
 }
 
-strong, b {
+strong,
+b {
   font-weight: 700;
 }
 
@@ -80,7 +87,7 @@ time {
   color: var(--color-gray-70);
 }
 
-[tabindex="-1"] {
+[tabindex='-1'] {
   outline: 0;
 }
 
@@ -88,6 +95,24 @@ code:not([class]) {
   font-family: var(--font-family-code);
   color: #ef3b7d;
 }
+
+blockquote:not([class]) {
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-gray-30);
+  font-style: italic;
+}
+
+mark {
+  background-color: var(--color-highlight);
+  padding: 0.05em 0.1em;
+  -webkit-box-shadow: var(--color-highlight) 0 0 5px;
+  box-shadow: var(--color-highlight) 0 0 5px;
+}
+
+/* blockquote {
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-gray-30);
+} */
 
 hr {
   margin: 2rem 0 !important;
@@ -102,36 +127,32 @@ figcaption {
   font-style: italic;
 }
 
-
-
-
 /* ==========================================================================
    OBJECTS
    ========================================================================== */
-
 
 /**
  * Aspect Ratio
  */
 
-[style*="--aspect-ratio"] > :first-child {
+[style*='--aspect-ratio'] > :first-child {
   height: auto;
   width: 100%;
 }
 
-@supports (--custom:property) {
-  [style*="--aspect-ratio"] {
+@supports (--custom: property) {
+  [style*='--aspect-ratio'] {
     position: relative;
     background-color: var(--color-gray-30);
   }
 
-  [style*="--aspect-ratio"]::before {
-    content: "";
+  [style*='--aspect-ratio']::before {
+    content: '';
     display: block;
     padding-bottom: calc(100% / (var(--aspect-ratio)));
   }
 
-  [style*="--aspect-ratio"] > :first-child {
+  [style*='--aspect-ratio'] > :first-child {
     position: absolute;
     top: 0;
     left: 0;
@@ -139,13 +160,9 @@ figcaption {
   }
 }
 
-
-
-
 /* ==========================================================================
    COMPONENTS
    ========================================================================== */
-
 
 /**
  * Skip link
@@ -160,14 +177,13 @@ figcaption {
   color: #fff;
   text-decoration: none;
   -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 .c-skip-link:focus {
   -webkit-transform: none;
-          transform: none;
+  transform: none;
 }
-
 
 /**
  * Navigation
@@ -179,13 +195,14 @@ figcaption {
 
 .c-nav__list {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .c-nav__list-item:not(:last-of-type) {
   margin-right: 1rem;
 }
-
 
 /**
  * Page header
@@ -202,10 +219,10 @@ figcaption {
 }
 
 .c-page-header__title:after {
-  content: "\2009\00AC";
+  content: '\2009\00AC';
   display: inline-block;
   color: currentColor;
-  opacity: .25;
+  opacity: 0.25;
 }
 
 .c-page-header__heading {
@@ -215,7 +232,6 @@ figcaption {
 .c-page-header__description {
   padding-top: 1rem;
 }
-
 
 /**
  * Listing
@@ -232,7 +248,6 @@ figcaption {
   border-bottom: 1px solid #eee;
 }
 
-
 /**
  * Prose
  */
@@ -246,7 +261,8 @@ figcaption {
   padding-top: 1rem;
 }
 
-.c-prose ul, ol {
+.c-prose ul,
+ol {
   display: -ms-grid;
   display: grid;
   grid-row-gap: 0.5rem;
@@ -254,15 +270,11 @@ figcaption {
   padding-left: 1.2rem;
 }
 
-.c-prose blockquote {
-  padding-left: 1rem;
-  border-left: 2px solid var(--color-gray-30);
-  font-style: italic;
-}
-
 .c-prose dl {
   display: grid;
+  grid-template-columns: -webkit-min-content 1fr;
   grid-template-columns: min-content 1fr;
+  -webkit-column-gap: 1rem;
   column-gap: 1rem;
   width: 100%;
 }
@@ -271,14 +283,6 @@ figcaption {
   grid-column: 1;
   font-weight: 700;
 }
-
-@media screen and (min-width: 600px) {
-  .c-prose__columns {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 
 /**
  * Entry
@@ -290,36 +294,37 @@ figcaption {
 
 .c-entry__date {
   margin-bottom: 0.25rem;
-  color: #767676;
 }
-
 
 /**
  * Pagination
  */
 
 .c-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-top: 2rem;
 }
 
-.c-pagination__item[rel="prev"]::before {
+.c-pagination__item[rel='prev']::before {
   display: inline-block;
   font-weight: normal;
-  content: "\2190\2009";
+  content: '\2190\2009';
 }
 
-.c-pagination__item[rel="next"] {
+.c-pagination__item[rel='next'] {
   margin-left: auto;
 }
 
-.c-pagination__item[rel="next"]::after {
+.c-pagination__item[rel='next']::after {
   display: inline-block;
   font-weight: normal;
-  content: "\2009\2192";
+  content: '\2009\2192';
 }
-
 
 /**
  * Notice
@@ -328,9 +333,8 @@ figcaption {
 .c-notice {
   padding: 1rem;
   border: 1px solid #ffeeba;
-  background-color: #FFF3CF;
+  background-color: #fff3cf;
 }
-
 
 /**
  * Form
@@ -351,8 +355,8 @@ figcaption {
 
 .c-form__input {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   display: block;
   width: 100%;
   padding: 1rem;
@@ -365,8 +369,8 @@ figcaption {
 
 .c-form__button {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 1rem;
   font: inherit;
   color: #fff;
@@ -374,6 +378,7 @@ figcaption {
   border: 1px solid var(--color-primary);
   border-radius: 0;
   cursor: pointer;
+  -webkit-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
 
@@ -384,6 +389,8 @@ figcaption {
 }
 
 .c-form__input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -400,7 +407,6 @@ figcaption {
   margin-bottom: 1rem;
 }
 
-
 /**
  * Footer
  */
@@ -416,7 +422,6 @@ figcaption {
 .c-footer__social a:not(:last-of-type) {
   margin-right: 1rem;
 }
-
 
 /**
  * Reference
@@ -437,7 +442,6 @@ figcaption {
 .c-reference__body {
   margin-bottom: 1rem;
 }
-
 
 .c-reference__cite {
   display: block;

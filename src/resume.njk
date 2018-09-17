@@ -14,7 +14,7 @@ permalink: /resume/index.html
       <li>
         <div class="c-entry">
           <header class="c-entry__header">
-            <time>{{ item.startDate | date_to_med }} - {% if item.endDate %}{{ item.endDate | date_to_med }}{% else %}Present{% endif %}</time>
+            <time class="c-entry__date">{{ item.startDate | date_to_med }} - {% if item.endDate %}{{ item.endDate | date_to_med }}{% else %}Present{% endif %}</time>
             <h3>{{ item.title }} at {{ item.company }}</h3>
           </header>
           <div class="c-prose">
@@ -45,35 +45,18 @@ permalink: /resume/index.html
     </div>
   </section>
 
-  {# <section>
-    <h2 class="c-section-heading">Projects</h2>
-    <ul class="c-listing">
-      {% for item in resume.projects %}
-      <li>
-        <div class="c-entry">
-          <header class="c-entry__header">
-            <time>{{ item.startDate | date_to_med }} - {% if item.endDate %}{{ item.endDate | date_to_med }}{% else %}Present{% endif %}</time>
-            <h3>{{ item.title }}</h3>
-          </header>
-          <div class="c-prose">
-            {{ item.description | markdownify | safe }}
-          </div>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </section> #}
-
   <section id="references">
     <h2 class="c-section-heading">References</h2>
     <ul class="c-listing">
       {% for item in resume.references %}
+      <li>
         {{ reference({
           body: item.body,
           avatar: item.avatar,
           cite: item.cite,
           title: item.title
         }) }}
+      </li>
       {% endfor %}
     </ul>
   </section>

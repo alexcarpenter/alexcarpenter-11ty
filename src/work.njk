@@ -17,10 +17,14 @@ permalink: /work/index.html
           <h2>{{ entry.title }}</h2>
         </header>
         <div class="c-prose">
-          <div style="--aspect-ratio: 4/3; border: 1px solid var(--color-gray-30);">
-            <img src="{{ entry.thumbnail }}" alt="{{ entry.title }} Homepage">
+          <div style="border: 1px solid var(--color-gray-30);">
+            {% Figure {
+              src: entry.thumbnail,
+              alt: entry.title,
+              ratio: '4/3'
+            } %}
           </div>
-          <dl>
+          <dl class="c-prose__meta">
           {% if entry.meta.year %}
             <dt>Year</dt>
             <dd>{{ entry.meta.year }}</dd>

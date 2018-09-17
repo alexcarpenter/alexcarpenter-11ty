@@ -46,8 +46,7 @@
   ],
   "skills": [
     "Craft CMS, Eleventy, Jekyll",
-    "Front-end Performance",
-    "Accessibility",
+    "Performance, Accessibility",
     "CSS, Sass, PostCSS",
     "Javascript, ES6, Vue.js",
     "NPM Scripts, Webpack, Gulp",
@@ -55,19 +54,19 @@
   ],
   "references": [
     {
-      "body": "I would recommend Alex to any forward-thinking web team. His passion for web standards along with his friendly attitude made him an invaluable part of our development team. I’m always especially impressed with his commitment to continuous learning and I hope to have the chance to work with him again!",
+      "body": "I would recommend Alex to any forward-thinking web team. His passion for web standards along with his friendly attitude made him an invaluable part of our development team. I’m always especially impressed with his <mark>commitment to continuous learning</mark> and I hope to have the chance to work with him again!",
       "avatar": "/assets/images/melissa-taylor.jpeg",
       "cite": "Melissa Taylor",
       "title": "Director of Client Services at Mighty"
     },
     {
-      "body": "Alex and I have worked together on several projects over the course of the last few years and it's been great to have him on my project teams. He is incredibly thorough and thoughtful with his work and is always seeking out improving in his craft. He's conscious of meeting deadlines and communicates concerns early so that project teams can be proactive in problem solving. Alex's passion for learning is contagious. He seeks out and initiates collaboration and through this passion he's taught me a ton about web development, performance, and accessibility. Working with him has made me a better in my work.",
+      "body": "Alex and I have worked together on several projects over the course of the last few years and it's been great to have him on my project teams. <mark>He is incredibly thorough and thoughtful</mark> with his work and is always seeking out improving in his craft. He's conscious of meeting deadlines and communicates concerns early so that project teams can be proactive in problem solving. Alex's passion for learning is contagious. <mark>He seeks out and initiates collaboration</mark> and through this passion he's taught me a ton about web development, performance, and accessibility. Working with him has made me a better in my work.",
       "avatar": "/assets/images/danielle-dunn.jpeg",
       "cite": "Danielle Dunn",
       "title": "Senior Project Manager at Mighty"
     },
     {
-      "body": "Alex is a true autodidact that is dedicated to keeping up with the latest development tools, methods and trends.",
+      "body": "Alex is a true autodidact that is <mark>dedicated to keeping up with the latest development tools, methods and trends</mark>.",
       "avatar": "/assets/images/ben-kohl.jpg",
       "cite": "Benjamin Kohl",
       "title": "Back-end developer at Masuga Design"
