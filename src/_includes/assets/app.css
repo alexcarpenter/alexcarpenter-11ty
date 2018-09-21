@@ -262,12 +262,12 @@ figcaption {
 }
 
 .c-prose ul,
-ol {
-  display: -ms-grid;
-  display: grid;
-  grid-row-gap: 0.5rem;
-  grid-column-gap: 2rem;
+.c-prose ol {
   padding-left: 1.2rem;
+}
+
+.c-prose li:not(:last-of-type) {
+  margin-bottom: 0.5rem;
 }
 
 .c-prose dl {

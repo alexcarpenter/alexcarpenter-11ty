@@ -1,19 +1,18 @@
-const { DateTime } = require('luxon')
+const {DateTime} = require('luxon')
 const CleanCSS = require('clean-css')
 const htmlmin = require('html-minifier')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const Figure = require('../src/_includes/components/Figure.js')
-const Mark = require('../src/_includes/components/Mark.js')
 const Youtube = require('../src/_includes/components/Youtube.js')
 const markdown = require('markdown-it')({
   html: true,
   breaks: true,
   linkify: true,
-  typographer: true
+  typographer: true,
 }).use(require('markdown-it-anchor'), {
   level: [2],
-  permalink: false
+  permalink: false,
 })
 
 module.exports = eleventyConfig => {
@@ -21,7 +20,7 @@ module.exports = eleventyConfig => {
     if (str instanceof Date) {
       return str
     }
-    const date = DateTime.fromISO(str, { zone: 'utc' })
+    const date = DateTime.fromISO(str, {zone: 'utc'})
     return date.toJSDate()
   }
 
@@ -34,7 +33,7 @@ module.exports = eleventyConfig => {
   // Filters
   eleventyConfig.addFilter(
     'cssmin',
-    code => new CleanCSS({}).minify(code).styles
+    code => new CleanCSS({}).minify(code).styles,
   )
 
   // Minify HTML output
@@ -43,7 +42,7 @@ module.exports = eleventyConfig => {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
-        collapseWhitespace: true
+        collapseWhitespace: true,
       })
       return minified
     }
@@ -53,13 +52,13 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('markdownify', str => markdown.render(str))
 
   eleventyConfig.addFilter('markdownify_inline', str =>
-    markdown.renderInline(str)
+    markdown.renderInline(str),
   )
 
   eleventyConfig.addFilter('strip_html', str => {
     return str.replace(
       /<script.*?<\/script>|<!--.*?-->|<style.*?<\/style>|<.*?>/g,
-      ''
+      '',
     )
   })
 
@@ -88,12 +87,14 @@ module.exports = eleventyConfig => {
   })
 
   eleventyConfig.addCollection('latestPosts', collection => {
-    return collection.getFilteredByGlob('**/posts/*.md').slice(-5).reverse()
+    return collection
+      .getFilteredByGlob('**/posts/*.md')
+      .slice(-5)
+      .reverse()
   })
 
   // Shortcodes
   eleventyConfig.addShortcode('Figure', Figure)
-  eleventyConfig.addShortcode('Mark', Mark)
   eleventyConfig.addShortcode('Youtube', Youtube)
 
   // ETC.
@@ -108,11 +109,11 @@ module.exports = eleventyConfig => {
       input: 'src',
       includes: '_includes',
       data: '_data',
-      output: 'www'
+      output: 'www',
     },
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
-    passthroughFileCopy: true
+    passthroughFileCopy: true,
   }
 }
