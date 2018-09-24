@@ -1,0 +1,23 @@
+:root {
+  --color-primary: #d34532;
+}
+
+.c-page-header__heading {
+  color: var(--color-primary);
+}
+
+.c-page-header__description {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.c-headshot {
+  float: right;
+  margin-left: 1rem;
+  border-radius: 4px;
+}
+
+/* .c-prose ul {
+  padding-left: 1.8rem;
+  list-style-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDE4IDEzIj4gIDxwYXRoIGQ9Ik01Ljk4NCAxMi4yNjZsLTUuMjUtNS4xMWMtLjM3NS0uMzQ0LS4zNzUtLjY4NyAwLTEuMDNsMS4wMzItMS4wMzJjLjM3NS0uMzQ0LjczNC0uMzQ0IDEuMDc4IDBMNi41IDguNzA0bDguMTU2LTcuOTdjLjM0NC0uMzQzLjcwMy0uMzQzIDEuMDc4IDBsMS4wMzIuOTg1Yy4zNzUuMzQyLjM3NS42ODUgMCAxLjAzbC05Ljc1IDkuNTYyYy0uMzQ0LjMxMi0uNjg4LjI5Ni0xLjAzMi0uMDQ3eiIgZmlsbD0iI2QzNDUzMiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+);
+} */

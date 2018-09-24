@@ -20,6 +20,7 @@
   {% set css %}
     {% include "assets/app.css" %}
     {% include "assets/prism.css" %}
+    {% if extraCSS %}{% include extraCSS %}{% endif %}
   {% endset %}
   <style>{{ css | cssmin | safe }}</style>
 </head>
