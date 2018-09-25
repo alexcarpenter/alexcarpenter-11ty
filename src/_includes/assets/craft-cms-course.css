@@ -14,7 +14,7 @@
 .c-headshot {
   float: right;
   margin-left: 1rem;
-  border-radius: 4px;
+  border-radius: 50%;
 }
 
 /* .c-prose ul {
