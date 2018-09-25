@@ -30,6 +30,31 @@ permalink: /index.html
 
   <section>
     <div class="c-prose">
+      <h2>Craft CMS Video Course</h2>
+      <p>From installation to launch, everything you need to know to build, launch, and manage a Craft CMS site.</p>
+      <p><mark>Subscribe for project updates, free content previews, and a discount when the course launches this winter.</mark></p>
+      <form
+        action="https://buttondown.email/api/emails/embed-subscribe/alexcarpenter"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.email/alexcarpenter', 'popupwindow')"
+        class="embeddable-buttondown-form c-form"
+      >
+        <input type="hidden" value="1" name="embed"/>
+        <div class="c-form__row">
+          <label class="c-form__label" for="bd-email">Enter your email</label>
+          <div class="c-form__input-group">
+            <input class="c-form__input" type="email" name="email" id="bd-email" required>
+            <input class="c-form__button" type="submit" value="Subscribe" />
+          </div>
+        </div>
+      </form>
+      <p>View course details at <a href="/course/craft-cms">alexcarpenter.me/courses/craft-cms</a></p>
+    </div>
+  </section>
+
+  {# <section>
+    <div class="c-prose">
       <h2>Join my weekly newsletter</h2>
       <p>{{ newsletter.description }}</p>
       {% include 'components/newsletter.njk' %}
@@ -41,5 +66,5 @@ permalink: /index.html
         title: 'Front-end Developer'
       }) }}
     </div>
-  </section>
+  </section> #}
 {% endblock %}
