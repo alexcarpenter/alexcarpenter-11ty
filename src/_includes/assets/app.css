@@ -8,12 +8,15 @@
     'Helvetica Neue', sans-serif;
   --font-family-code: Menlo, Monaco, 'Courier New', monospace;
   --color-blue: #306cfb;
+  --color-red: #e7275c;
   --color-highlight: #fffeca;
   --color-primary: var(--color-blue);
+  --color-secondary: var(--color-red);
   --color-gray-0: #111;
   --color-gray-70: #767676;
   --color-gray-30: #eee;
   --border-radius-default: 4px;
+  --transition-duration: 0.2s;
 }
 
 /* ==========================================================================
@@ -28,7 +31,6 @@
 }
 
 body {
-  max-width: 43.75rem;
   padding: 2rem 1rem;
   font-family: var(--font-family-system);
   font-size: 1.125rem;
@@ -59,7 +61,8 @@ h6 {
 a {
   color: inherit;
   -webkit-text-decoration-color: var(--color-primary);
-  text-decoration-color: var(--color-primary);
+  text-decoration-color: var(--color-secondary);
+  transition: color ease-in-out var(--transition-duration);
 }
 
 a:hover:not(.c-skip-link),
@@ -90,6 +93,11 @@ time {
 
 [tabindex='-1'] {
   outline: 0;
+}
+
+img,
+svg {
+  vertical-align: middle;
 }
 
 code:not([class]) {
@@ -138,6 +146,16 @@ figcaption {
 /* ==========================================================================
    OBJECTS
    ========================================================================== */
+
+/**
+ * Container
+ */
+
+.o-container {
+  max-width: 37.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 /**
  * Aspect Ratio
@@ -437,6 +455,10 @@ figcaption {
   padding-top: 4rem;
 }
 
+.c-footer__social {
+  display: flex;
+}
+
 .c-footer__social a {
   text-decoration: none;
 }
@@ -468,3 +490,8 @@ figcaption {
 .c-reference__cite {
   display: block;
 }
+
+/*.u-extend {
+  margin-left: -4rem;
+  width: calc(100% + 8rem);
+}*/

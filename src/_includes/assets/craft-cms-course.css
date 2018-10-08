@@ -1,5 +1,6 @@
 :root {
   --color-primary: #d34532;
+  --color-secondary: var(--color-primary);
 }
 
 .c-page-header__heading {

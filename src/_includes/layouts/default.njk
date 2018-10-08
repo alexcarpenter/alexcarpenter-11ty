@@ -25,13 +25,15 @@
   <style>{{ css | cssmin | safe }}</style>
 </head>
 <body>
-  <a class="c-skip-link" href="#main-content">Skip to main content</a>
-  {% include "components/navigation.njk" %}
-  <main id="main-content" tabindex="-1">
-    {% block pageTop %}{% endblock %}
-    {% block main %}{% endblock %}
-  </main>
-  {% include "components/footer.njk" %}
+  <div class="o-container">
+    <a class="c-skip-link" href="#main-content">Skip to main content</a>
+    {% include "components/navigation.njk" %}
+    <main id="main-content" tabindex="-1">
+      {% block pageTop %}{% endblock %}
+      {% block main %}{% endblock %}
+    </main>
+    {% include "components/footer.njk" %}
+  </div>
   <script>
     if (navigator.serviceWorker) {
       navigator.serviceWorker.register('/sw.js', {
