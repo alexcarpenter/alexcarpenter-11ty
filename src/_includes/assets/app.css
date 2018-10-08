@@ -13,6 +13,7 @@
   --color-gray-0: #111;
   --color-gray-70: #767676;
   --color-gray-30: #eee;
+  --border-radius-default: 4px;
 }
 
 /* ==========================================================================
@@ -105,7 +106,12 @@ blockquote:not([class]) {
 mark {
   /* background-color: var(--color-highlight); */
   background-color: transparent;
-  background-image: linear-gradient(-100deg, rgba(250,247,133,0.3), rgba(250,247,133,0.7) 95%, rgba(250,247,133,0.1));
+  background-image: linear-gradient(
+    -100deg,
+    rgba(250, 247, 133, 0.3),
+    rgba(250, 247, 133, 0.7) 95%,
+    rgba(250, 247, 133, 0.1)
+  );
   padding: 0.05em 0.1em;
   -webkit-box-shadow: var(--color-highlight) 0 0 5px;
   box-shadow: var(--color-highlight) 0 0 5px;
@@ -363,7 +369,7 @@ figcaption {
   width: 100%;
   padding: 1rem;
   border: 1px solid #ccc;
-  border-radius: 0;
+  border-radius: var(--border-radius-default);
   background-color: #fafafa;
   font: inherit;
   resize: none;
@@ -378,7 +384,7 @@ figcaption {
   color: #fff;
   background-color: var(--color-primary);
   border: 1px solid var(--color-primary);
-  border-radius: 0;
+  border-radius: var(--border-radius-default);
   cursor: pointer;
   -webkit-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
@@ -397,13 +403,17 @@ figcaption {
 }
 
 .c-form__input-group .c-form__input {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: var(--border-radius-default);
+  border-bottom-left-radius: var(--border-radius-default);
 }
 
 .c-form__input-group .c-form__button {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: var(--border-radius-default);
+  border-bottom-right-radius: var(--border-radius-default);
 }
 
 .c-form__help {
