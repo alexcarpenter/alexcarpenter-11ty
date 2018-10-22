@@ -12,6 +12,12 @@
         {%- endif %}
       </h1>
     </header>
-    <div class="c-prose">{{ content | safe }}</div>
+    <div class="c-prose">
+      {{ content | safe }}
+      {% if link -%}
+        <hr>
+        <a rel="external" href="{{ link | safe }}">View Link</a>
+      {%- endif %}
+    </div>
   </article>
 {% endblock %}
