@@ -1,0 +1,39 @@
+---
+title: About
+description: I’m Alex Carpenter, a front-end web developer focused on performance and accessibility.
+permalink: /about/index.html
+---
+{% extends 'layouts/page.njk' %}
+
+{% set content %}
+{% Figure {
+  src: '/assets/images/banner.jpg',
+  caption: 'Photo by Jill DeVries'
+} %}
+
+Throughtout the past five years i've worked professionally as a hybrid front-end developer/designer. Working confidently throughout the stack to produce semantic <a href="/posts/tagged/accessiblity/">accessible</a> markup, with modular <a href="/posts/tagged/css/">CSS</a>, and progressively enhance the experience with unobtrusive <a href="/posts/tagged/javascript/">JavaScript</a>.
+
+I live in Grand Rapids, Michigan ✋, with my wife and our puppy, where we spend our time fly fishing, hiking, and seeking adventures offline.
+
+Checkout my [now page](/now/) to see what I am up to right now.
+
+## Interviews
+
+* **[Developurrs](https://developur.rs/posts/alex-carpenter/)** - An interview series where web professionals about their beloved pets...and tech.
+* **[Show Me Your Mic](https://itunes.apple.com/us/podcast/alex-carpenter-show-me-your-coffee/id602836998?i=1000330208077&mt=2)** - A show that talks to podcasters about gear, software, workflow, and philosophies behind podcasting.
+* **[How to Hold a Pencil](https://itunes.apple.com/us/podcast/013-alex-carpenter/id738646287?i=1000264786894&mt=2)** - An interview show with self-taught designers and developers.
+
+## Colophon
+
+* Site is built using the static site generator [11ty](https://www.11ty.io/).
+* Template code makes use of [Nunjucks](https://mozilla.github.io/nunjucks/).
+* Styles are written in vanilla CSS 😱.
+* Site is hosted and built using [Netlify](https://www.netlify.com/).
+* View the source code on [Github](https://github.com/alexcarpenter/alexcarpenter.me).
+{% endset %}
+
+{% block main %}
+  <div class="c-prose">
+    {{ content | markdownify | safe }}
+  </div>
+{% endblock %}
