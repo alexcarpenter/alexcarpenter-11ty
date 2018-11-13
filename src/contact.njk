@@ -13,7 +13,9 @@ permalink: /contact/index.html
 
   <section class="o-grid-row">
     <div class="o-grid-col u-width-two-thirds">
-      <form name="contact" netlify>
+      <form name="contact" netlify-honeypot="bot-field" action="/contact/thanks/" netlify>
+        <input name="bot-field" hidden />
+
         <div class="c-form__row">
           <label class="c-form__label" for="name">Your name</label>
           <input class="c-form__input" type="text" name="name" id="name" required>

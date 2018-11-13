@@ -17,9 +17,31 @@ primaryColor: '#d34532'
     <div class="o-grid-col u-width-two-thirds">
       <div class="c-prose">
         <p><mark>Subscribe for project updates, free content previews, and a discount when the course launches this winter.</mark></p>
+        <form
+          action="https://buttondown.email/api/emails/embed-subscribe/alexcarpenter"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://buttondown.email/alexcarpenter', 'popupwindow')"
+          class="embeddable-buttondown-form c-form"
+        >
+          <input type="hidden" value="1" name="embed"/>
+          <div class="c-form__row">
+            <label class="c-form__label" for="bd-email">Enter your email</label>
+            <input class="c-form__input" type="email" name="email" id="bd-email" required>
+          </div>
+
+          <div class="c-form__row">
+            <input class="c-form__button" type="submit" value="Subscribe" />
+          </div>
+        </form>
         <hr>
         <h2>What you will learn</h2>
         <ul><li>Local enviroment setup via <mark>Mamp Pro and Sequel Pro</mark></li><li>Multi environment config setup</li><li>Front-end build process via <mark>Laravel Mix</mark></li><li>Content builder via <mark>Matrix and Super Table</mark></li><li>Components via <mark>includes and macros</mark></li><li>Image optimization techniques via <mark>Imager</mark></li><li>Modern SEO techniques via <mark>SEOmatic</mark></li><li>Improve template performance with <mark>Eager Loading</mark></li><li>Hosting via <mark>Digital Ocean</mark></li><li>Server provisioning via <mark>Server Pilot</mark></li><li>Atomic zero downtime deployments via <mark>Buddy Works</mark></li><li>Managing backups and assets via <mark>craft-scripts</mark></li></ul>
+        <h2>Help me spread the word</h2>
+        <blockquote><p>“Checkout the Craft CMS Video Course by @hybrid_alex - From installation to launch, everything you need to know to build, launch, and manage a @craftcms site.”</p></blockquote>
+        <p><a href="https://twitter.com/home?status=Checkout%20the%20Craft%20CMS%20Video%20Course%20by%20%40hybrid_alex%20-%20from%20installation%20to%20launch,%20everything%20you%20need%20to%20know%20to%20build,%20launch,%20and%20manage%20a%20%40craftcms%20site.%20https%3A//alexcarpenter.me/courses/craft-cms">Share on Twitter</a></p>
+        <hr>
+        <p><em>Notice: this video course is not affiliated with or endorsed by Pixel & Tonic, Inc.</em></p>
       </div>
     </div>
   </div>
