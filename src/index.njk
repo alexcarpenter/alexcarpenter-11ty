@@ -5,17 +5,57 @@ description: "Currently, I am a senior developer at [Mighty in the Midwest](http
 permalink: /index.html
 ---
 {% extends 'layouts/default.njk' %}
-{% from 'components/reference.njk' import reference %}
-
-{% block pageTop %}
-  <header class="c-page-header">
-    <h1 class="c-page-header__heading">{{ title }}</h1>
-    <p class="c-page-header__description">{{ description | markdownify_inline | safe }}</p>
-  </header>
-{% endblock %}
 
 {% block main %}
-  <section>
+  <header class="c-content-header">
+    <h1 class="c-content-header__headline">I’m Alex Carpenter, a front-end web developer focused on performance and accessibility.</h1>
+    <p class="c-content-header__lead">Currently, I am a senior front-end developer, based out of Grand Rapids, MI. I enjoy finding simple solutions for our clients complex problems. I aim to produce semantic accessible markup, with modular CSS, and progressively enhance the experience with unobtrusive JavaScript.</p>
+  </header>
+
+  <section class="o-grid-row">
+    <div class="o-grid-col u-width-two-thirds">
+      <div class="c-prose">
+        <h2>Latest posts</h2>
+        <ul>
+          {% for entry in collections.latestPosts %}
+          <li>
+            <a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="o-grid-row">
+    <div class="o-grid-col u-width-two-thirds">
+      <div class="c-prose">
+        <h2>Craft CMS Video Course</h2>
+        <p>From installation to launch, everything you need to know to build, launch, and manage a Craft CMS site.</p>
+        <p><mark>Subscribe for project updates, free content previews, and a discount when the course launches this winter.</mark></p>
+        <form
+          action="https://buttondown.email/api/emails/embed-subscribe/alexcarpenter"
+          method="post"
+          target="popupwindow"
+          onsubmit="window.open('https://buttondown.email/alexcarpenter', 'popupwindow')"
+          class="embeddable-buttondown-form c-form"
+        >
+          <input type="hidden" value="1" name="embed"/>
+          <div class="c-form__row">
+            <label class="c-form__label" for="bd-email">Enter your email</label>
+            <input class="c-form__input" type="email" name="email" id="bd-email" required>
+          </div>
+
+          <div class="c-form__row">
+            <input class="c-form__button" type="submit" value="Subscribe" />
+          </div>
+        </form>
+        <p>View course details at <a href="/courses/craft-cms">alexcarpenter.me/courses/craft-cms</a></p>
+      </div>
+    </div>
+  </section>
+
+  {# <section>
     <div class="c-prose">
       <h2>Latest posts</h2>
       <ul>
@@ -51,7 +91,7 @@ permalink: /index.html
       </form>
       <p>View course details at <a href="/courses/craft-cms">alexcarpenter.me/courses/craft-cms</a></p>
     </div>
-  </section>
+  </section> #}
 
   {# <section>
     <div class="c-prose">

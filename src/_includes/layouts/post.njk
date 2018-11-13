@@ -1,23 +1,26 @@
 {% extends 'layouts/default.njk' %}
 
 {% block main %}
-  <article>
-    <header class="c-page-header">
-      <time>{{ date | date_formatted }}</time>
-      <h1 class="c-page-header__heading">
+  <article class="o-grid-row">
+    <div class="o-grid-col u-width-two-thirds">
+      <header class="c-post-header">
+        <time class="c-post-header__time">{{ date | date_formatted }}</time>
+        <h1 class="c-post-header__title">
+          {% if link -%}
+            <a rel="external" href="{{ link | safe }}">{{ title }}</a>
+          {%- else -%}
+            {{ title }}
+          {%- endif %}
+        </h1>
+      </header>
+
+      <div class="c-prose">
+        {{ content | safe }}
         {% if link -%}
-          <a rel="external" href="{{ link | safe }}">{{ title }}</a>
-        {%- else -%}
-          {{ title }}
+          <hr>
+          <a rel="external" href="{{ link | safe }}">View Link</a>
         {%- endif %}
-      </h1>
-    </header>
-    <div class="c-prose">
-      {{ content | safe }}
-      {% if link -%}
-        <hr>
-        <a rel="external" href="{{ link | safe }}">View Link</a>
-      {%- endif %}
+      </div>
     </div>
   </article>
 {% endblock %}

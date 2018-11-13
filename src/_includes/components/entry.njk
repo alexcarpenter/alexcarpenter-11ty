@@ -1,12 +1,9 @@
 <article>
   <header class="c-entry__header">
     <time class="c-entry__date">{{ entry.date | date_formatted }}</time>
-    <h2><a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a></h2>
+    <h2 class="c-entry__title"><a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a></h2>
   </header>
   <div class="c-prose">
     <p>{{ entry.data.description | safe }}</p>
-    {% if entry.data.tags %}
-      <p>Tagged: {% for tag in entry.data.tags %}<a href="/posts/tagged/{{ tag }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
-    {% endif %}
   </div>
 </article>

@@ -6,16 +6,28 @@ pagination:
   size: 10
 permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html
 ---
-{% extends 'layouts/page.njk' %}
+{% extends 'layouts/default.njk' %}
 
 {% block main %}
-  <ul class="c-listing">
-    {% for entry in pagination.items %}
-    <li>
-      {% include "components/entry.njk" %}
-    </li>
-    {% endfor %}
-  </ul>
+  <header class="c-content-header">
+    <h1 class="c-content-header__title">Posts</h1>
+  </header>
 
-  {% include "components/pagination.njk" %}
+  <div class="o-grid-row">
+    <div class="o-grid-col u-width-two-thirds">
+      <ul class="o-listing">
+        {% for entry in pagination.items %}
+        <li class="o-listing__item">
+          {% include "components/entry.njk" %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="o-grid-row">
+    <div class="o-grid-col u-width-two-thirds">
+      {% include "components/pagination.njk" %}
+    </div>
+  </div>
 {% endblock %}
