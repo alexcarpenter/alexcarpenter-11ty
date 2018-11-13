@@ -1,193 +1,157 @@
 /**
-* xonokai theme for JavaScript, CSS and HTML
-* based on: https://github.com/MoOx/sass-prism-theme-base by Maxime Thirouin ~ MoOx --> http://moox.fr/ , which is Loosely based on Monokai textmate theme by http://www.monokai.nl/
-* license: MIT; http://moox.mit-license.org/
-*/
+ * VS theme by Andrew Lock (https://andrewlock.net)
+ * Inspired by Visual Studio syntax coloring
+ */
+
 code[class*="language-"],
 pre[class*="language-"] {
-    -moz-tab-size: 2;
-    -o-tab-size: 2;
-    tab-size: 2;
+    color: #393A34;
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    font-size: 0.95rem;
+    line-height: 1.4;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: normal;
-    font-family: Menlo, Monaco, "Courier New", monospace;
-    font-size: 14px;
-    color: #76d9e6;
-    text-shadow: none;
 }
-pre[class*="language-"],
-:not(pre) > code[class*="language-"] {
-    background: #2a2a2a;
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    background: #C1DEF1;
 }
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    background: #C1DEF1;
+}
+
+/* Code blocks */
 pre[class*="language-"] {
-    padding: 15px;
-    border-radius: 4px;
-    border: 1px solid #e1e1e8;
+    padding: 1em;
+    margin: .5em 0;
     overflow: auto;
+    border: 1px solid #dddddd;
+    background-color: #fafafa;
 }
 
-pre[class*="language-"] {
-    position: relative;
-}
-pre[class*="language-"] code {
-    white-space: pre;
-    display: block;
-}
-
+/* Inline code */
 :not(pre) > code[class*="language-"] {
-    padding: 0.15em 0.2em 0.05em;
-    border-radius: .3em;
-    border: 0.13em solid #7a6652;
-    box-shadow: 1px 1px 0.3em -0.1em #000 inset;
+    padding: .2em;
+    padding-top: 1px; padding-bottom: 1px;
+    background: #f8f8f8;
+    border: 1px solid #dddddd;
 }
-.token.namespace {
-    opacity: .7;
-}
+
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: #6f705e;
+    color: #008000; font-style: italic;
 }
-.token.operator,
-.token.boolean,
-.token.number {
-    color: #a77afe;
+
+.token.namespace {
+    opacity: .7;
 }
-.token.attr-name,
+
 .token.string {
-    color: #e6d06c;
+    color: #A31515;
 }
-.token.entity,
+
+.token.punctuation,
+.token.operator {
+    color: #393A34; /* no highlight */
+}
+
 .token.url,
-.language-css .token.string,
-.style .token.string {
-    color: #e6d06c;
-}
-.token.selector,
+.token.symbol,
+.token.number,
+.token.boolean,
+.token.variable,
+.token.constant,
 .token.inserted {
-    color: #a6e22d;
+    color: #36acaa;
 }
+
 .token.atrule,
-.token.attr-value,
 .token.keyword,
+.token.attr-value,
+.language-autohotkey .token.selector,
+.language-json .token.boolean,
+.language-json .token.number,
+code[class*="language-css"]{
+    color: #0000ff;
+}
+
+.token.function {
+    color: #393A34;
+}
+.token.deleted,
+.language-autohotkey .token.tag {
+    color: #9a050f;
+}
+
+.token.selector,
+.language-autohotkey .token.keyword {
+    color: #00009f;
+}
+
 .token.important,
-.token.deleted {
-    color: #ef3b7d;
-}
-.token.regex,
-.token.statement {
-    color: #76d9e6;
-}
-.token.placeholder,
-.token.variable {
-    color: #fff;
-}
-.token.important,
-.token.statement,
 .token.bold {
     font-weight: bold;
 }
-.token.punctuation {
-    color: #bebec5;
-}
-.token.entity {
-    cursor: help;
-}
+
 .token.italic {
     font-style: italic;
 }
 
-code.language-markup {
-    color: #f9f9f9;
-}
-code.language-markup .token.tag {
-    color: #ef3b7d;
-}
-code.language-markup .token.attr-name {
-    color: #a6e22d;
-}
-code.language-markup .token.attr-value {
-    color: #e6d06c;
-}
-code.language-markup .token.style,
-code.language-markup .token.script {
-    color: #76d9e6;
-}
-code.language-markup .token.script .token.keyword {
-    color: #76d9e6;
+.token.class-name,
+.language-json .token.property {
+    color: #2B91AF;
 }
 
-/* Line highlight plugin */
-pre[class*="language-"][data-line] {
-    position: relative;
-    padding: 1em 0 1em 3em;
+.token.tag,
+.token.selector {
+    color: #800000;
 }
-pre[data-line] .line-highlight {
-    position: absolute;
-    left: 0;
-    right: 0;
-    padding: 0;
-    margin-top: 1em;
-    background: rgba(255, 255, 255, 0.08);
-    pointer-events: none;
-    line-height: inherit;
-    white-space: pre;
+
+.token.attr-name,
+.token.property,
+.token.regex,
+.token.entity {
+    color: #ff0000;
 }
-pre[data-line] .line-highlight:before,
-pre[data-line] .line-highlight[data-end]:after {
-    content: attr(data-start);
-    position: absolute;
-    top: .4em;
-    left: .6em;
-    min-width: 1em;
-    padding: 0.2em 0.5em;
-    background-color: rgba(255, 255, 255, 0.4);
-    color: black;
-    font: bold 65%/1 sans-serif;
-    height: 1em;
-    line-height: 1em;
-    text-align: center;
-    border-radius: 999px;
-    text-shadow: none;
-    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+
+.token.directive.tag  .tag {
+    background: #ffff00;
+    color: #393A34;
 }
-pre[data-line] .line-highlight[data-end]:after {
-    content: attr(data-end);
-    top: auto;
-    bottom: .4em;
+
+/* overrides color-values for the Line Numbers plugin
+ * http://prismjs.com/plugins/line-numbers/
+ */
+.line-numbers .line-numbers-rows {
+  border-right-color: #a5a5a5;
 }
-/* Line highlighting */
-.highlight-line {
-    padding: 0.125rem .75rem;
+
+.line-numbers-rows > span:before {
+  color: #2B91AF;
 }
-.highlight-line:empty {
-    min-height: 1.5rem;
-}
-/* .highlight-line:not(:empty):not(:last-child) {
-    border-bottom: 1px dashed #373737;
-} */
-.highlight-line.highlight-line.highlight-line-active,
-.highlight-line.highlight-line.highlight-line-add,
-.highlight-line.highlight-line.highlight-line-remove {
-    border-color: transparent;
-}
-.highlight-line-isdir {
-    color: #b0b0b0;
-    background-color: #222;
-}
-.highlight-line-active {
-    background-color: #444;
-    background-color: hsla(0, 0%, 27%, .8);
-}
-.highlight-line-add {
-    background-color: hsla(126, 31%, 39%, 0.5);
-}
-.highlight-line-remove {
-    background-color: hsla(0, 51%, 37%, 0.5);
+
+/* overrides color-values for the Line Highlight plugin
+* http://prismjs.com/plugins/line-highlight/
+*/
+.line-highlight {
+  background: rgba(193, 222, 241, 0.2);
+  background: -webkit-linear-gradient(left, rgba(193, 222, 241, 0.2) 70%, rgba(221, 222, 241, 0));
+  background: linear-gradient(to right, rgba(193, 222, 241, 0.2) 70%, rgba(221, 222, 241, 0));
 }

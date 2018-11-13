@@ -3,30 +3,38 @@ title: Contact
 description: I’d love to hear from you — send a note using the form below and I’ll get back to you as soon as I can. If your enquiry is more urgent, send me a message on [Twitter](https://twitter.com/hybrid_alex).
 permalink: /contact/index.html
 ---
-{% extends 'layouts/page.njk' %}
+{% extends 'layouts/default.njk' %}
 
 {% block main %}
-  <section>
-    <form action="https://formspree.io/im.alexcarpenter@gmail.com" method="POST">
-      <input type="hidden" name="_next" value="/contact/thanks" />
-      <input type="text" name="_gotcha" style="display:none" />
+  <header class="c-content-header">
+    <h1 class="c-content-header__title">Contact</h1>
+    <p class="c-content-header__lead">I’d love to hear from you — send a note using the form below and I’ll get back to you as soon as I can. If your enquiry is more urgent, send me a message on <a href="https://twitter.com/hybrid_alex">Twitter</a>.</p>
+  </header>
 
-      <div class="c-form__field">
-        <label class="c-form__label" for="name">Your name</label>
-        <input class="c-form__input" type="text" name="name" id="name" required>
-      </div>
+  <section class="o-grid-row">
+    <div class="o-grid-col u-width-two-thirds">
+      <form name="contact" netlify-honeypot="bot-field" action="/contact/thanks/" netlify>
+        <input name="bot-field" hidden />
 
-      <div class="c-form__field">
-        <label class="c-form__label" for="email">Your email</label>
-        <input class="c-form__input" type="email" name="_replyto" id="email" required>
-      </div>
+        <div class="c-form__row">
+          <label class="c-form__label" for="name">Your name</label>
+          <input class="c-form__input" type="text" name="name" id="name" required>
+        </div>
 
-      <div class="c-form__field">
-        <label class="c-form__label" for="message">Message</label>
-        <textarea class="c-form__input" name="message" id="message" cols="10" rows="5" required></textarea>
-      </div>
+        <div class="c-form__row">
+          <label class="c-form__label" for="email">Your email</label>
+          <input class="c-form__input" type="email" name="email" id="email" required>
+        </div>
 
-      <input class="c-form__button" type="submit" value="Send Message">
-    </form>
+        <div class="c-form__row">
+          <label class="c-form__label" for="message">Message</label>
+          <textarea class="c-form__input" name="message" id="message" cols="10" rows="5" required></textarea>
+        </div>
+
+        <div class="c-form__row">
+          <input class="c-form__button" type="submit" value="Send Message">
+        </div>
+      </form>
+    </div>
   </section>
 {% endblock %}

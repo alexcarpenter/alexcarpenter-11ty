@@ -20,26 +20,26 @@
   {% set css %}
     {% include "assets/app.css" %}
     {% include "assets/prism.css" %}
-    {% if extraCSS %}{% include extraCSS %}{% endif %}
   {% endset %}
   <style>{{ css | cssmin | safe }}</style>
+  {% if primaryColor %}
+  <style>
+    :root {
+      --color-primary: {{ primaryColor }};
+    }
+  </style>
+  {% endif %}
 </head>
 <body>
+  <a class="c-skip-link" href="#main-content">Skip to main content</a>
+  {% include "components/header.njk" %}
   <div class="o-container">
-    <a class="c-skip-link" href="#main-content">Skip to main content</a>
-    {% include "components/navigation.njk" %}
     <main id="main-content" tabindex="-1">
-      {% block pageTop %}{% endblock %}
       {% block main %}{% endblock %}
     </main>
-    {% include "components/footer.njk" %}
   </div>
-  {# <script>
-    if (navigator.serviceWorker) {
-      navigator.serviceWorker.register('/sw.js', {
-        scope: '/'
-      });
-    }
-  </script> #}
+  {% include "components/footer.njk" %}
+  {% set js %}{% include "assets/app.js" %}{% endset %}
+  <script>{{ js | jsmin | safe }}</script>
 </body>
 </html>

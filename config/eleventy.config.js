@@ -1,5 +1,6 @@
 const {DateTime} = require('luxon')
 const CleanCSS = require('clean-css')
+const UglifyJS = require('uglify-js')
 const htmlmin = require('html-minifier')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
@@ -35,6 +36,15 @@ module.exports = eleventyConfig => {
     'cssmin',
     code => new CleanCSS({}).minify(code).styles,
   )
+
+  eleventyConfig.addFilter('jsmin', (code) => {
+    let minified = UglifyJS.minify(code)
+    if (minified.error) {
+      console.log('UglifyJS error: ', minified.error)
+      return code
+    }
+    return minified.code
+  })
 
   // Minify HTML output
   eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
@@ -101,7 +111,6 @@ module.exports = eleventyConfig => {
   eleventyConfig
     .addPassthroughCopy('src/assets')
     .addPassthroughCopy('src/manifest.json')
-    .addPassthroughCopy('src/sw.js')
 
   return {
     templateFormats: ['njk', 'md', 'html'],

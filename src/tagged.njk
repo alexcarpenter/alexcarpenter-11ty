@@ -8,19 +8,21 @@ permalink: /posts/tagged/{{ tag }}/index.html
 ---
 {% extends 'layouts/default.njk' %}
 
-{% block pageTop %}
-  <header class="c-page-header">
-    <h1 class="c-page-header__title">Posts tagged “{{ tag }}”</h1>
-  </header>
-{% endblock %}
-
 {% block main %}
-  <ul class="c-listing">
-    {% set taglist = collections[ tag ] %}
-    {% for entry in taglist | reverse %}
-    <li>
-      {% include "components/entry.njk" %}
-    </li>
-    {% endfor %}
-  </ul>
+  <header class="c-content-header">
+    <h1 class="c-content-header__headline">Posts tagged “{{ tag }}”</h1>
+  </header>
+
+  <div class="o-grid-row">
+    <div class="o-grid-col u-width-two-thirds">
+      <ul class="o-listing">
+        {% set taglist = collections[ tag ] %}
+        {% for entry in taglist | reverse %}
+        <li class="o-listing__item">
+          {% include "components/entry.njk" %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 {% endblock %}

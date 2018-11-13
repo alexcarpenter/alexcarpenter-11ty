@@ -4,27 +4,31 @@ permalink: /now/index.html
 description: This is my [now page](https://nownownow.com/about), inspired by Derek Sivers.
 updated: 2018-10-26T09:39:29
 ---
-{% extends 'layouts/page.njk' %}
-
-{% set content %}
-## Professional
-
-* Building a [Craft CMS Video Course](/courses/craft-cms)
-* Improving my Javascript testing skills
-* Experimenting with GraphQL
-* Writing technical blog [posts](/posts/) about what I am learning
-
-## Personal
-
-* Training our new puppy [Frankie](https://developur.rs/posts/alex-carpenter/)
-* Getting ready for winter steelhead fly fishing
-* Taking a small step back from social media
-{% endset %}
+{% extends 'layouts/default.njk' %}
 
 {% block main %}
-  <div class="c-prose">
-    {{ content | markdownify | safe }}
-    <hr>
-    <p>Last updated: <time>{{ updated | date_formatted }}</time></p>
+  <header class="c-content-header">
+    <h1 class="c-content-header__title">Now</h1>
+    <p class="c-content-header__lead">This is my <a href="https://nownownow.com/about">now page</a>, inspired by Derek Sivers.</p>
+  </header>
+  <div class="o-grid-row">
+    <div class="o-grid-col u-width-two-thirds">
+      <div class="c-prose">
+        <h2>Professional</h2>
+        <ul>
+          <li>Building a <a href="/courses/craft-cms/">Craft CMS Video Course</a></li>
+          <li>Improving my Javascript testing skills</li>
+          <li>Experimenting with GraphQL</li>
+          <li>Writing technical blog <a href="/posts/">posts</a> about what I am learning</li>
+        </ul>
+
+        <h2>Personal</h2>
+        <ul>
+          <li>Training our new puppy <a href="https://developur.rs/posts/alex-carpenter/">Frankie</a></li>
+          <li>Getting ready for winter steelhead fly fishing</li>
+          <li>Taking a small step back from social media</li>
+        </ul>
+      </div>
+    </div>
   </div>
 {% endblock %}
