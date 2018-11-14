@@ -221,7 +221,7 @@ dd + dt {
 .o-grid-row {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: calc(100% + 4rem);
   margin-bottom: 2.5rem;
   margin-right: -2rem;
   margin-left: -2rem;
