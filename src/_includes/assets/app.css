@@ -288,7 +288,7 @@ dd + dt {
 .c-header__inner {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "a b"
+          grid-template-areas: "a b"
     "c c";
 }
 
