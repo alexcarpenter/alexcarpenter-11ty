@@ -38,6 +38,7 @@
 }
 
 body {
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -480,6 +481,7 @@ dd + dt {
   padding: 0.5rem 1rem;
   font: inherit;
   border: 2px solid #0b0c0c;
+  border-radius: 0;
 }
 
 .c-form__button {
@@ -490,6 +492,7 @@ dd + dt {
   font: inherit;
   color: #fff;
   cursor: pointer;
+  border-radius: 0;
 }
 
 .c-form__input:focus,
