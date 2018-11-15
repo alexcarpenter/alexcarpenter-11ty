@@ -197,7 +197,7 @@ dd + dt {
 
 .o-container {
   width: 100%;
-  max-width: calc(1000px + 2.5rem);
+  max-width: calc(980px + 2.5rem);
   margin-right: auto;
   margin-left: auto;
   padding-right: 1.25rem;
@@ -221,15 +221,12 @@ dd + dt {
 .o-grid-row {
   display: flex;
   flex-wrap: wrap;
-  width: calc(100% + 4rem);
-  margin-bottom: 2.5rem;
-  margin-right: -2rem;
   margin-left: -2rem;
+  margin-bottom: 2.5rem;
 }
 
 .o-grid-col {
   width: 100%;
-  padding-right: 2rem;
   padding-left: 2rem;
 }
 
