@@ -2,26 +2,19 @@
   <div class="o-container">
     <div class="c-header__inner">
       <h1 class="c-header__branding">
+        <span class="u-hidden-visually">Alex Carpenter</span>
         <a href="/">{% include "components/logo.njk" %}</a>
       </h1>
       <button class="c-header__toggle js-nav-toggle" aria-label="Toggle mobile nav" aria-expanded="false" aria-controls="primary-nav">Menu</button>
       <nav class="c-header__nav js-nav" id="primary-nav">
         <ul class="c-header__nav-list">
+          {% for item in navigation.primary %}
           <li class="c-header__nav-list-item">
-            <a class="c-header__nav-list-anchor {% if page.url == '/' %}c-header__nav-list-anchor--active{% endif %}" href="/">Home</a>
+            <a class="c-header__nav-list-anchor" {% if page.url == item.url %}aria-current="page"{% endif %} href="{{ item.url }}">{{ item.label }}</a>
           </li>
-          <li class="c-header__nav-list-item">
-            <a class="c-header__nav-list-anchor {% if page.url == '/about/' %}c-header__nav-list-anchor--active{% endif %}" href="/about/">About</a>
-          </li>
-          <li class="c-header__nav-list-item">
-            <a class="c-header__nav-list-anchor {% if page.url == '/posts/' %}c-header__nav-list-anchor--active{% endif %}" href="/posts/">Posts</a>
-          </li>
-          <li class="c-header__nav-list-item">
-            <a class="c-header__nav-list-anchor {% if page.url == '/contact/' %}c-header__nav-list-anchor--active{% endif %}" href="/contact/">Contact</a>
-          </li>
+          {% endfor %}
         </ul>
       </nav>
-
     </div>
   </div>
 </header>

@@ -4,6 +4,9 @@ const UglifyJS = require('uglify-js')
 const htmlmin = require('html-minifier')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const Abreast = require('../src/_includes/components/Abreast.js')
+const Card = require('../src/_includes/components/Card.js')
+const Checklist = require('../src/_includes/components/Checklist.js')
 const Figure = require('../src/_includes/components/Figure.js')
 const Youtube = require('../src/_includes/components/Youtube.js')
 const markdown = require('markdown-it')({
@@ -37,7 +40,7 @@ module.exports = eleventyConfig => {
     code => new CleanCSS({}).minify(code).styles,
   )
 
-  eleventyConfig.addFilter('jsmin', (code) => {
+  eleventyConfig.addFilter('jsmin', code => {
     let minified = UglifyJS.minify(code)
     if (minified.error) {
       console.log('UglifyJS error: ', minified.error)
@@ -104,6 +107,9 @@ module.exports = eleventyConfig => {
   })
 
   // Shortcodes
+  eleventyConfig.addShortcode('Abreast', Abreast)
+  eleventyConfig.addShortcode('Card', Card)
+  eleventyConfig.addShortcode('Checklist', Checklist)
   eleventyConfig.addShortcode('Figure', Figure)
   eleventyConfig.addShortcode('Youtube', Youtube)
 

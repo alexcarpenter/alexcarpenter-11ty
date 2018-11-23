@@ -1,0 +1,15 @@
+{
+  "primary": [{
+    "label": "Home",
+    "url": "/"
+  }, {
+    "label": "About",
+    "url": "/about/"
+  }, {
+    "label": "Posts",
+    "url": "/posts/"
+  }, {
+    "label": "Contact",
+    "url": "/contact/"
+  }]
+}

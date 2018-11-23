@@ -1,0 +1,10 @@
+{% macro cta(params) %}
+<div class="c-cta">
+  {% if params.data.heading %}
+  <h3 class="c-cta__heading">{{ params.data.heading }}</h3>
+  {% endif %}
+  {% if params.data.text %}
+  <p class="c-cta__text">{{ params.data.text | markdownify_inline }}</p>
+  {% endif %}
+</div>
+{% endmacro %}
