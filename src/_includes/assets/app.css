@@ -151,6 +151,31 @@ dd + dt {
   padding-top: 0.5rem;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+}
+
+thead {
+  text-align: left;
+  background-color: #eee;
+}
+
+th {
+  border-bottom: 1px solid #ddd;
+}
+
+tr:not(:last-of-type) td {
+  border-bottom: 1px solid #eee;
+}
+
+th, td {
+  padding: 1rem;
+  vertical-align: top;
+}
+
 /* ==========================================================================
    OBJECTS
    ========================================================================== */

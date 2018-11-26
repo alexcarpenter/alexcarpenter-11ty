@@ -1,0 +1,20 @@
+{% macro table(params) %}
+  <table>
+    <thead>
+      <tr>
+        {% for cell in params.head %}
+        <th>{{ cell.text }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in params.rows %}
+      <tr>
+        {% for cell in row %}
+          <td>{{ cell.text | markdownify_inline | safe }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endmacro %}

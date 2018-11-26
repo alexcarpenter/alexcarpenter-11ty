@@ -1,0 +1,192 @@
+---
+title: Styleguide
+permalink: /styleguide/index.html
+---
+{% extends 'layouts/default.njk' %}
+{% from 'components/table.njk' import table %}
+
+
+{% block main %}
+  <header class="c-content-header">
+    <h1 class="c-content-header__title">Styleguide</h1>
+    <p class="c-content-header__lead">Component documentation for <a href="">alexcarpenter.me</a>.</p>
+  </header>
+
+  <div class="o-grid-row">
+    <div class="o-grid-col u-width-two-thirds">
+      <div class="c-prose">
+        <h2>Abreast</h2>
+        <p>A component to put a group of images side by side. Great for galleries highlighting a set of images together. By default the amount of columns is defined by the total number of images in the array. This can be overridden using the columns prop. It is recommended that all of the images preserve the same aspect ratio.</p>
+        <h3>Output</h3>
+        {% Abreast {
+          images: [
+            'http://placehold.it/600x400',
+            'http://placehold.it/600x400'
+          ],
+          caption: 'Two images side by side.'
+        } %}
+        <h3>Props</h3>
+        {{ table({
+          head: [
+            { text: 'Name' },
+            { text: 'Type' },
+            { text: 'Description' }
+          ],
+          rows: [
+            [
+              { text: '`images`' },
+              { text: 'array' },
+              { text: '' }
+            ],
+            [
+              { text: '`caption`' },
+              { text: 'string' },
+              { text: '' }
+            ],
+            [
+              { text: '`ratio`' },
+              { text: 'string' },
+              { text: '' }
+            ],
+            [
+              { text: '`columns`' },
+              { text: 'number' },
+              { text: '' }
+            ]
+          ]
+        }) }}
+        <hr>
+        <h2>Card</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, iure at cum optio voluptates quod quaerat quas. Eos iure vitae, reiciendis dolor molestiae omnis! Eius deserunt officiis, enim commodi voluptates.</p>
+        <h3>Output</h3>
+        {% Card {
+          image: 'http://placehold.it/600x400',
+          heading: 'Card Heading',
+          link: 'https://alexcarpenter.me',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, incidunt.'
+        } %}
+        <h3>Props</h3>
+        {{ table({
+          head: [
+            { text: 'Name' },
+            { text: 'Type' },
+            { text: 'Description' }
+          ],
+          rows: [
+            [
+              { text: '`image`' },
+              { text: 'string' },
+              { text: '' }
+            ],
+            [
+              { text: '`heading`' },
+              { text: 'string' },
+              { text: '' }
+            ],
+            [
+              { text: '`link`' },
+              { text: 'string' },
+              { text: '' }
+            ],
+            [
+              { text: '`text`' },
+              { text: 'string' },
+              { text: '' }
+            ]
+          ]
+        }) }}
+        <hr>
+        <h2>Figure</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi fugiat quia voluptatum quasi, explicabo rerum corporis, minus iure temporibus illo facilis id neque nostrum aperiam. Temporibus sapiente vel eos cum?</p>
+        <h3>Output</h3>
+        {% Figure {
+          src: 'http://placehold.it/1600x900',
+          alt: 'Photo of Alex Carpenter',
+          caption: 'Figure caption'
+        } %}
+        <h3>Props</h3>
+        {{ table({
+          head: [
+            { text: 'Name' },
+            { text: 'Type' },
+            { text: 'Description' }
+          ],
+          rows: [
+            [
+              { text: '`src`' },
+              { text: 'string' },
+              { text: '' }
+            ],
+            [
+              { text: '`alt`' },
+              { text: 'string' },
+              { text: '' }
+            ],
+            [
+              { text: '`caption`' },
+              { text: 'string' },
+              { text: '' }
+            ],
+            [
+              { text: '`ratio`' },
+              { text: 'string' },
+              { text: '' }
+            ]
+          ]
+        }) }}
+        <hr>
+        {# <h2>Testimonial</h2>
+        <h3>Props</h3>
+        {{ table({
+          head: [
+            { text: 'Name' },
+            { text: 'Type' },
+            { text: 'Description' }
+          ],
+          rows: [
+            [
+              { text: '`text`' },
+              { text: 'string' },
+              { text: '' }
+            ],
+            [
+              { text: '`author`' },
+              { text: 'string' },
+              { text: '' }
+            ],
+            [
+              { text: '`authorTitle`' },
+              { text: 'string' },
+              { text: '' }
+            ],
+            [
+              { text: '`authorAvatar`' },
+              { text: 'string' },
+              { text: '' }
+            ]
+          ]
+        }) }}
+        <hr> #}
+        <h2>Youtube</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam culpa est, molestiae atque odio corporis accusantium. Perspiciatis repudiandae ex magnam, ab vel molestias veniam earum et impedit explicabo quae fugit?</p>
+        <h3>Output</h3>
+        {% Youtube "FNIM8MvUL-Q" %}
+        <h3>Props</h3>
+        {{ table({
+          head: [
+            { text: 'Name' },
+            { text: 'Type' },
+            { text: 'Description' }
+          ],
+          rows: [
+            [
+              { text: '`id`' },
+              { text: 'string' },
+              { text: '' }
+            ]
+          ]
+        }) }}
+      </div>
+    </div>
+  </div>
+{% endblock %}
