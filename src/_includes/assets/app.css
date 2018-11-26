@@ -7,13 +7,13 @@
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
   --font-family-code: Menlo, Monaco, 'Courier New', monospace;
-  --color-blue: #005EA5;
+  --color-blue: #0005FF;
   --color-red: #eb013d;
   --color-green: #00823b;
   --color-purple: #653797;
   --color-mark: #fffeca;
   --color-visited: #4c2c92;
-  --color-primary: var(--color-purple);
+  --color-primary: var(--color-blue);
   --color-secondary: var(--color-red);
   --color-gray-0: #111;
   --color-gray-70: #767676;
