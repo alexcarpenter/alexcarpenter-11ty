@@ -115,7 +115,8 @@ svg {
 
 code:not([class]) {
   font-family: var(--font-family-code);
-  color: #ef3b7d;
+  font-size: 90%;
+  color: red;
 }
 
 blockquote:not([class]) {
@@ -604,7 +605,7 @@ th, td {
   padding-top: 1.25rem;
 }
 
-.c-prose ul {
+.c-prose ul:not(.o-listing) {
   padding-left: 1.3rem;
   list-style-type: square;
 }
@@ -780,4 +781,8 @@ th, td {
   position: absolute !important;
   white-space: nowrap !important;
   width: 1px !important;
+}
+
+.u-gray {
+  color: var(--color-gray-70);
 }
