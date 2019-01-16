@@ -1,0 +1,39 @@
+---
+title: Uses
+permalink: /uses/index.html
+description:
+updated: 2018-11-29T09:39:29
+---
+{% extends 'layouts/default.njk' %}
+{% from 'components/intro.njk' import intro %}
+
+{% set content %}
+## Software
+
+* Sublime Text 3
+* iTerm 2
+* 1Password
+* Bear
+* Alfred 3
+* Spectacle
+
+## Hardware
+* 2016 15-inch MacBook Pro
+* iPhone 8
+* Airpods
+{% endset %}
+
+{% block main %}
+  {{ intro({
+    title: "Uses",
+    lead: "The tools I use to get things done."
+  }) }}
+  
+  <div class="o-grid-row">
+    <div class="o-grid-col u-width-two-thirds">
+      <div class="c-prose">
+        {{ content | markdownify | safe }}
+      </div>
+    </div>
+  </div>
+{% endblock %}

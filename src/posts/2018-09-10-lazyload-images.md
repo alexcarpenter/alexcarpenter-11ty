@@ -13,5 +13,3 @@ Lazy loading is a technique used to improve the performance of a website by defe
 In this screencast, I demonstrate how you can start lazyloading images with the feature rich JavaScript plugin [lazysizes](https://github.com/aFarkas/lazysizes).
 
 > lazysizes is a fast (jank-free), SEO-friendly and self-initializing lazyloader for images (including responsive images picture/srcset), iframes, scripts/widgets and much more. It also prioritizes resources by differentiating between crucial in view and near view elements to make perceived performance even faster.
-
-If you enjoyed this screencast, consider subscribing to my [YouTube channel](https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg).

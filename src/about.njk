@@ -4,12 +4,13 @@ description: I’m Alex Carpenter, a front-end web developer focused on performa
 permalink: /about/index.html
 ---
 {% extends 'layouts/default.njk' %}
+{% from "components/intro.njk" import intro %}
 
 {% block main %}
-  <header class="c-content-header">
-    <h1 class="c-content-header__title">About</h1>
-    <p class="c-content-header__lead">I’m Alex Carpenter, a front-end web developer focused on performance and accessibility.</p>
-  </header>
+  {{ intro({
+    title: "About",
+    lead: "I’m Alex Carpenter, a front-end web developer focused on performance and accessibility."
+  }) }}
 
   <div class="o-grid-row">
     <div class="o-grid-col">

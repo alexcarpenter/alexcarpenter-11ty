@@ -5,12 +5,14 @@ description: "Currently, I am a senior developer at [Mighty in the Midwest](http
 permalink: /index.html
 ---
 {% extends 'layouts/default.njk' %}
+{% from "components/intro.njk" import intro %}
 
 {% block main %}
-  <header class="c-content-header">
-    <h1 class="c-content-header__headline">I’m Alex Carpenter, a front-end web developer focused on performance and accessibility.</h1>
-    <p class="c-content-header__lead">Currently, I am a front-end developer at <a href="https://nationbuilder.com">NationBuilder</a>, based out of Grand Rapids, MI. I aim to produce semantic accessible markup, with modular CSS, and progressively enhance the experience with unobtrusive JavaScript.</p>
-  </header>
+  {{ intro({
+    heading: true,
+    title: "I’m Alex Carpenter, a front-end web developer focused on performance and accessibility.",
+    lead: "Currently, I am a front-end developer at [NationBuilder](https://nationbuilder.com), based out of Grand Rapids, MI. I aim to produce semantic accessible markup, with modular CSS, and progressively enhance the experience with unobtrusive JavaScript."
+  }) }}
 
   <section class="o-grid-row">
     <div class="o-grid-col u-width-two-thirds">

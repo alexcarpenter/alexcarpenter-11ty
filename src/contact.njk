@@ -4,12 +4,13 @@ description: I’d love to hear from you — send a note using the form below an
 permalink: /contact/index.html
 ---
 {% extends 'layouts/default.njk' %}
+{% from "components/intro.njk" import intro %}
 
 {% block main %}
-  <header class="c-content-header">
-    <h1 class="c-content-header__title">Contact</h1>
-    <p class="c-content-header__lead">I’d love to hear from you — send a note using the form below and I’ll get back to you as soon as I can. If your enquiry is more urgent, send me a message on <a href="https://twitter.com/hybrid_alex">Twitter</a>.</p>
-  </header>
+  {{ intro({
+    title: "Contact",
+    lead: "I’d love to hear from you — send a note using the form below and I’ll get back to you as soon as I can. If your enquiry is more urgent, send me a message on [Twitter](https://twitter.com/hybrid_alex)."
+  }) }}
 
   <section class="o-grid-row">
     <div class="o-grid-col u-width-two-thirds">

@@ -8,6 +8,8 @@ const Abreast = require('../src/_includes/components/Abreast.js')
 const Card = require('../src/_includes/components/Card.js')
 const Checklist = require('../src/_includes/components/Checklist.js')
 const Figure = require('../src/_includes/components/Figure.js')
+const Notice = require('../src/_includes/components/Notice.js')
+const Review = require('../src/_includes/components/Review.js')
 const Youtube = require('../src/_includes/components/Youtube.js')
 const markdown = require('markdown-it')({
   html: true,
@@ -111,6 +113,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('Card', Card)
   eleventyConfig.addShortcode('Checklist', Checklist)
   eleventyConfig.addShortcode('Figure', Figure)
+  eleventyConfig.addShortcode('Notice', Notice)
+  eleventyConfig.addShortcode('Review', Review)
   eleventyConfig.addShortcode('Youtube', Youtube)
 
   // ETC.

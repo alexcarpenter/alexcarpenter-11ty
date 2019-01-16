@@ -1,10 +1,27 @@
 {% extends 'layouts/default.njk' %}
+{% set screencast = false %}
 
 {% block main %}
   <article class="o-grid-row">
     <div class="o-grid-col u-width-two-thirds">
       <header class="c-post-header">
-        <time class="c-post-header__time">{{ date | date_formatted }}</time>
+        <span class="c-post-header__meta">
+          {% if updated -%}
+          Updated on <time class="c-post-header__time">{{ updated | date_formatted }}</time>
+          {% else %}
+          <time class="c-post-header__time">{{ date | date_formatted }}</time>
+          {%- endif %}
+          &ndash;
+          {% for tag in tags %}
+            {%- if tag == "screencast" -%}
+              {% set screencast = true %}
+            {%- endif -%}
+            {%- if tag != "post" -%}
+              {% set tagUrl %}/posts/tagged/{{ tag }}/{% endset %}
+              <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>{%- if not loop.last -%}, {% endif %}
+            {%- endif -%}
+          {% endfor %}
+        </span>
         <h1 class="c-post-header__title">
           {% if link -%}
             <a rel="external" href="{{ link | safe }}">{{ title }}</a>
@@ -14,11 +31,16 @@
         </h1>
       </header>
 
-      <div class="c-prose">
+      <div class="c-prose c-prose--post">
         {{ content | safe }}
         {% if link -%}
-          <hr>
           <a rel="external" href="{{ link | safe }}">View Link</a>
+        {%- endif %}
+        {% if screencast -%}
+          <hr>
+          {% Notice {
+            text: "If you enjoyed this screencast, consider subscribing to my [YouTube channel](https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg) for more screencasts about HTML, CSS, and JavaScript."
+          } %}
         {%- endif %}
       </div>
     </div>

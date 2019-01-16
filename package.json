@@ -4,10 +4,10 @@
   "description": "",
   "scripts": {
     "build": "npx eleventy --config=config/eleventy.config.js",
-    "serve": "npx eleventy --config=config/eleventy.config.js --serve"
+    "serve": "npx eleventy --config=config/eleventy.config.js --serve --watch"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.5.2",
+    "@11ty/eleventy": "^0.7.0",
     "@11ty/eleventy-plugin-rss": "^1.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^1.0.5",
     "clean-css": "^4.1.11",
