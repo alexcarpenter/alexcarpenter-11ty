@@ -1,0 +1,40 @@
+---
+title: Notes
+description: 
+pagination:
+  data: collections.notes
+  size: 10
+permalink: /notes/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html
+---
+{% extends 'layouts/default.njk' %}
+{% from "components/intro.njk" import intro %}
+
+{% block main %}
+  {{ intro({
+    title: "Notes",
+    lead: "Subscribe via [RSS](/notes/feed.xml)."
+  }) }}
+
+  <div class="o-grid-row">
+    <div class="o-grid-col u-width-two-thirds">
+      <ul class="o-listing">
+        {% for entry in pagination.items %}
+        <li class="o-listing__item">
+          <article>
+            <div class="c-prose">
+              {{ entry.templateContent | safe }}
+              <a class="c-prose__date" href="{{ entry.url | permalink }}">{{ entry.date | date_time }}</a>
+            </div>
+          </article>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="o-grid-row">
+    <div class="o-grid-col u-width-two-thirds">
+      {% include "components/pagination.njk" %}
+    </div>
+  </div>
+{% endblock %}

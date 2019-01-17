@@ -4,12 +4,8 @@ const UglifyJS = require('uglify-js')
 const htmlmin = require('html-minifier')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
-const Abreast = require('../src/_includes/components/Abreast.js')
-const Card = require('../src/_includes/components/Card.js')
-const Checklist = require('../src/_includes/components/Checklist.js')
 const Figure = require('../src/_includes/components/Figure.js')
 const Notice = require('../src/_includes/components/Notice.js')
-const Review = require('../src/_includes/components/Review.js')
 const Youtube = require('../src/_includes/components/Youtube.js')
 const markdown = require('markdown-it')({
   html: true,
@@ -84,12 +80,12 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addFilter('date_formatted', obj => {
     const date = parseDate(obj)
-    return DateTime.fromJSDate(date).toFormat('yyyy/MM/dd')
+    return DateTime.fromJSDate(date).toFormat('DD')
   })
 
-  eleventyConfig.addFilter('date_to_med', obj => {
+  eleventyConfig.addFilter('date_time', obj => {
     const date = parseDate(obj)
-    return DateTime.fromJSDate(date).toFormat('MMM yyyy')
+    return DateTime.fromJSDate(date).toFormat('ff')
   })
 
   eleventyConfig.addFilter('permalink', str => {
@@ -108,13 +104,13 @@ module.exports = eleventyConfig => {
       .reverse()
   })
 
+  eleventyConfig.addCollection('notes', collection => {
+    return collection.getFilteredByGlob('**/notes/*.md').reverse()
+  })
+
   // Shortcodes
-  eleventyConfig.addShortcode('Abreast', Abreast)
-  eleventyConfig.addShortcode('Card', Card)
-  eleventyConfig.addShortcode('Checklist', Checklist)
   eleventyConfig.addShortcode('Figure', Figure)
   eleventyConfig.addShortcode('Notice', Notice)
-  eleventyConfig.addShortcode('Review', Review)
   eleventyConfig.addShortcode('Youtube', Youtube)
 
   // ETC.

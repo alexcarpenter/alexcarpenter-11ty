@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/note",
+  "permalink": "notes/{{ page.fileSlug }}/index.html"
+}

@@ -1,0 +1,13 @@
+{% extends 'layouts/default.njk' %}
+{% set title = "Note: " + page.date | date_time %}
+
+{% block main %}
+  <article class="o-grid-row">
+    <div class="o-grid-col u-width-two-thirds">
+      <div class="c-prose c-prose--post">
+        {{ content | safe }}
+        <a class="c-prose__date" href="{{ page.url | permalink }}">{{ page.date | date_time }}</a>
+      </div>
+    </div>
+  </article>
+{% endblock %}

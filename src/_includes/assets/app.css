@@ -631,6 +631,11 @@ th, td {
   font-size: 1.625rem;
 }
 
+.c-prose__date {
+  color: #767676;
+  font-size: 1rem;
+}
+
 /**
  * Footer
  */
