@@ -310,12 +310,28 @@ th, td {
      -moz-appearance: none;
           appearance: none;
   display: inline-flex;
+  align-items: center;
   padding: 0.5rem 1rem;
   color: #fff;
   background-color: var(--color-primary);
-  /*box-shadow: 0 2px 0 #013618;*/
   font: inherit;
   text-align: center;
+  text-decoration: none;
+}
+
+.c-button--secondary {
+  background-color: var(--color-gray-0);
+}
+
+.c-button svg {
+  margin-left: 0.5rem;
+  opacity: 0.5;
+  transition: opacity ease-in-out var(--transition-duration);
+}
+
+.c-button:hover svg,
+.c-button:focus svg {
+  opacity: 1;
 }
 
 /**
