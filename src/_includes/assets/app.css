@@ -820,3 +820,7 @@ th, td {
 .u-gray {
   color: var(--color-gray-70);
 }
+
+.u-text-small {
+  font-size: 1rem;
+}
