@@ -7,6 +7,7 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const Figure = require('../src/_includes/components/Figure.js')
 const Notice = require('../src/_includes/components/Notice.js')
 const Youtube = require('../src/_includes/components/Youtube.js')
+const Quote = require('../src/_includes/components/Quote.js')
 const markdown = require('markdown-it')({
   html: true,
   breaks: true,
@@ -112,11 +113,13 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('Figure', Figure)
   eleventyConfig.addShortcode('Notice', Notice)
   eleventyConfig.addShortcode('Youtube', Youtube)
+  eleventyConfig.addShortcode('Quote', Quote)
 
   // ETC.
   eleventyConfig
     .addPassthroughCopy('src/assets')
     .addPassthroughCopy('src/manifest.json')
+    .addPassthroughCopy('src/_redirects')
 
   return {
     templateFormats: ['njk', 'md', 'html'],

@@ -19,9 +19,9 @@
   --color-gray-70: #767676;
   --color-gray-40: #ddd;
   --color-gray-30: #eee;
-  --color-link:;
-  --color-link-hover:;
-  --color-link-visited:;
+  --color-link: ;
+  --color-link-hover: ;
+  --color-link-visited: ;
   --color-focus: #ffbf47;
   --border-radius-default: 4px;
   --transition-duration: 0.2s;
@@ -52,7 +52,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-@media (prefers-color-scheme: dark) { 
+@media (prefers-color-scheme: dark) {
   body {
     background-color: #000;
     color: #fff;
@@ -76,7 +76,7 @@ small {
 a {
   color: currentColor;
   -webkit-text-decoration-color: var(--color-primary);
-          text-decoration-color: var(--color-primary);
+  text-decoration-color: var(--color-primary);
   transition: color ease-in-out var(--transition-duration);
 }
 
@@ -88,7 +88,7 @@ a:focus:not([class]) {
 a:focus,
 button:focus,
 input:focus {
-  outline: 3px solid #ffbf47;
+  outline: 3px solid #ffdb00;
   outline-offset: 0;
 }
 
@@ -159,7 +159,7 @@ dt {
   font-weight: 700;
 }
 
-dd + dt {
+dd+dt {
   padding-top: 0.5rem;
 }
 
@@ -183,7 +183,8 @@ tr:not(:last-of-type) td {
   border-bottom: 1px solid #eee;
 }
 
-th, td {
+th,
+td {
   padding: 1rem;
   vertical-align: top;
 }
@@ -196,7 +197,7 @@ th, td {
  * Aspect ratio
  */
 
-[style*='--aspect-ratio'] > :first-child {
+[style*='--aspect-ratio']> :first-child {
   height: auto;
   width: 100%;
 }
@@ -214,7 +215,7 @@ th, td {
     padding-bottom: calc(100% / (var(--aspect-ratio)));
   }
 
-  [style*='--aspect-ratio'] > :first-child {
+  [style*='--aspect-ratio']> :first-child {
     position: absolute;
     top: 0;
     left: 0;
@@ -292,13 +293,13 @@ th, td {
   background-color: #ffbf47;
   color: inherit;
   -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 .c-skip-link:focus {
   -webkit-transform: none;
-          transform: none;
-          z-index: 10;
+  transform: none;
+  z-index: 10;
 }
 
 /**
@@ -307,8 +308,8 @@ th, td {
 
 .c-button {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   display: inline-flex;
   align-items: center;
   padding: 0.5rem 1rem;
@@ -348,11 +349,11 @@ th, td {
 .c-header__inner {
   display: -ms-grid;
   display: grid;
-              grid-template-areas: "a b"
+  grid-template-areas: "a b"
     "c c";
 }
 
-.c-header__branding  {
+.c-header__branding {
   position: relative;
   margin-bottom: -0.625rem;
   max-width: 5rem;
@@ -368,8 +369,8 @@ th, td {
 
 .c-header__toggle {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: b;
@@ -399,7 +400,7 @@ th, td {
 
 .c-header__toggle.is-active::after {
   -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .c-header__nav {
@@ -456,7 +457,7 @@ th, td {
     width: 100%;
     height: 0.625rem;
     -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    transform: translateY(100%);
     background-color: var(--color-primary);
     opacity: 0;
   }
@@ -521,7 +522,7 @@ th, td {
 .c-notice {
   padding: 1rem;
   font-size: 1rem;
-  color: var(--notice-color);
+  /* color: var(--notice-color); */
   border: 1px solid;
   background-color: var(--notice-background-color);
   border-color: var(--notice-border-color);
@@ -530,13 +531,13 @@ th, td {
 .c-notice--warning {
   --notice-background-color: var(--color-mark);
   --notice-border-color: #e8e7b5;
-  --notice-color: #856404;
+  /* --notice-color: #856404; */
 }
 
 .c-notice--success {
   --notice-background-color: #d4edda;
   --notice-border-color: #c3e6cb;
-  --notice-color: #155724;
+  /* --notice-color: #155724; */
 }
 
 /**
@@ -559,12 +560,76 @@ th, td {
 }
 
 /**
+ * Numbered list
+ */
+
+.c-numbered-list {
+  display: grid;
+  grid-gap: 2rem;
+  counter-reset: counter;
+  list-style: none;
+}
+
+.c-numbered-list__item {
+  counter-increment: counter;
+  display: inline-flex;
+  align-items: flex-start;
+  padding-top: 0.75rem;
+}
+
+.c-numbered-list__item::before {
+  content: counter(counter);
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -0.75rem;
+  margin-right: 1.5rem;
+  font-size: 1.17em;
+  font-weight: 700;
+  line-height: 1.2;
+  background-color: #ffbf47;
+  width: 48px;
+  height: 48px;
+  /* border-radius: 50%; */
+}
+
+/**
+ * Quote
+ */
+
+.c-quote__text {
+  font-size: 1.5rem;
+}
+
+.c-quote__text p {
+  display: inline;
+  line-height: 1.5;
+  background: var(--color-mark);
+  box-shadow: -10px 0px 0px var(--color-mark), 10px 0px 0px var(--color-mark);
+  box-decoration-break: clone;
+}
+
+.c-quote__cite {
+  padding-top: 1rem;
+  text-align: left;
+  color: var(--color-gray-70);
+  font-style: normal;
+}
+
+
+.c-quote__cite::before {
+  content: '—\2009';
+}
+
+
+/**
  * Forms
  */
 
 /*.c-form {}*/
 
-.c-form__row + .c-form__row {
+.c-form__row+.c-form__row {
   padding-top: 1rem;
 }
 
@@ -583,8 +648,8 @@ th, td {
 
 .c-form__button {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0.5rem 1rem;
   background-color: #0b0c0c;
   border: 2px solid #0b0c0c;
@@ -621,11 +686,11 @@ th, td {
  * Prose
  */
 
-.c-prose > :not(:last-child) {
+.c-prose> :not(:last-child) {
   margin-bottom: 1.25rem;
 }
 
-.c-prose > *:not(hr) + h2 {
+.c-prose>*:not(hr)+h2 {
   padding-top: 1.25rem;
 }
 
@@ -634,7 +699,7 @@ th, td {
   list-style-type: square;
 }
 
-.c-prose li + li {
+.c-prose li+li {
   padding-top: 0.3125rem;
 }
 
@@ -735,7 +800,7 @@ th, td {
   border-left: 0.625rem solid var(--color-gray-30);
 }
 
-.c-testimonial__quote > * {
+.c-testimonial__quote>* {
   margin-bottom: 1.25rem;
 }
 
@@ -807,7 +872,7 @@ th, td {
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
   -webkit-clip-path: inset(50%) !important;
-          clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
   height: 1px !important;
   margin: -1px !important;
   overflow: hidden !important;
@@ -823,4 +888,13 @@ th, td {
 
 .u-text-small {
   font-size: 1rem;
+}
+
+.u-mark {
+  position: relative;
+  left: 4px;
+  background: #ffdb00;
+  box-shadow: -4px 0px 0px #ffdb00, 4px 0px 0px #ffdb00;
+  box-decoration-break: clone;
+  line-height: 1.5;
 }
