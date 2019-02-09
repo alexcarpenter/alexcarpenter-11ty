@@ -729,6 +729,21 @@ td {
   border-top: 1px solid var(--color-gray-40);
 }
 
+.c-footer__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 740px) {
+  .c-footer__inner {
+    flex-direction: column;
+  }
+
+  .c-footer__timing {
+    padding-top: 1.25rem;
+  }
+}
+
 .c-footer__nav {
   display: flex;
   margin-bottom: 1.25rem;
