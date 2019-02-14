@@ -603,11 +603,7 @@ td {
 }
 
 .c-quote__text p {
-  display: inline;
-  line-height: 1.5;
-  background: var(--color-mark);
-  box-shadow: -10px 0px 0px var(--color-mark), 10px 0px 0px var(--color-mark);
-  box-decoration-break: clone;
+  font-weight: 600;
 }
 
 .c-quote__cite {
