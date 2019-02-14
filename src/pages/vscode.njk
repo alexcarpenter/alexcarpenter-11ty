@@ -1,0 +1,90 @@
+---
+title: VSCode
+permalink: /vscode/index.html
+description: These are my VSCode settings and plugins I use.
+updated: 2019-02-14
+---
+{% extends 'layouts/default.njk' %}
+
+{% set content %}
+{% Figure {
+  src: "/assets/images/vscode-screenshot.png",
+  ratio: "3584/2278"
+} %}
+
+## Plugins
+- aaron-bond.better-comments
+- alefragnani.project-manager
+- CoenraadS.bracket-pair-colorizer
+- CraigMaslowski.erb
+- dbaeumer.vscode-eslint
+- eamodio.gitlens
+- HookyQR.beautify
+- luwenjiechn.nunjucks-vscode-snippets
+- mrmlnc.vscode-autoprefixer
+- mrmlnc.vscode-duplicate
+- ms-vsliveshare.vsliveshare
+- neilding.language-liquid
+- ph-hawkins.arc-plus
+- ronnidc.nunjucks
+- sdras.night-owl
+- simsim0709.over-night-owl
+- uloco.theme-bluloco-light
+- vscodevim.vim
+- WallabyJs.quokka-vscode
+
+## Settings
+
+```json
+{
+    "workbench.colorTheme": "Night Owl No Italics",
+    "editor.formatOnSave": false,
+    "editor.detectIndentation": true,
+    "editor.fontFamily": "Fira Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 18,
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "all",
+    "editor.fontLigatures": false,
+    "editor.minimap.enabled": false,
+    "editor.lineHeight": 40,
+    "editor.glyphMargin": false,
+    "workbench.startupEditor": "none",
+    "editor.cursorBlinking": "phase",
+    "editor.parameterHints.enabled": false,
+    "window.zoomLevel": 0,
+    "workbench.activityBar.visible": true,
+    "eslint.enable": false,
+    "editor.occurrencesHighlight": false,
+    "emmet.includeLanguages": {
+        "nunjucks": "html",
+        "erb": "html"
+    },
+    "editor.selectionHighlight": false,
+    "editor.autoIndent": false,
+    /**/
+    // Screencasting
+    /*
+    "editor.fontSize": 20,
+    "terminal.integrated.fontSize": 16,
+    "workbench.activityBar.visible": false,
+    "editor.lineNumbers": "off",
+    "workbench.statusBar.visible": false,
+    "editor.cursorBlinking": "solid"
+    /**/
+}
+```
+{% endset %}
+
+{% block main %}
+  <header class="c-content-header">
+    <h1 class="c-content-header__title">VSCode</h1>
+    <p class="c-content-header__lead">These are my VSCode settings and plugins I use.</p>
+  </header>
+  <div class="o-grid-row">
+    <div class="o-grid-col u-width-two-thirds">
+      <div class="c-prose">
+        {{ content | markdownify | safe }}
+      </div>
+    </div>
+  </div>
+{% endblock %}
