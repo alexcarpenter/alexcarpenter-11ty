@@ -3,18 +3,13 @@
    ========================================================================== */
 
 :root {
-  --font-family-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-    'Helvetica Neue', sans-serif;
-  --font-family-code: Menlo, Monaco, 'Courier New', monospace;
+  --font-family-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --font-family-code: Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
   --color-blue: #05F;
-  --color-red: #eb013d;
-  --color-green: #00823b;
-  --color-purple: #653797;
+  --color-yellow: #ffbf47;
   --color-mark: #fffeca;
-  --color-visited: #4c2c92;
   --color-primary: var(--color-blue);
-  --color-secondary: var(--color-red);
+  --color-secondary: var(--color-yellow);
   --color-gray-0: #111;
   --color-gray-70: #767676;
   --color-gray-40: #ddd;
@@ -22,7 +17,7 @@
   --color-link: ;
   --color-link-hover: ;
   --color-link-visited: ;
-  --color-focus: #ffbf47;
+  --color-focus: var(--color-yellow);
   --border-radius-default: 4px;
   --transition-duration: 0.2s;
   --notice-background-color: var(--color-gray-30);

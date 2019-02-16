@@ -2,19 +2,16 @@
 title: Now
 permalink: /now/index.html
 description: This is my [now page](https://nownownow.com/about), inspired by Derek Sivers.
-updated: 2018-11-29T09:39:29
+updated: 2019-02-15
 ---
 {% extends 'layouts/default.njk' %}
 
 {% set content %}
 ## Professional
-* Onboarding at [NationBuilder](http://nationbuilder.com)
-* Reading "The Five Dysfunctions of a Team"
 * Producing screencasts on HTML, CSS, and JavaScript on [YouTube](https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg)
 * Writing technical blog <a href="/posts/">posts</a> about what I am learning
 
 ## Personal
-* Training our new puppy [Frankie](https://developur.rs/posts/alex-carpenter/)
 * Taking a small step back from social media
 {% endset %}
 
@@ -27,6 +24,10 @@ updated: 2018-11-29T09:39:29
     <div class="o-grid-col u-width-two-thirds">
       <div class="c-prose">
         {{ content | markdownify | safe }}
+        <hr>
+        {% Notice {
+          text: "Last updated on " + updated | date_formatted
+        } %}
       </div>
     </div>
   </div>

@@ -9,29 +9,26 @@ updated: 2019-02-14
 {% set content %}
 {% Figure {
   src: "/assets/images/vscode-screenshot.png",
-  ratio: "3584/2278"
+  ratio: "2000/1271",
+  alt: "Screenshot of my VSCode editor setup"
 } %}
 
 ## Plugins
-- aaron-bond.better-comments
-- alefragnani.project-manager
-- CoenraadS.bracket-pair-colorizer
-- CraigMaslowski.erb
-- dbaeumer.vscode-eslint
-- eamodio.gitlens
-- HookyQR.beautify
-- luwenjiechn.nunjucks-vscode-snippets
-- mrmlnc.vscode-autoprefixer
-- mrmlnc.vscode-duplicate
-- ms-vsliveshare.vsliveshare
-- neilding.language-liquid
-- ph-hawkins.arc-plus
-- ronnidc.nunjucks
-- sdras.night-owl
-- simsim0709.over-night-owl
-- uloco.theme-bluloco-light
-- vscodevim.vim
-- WallabyJs.quokka-vscode
+
+- [aaron-bond.better-comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+- [alefragnani.project-manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
+- [CoenraadS.bracket-pair-colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
+- [CraigMaslowski.erb](https://marketplace.visualstudio.com/items?itemName=CraigMaslowski.erb)
+- [dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [eamodio.gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- [HookyQR.beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
+- [luwenjiechn.nunjucks-vscode-snippets](https://marketplace.visualstudio.com/items?itemName=luwenjiechn.nunjucks-vscode-snippets)
+- [mrmlnc.vscode-autoprefixer](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-autoprefixer)
+- [mrmlnc.vscode-duplicate](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-duplicate)
+- [ms-vsliveshare.vsliveshare](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare)
+- [neilding.language-liquid](https://marketplace.visualstudio.com/items?itemName=neilding.language-liquid)
+- [ronnidc.nunjucks](https://marketplace.visualstudio.com/items?itemName=ronnidc.nunjucks)
+- [sdras.night-owl](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl)
 
 ## Settings
 
@@ -44,7 +41,7 @@ updated: 2019-02-14
     "editor.fontSize": 18,
     "editor.tabSize": 2,
     "editor.renderWhitespace": "all",
-    "editor.fontLigatures": false,
+    "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "editor.lineHeight": 40,
     "editor.glyphMargin": false,
@@ -61,10 +58,12 @@ updated: 2019-02-14
     },
     "editor.selectionHighlight": false,
     "editor.autoIndent": false,
+    "editor.multiCursorModifier": "ctrlCmd",
     /**/
     // Screencasting
     /*
-    "editor.fontSize": 20,
+    "editor.fontSize": 22,
+    "editor.lineHeight": 50,
     "terminal.integrated.fontSize": 16,
     "workbench.activityBar.visible": false,
     "editor.lineNumbers": "off",
