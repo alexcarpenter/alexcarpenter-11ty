@@ -35,7 +35,7 @@ updated: 2019-02-14
 ```json
 {
     "workbench.colorTheme": "Night Owl No Italics",
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.detectIndentation": true,
     "editor.fontFamily": "Fira Mono, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 20,
@@ -59,6 +59,50 @@ updated: 2019-02-14
     "editor.selectionHighlight": false,
     "editor.autoIndent": false,
     "editor.multiCursorModifier": "ctrlCmd",
+    "breadcrumbs.enabled": true,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/coverage": true,
+        "**/dist": true,
+        "**/build": true,
+        "**/.build": true,
+        "**/.gh-pages": true
+    },
+    "eslint.autoFixOnSave": false,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "eslint.options": {
+        "env": {
+            "browser": true,
+            "jest/globals": true,
+            "es6": true
+        },
+        "parserOptions": {
+            "ecmaVersion": 2018,
+            "sourceType": "module",
+            "ecmaFeatures": {
+                "jsx": true
+            }
+        },
+        "rules": {
+            "no-debugger": "off"
+        }
+    },
+    "prettier.eslintIntegration": false,
+    "prettier.bracketSpacing": false,
+    "prettier.printWidth": 80,
+    "prettier.tabWidth": 2,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "all",
+    "prettier.jsxBracketSameLine": false,
+    "prettier.semi": false,
+    "prettier.useTabs": false,
+    "prettier.proseWrap": "always",
     /**/
     // Screencasting
     /*
@@ -69,7 +113,8 @@ updated: 2019-02-14
     "workbench.activityBar.visible": false,
     "editor.lineNumbers": "off",
     "workbench.statusBar.visible": false,
-    "editor.cursorBlinking": "solid"
+    "editor.cursorBlinking": "solid",
+    "breadcrumbs.enabled": false
     /**/
 }
 ```
