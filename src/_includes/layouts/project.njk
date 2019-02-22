@@ -1,0 +1,37 @@
+{% extends 'layouts/default.njk' %}
+{% from "components/intro.njk" import intro %}
+
+{% block main %}
+  {{ intro({
+    title: title,
+    lead: description
+  }) }}
+
+  <div class="o-grid-row">
+    {% if videoSrc %}
+    <div class="o-grid-col">
+      <div style="--aspect-ratio: 16/9;">
+        <video muted="muted" controls>
+          <source src="{{ videoSrc }}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    {% endif %}
+    <div class="o-grid-col u-width-two-thirds">
+      <div class="c-prose">
+        {% if demo or code %}
+        <p><b>{% if demo %}<a href="{{ demo }}">View demo</a>{% endif %}{% if demo and code %} <span class="u-gray">&bullet;</span> {% endif %}{% if code %}<a href="{{ code }}">View code</a>{% endif %}</b></p>
+        {% endif %}
+        {{ content | safe }}
+        {% if releases %}
+          <h2>Releases</h2>
+          <ul>
+            {% for release in releases %}
+              <li><a href="{{ release.url }}">{{ release.title }}</a> - {{ release.description | markdownify_inline | safe }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

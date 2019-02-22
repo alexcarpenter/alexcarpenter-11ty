@@ -109,6 +109,10 @@ module.exports = eleventyConfig => {
     return collection.getFilteredByGlob('**/notes/*.md').reverse()
   })
 
+  eleventyConfig.addCollection('projects', collection => {
+    return collection.getFilteredByGlob('**/projects/*.md').reverse()
+  })
+
   // Shortcodes
   eleventyConfig.addShortcode('Figure', Figure)
   eleventyConfig.addShortcode('Notice', Notice)
