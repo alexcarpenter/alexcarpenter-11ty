@@ -369,6 +369,10 @@ td {
   display: inline-block;
 }
 
+.c-header__branding svg {
+  width: 100%;
+}
+
 .c-header__toggle {
   -webkit-appearance: none;
   -moz-appearance: none;
