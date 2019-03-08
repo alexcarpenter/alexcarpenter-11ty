@@ -1,8 +1,9 @@
-(function() {
+(function () {
   var nav = document.querySelector('.js-nav');
 
-  document.addEventListener('click', function(e) {
+  document.addEventListener('click', function (e) {
     toggleNav(e);
+    toggleDarkMode(e);
   }, false);
 
   function toggleNav(e) {
@@ -23,22 +24,13 @@
     el.setAttribute('aria-expanded', false);
   }
 
-  // Ref: https://timkadlec.com/
-  window.onload = function(){
-    setTimeout(function(){
-      window.performance = window.performance || window.mozPerformance || window.msPerformance || window.webkitPerformance || {};
-      var t = performance.timing || {};
-
-      if (!t) {
-        
-        return;
-      }
-      var start = t.navigationStart,
-          end = t.loadEventEnd
-          loadTime = (end - start) / 1000;
-
-      var copy = document.querySelectorAll('.js-page-timing');
-      copy[0].innerHTML += "<p class='loaded'>This page loaded in <strong>" + loadTime + " seconds</strong>.</p>";
-    }, 0); 
+  function toggleDarkMode(e) {
+    if (!e.target.matches('.js-dark-mode-toggle')) return;
+    document.documentElement.classList.toggle('dark-mode');
+    if (document.documentElement.classList.contains('dark-mode')) {
+      localStorage.setItem('isDarkMode', true);
+      return;
+    }
+    localStorage.removeItem('isDarkMode');
   }
 })();

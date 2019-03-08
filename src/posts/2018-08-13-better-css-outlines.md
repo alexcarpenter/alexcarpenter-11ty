@@ -1,7 +1,7 @@
 ---
 title: Better CSS outlines with box-shadows
 date: 2018-08-13
-description: I think we can all agree that the default browser outline styling isn't the most beautiful design implementation.
+summary: I think we can all agree that the default browser outline styling isn't the most beautiful design implementation.
 tags:
   - css
   - accessiblity

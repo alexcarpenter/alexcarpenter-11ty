@@ -1,7 +1,7 @@
 ---
 title: Sticky footer with flexbox auto margins
 date: 2018-09-06
-description: How to create a sticky footer with flexbox auto margins.
+summary: How to create a sticky footer with flexbox auto margins.
 tags:
   - css
 ---

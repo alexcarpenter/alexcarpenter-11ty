@@ -6,14 +6,14 @@
 code[class*="language-"],
 pre[class*="language-"] {
     color: #393A34;
-    font-family: Menlo, Monaco, "Courier New", monospace;
+    font-family: var(--font-family-code);
     direction: ltr;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
-    font-size: 0.95rem;
-    line-height: 1.4;
+    font-size: .85rem;
+    line-height: 1.2;
 
     -moz-tab-size: 4;
     -o-tab-size: 4;

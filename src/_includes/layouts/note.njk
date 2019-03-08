@@ -2,9 +2,9 @@
 {% set title = "Note: " + page.date | date_time %}
 
 {% block main %}
-  <article class="o-grid-row">
-    <div class="o-grid-col u-width-two-thirds">
-      <div class="c-prose c-prose--post">
+  <article class="o-layout">
+    <div class="o-layout__item u-width-two-thirds">
+      <div class="c-prose">
         {{ content | safe }}
         <a class="c-prose__date" href="{{ page.url | permalink }}">{{ page.date | date_time }}</a>
       </div>

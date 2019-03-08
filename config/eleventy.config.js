@@ -5,9 +5,7 @@ const htmlmin = require('html-minifier')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const Figure = require('../src/_includes/components/Figure.js')
-const Notice = require('../src/_includes/components/Notice.js')
 const Youtube = require('../src/_includes/components/Youtube.js')
-const Quote = require('../src/_includes/components/Quote.js')
 const markdown = require('markdown-it')({
   html: true,
   breaks: true,
@@ -98,26 +96,33 @@ module.exports = eleventyConfig => {
     return collection.getFilteredByGlob('**/posts/*.md').reverse()
   })
 
-  eleventyConfig.addCollection('latestPosts', collection => {
-    return collection
-      .getFilteredByGlob('**/posts/*.md')
-      .slice(-5)
-      .reverse()
-  })
-
   eleventyConfig.addCollection('notes', collection => {
     return collection.getFilteredByGlob('**/notes/*.md').reverse()
   })
 
-  eleventyConfig.addCollection('projects', collection => {
-    return collection.getFilteredByGlob('**/projects/*.md').reverse()
+  eleventyConfig.addCollection('screencasts', collection => {
+    return collection.getFilteredByGlob('**/screencasts/*.md').reverse()
+  })
+
+  eleventyConfig.addCollection('speakingUpcoming', collection => {
+    return collection.getFilteredByGlob('**/speaking/*.md').filter(item => {
+      const date = new Date(item.date).getTime()
+      const now = new Date().getTime()
+      return (date > now ? item : false)
+    })
+  })
+
+  eleventyConfig.addCollection('speakingPrevious', collection => {
+    return collection.getFilteredByGlob('**/speaking/*.md').filter(item => {
+      const date = new Date(item.date).getTime()
+      const now = new Date().getTime()
+      return (date < now ? item : false)
+    })
   })
 
   // Shortcodes
   eleventyConfig.addShortcode('Figure', Figure)
-  eleventyConfig.addShortcode('Notice', Notice)
   eleventyConfig.addShortcode('Youtube', Youtube)
-  eleventyConfig.addShortcode('Quote', Quote)
 
   // ETC.
   eleventyConfig

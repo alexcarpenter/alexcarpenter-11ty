@@ -1,10 +1,9 @@
 ---
 title: How to lazyload images
 date: 2018-09-10
-description: Lazy loading is a technique used to improve the performance of a website by defering loading of imagery at page load time.
+summary: Lazy loading is a technique used to improve the performance of a website by defering loading of imagery at page load time.
 tags:
   - javascript
-  - screencast
 ---
 {% Youtube "Uwnmn65cMec" %}
 

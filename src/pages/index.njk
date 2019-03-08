@@ -1,42 +1,76 @@
 ---
-title: "I’m Alex Carpenter, a front-end web developer focused on performance and accessibility."
-heading: true
+title: "Home"
 description: "Currently, I am a front-end developer at [NationBuilder](https://nationbuilder.com), based out of Grand Rapids, MI. I aim to produce semantic accessible markup, with modular CSS, and progressively enhance the experience with unobtrusive JavaScript."
 permalink: /index.html
 ---
 {% extends 'layouts/default.njk' %}
-{% from "components/intro.njk" import intro %}
+{% from "components/masthead.njk" import masthead %}
 
 {% block main %}
-  {{ intro({
-    heading: true,
-    title: "I’m Alex Carpenter, a front-end web developer focused on performance and accessibility.",
-    lead: "Currently, I am a front-end developer at [NationBuilder](https://nationbuilder.com), based out of Grand Rapids, MI. I aim to produce semantic accessible markup, with modular CSS, and progressively enhance the experience with unobtrusive JavaScript."
+  {{ masthead({
+    title: "Hey, I’m Alex",
+    summary: "I’m a front-end developer who is passionate about building inclusive web experiences. Currently I’m [teaching](/screencasts/) what I know about HTML, CSS, & JavaScript on [YouTube]()."
   }) }}
 
-  <section class="o-grid-row">
-    <div class="o-grid-col u-width-two-thirds">
+  <div class="o-layout">
+    <div class="o-layout__item">
+      {% Figure {
+        src: '/assets/images/banner.jpg',
+        alt: 'Photo of Alex Carpenter',
+        caption: 'Photo by Jill DeVries'
+      } %}
+    </div>
+
+    <div class="o-layout__item u-width-two-thirds">
       <div class="c-prose">
-        <h2>Latest posts</h2>
+        <p>Throughtout the past five years i've worked professionally as a hybrid front-end developer/designer. Working confidently throughout the stack to produce semantic <a href="/posts/tagged/accessiblity/">accessible</a> markup, with modular <a href="/posts/tagged/css/">CSS</a>, and progressively enhance the experience with unobtrusive <a href="/posts/tagged/javascript/">JavaScript</a>.</p>
+        <p>I live in Grand Rapids, Michigan, with my wife and our puppy, where we spend our time fly fishing, hiking, and seeking adventures offline.</p>
+        <p>Checkout my <a href="/now/">now page</a> to see what I am up to right now.</p>
+        <h2>Interviews</h2>
         <ul>
-          {% for entry in collections.latestPosts %}
+          <li><a href="https://developur.rs/posts/alex-carpenter/">Developurrs</a> - An interview series where web professionals about their beloved pets…and tech.</li>
+          <li><a href="https://itunes.apple.com/us/podcast/alex-carpenter-show-me-your-coffee/id602836998?i=1000330208077&amp;mt=2">Show Me Your Mic</a> - A show that talks to podcasters about gear, software, workflow, and philosophies behind podcasting.</li>
+          <li><a href="https://itunes.apple.com/us/podcast/013-alex-carpenter/id738646287?i=1000264786894&amp;mt=2">How to Hold a Pencil</a> - An interview show with self-taught designers and developers.</li>
+        </ul>
+        <h2>Experience</h2>
+        <ul>
           <li>
-            <a href="{{ entry.url | permalink }}">{{ entry.data.title }}</a>
+            <p>Front-end Developer <span class="u-color-gray">@</span> NationBuilder</p>
+            <p class="u-color-gray u-font-size-xs">Nov 2018 - Current</p>
           </li>
-          {% endfor %}
+          <li>
+            <p>Senior Developer <span class="u-color-gray">@</span> Mighty in the Midwest</p>
+            <p class="u-color-gray u-font-size-xs">Oct 2015 - Jun 2018</p>
+          </li>
+          <li>
+            <p>Front-end Developer &amp; Designer <span class="u-color-gray">@</span> Masuga Design</p>
+            <p class="u-color-gray u-font-size-xs">Feb 2012 - Oct 2015</p>
+          </li>
+          <li>
+            <p>Co-founder &amp; Creative Director <span class="u-color-gray">@</span> Hybrid Media Co.</p>
+            <p class="u-color-gray u-font-size-xs">Dec 2010 - Feb 2012</p>
+          </li>
+        </ul>
+        <h2>Colophon</h2>
+        <ul>
+          <li>Site is built using the static site generator <a href="https://www.11ty.io/">11ty</a>.</li>
+          <li>Template code makes use of <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>.</li>
+          <li>Styles are written in vanilla CSS.</li><li>Site is hosted and built using <a href="https://www.netlify.com/">Netlify</a>.</li>
+          <li>View the source code on <a href="https://github.com/alexcarpenter/alexcarpenter.me">Github</a>.</li>
         </ul>
       </div>
     </div>
-  </section>
 
-  <section class="o-grid-row">
-    <div class="o-grid-col u-width-two-thirds">
+    <div class="o-layout__item u-width-one-third">
       <div class="c-prose">
-        <h2>Sharing what I know on YouTube</h2>
-        {% Youtube "sZJrcOfBaNY" %}
-        <p>In an effort to give back to the community that has given so much to me, I produce screencasts on front-end development techniques on YouTube every week.</p>
-        <a href="https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg" class="c-button c-button--secondary">Subscribe on YouTube <svg focusable="false" aria-hidden="true" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#fff" d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"></path></svg></a>
+        <h2>Sidenotes</h2>
+        <p><strong>Pronouns</strong><br>He/him/his</p>
+        <p><strong>Current location</strong><br>Grand Rapids, MI.</p>
+        <p><strong>Top bookmarks</strong><br><a href="https://github.com/">github.com</a>, <a href="https://www.youtube.com/">youtube.com</a>, <a href="https://dribbble.com/">dribbble.com</a>, <a href="https://www.siteinspire.com/">siteInspire</a>, <a href="https://www.dwell.com/">dwell.com</a></p>
+        <p><strong>Top apps</strong><br>VSCode, Todoist, iTerm2, Bear, 1Password, Spectacle</p>
+        <p><strong>Audio</strong><br>Bear's Den, Damien Jurado, Chris Stapleton, Tycho</p>
+        <p><strong>Inspiration</strong><br>I am inspired by passionate people. People who share what they love with everyone else.</p>
       </div>
     </div>
-  </section>
+  </div>
 {% endblock %}

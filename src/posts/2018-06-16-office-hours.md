@@ -1,7 +1,7 @@
 ---
 title: Office Hours
 date: 2018-06-16
-description: In my continual quest to give back to the community that has provided so much for me, I decided to signup up for a service called Office Hours.
+summary: In my continual quest to give back to the community that has provided so much for me, I decided to signup up for a service called Office Hours.
 ---
 {{ description }}
 

@@ -1,0 +1,45 @@
+---
+permalink: screencasts/feed.xml
+metadata:
+  title: Screencasts - Alex Carpenter
+  url: https://alexcarpenter.me/
+  author:
+    name: Alex Carpenter
+    email: im.alexcarpenter@gmail.com
+  feed:
+    subtitle: Short screencast video tutorials for front-end web developers.
+    filename: feed.xml
+    path: feed/feed.xml
+    url: https://alexcarpenter.me/screencasts/feed.xml
+    id: https://alexcarpenter.me/
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.feed.subtitle }}</subtitle>
+  <link href="{{ metadata.feed.url }}" rel="self"/>
+  <link href="{{ metadata.url }}screencasts/"/>
+  <updated>{{ collections.notes | rssLastUpdatedDate }}</updated>
+  <id>{{ metadata.feed.id }}screencasts/</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {%- for post in collections.screencasts %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <id>{{ absolutePostUrl }}</id>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ site.url }}{{ post.url }}" rel="alternate" type="text/html"/>
+    <updated>{{ post.date | rssDate }}</updated>
+    <content type="html">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ post.data.youtubeId }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+      {% if post.data.summary %}
+        <p>{{ post.data.summary }}</p>
+      {% endif %}
+      {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+      <a href="https://www.youtube.com/watch?v={{ post.data.youtubeId }}">Watch on YouTube</a>
+    </content>
+  </entry>
+  {%- endfor %}
+</feed>

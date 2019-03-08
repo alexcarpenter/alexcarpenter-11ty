@@ -1,0 +1,18 @@
+<header class="c-entry__header">
+  <dl class="c-entry__meta">
+    <dt class="u-hidden-visually">Published on</dt>
+    <dd><time class="c-entry__date">{{ date | date_formatted }}</time></dd>
+    {% if duration %}
+    <dt class="u-hidden-visually">Duration</dt>
+    <dd><span class="c-entry__duration"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="var(--color-gray)" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/><path d="M0 0h24v24H0z" fill="none"/><path fill="var(--color-gray)" d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg> {{ duration }}</span></dd>
+    {% endif %}
+    <dt class="u-hidden-visually">Tagged</dt>
+    <dd>
+      {% for tag in tags %}
+        {% set tagUrl %}/{{ type }}/tagged/{{ tag }}/{% endset %}
+        <a href="{{ tagUrl | url }}" rel="tag">#{{ tag }}</a>{%- if not loop.last -%}, {% endif %}
+      {% endfor %}
+    </dd>
+  </dl>
+  <h3 class="c-entry__title c-entry__title--lg">{{ title }}</h3>
+</header>

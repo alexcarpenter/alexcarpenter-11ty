@@ -5,6 +5,7 @@ description: These are my VSCode settings and plugins I use.
 updated: 2019-02-14
 ---
 {% extends 'layouts/default.njk' %}
+{% from "components/masthead.njk" import masthead %}
 
 {% set content %}
 {% Figure {
@@ -121,12 +122,12 @@ updated: 2019-02-14
 {% endset %}
 
 {% block main %}
-  <header class="c-content-header">
-    <h1 class="c-content-header__title">VSCode</h1>
-    <p class="c-content-header__lead">These are my VSCode settings and plugins I use.</p>
-  </header>
-  <div class="o-grid-row">
-    <div class="o-grid-col u-width-two-thirds">
+  {{ masthead({
+    title: "VSCode",
+    summary: "These are my VSCode settings and plugins I use."
+  }) }}
+  <div class="o-layout">
+    <div class="o-layout__item u-width-two-thirds">
       <div class="c-prose">
         {{ content | markdownify | safe }}
       </div>

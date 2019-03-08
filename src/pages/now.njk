@@ -5,6 +5,7 @@ description: This is my [now page](https://nownownow.com/about), inspired by Der
 updated: 2019-02-26
 ---
 {% extends 'layouts/default.njk' %}
+{% from "components/masthead.njk" import masthead %}
 
 {% set content %}
 ## Professional
@@ -20,18 +21,16 @@ updated: 2019-02-26
 {% endset %}
 
 {% block main %}
-  <header class="c-content-header">
-    <h1 class="c-content-header__title">Now</h1>
-    <p class="c-content-header__lead">This is my <a href="https://nownownow.com/about">now page</a>, inspired by Derek Sivers.</p>
-  </header>
+  {{ masthead({
+    title: "Now",
+    summary: "This is my [now page](https://nownownow.com/about), inspired by Derek Sivers."
+  }) }}
   <div class="o-grid-row">
     <div class="o-grid-col u-width-two-thirds">
       <div class="c-prose">
         {{ content | markdownify | safe }}
-        <hr>
-        {% Notice {
-          text: "Last updated on " + updated | date_formatted
-        } %}
+        {# <hr> #}
+        {# <p class="u-font-size-xs u-color-gray u-font-family-mono">Last updated on {{ updated | date_formatted }}</p> #}
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 ---
 title: Component event delegation
 date: 2018-08-06
-description: Lets take a look at how we can make use of event delegation to manage our components event listeners efficiently.
+summary: Lets take a look at how we can make use of event delegation to manage our components event listeners efficiently.
 tags:
   - javascript
 ---

@@ -1,8 +1,0 @@
-<header class="c-page-header">
-  {% if date %}<time>{{ date | date_formatted }}</time>{% endif %}
-  <h1 class="{% if heading == true %}c-page-header__heading{% else %}
-  c-page-header__title{% endif %}">{{ title }}</h1>
-  {% if description %}
-    <p class="c-page-header__description">{{ description | markdownify_inline | safe }}</p>
-  {% endif %}
-</header>

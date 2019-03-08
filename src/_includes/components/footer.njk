@@ -1,7 +1,7 @@
 <footer class="c-footer">
   <div class="o-container">
     <div class="c-footer__inner">
-      <div>
+      <div class="c-footer__primary">
         <p class="c-footer__nav">
           {% for item in navigation.primary %}
           <a class="c-footer__nav-anchor" {% if page.url == item.url %}aria-current="page"{% endif %} href="{{ item.url }}">{{ item.label }}</a>
@@ -29,7 +29,13 @@
           </a>
         </p>
       </div>
-      <p class="c-footer__timing js-page-timing"></p>
+      <div class="c-footer__secondary">
+        <label for="darkMode" class="c-control">
+          <input class="c-control__input js-dark-mode-toggle" type="checkbox" id="darkMode" name="darkMode">
+          <span class="c-control__indicator"></span>
+          Dark mode
+        </label>
+      </div>
     </div>
   </div>
 </footer>

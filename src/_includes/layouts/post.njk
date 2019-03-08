@@ -1,48 +1,36 @@
 {% extends 'layouts/default.njk' %}
-{% set screencast = false %}
 
 {% block main %}
-  <article class="o-grid-row">
-    <div class="o-grid-col u-width-two-thirds">
-      <header class="c-post-header">
-        <span class="c-post-header__meta">
-          {% if updated -%}
-          Updated on <time class="c-post-header__time">{{ updated | date_formatted }}</time>
-          {% else %}
-          <time class="c-post-header__time">{{ date | date_formatted }}</time>
-          {%- endif %}
-          &ndash;
+  <article class="o-layout">
+    <div class="o-layout__item u-width-two-thirds">
+      <header class="c-entry__header">
+        <dl class="c-entry__meta">
+          <dt class="u-hidden-visually">Published on</dt>
+          <dd><time class="c-entry__date">{{ date | date_formatted }}</time></dd>
+          {# <dt class="u-hidden-visually">Tagged</dt>
+          <dd>
           {% for tag in tags %}
-            {%- if tag == "screencast" -%}
-              {% set screencast = true %}
-            {%- endif -%}
-            {%- if tag != "post" -%}
-              {% set tagUrl %}/posts/tagged/{{ tag }}/{% endset %}
-              <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>{%- if not loop.last -%}, {% endif %}
-            {%- endif -%}
+            {% set tagUrl %}/{{ type }}/tagged/{{ tag }}/{% endset %}
+            <a href="{{ tagUrl | url }}" rel="tag">#{{ tag }}</a>{%- if not loop.last -%}, {% endif %}
           {% endfor %}
-        </span>
-        <h1 class="c-post-header__title">
-          {% if link -%}
-            <a rel="external" href="{{ link | safe }}">{{ title }}</a>
-          {%- else -%}
-            {{ title }}
-          {%- endif %}
-        </h1>
+          </dd> #}
+        </dl>
+        {% if link %}
+        <h1 class="c-entry__title c-entry__title--lg"><a ref="external" href="{{ link }}">{{ title }}</a> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><path fill="var(--color-gray)" d="M66 8H48V0h32v32h-8V14L38 48l-6-6L66 8zm6 40h8v32H0V0h32v8H8v64h64V48z"/></svg></h1>
+        {% else %}
+        <h1 class="c-entry__title c-entry__title--lg">{{ title }}</h1>
+        {% endif %}
       </header>
+    </div>
 
-      <div class="c-prose c-prose--post">
+    <div class="o-layout__item u-width-two-thirds">
+      <div class="c-prose">
         {{ content | safe }}
-        {% if link -%}
-          <a rel="external" href="{{ link | safe }}">View Link</a>
-        {%- endif %}
-        {% if screencast -%}
-          <hr>
-          {% Notice {
-            text: "If you enjoyed this screencast, consider subscribing to my [YouTube channel](https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg) for more screencasts about HTML, CSS, and JavaScript."
-          } %}
-        {%- endif %}
       </div>
     </div>
+
+    {# <div class="o-layout__item u-width-one-third">
+      {% include "components/actions.njk" %}
+    </div> #}
   </article>
 {% endblock %}

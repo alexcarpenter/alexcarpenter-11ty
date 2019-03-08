@@ -7,24 +7,22 @@ pagination:
 permalink: /notes/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html
 ---
 {% extends 'layouts/default.njk' %}
-{% from "components/intro.njk" import intro %}
+{% from "components/masthead.njk" import masthead %}
 
 {% block main %}
-  {{ intro({
+  {{ masthead({
     title: "Notes",
-    lead: "Subscribe via [RSS](/notes/feed.xml)."
+    summary: "Subscribe via [RSS](/notes/feed.xml)."
   }) }}
 
-  <div class="o-grid-row">
-    <div class="o-grid-col u-width-two-thirds">
-      <ul class="o-listing">
+  <div class="o-layout">
+    <div class="o-layout__item u-width-two-thirds">
+      <ul class="c-listing">
         {% for entry in pagination.items %}
-        <li class="o-listing__item">
-          <article>
-            <div class="c-prose">
-              {{ entry.templateContent | safe }}
-              <a class="c-prose__date" href="{{ entry.url | permalink }}">{{ entry.date | date_time }}</a>
-            </div>
+        <li class="c-listing__item">
+          <article class="c-prose">
+            {{ entry.templateContent | safe }}
+            <a class="c-prose__date" href="{{ entry.url | permalink }}">{{ entry.date | date_time }}</a>
           </article>
         </li>
         {% endfor %}
@@ -33,7 +31,7 @@ permalink: /notes/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
   </div>
 
   <div class="o-grid-row">
-    <div class="o-grid-col u-width-two-thirds">
+    <div class="o-layout__item u-width-two-thirds">
       {% include "components/pagination.njk" %}
     </div>
   </div>

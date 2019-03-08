@@ -1,8 +1,0 @@
-{% macro intro(params) %}
-<header class="c-content-header">
-  <h1 class="{% if params.heading %}c-content-header__headline{% else %}c-content-header__title{% endif %}">{{ params.title }}</h1>
-  {% if params.lead %}
-  <p class="c-content-header__lead">{{ params.lead | markdownify_inline | safe }}</p>
-  {% endif %}
-</header>
-{% endmacro %}

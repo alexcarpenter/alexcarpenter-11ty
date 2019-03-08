@@ -1,7 +1,7 @@
 ---
 title: 5 tips for styling the component layer
 date: 2018-08-20
-description: Here are 5 tips to consider next time you begin styling components for a project.
+summary: Here are 5 tips to consider next time you begin styling components for a project.
 tags:
   - css
 ---

@@ -1,7 +1,7 @@
 ---
 title: Event delegation gotcha
 date: 2018-08-01
-description: While making a few small Javascript libraries, I discovered this one small event delegation gotcha and found a one line CSS fix to solve the problem.
+summary: While making a few small Javascript libraries, I discovered this one small event delegation gotcha and found a one line CSS fix to solve the problem.
 tags:
   - javascript
 ---

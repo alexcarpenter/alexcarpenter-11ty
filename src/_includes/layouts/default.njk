@@ -3,35 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="theme-color" content="#0055FF" />
   <meta name="robots" content="index,follow" />
   <title>{% if title and page.fileSlug != '' %}{{ title }} - {% endif %}{{ site.title }}</title>
   <meta name="description" content="{% if description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.description }}{% endif %}" />
   <meta property="og:title" content="{% if title and page.fileSlug != '' %}{{ title }} - {% endif %}{{ site.title }}">
-  <meta property="og:description" content="{% if description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:description" content="{% if summary %}{{ summary | markdownify_inline | strip_html }}{% elif description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ page.url | permalink }}">
-  <meta property="og:image" content="{{ site.url }}/assets/images/og-image.png">
+  <meta property="og:image" content="{{ site.url }}{%if thumbnail %}{{ thumbnail }}{% else %}/assets/images/og-image.png{% endif %}">
   <meta name="twitter:card" content="summary">
   <link rel="icon apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180" type="image/png" />
   <link rel="icon" href="/assets/images/favicon-96x96.png" sizes="96x96" type="image/png" />
   <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png" />
   <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png" />
   <link rel="manifest" href="/manifest.json" />
+  <link rel="preload" href="/assets/fonts/IBMPlexSans-Text.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/IBMPlexSans-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/IBMPlexSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
   {% set css %}
+    {% include "assets/fonts.css" %}
     {% include "assets/app.css" %}
     {% include "assets/prism.css" %}
   {% endset %}
   <style>{{ css | cssmin | safe }}</style>
-  {% if primaryColor %}
-  <style>
-    :root {
-      --color-primary: {{ primaryColor }};
-    }
-  </style>
-  {% endif %}
+  <script>
+    ;(function (window, document, undefined) {
+      if (!('localStorage' in window)) return;
+      var darkMode = localStorage.getItem('isDarkMode');
+      if (!darkMode) return;
+      document.documentElement.className += ' dark-mode';
+      window.onload = function() {
+        document.querySelector('.js-dark-mode-toggle').checked = true;
+      }
+    })(window, document);
+  </script>
 </head>
 <body>
-  <a class="c-skip-link" href="#main-content">Skip to main content</a>
   {% include "components/header.njk" %}
   <div class="o-container">
     <main id="main-content" tabindex="-1">

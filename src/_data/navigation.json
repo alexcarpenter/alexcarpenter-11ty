@@ -3,8 +3,8 @@
     "label": "Home",
     "url": "/"
   }, {
-    "label": "About",
-    "url": "/about/"
+    "label": "Screencasts",
+    "url": "/screencasts/"
   }, {
     "label": "Posts",
     "url": "/posts/"

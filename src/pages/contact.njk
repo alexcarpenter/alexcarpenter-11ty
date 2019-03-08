@@ -4,16 +4,16 @@ description: I’d love to hear from you — send a note using the form below an
 permalink: /contact/index.html
 ---
 {% extends 'layouts/default.njk' %}
-{% from "components/intro.njk" import intro %}
+{% from "components/masthead.njk" import masthead %}
 
 {% block main %}
-  {{ intro({
+  {{ masthead({
     title: "Contact",
-    lead: "I’d love to hear from you — send a note using the form below and I’ll get back to you as soon as I can. If your enquiry is more urgent, send me a message on [Twitter](https://twitter.com/hybrid_alex)."
+    summary: "I’d love to hear from you — send a note using the form below and I’ll get back to you as soon as I can. If your enquiry is more urgent, send me a message on [Twitter](https://twitter.com/hybrid_alex)."
   }) }}
 
-  <section class="o-grid-row">
-    <div class="o-grid-col u-width-two-thirds">
+  <section class="o-layout">
+    <div class="o-layout__item u-width-two-thirds">
       <form name="contact" netlify-honeypot="bot-field" action="/contact/thanks/" netlify>
         <input name="bot-field" hidden />
 
@@ -33,7 +33,7 @@ permalink: /contact/index.html
         </div>
 
         <div class="c-form__row">
-          <input class="c-form__button" type="submit" value="Send Message">
+          <input class="c-button" type="submit" value="Send Message">
         </div>
       </form>
     </div>

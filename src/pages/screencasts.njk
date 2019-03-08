@@ -1,0 +1,39 @@
+---
+title: Screencasts
+description: "Short screencast video tutorials for front-end web developers"
+pagination:
+  data: collections.screencasts
+  size: 10
+permalink: /screencasts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html
+---
+{% extends 'layouts/default.njk' %}
+{% from "components/masthead.njk" import masthead %}
+
+{% block main %}
+  {{ masthead({
+    title: "Screencasts",
+    summary: "Short screencast video tutorials for front-end web developers. Subscribe via [YouTube](https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg?sub_confirmation=1)."
+  }) }}
+
+  <div class="o-layout">
+    <div class="o-layout__item u-width-two-thirds">
+      <ul class="c-listing">
+      {% for entry in pagination.items %}
+        <li class="c-listing__item">
+          {% include "./components/entry.njk" %}
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+
+    {# <div class="o-layout__item u-width-one-third">
+      {% include "./components/topic-list.njk" %}
+    </div> #}
+  </div>
+
+  <div class="o-layout">
+    <div class="o-layout__item u-width-two-thirds">
+      {% include "./components/pagination.njk" %}
+    </div>
+  </div>
+{% endblock %}

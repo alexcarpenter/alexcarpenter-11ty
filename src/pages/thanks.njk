@@ -4,10 +4,11 @@ description: Thanks for contacting me. I typically respond to emails within a co
 permalink: /contact/thanks/index.html
 ---
 {% extends 'layouts/default.njk' %}
+{% from "components/masthead.njk" import masthead %}
 
 {% block main %}
-  <header class="c-content-header">
-    <h1 class="c-content-header__title">Thanks</h1>
-    <p class="c-content-header__lead">Thanks for contacting me. I typically respond to emails within a couple of days. Should your enquiry be more urgent, please send me a message on <a href="https://twitter.com/hybrid_alex">Twitter</a>.</p>
-  </header>
+  {{ masthead({
+    title: "Thanks",
+    summary: "Thanks for contacting me. I typically respond to emails within a couple of days. Should your enquiry be more urgent, please send me a message on [Twitter](https://twitter.com/hybrid_alex)."
+  }) }}
 {% endblock %}

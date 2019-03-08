@@ -1,10 +1,10 @@
 <header class="c-header">
   <div class="o-container">
     <div class="c-header__inner">
-      <h1 class="c-header__branding">
-        <span class="u-hidden-visually">Alex Carpenter</span>
-        <a href="/">{% include "components/logo.njk" %}</a>
-      </h1>
+      <a href="/" class="c-header__branding">
+        <span class="u-hidden-visually">{{ site.title }}</span>
+        {% include "components/logo.njk" %}
+      </a>
       <button class="c-header__toggle js-nav-toggle" aria-label="Toggle mobile nav" aria-expanded="false" aria-controls="primary-nav">Menu</button>
       <nav class="c-header__nav js-nav" id="primary-nav">
         <ul class="c-header__nav-list">

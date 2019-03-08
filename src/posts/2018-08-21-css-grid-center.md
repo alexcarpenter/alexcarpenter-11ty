@@ -1,7 +1,7 @@
 ---
 title: Center an element with CSS Grid
 date: 2018-08-21
-description: Here it is, two lines of CSS to center an element within its parent.
+summary: Here it is, two lines of CSS to center an element within its parent.
 tags:
   - css
 ---
