@@ -406,6 +406,9 @@ code:not([class]) {
 /* Button */
 
 .c-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -479,25 +482,6 @@ code:not([class]) {
   font: inherit;
   border: 2px solid var(--input-border-color);
   border-radius: 0;
-}
-
-.c-form__button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0.5rem 1rem;
-  background-color: #0b0c0c;
-  border: 2px solid #0b0c0c;
-  font: inherit;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 0;
-}
-
-.c-form__input:focus,
-.c-form__button:focus {
-  outline: 3px solid #ffbf47;
-  outline-offset: 0;
 }
 
 /* Control */

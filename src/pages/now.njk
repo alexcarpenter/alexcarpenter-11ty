@@ -25,12 +25,10 @@ updated: 2019-02-26
     title: "Now",
     summary: "This is my [now page](https://nownownow.com/about), inspired by Derek Sivers."
   }) }}
-  <div class="o-grid-row">
-    <div class="o-grid-col u-width-two-thirds">
+  <div class="o-layout">
+    <div class="o-layout__item u-width-two-thirds">
       <div class="c-prose">
         {{ content | markdownify | safe }}
-        {# <hr> #}
-        {# <p class="u-font-size-xs u-color-gray u-font-family-mono">Last updated on {{ updated | date_formatted }}</p> #}
       </div>
     </div>
   </div>
