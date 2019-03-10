@@ -1,11 +1,9 @@
 ---
 title: Now
 permalink: /now/index.html
-description: This is my [now page](https://nownownow.com/about), inspired by Derek Sivers.
 updated: 2019-02-26
 ---
-{% extends 'layouts/default.njk' %}
-{% from "components/masthead.njk" import masthead %}
+{% extends 'layouts/page.njk' %}
 
 {% set content %}
 ## Professional
@@ -20,11 +18,7 @@ updated: 2019-02-26
 * Taking a small step back from social media
 {% endset %}
 
-{% block main %}
-  {{ masthead({
-    title: "Now",
-    summary: "This is my [now page](https://nownownow.com/about), inspired by Derek Sivers."
-  }) }}
+{% block content %}
   <div class="o-layout">
     <div class="o-layout__item u-width-two-thirds">
       <div class="c-prose">

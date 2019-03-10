@@ -1,20 +1,14 @@
 ---
 title: Posts
-description: 'Subscribe via [RSS](/feed.xml).'
+summary: 'Subscribe via [RSS](/feed.xml).'
 pagination:
   data: collections.posts
   size: 10
 permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html
 ---
-{% extends 'layouts/default.njk' %}
-{% from "components/masthead.njk" import masthead %}
+{% extends 'layouts/page.njk' %}
 
-{% block main %}
-  {{ masthead({
-    title: "Posts",
-    summary: "Subscribe via [RSS](/feed.xml)."
-  }) }}
-
+{% block content %}
   <div class="o-layout">
     <div class="o-layout__item u-width-two-thirds">
       <ul class="c-listing">

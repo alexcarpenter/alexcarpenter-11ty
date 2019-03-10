@@ -8,6 +8,8 @@ tags:
 ---
 I think we can all agree that the default browser outline styling isn't the most beautiful design implementation. I also think we can agree that it may not be pretty but it does *function well*.
 
+> Not replace it with any other visual indication. This is bad practice and can hurt the user experience for keyboard users.
+
 It can be common to see folks remove the outline completely and not replace it with any other visual indication. This is bad practice and can hurt the user experience for keyboard users.
 
 To appease our designers while keeping our site accessible, lets replace the default outline style and replace it with a box-shadow implemenatation shown below.

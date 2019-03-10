@@ -1,17 +1,11 @@
 ---
-title: "Home"
-description: "Currently, I am a front-end developer at [NationBuilder](https://nationbuilder.com), based out of Grand Rapids, MI. I aim to produce semantic accessible markup, with modular CSS, and progressively enhance the experience with unobtrusive JavaScript."
+title: "Hey, I’m Alex"
+summary: "I’m a front-end developer who is passionate about building inclusive web experiences. Currently I’m [teaching](/screencasts/) what I know about HTML, CSS, & JavaScript on [YouTube](https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg)."
 permalink: /index.html
 ---
-{% extends 'layouts/default.njk' %}
-{% from "components/masthead.njk" import masthead %}
+{% extends 'layouts/page.njk' %}
 
-{% block main %}
-  {{ masthead({
-    title: "Hey, I’m Alex",
-    summary: "I’m a front-end developer who is passionate about building inclusive web experiences. Currently I’m [teaching](/screencasts/) what I know about HTML, CSS, & JavaScript on [YouTube]()."
-  }) }}
-
+{% block content %}
   <div class="o-layout">
     <div class="o-layout__item">
       {% Figure {
