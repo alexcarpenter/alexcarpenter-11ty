@@ -24,6 +24,7 @@
 
   --color-primary: var(--color-blue);
   --color-gray: #767676;
+  --color-mark: #FBF9C9;
   --box-shadow: 0 5px 15px -5px rgba(0,0,0,0.15);
   --body-background-color: var(--color-gray-100);
   --body-color: var(--color-gray-0);
@@ -143,7 +144,7 @@ ul:not([class]) li + li {
 mark {
   padding-left: 4px;
   padding-right: 4px;
-  background-color: var(--color-yellow);
+  background-color: var(--color-mark);
 }
 
 hr {
@@ -442,7 +443,7 @@ code:not([class]) {
 
 /* Prose */
 
-.c-prose > :not(:last-child) {
+.c-prose > :not(:last-child):not(hr) {
   margin-bottom: 1rem;
 }
 
@@ -463,6 +464,11 @@ code:not([class]) {
 .c-prose__date:hover,
 .c-prose__date:focus {
   color: var(--color-primary);
+}
+
+.c-prose hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* Form */
@@ -522,6 +528,32 @@ code:not([class]) {
   background-position: center center;
   background-size: 18px;
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTkgMTYuMTdMNC44MyAxMmwtMS40MiAxLjQxTDkgMTkgMjEgN2wtMS40MS0xLjQxeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==');
+}
+
+.c-note {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  font-size: var(--font-size-xs);
+}
+
+.c-note__label {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.c-note svg {
+  font-size: .5em;
+  width: 1em;
+  height: 1em;
+  margin-left: .25em;
+}
+
+.c-note--warning {
+  border-color: var(--color-red);
+}
+
+.c-note--warning .c-note__label {
+  color: var(--color-red);
 }
 
 /* Listing */
@@ -636,7 +668,9 @@ code:not([class]) {
 }
 
 .c-entry__duration svg {
-  margin-right: .25rem;
+  margin-right: .25em;
+  width: 1em;
+  height: 1em;
 }
 
 .c-entry__title {
@@ -644,8 +678,8 @@ code:not([class]) {
 }
 
 .c-entry__title svg {
-  margin-left: .5rem;
-  font-size: 1rem;
+  margin-left: .25em;
+  font-size: .5em;
   width: 1em;
   height: 1em;
 }
@@ -695,6 +729,26 @@ code:not([class]) {
   display: inline-block;
   font-weight: normal;
   content: '\2009\2192';
+}
+
+/* Quote */
+
+.c-quote {
+  text-align: left;
+}
+
+.c-quote__text {
+  padding-left: 0;
+  border: 0;
+  font-size: var(--font-size-md);
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+.c-quote__cite:before {
+  display: inline-block;
+  font-weight: normal;
+  content: '\2014\2009';
 }
 
 /* Footer */

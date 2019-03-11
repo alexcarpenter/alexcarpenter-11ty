@@ -1,5 +1,6 @@
 ---
 title: Now
+summary: "This is my [now page](https://nownownow.com/about), inspired by Derek Sivers."
 permalink: /now/index.html
 updated: 2019-02-26
 ---
@@ -23,6 +24,10 @@ updated: 2019-02-26
     <div class="o-layout__item u-width-two-thirds">
       <div class="c-prose">
         {{ content | markdownify | safe }}
+        {% Note {
+          text: updated | date_formatted,
+          label: 'Last updated'
+        } %}
       </div>
     </div>
   </div>

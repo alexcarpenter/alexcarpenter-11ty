@@ -1,10 +1,12 @@
-const {DateTime} = require('luxon')
+const { DateTime } = require('luxon')
 const CleanCSS = require('clean-css')
 const UglifyJS = require('uglify-js')
 const htmlmin = require('html-minifier')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const Figure = require('../src/_includes/components/Figure.js')
+const Note = require('../src/_includes/components/Note.js')
+const Quote = require('../src/_includes/components/Quote.js')
 const Youtube = require('../src/_includes/components/Youtube.js')
 const markdown = require('markdown-it')({
   html: true,
@@ -21,7 +23,7 @@ module.exports = eleventyConfig => {
     if (str instanceof Date) {
       return str
     }
-    const date = DateTime.fromISO(str, {zone: 'utc'})
+    const date = DateTime.fromISO(str, { zone: 'utc' })
     return date.toJSDate()
   }
 
@@ -47,7 +49,7 @@ module.exports = eleventyConfig => {
   })
 
   // Minify HTML output
-  eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
+  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (outputPath.indexOf('.html') > -1) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
@@ -122,6 +124,8 @@ module.exports = eleventyConfig => {
 
   // Shortcodes
   eleventyConfig.addShortcode('Figure', Figure)
+  eleventyConfig.addShortcode('Note', Note)
+  eleventyConfig.addShortcode('Quote', Quote)
   eleventyConfig.addShortcode('Youtube', Youtube)
 
   // ETC.
