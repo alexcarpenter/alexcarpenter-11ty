@@ -6,7 +6,7 @@ tags:
 ---
 The other week I was working on a [side project](https://github.com/alexcarpenter/standup-starter) where I needed to consecutively return a random item from an array via a button click.
 
-So to start, I first created a function that returns a random item from an array.
+To do this, will first create a function that returns a random item from an array.
 
 ```js
 function randomItem(arr) {
@@ -18,7 +18,7 @@ The problem with using only the `randomItem` function here, is that it was not u
 
 To fix that issue, we can make use of a `do...while` loop to call the `randomItem` function until it returns a result which is not equal to the previously selected item.
 
-So while `prevItem === currentItem` run the `randomItem` function.
+So while `prevItem` is equal to `currentItem`, run the `randomItem` function.
 
 ```js/5-8
 var fruit = ['Apples', 'Oranges', 'Pears'];
