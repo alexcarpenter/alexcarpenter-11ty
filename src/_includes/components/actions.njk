@@ -1,9 +1,9 @@
 <div class="c-actions">
   <div class="c-actions__group">
-    <p class="c-actions__heading">Share on</p>
+    <p class="c-actions__heading">Share</p>
     <ul class="c-actions__list">
       <li class="c-actions__list-item">
-        <a href="https://twitter.com/home?status={{title|urlencode}}%20-%20{{site.url}}{{page.url|urlencode}}" class="c-actions__list-anchor">Twitter</a>
+        <a href="http://twitter.com/share?text={{title|urlencode}}&url={{site.url}}{{page.url|urlencode}}" class="c-actions__list-anchor">Twitter</a>
       </li>
 
       <li class="c-actions__list-item">
@@ -17,7 +17,7 @@
   </div>
 
   <div class="c-actions__group">
-    <p class="c-actions__heading">Subscribe via</p>
+    <p class="c-actions__heading">Subscribe</p>
     <ul class="c-actions__list">
       {% if type == 'screencasts' %}
       <li class="c-actions__list-item">
@@ -26,7 +26,13 @@
       {% endif %}
 
       <li class="c-actions__list-item">
-        <a href="/screencasts/feed.xml" class="c-actions__list-anchor">RSS</a>
+        {% switch type %}
+          {% case 'screencasts' %}
+            {% set rssUrl = '/screencasts/feed.xml' %}
+          {% default %}
+            {% set rssUrl = '/feed.xml' %}
+        {% endswitch %}
+        <a href="{{ rssUrl }}" class="c-actions__list-anchor">RSS</a>
       </li>
     </ul>
   </div>
