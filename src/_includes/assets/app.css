@@ -87,7 +87,6 @@ body {
   font-family: var(--font-family-system);
   line-height: 1.4;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3,
@@ -358,6 +357,11 @@ code:not([class]) {
     background-color: var(--color-primary);
     opacity: 0;
   }
+
+  /* .c-header__nav-list-anchor:not([aria-current='page']):hover::after {
+    opacity: 1;
+    background-color: var(--color-yellow);
+  } */
 
   .c-header__nav-list-anchor[aria-current='page']::after {
     opacity: 1;
