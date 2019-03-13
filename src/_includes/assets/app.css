@@ -168,6 +168,27 @@ code:not([class]) {
   color: red;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+thead {
+  text-align: left;
+}
+
+th {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+}
+
+td {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  border-top: 1px solid var(--border-color);
+}
+
 [tabindex='-1'] {
   outline: 0;
 }
@@ -746,7 +767,6 @@ code:not([class]) {
   border: 0;
   font-size: var(--font-size-md);
   font-style: italic;
-  color: var(--color-primary);
 }
 
 .c-quote__cite:before {
