@@ -8,6 +8,7 @@ tags:
 ---
 {% Figure {
   src: '/assets/images/frankie.jpg',
+  alt: 'Frankie holding stick in her mouth',
   caption: 'Frankie doing yoga.',
   ratio: '1200/899'
 } %}
