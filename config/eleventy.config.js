@@ -5,8 +5,10 @@ const htmlmin = require('html-minifier')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const Figure = require('../src/_includes/components/Figure.js')
+const Link = require('../src/_includes/components/Link.js')
 const Note = require('../src/_includes/components/Note.js')
 const Quote = require('../src/_includes/components/Quote.js')
+const Stats = require('../src/_includes/components/Stats.js')
 const Youtube = require('../src/_includes/components/Youtube.js')
 const markdown = require('markdown-it')({
   html: true,
@@ -124,8 +126,10 @@ module.exports = eleventyConfig => {
 
   // Shortcodes
   eleventyConfig.addShortcode('Figure', Figure)
+  eleventyConfig.addShortcode('Link', Link)
   eleventyConfig.addShortcode('Note', Note)
   eleventyConfig.addShortcode('Quote', Quote)
+  eleventyConfig.addShortcode('Stats', Stats)
   eleventyConfig.addShortcode('Youtube', Youtube)
 
   // ETC.

@@ -15,6 +15,7 @@
   --color-gray-95: #FAFAFA;
   --color-gray-100: #FFFFFF;
   --font-scale-root: 1rem;
+  --font-size-xxxl: 3.2rem;
   --font-size-xxl: 2.4rem;
   --font-size-xl: 2rem;
   --font-size-lg: 1.5rem;
@@ -165,7 +166,7 @@ textarea {
 code:not([class]) {
   font-family: var(--font-family-code);
   font-size: .9rem;
-  color: red;
+  color: var(--color-primary);
 }
 
 table {
@@ -773,6 +774,48 @@ td {
   display: inline-block;
   font-weight: normal;
   content: '\2014\2009';
+}
+
+/* Stats */
+
+.c-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.c-stats__title {
+  grid-row-start: 1;
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+}
+
+.c-stats__description {
+  color: var(--color-gray);
+}
+
+/* Link */
+
+.c-link {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  text-decoration-color: var(--color-primary);
+}
+
+.c-link:hover {
+  color: var(--color-primary);
+}
+
+.c-link--md {
+  font-size: var(--font-size-md);
+}
+
+.c-link svg {
+  flex-shrink: 0;
+  margin-left: .5em;
+  font-size: .5em;
+  width: 1em;
+  height: 1em;
 }
 
 /* Footer */
