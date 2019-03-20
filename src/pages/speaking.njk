@@ -10,9 +10,12 @@ permalink: /speaking/index.html
     <div class="o-layout__item u-width-two-thirds">
       <div class="c-prose">
         <h2>Upcoming events</h2>
-        <ul>
+        <ul class="c-listing">
           {% for entry in collections.speakingUpcoming %}
-            <li>{{ entry.data.title }}</li>
+            <li class="c-listing__item">
+              <span>{{ entry.data.title }}</span>
+              <h3>{{ entry.data.topic }}</h3>
+            </li>
           {% endfor %}
         </ul>
       </div>
