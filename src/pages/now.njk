@@ -24,6 +24,7 @@ updated: 2019-03-11
     <div class="o-layout__item u-width-two-thirds">
       <div class="c-prose">
         {{ content | markdownify | safe }}
+        <hr>
         {% Note {
           text: updated | date_formatted,
           label: 'Last updated'
