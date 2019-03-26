@@ -778,19 +778,26 @@ td {
 
 /* Stats */
 
-.c-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+@media screen and (min-width: 700px) {
+  .c-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+  }
 }
 
 .c-stats__title {
   grid-row-start: 1;
   font-size: var(--font-size-xxl);
   font-weight: 700;
+  border-left: 10px solid var(--border-color);
+  padding-left: 1rem;
 }
 
 .c-stats__description {
-  color: var(--color-gray);
+  color: var(--color-primary);
+  border-left: 10px solid var(--border-color);
+  padding-left: 1rem;
 }
 
 /* Link */
