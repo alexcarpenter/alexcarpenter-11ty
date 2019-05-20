@@ -16,7 +16,7 @@ permalink: /notes/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
         <li class="c-listing__item">
           <article class="c-prose">
             {{ entry.templateContent | safe }}
-            <a class="c-prose__date" href="{{ entry.url | permalink }}">{{ entry.date | date_time }}</a>
+           <p><a class="c-prose__date" href="{{ entry.url | permalink }}">{{ entry.date | date_time }}</a></p>
           </article>
         </li>
         {% endfor %}

@@ -1,4 +1,5 @@
 {% extends 'layouts/default.njk' %}
+{% from "components/offsite-link.njk" import offsiteLink %}
 
 {% block main %}
   <article class="o-layout">
@@ -15,10 +16,14 @@
           {% endfor %}
           </dd> #}
         </dl>
-        {% if link %}
+        {# {% if link %}
         <h1 class="c-entry__title c-entry__title--lg"><a ref="external" href="{{ link }}">{{ title }}</a> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><path fill="var(--color-gray)" d="M66 8H48V0h32v32h-8V14L38 48l-6-6L66 8zm6 40h8v32H0V0h32v8H8v64h64V48z"/></svg></h1>
         {% else %}
         <h1 class="c-entry__title c-entry__title--lg">{{ title }}</h1>
+        {% endif %} #}
+        <h1 class="c-entry__title c-entry__title--lg">{{ title }}</h1>
+        {% if link %}
+          <p class="u-margin-top-025">{{ offsiteLink({ url: link, text: "Visit link" }) }}</p>
         {% endif %}
       </header>
     </div>

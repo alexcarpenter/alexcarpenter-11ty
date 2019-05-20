@@ -10,6 +10,7 @@ const Note = require('../src/_includes/components/Note.js')
 const Quote = require('../src/_includes/components/Quote.js')
 const Stats = require('../src/_includes/components/Stats.js')
 const Youtube = require('../src/_includes/components/Youtube.js')
+const Video = require('../src/_includes/components/Video.js')
 const markdown = require('markdown-it')({
   html: true,
   breaks: true,
@@ -48,6 +49,12 @@ module.exports = eleventyConfig => {
       return code
     }
     return minified.code
+  })
+
+  eleventyConfig.addFilter('sortByOrder', value => {
+    return value.sort((a, b) => {
+      return parseInt(a.data.order, 10) - parseInt(b.data.order, 10)
+    })
   })
 
   // Minify HTML output
@@ -108,20 +115,8 @@ module.exports = eleventyConfig => {
     return collection.getFilteredByGlob('**/screencasts/*.md').reverse()
   })
 
-  eleventyConfig.addCollection('speakingUpcoming', collection => {
-    return collection.getFilteredByGlob('**/speaking/*.md').filter(item => {
-      const date = new Date(item.date).getTime()
-      const now = new Date().getTime()
-      return (date > now ? item : false)
-    })
-  })
-
-  eleventyConfig.addCollection('speakingPrevious', collection => {
-    return collection.getFilteredByGlob('**/speaking/*.md').filter(item => {
-      const date = new Date(item.date).getTime()
-      const now = new Date().getTime()
-      return (date < now ? item : false)
-    })
+  eleventyConfig.addCollection('work', collection => {
+    return collection.getFilteredByGlob('**/work/*.md').reverse()
   })
 
   // Shortcodes
@@ -131,6 +126,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addShortcode('Quote', Quote)
   eleventyConfig.addShortcode('Stats', Stats)
   eleventyConfig.addShortcode('Youtube', Youtube)
+  eleventyConfig.addShortcode('Video', Video)
 
   // ETC.
   eleventyConfig

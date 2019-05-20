@@ -1,0 +1,7 @@
+<ul class="c-listing">
+  {% for entry in pagination.items %}
+  <li class="c-listing__item">
+    {% include "components/entry.njk" %}
+  </li>
+  {% endfor %}
+</ul>

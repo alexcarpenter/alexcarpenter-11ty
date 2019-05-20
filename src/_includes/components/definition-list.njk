@@ -1,0 +1,8 @@
+{% macro definitionList(params) %}
+  <dl class="c-definition-list{% if params.class %} {{ params.class }}{% endif %}">
+    {% for item in params.items %}
+    <dt class="u-hidden-visually">{{ item.title }}</dt>
+    <dd>{{ item.description }}</dd>
+    {% endfor %}
+  </dl>
+{% endmacro %}

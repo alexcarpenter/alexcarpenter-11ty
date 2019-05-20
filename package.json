@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "npx eleventy --config=config/eleventy.config.js",
-    "serve": "npx eleventy --config=config/eleventy.config.js --serve --watch",
-    "post": "node ./scripts/newPost.js"
+    "start": "npx eleventy --config=config/eleventy.config.js --serve --watch",
+    "build": "npx eleventy --config=config/eleventy.config.js"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.7.0",
+    "@11ty/eleventy": "^0.8.2",
     "@11ty/eleventy-plugin-rss": "^1.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^1.0.5",
     "@sindresorhus/slugify": "^0.8.0",

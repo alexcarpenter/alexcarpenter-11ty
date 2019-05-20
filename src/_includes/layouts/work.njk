@@ -1,0 +1,47 @@
+{% extends 'layouts/default.njk' %}
+{% from "components/definition-list.njk" import definitionList %}
+{% from "components/offsite-link.njk" import offsiteLink %}
+
+{% block main %}
+  <article class="o-layout">
+    <header class="o-layout__item">
+      {{ definitionList({
+        class: "u-margin-bottom-025",
+        items: [{
+          title: "Type",
+          description: description
+        }]
+      }) }}
+      <h2 class="u-margin-bottom-025 u-font-size-xl">{{ title }}</h2>
+      <p>{{ offsiteLink({ url: link }) }}</p>
+    </header>
+
+    <div class="o-layout__item">
+      {% Figure {
+        src: '/assets/images/' + banner,
+        alt: title + ' graphics',
+        border: true
+      } %}
+    </div>
+
+    <div class="o-layout__item u-width-two-thirds">
+      <div class="c-prose">
+        {{ content | safe }}
+        {# <p>{{ offsiteLink({ url: link }) }}</p> #}
+      </div>
+    </div>
+
+    <aside class="o-layout__item u-width-one-third" role="complementary">
+      <div class="c-prose">
+        <dl>
+          {# <dt>Year</dt>
+          <dd>{{ date | date_year }}</dd> #}
+          <dt>Role</dt>
+          <dd>{{ roles }}</dd>
+          <dt>Tech</dt>
+          <dd>{{ tech }}</dd>
+        </dl>
+      </div>
+    </aside>
+  </article>
+{% endblock %}

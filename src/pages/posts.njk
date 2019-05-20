@@ -11,13 +11,7 @@ permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
 {% block content %}
   <div class="o-layout">
     <div class="o-layout__item u-width-two-thirds">
-      <ul class="c-listing">
-        {% for entry in pagination.items %}
-        <li class="c-listing__item">
-          {% include "components/entry.njk" %}
-        </li>
-        {% endfor %}
-      </ul>
+      {% include "components/listing.njk" %}
     </div>
   </div>
 

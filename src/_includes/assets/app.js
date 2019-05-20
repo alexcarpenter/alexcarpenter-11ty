@@ -1,4 +1,4 @@
-(function () {
+;(function () {
   var nav = document.querySelector('.js-nav');
 
   document.addEventListener('click', function (e) {

@@ -1,0 +1,16 @@
+{% macro orderedList(params) %}
+  {% set headingLevel = "h2" %}
+  {% if params.headingLevel %}
+    {% set headingLevel = params.headingLevel %}
+  {% endif %}
+  <ol class="c-ordered-list">
+    {% for item in params.items %}
+    <li class="c-ordered-list__item">
+      <div class="c-prose">
+        <{{ headingLevel }}>{{ item.heading }}</{{ headingLevel }}>
+        {{ item.text | markdownify | safe }}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+{% endmacro %}

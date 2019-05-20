@@ -39,7 +39,6 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 pre[class*="language-"] {
     padding-top: 1em;
     padding-bottom: 1em;
-    margin: .5em 0;
     overflow: auto;
     border: 1px solid #dddddd;
     background-color: #fafafa;

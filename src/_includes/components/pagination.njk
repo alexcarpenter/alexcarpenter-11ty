@@ -2,7 +2,7 @@
   {% if pagination.nextPageLink -%}
     {% set nextPageNumber = pagination.pageNumber + 1 %}
     {% set nextPageLink = 'page/' ~ nextPageNumber %}
-    <a class="c-pagination__item" href="/{{ page.fileSlug }}/{{ nextPageLink }}" rel="prev">Older</a>
+    <a class="c-pagination__item" href="/{{ page.fileSlug }}/{{ nextPageLink }}" rel="prev">{% include "components/arrow-left.njk" %} Older</a>
   {%- endif %}
 
   {% if pagination.previousPageLink -%}
@@ -12,7 +12,7 @@
   {%- else -%}
     {% set previousPageLink = 'page/' ~ previousPageNumber %}
   {%- endif -%}
-    <a class="c-pagination__item" href="/{{ page.fileSlug }}/{{ previousPageLink }}" rel="next">Newer</a>
+    <a class="c-pagination__item" href="/{{ page.fileSlug }}/{{ previousPageLink }}" rel="next">Newer {% include "components/arrow-right.njk" %}</a>
   {%- endif %}
 </nav>
 
