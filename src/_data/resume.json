@@ -1,0 +1,22 @@
+{
+  "experience": [{
+    "company": "NationBuilder",
+    "title": "Front-end developer",
+    "startDate": "Nov 2018"
+  }, {
+    "company": "Mighty in the Midwest",
+    "title": "Senior developer",
+    "startDate": "Oct 2015",
+    "endDate": "Nov 2018"
+  }, {
+    "company": "Masuga Design",
+    "title": "Front-end Developer &amp; Designer",
+    "startDate": "Feb 2012",
+    "endDate": "Oct 2015"
+  }, {
+    "company": "Hybrid Media Co.",
+    "title": "Co-founder &amp; Creative Director",
+    "startDate": "Dec 2010",
+    "endDate": "Feb 2012"
+  }]
+}

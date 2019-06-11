@@ -31,8 +31,8 @@ module.exports = function(eleventyConfig) {
     return collection.getFilteredByGlob('**/screencasts/*.md').reverse()
   })
 
-  eleventyConfig.addCollection('work', collection => {
-    return collection.getFilteredByGlob('**/work/*.md').reverse()
+  eleventyConfig.addCollection('projects', collection => {
+    return collection.getFilteredByGlob('**/projects/*.md').reverse()
   })
 
   // ETC.

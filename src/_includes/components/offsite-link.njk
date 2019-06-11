@@ -1,10 +1,10 @@
 {% macro offsiteLink(params) -%}
-  <a class="c-offsite-link{% if params.class %} {{ params.class }}{% endif %}" rel="external nofollow" href="//{{ params.url }}">
+  <a class="c-offsite-link{% if params.class %} {{ params.class }}{% endif %}" rel="external nofollow" href="{{ params.url }}">
     {% include "components/arrow-right.njk" %}
     {% if params.text -%}
       {{ params.text }}
     {% else %}
-      {{ params.url }}
+      {{ params.url | replace('https://', '') }}
     {%- endif %}
   </a>
 {%- endmacro %}

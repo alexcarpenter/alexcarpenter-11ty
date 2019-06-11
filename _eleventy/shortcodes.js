@@ -14,7 +14,7 @@ module.exports = {
               <div${border ? ` class="u-bordered"` : ''} style="--aspect-ratio: ${ratio};">
                 <img src="${src}" alt="${alt}" />
               </div>
-              ${caption ? `<figcaption>${caption}</figcaption>` : ''}
+              ${caption ? `<figcaption>${markdown.renderInline(caption)}</figcaption>` : ''}
             </figure>`
   },
 
@@ -39,23 +39,35 @@ module.exports = {
             </dl>`;
   },
 
+  Timeline: function({ items = [] }) {
+    return `<ol class="c-timeline">
+            ${items.map((item) => `
+              <li class="c-timeline__item">
+                <h3 class="c-timeline__date">${item.startDate} – ${item.endDate ? `${item.endDate}` : 'Current'}</h3>
+                <h3 class="u-font-size-sm u-margin-bottom-025">${item.title}</h3>
+                ${item.byline ? `<p class="u-color-gray">${markdown.renderInline(item.byline)}</p>` : ''}
+              </li>
+            `).join('')}
+            </ol>`;
+  },
+
   Video: function({
     url = '',
     ratio = '16/9',
     controls = true,
     autoPlay = false,
     loop = false,
+    mute = true,
     caption = ''
   }) {
     return `<figure class="c-video">
               <div style="--aspect-ratio: ${ratio};">
-                <video${controls ? ' controls' : ''}${autoPlay ? ' autoPlay' : ''}${loop ? ' loop' : ''}>
+                <video${controls ? ` controls` : ''}${autoPlay ? ` autoPlay` : ''}${loop ? ` loop` : ''}${mute ? ` muted` : ''}>
                   <source src="${url}" type="video/mp4">
                   <p>Your browser doesn't support HTML5 video. Here is a <a href="${url}">link to the video</a> instead.</p>
                 </video>
               </div>
-              ${controls ? '' : `<button class="c-video__pause js-pause-video"><span class="u-hidden-visually">Pause video</span></button>`}
-              ${caption ? `<figcaption class="c-video__caption">${caption}</figcaption>` : ''}
+              ${caption ? `<figcaption class="c-video__caption">${markdown.renderInline(caption)}</figcaption>` : ''}
             </figure>`
   },
 

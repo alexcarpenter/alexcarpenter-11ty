@@ -3,7 +3,6 @@
 
   document.addEventListener('click', function (e) {
     toggleNav(e);
-    toggleDarkMode(e);
   }, false);
 
   function toggleNav(e) {
@@ -22,15 +21,5 @@
     el.classList.remove('is-active');
     nav.classList.remove('is-visible');
     el.setAttribute('aria-expanded', false);
-  }
-
-  function toggleDarkMode(e) {
-    if (!e.target.matches('.js-dark-mode-toggle')) return;
-    document.documentElement.classList.toggle('dark-mode');
-    if (document.documentElement.classList.contains('dark-mode')) {
-      localStorage.setItem('isDarkMode', true);
-      return;
-    }
-    localStorage.removeItem('isDarkMode');
   }
 })();

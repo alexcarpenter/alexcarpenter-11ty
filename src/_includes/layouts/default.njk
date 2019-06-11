@@ -24,19 +24,11 @@
     {% include "assets/fonts.css" %}
     {% include "assets/app.css" %}
     {% include "assets/prism.css" %}
+    {% if primaryColor %}
+      :root { --color-primary: {{ primaryColor }}; }
+    {% endif %}
   {% endset %}
   <style>{{ css | cssmin | safe }}</style>
-  <script>
-    ;(function (window, document, undefined) {
-      if (!('localStorage' in window)) return;
-      var darkMode = localStorage.getItem('isDarkMode');
-      if (!darkMode) return;
-      document.documentElement.className += ' dark-mode';
-      window.onload = function() {
-        document.querySelector('.js-dark-mode-toggle').checked = true;
-      }
-    })(window, document);
-  </script>
 </head>
 <body>
   {% include "components/header.njk" %}

@@ -28,22 +28,12 @@ permalink: /index.html
         </ul>
         <h2>Experience</h2>
         <ul>
+          {% for item in resume.experience %}
           <li>
-            <p>Front-end Developer <span class="u-color-gray">@</span> NationBuilder</p>
-            <p class="u-color-gray u-font-size-xs">Nov 2018 - Current</p>
+            <p>{{ item.title | safe }} <span class="u-color-gray">@</span> {{ item.company }}</p>
+            <p class="u-color-gray u-font-size-xs">{{ item.startDate }} - {% if item.endDate %}{{ item.endDate }}{% else %}Current{% endif %}</p>
           </li>
-          <li>
-            <p>Senior Developer <span class="u-color-gray">@</span> Mighty in the Midwest</p>
-            <p class="u-color-gray u-font-size-xs">Oct 2015 - Jun 2018</p>
-          </li>
-          <li>
-            <p>Front-end Developer &amp; Designer <span class="u-color-gray">@</span> Masuga Design</p>
-            <p class="u-color-gray u-font-size-xs">Feb 2012 - Oct 2015</p>
-          </li>
-          <li>
-            <p>Co-founder &amp; Creative Director <span class="u-color-gray">@</span> Hybrid Media Co.</p>
-            <p class="u-color-gray u-font-size-xs">Dec 2010 - Feb 2012</p>
-          </li>
+          {% endfor %}
         </ul>
         <h2>Colophon</h2>
         <ul>

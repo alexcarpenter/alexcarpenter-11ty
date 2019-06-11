@@ -1,0 +1,54 @@
+---
+title: Projects
+summary: "A sampling of personal projects & work the I am proud of."
+permalink: /projects/index.html
+---
+{% extends "layouts/page.njk" %}
+{% from "components/definition-list.njk" import definitionList %}
+
+{% block content %}
+  <div class="o-layout">
+    <div class="o-layout__item u-width-two-thirds">
+      <ul class="c-listing">
+        {%- for entry in collections.projects | sortByOrder -%}
+        <li class="c-listing__item">
+          <article class="c-entry">
+            {{ definitionList({
+              class: "u-margin-bottom-025",
+              items: [{
+                title: "Team",
+                description: entry.data.team
+              }]
+            }) }}
+            <h3 class="c-entry__title"><a href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
+            {# {% Figure {
+              src: '/assets/images/' + entry.data.banner,
+              alt: title + ' graphics',
+              border: true
+            } %} #}
+            {% if entry.data.summary %}
+            <p class="c-entry__summary">{{ entry.data.summary }}</p>
+            {% endif %}
+          </article>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+
+    <div class="o-layout__item u-width-one-third">
+      <div class="c-prose">
+        <h2 class="u-section-heading">Experience</h2>
+        <ol class="c-timeline">
+          {% for item in resume.experience %}
+          <li class="c-timeline__item">
+            <h3 class="c-timeline__date">{{ item.startDate }} – {% if item.endDate %}{{ item.endDate }}{% else %}Current{% endif %}</h3>
+            <h3 class="u-font-size-sm u-margin-bottom-025">{{ item.company }}</h3>
+            <p class="u-color-gray">{{ item.title | safe }}</p>
+          </li>
+          {% endfor %}
+        </ol>
+        {# <a href="/assets/resume.pdf" class="c-button u-font-size-xs">Download resume</a> #}
+      </div>
+    </div>
+  </div>
+{% endblock %}
