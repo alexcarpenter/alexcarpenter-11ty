@@ -26,6 +26,12 @@
 
     <div class="o-layout__item u-width-two-thirds">
       <div class="c-prose">
+        {# {% if summary %}
+          {% Note {
+            text: summary | markdownify_inline | safe,
+            label: 'TLDR'
+          } %}
+        {% endif %} #}
         {{ content | safe }}
       </div>
     </div>
@@ -33,12 +39,18 @@
     <aside class="o-layout__item u-width-one-third" role="complementary">
       <div class="c-prose">
         <dl>
-          {# <dt>Year</dt>
-          <dd>{{ date | date_year }}</dd> #}
+          <dt>Team</dt>
+          <dd>{{ team }}</dd>
           <dt>Role</dt>
-          <dd>{{ roles }}</dd>
+          <dd>
+            {% set comma = joiner() %}
+            {% for item in roles -%}{{ comma() }} {{ item }}{%- endfor %}
+          </dd>
           <dt>Tech</dt>
-          <dd>{{ tech }}</dd>
+          <dd>
+            {% set comma = joiner() %}
+            {% for item in tech -%}{{ comma() }} {{ item }}{%- endfor %}
+          </dd>
         </dl>
       </div>
     </aside>

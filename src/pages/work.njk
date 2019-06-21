@@ -1,7 +1,7 @@
 ---
-title: Projects
-summary: "A sampling of personal projects & work the I am proud of."
-permalink: /projects/index.html
+title: Work
+summary: "A sampling of recent work the I am proud of."
+permalink: /work/index.html
 ---
 {% extends "layouts/page.njk" %}
 {% from "components/definition-list.njk" import definitionList %}
@@ -10,7 +10,7 @@ permalink: /projects/index.html
   <div class="o-layout">
     <div class="o-layout__item u-width-two-thirds">
       <ul class="c-listing">
-        {%- for entry in collections.projects | sortByOrder -%}
+        {%- for entry in collections.work | sortByOrder -%}
         <li class="c-listing__item">
           <article class="c-entry">
             {{ definitionList({
@@ -20,14 +20,21 @@ permalink: /projects/index.html
                 description: entry.data.team
               }]
             }) }}
-            <h3 class="c-entry__title"><a href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
-            {# {% Figure {
-              src: '/assets/images/' + entry.data.banner,
-              alt: title + ' graphics',
-              border: true
-            } %} #}
+            <h3 class="c-entry__title">
+              {% if entry.url != false %}
+                <a href="{{ entry.url }}">{{ entry.data.title }}</a>
+              {% else %}
+                {{ entry.data.title }}
+              {% endif %}
+            </h3>
             {% if entry.data.summary %}
-            <p class="c-entry__summary">{{ entry.data.summary }}</p>
+              <p class="c-entry__summary">
+                {% if entry.url != false %}
+                  {{ entry.data.summary }}
+                {% else %}
+                  <em>Case study coming soon.</em>
+                {% endif %}
+              </p>
             {% endif %}
           </article>
         </li>
