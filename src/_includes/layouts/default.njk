@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0055FF" />
   <meta name="robots" content="index,follow" />
-  <title>{% if title and page.fileSlug != '' %}{{ title }} - {% endif %}{{ site.title }}</title>
+  <title>{% if title and page.url != '/' %}{{ title }}{% else %}Front-end Web Developer{% endif %} - {{ site.title }}</title>
   <meta name="description" content="{% if description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.description }}{% endif %}" />
-  <meta property="og:title" content="{% if title and page.fileSlug != '' %}{{ title }} - {% endif %}{{ site.title }}">
+  <meta property="og:title" content="{% if title and page.url != '/' %}{{ title }}{% else %}Front-end Web Developer{% endif %} - {{ site.title }}">
   <meta property="og:description" content="{% if summary %}{{ summary | markdownify_inline | strip_html }}{% elif description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ page.url | permalink }}">
   <meta property="og:image" content="{{ site.url }}{%if thumbnail %}{{ thumbnail }}{% else %}/assets/images/og-image.png{% endif %}">
