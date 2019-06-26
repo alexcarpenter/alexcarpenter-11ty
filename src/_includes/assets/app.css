@@ -439,18 +439,26 @@ td {
   font-size: 1rem;
   cursor: pointer;
   box-shadow: var(--box-shadow);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px;
   transition: ease-in-out .2s;
-  transition-property: background-color, border-color;
+  transition-property: background-color, border-color, color;
 }
 
 .c-button:hover {
   background-color: var(--color-gray-0);
   border-color: var(--color-gray-0);
+  color: var(--color-gray-100);
 }
 
 .c-button:focus {
   outline: 3px solid var(--color-yellow);
   outline-offset: 0;
+}
+
+.c-button--ghost {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-gray-0);
 }
 
 /* Project */

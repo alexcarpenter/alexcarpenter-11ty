@@ -2,7 +2,7 @@
 order: 2
 title: "Conservation Legacy"
 team: "Mighty in the Midwest"
-summary: "In about half a year, we launched eight seperate CraftCMS managed websites simultaneously."
+summary: "Led the development of a platform of websites for Conservation Legacy, an organization that supports local conservation services across the US."
 year: "2017"
 roles:
   - "Front-end development"
@@ -34,7 +34,7 @@ Each programs needs were different in terms of pages needed. We built a fully cu
   caption: '[Arizona Conservation Corps](https://azcorps.org) call to action'
 } %}
 
-Each program site needed to be easily themeable. We choose to stick to two color variable options for each site. We created a Sass file for each program and defined the primary and secondary color variables before importing the master Sass file.
+Each site needed to be easily themeable. Choosing to stick to two color variable options, we created a Sass file for each program and defined the primary and secondary color variables before importing the master Sass file.
 
 ```scss
 /* src/styles/conservation-legacy.scss */

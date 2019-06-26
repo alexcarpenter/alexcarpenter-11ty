@@ -2,7 +2,7 @@
 order: 1
 title: "NationBuilder.com"
 team: "NationBuilder"
-summary: "An animated homepage to help sell the features of NationBuilder as a full integrated system."
+summary: "Developed a new homepage to showcase the leaders who are using NationBuilder and highlight features from the new control panel."
 year: "2019"
 roles:
   - "Front-end development"
@@ -32,7 +32,7 @@ To do this, I reached for [anime.js](https://animejs.com/) to help with choreogr
 
 > Anime.js (/ˈæn.ə.meɪ/) is a lightweight JavaScript animation library with a simple, yet powerful API. It works with CSS properties, SVG, DOM attributes and JavaScript Objects.
 
-Using anime to manage the animations, allowed me to build out the animation logic with JavaScript and trigger animations based on certain conditions.
+Using anime to manage the animations allowed me to build out the animation logic with JavaScript and trigger animations based on certain conditions.
 
 ```js
 // Create our anime timeline and default autoplay to false
