@@ -506,6 +506,7 @@ td {
 }
 
 .c-prose > * + h2,
+.c-prose > * + h3,
 .c-prose > * + .c-ordered-list {
   margin-top: 2rem;
 }
@@ -886,6 +887,10 @@ td {
   font-style: italic;
 }
 
+.c-quote__text--root {
+  font-size: 1rem;
+}
+
 .c-quote__cite:before {
   display: inline-block;
   font-weight: normal;
@@ -1135,11 +1140,13 @@ td {
 .u-margin-top-05 { margin-top: .5rem !important; }
 .u-margin-top-1 { margin-top: 1rem !important; }
 .u-margin-top-2 { margin-top: 2rem !important; }
+.u-margin-top-4 { margin-top: 4rem !important; }
 
 .u-margin-bottom-025 { margin-bottom: .25rem !important; }
 .u-margin-bottom-05 { margin-bottom: .5rem !important; }
 .u-margin-bottom-1 { margin-bottom: 1rem !important; }
 .u-margin-bottom-2 { margin-bottom: 2rem !important; }
+.u-margin-bottom-4 { margin-bottom: 4rem !important; }
 
 .u-hidden-visually {
   border: 0 !important;

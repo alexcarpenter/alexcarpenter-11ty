@@ -116,11 +116,12 @@ module.exports = {
 
   Quote: function ({
     text,
-    cite
+    cite,
+    size
   }) {
     return html `
       <figure class="c-quote">
-        <blockquote class="c-quote__text">
+        <blockquote class="c-quote__text${size ? ` c-quote__text--${size}` : ''}">
           <p>${markdown.renderInline(text)}</p>
         </blockquote>
         ${cite ? `<figcaption class="c-quote__cite">${markdown.renderInline(cite)}</figcaption>` : ''}

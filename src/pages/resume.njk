@@ -1,34 +1,25 @@
 ---
-title: Work
+title: Resume
 summary: ""
-permalink: /work/index.html
+permalink: /resume/index.html
 ---
-{% extends "layouts/page.njk" %}
-{% from "components/definition-list.njk" import definitionList %}
+{% extends 'layouts/page.njk' %}
 
 {% block content %}
   <section class="o-layout">
     <div class="o-layout__item u-width-two-thirds">
       <div class="c-prose">
         <h2>Experience</h2>
-        <p>I am a user-focused front-end developer with more than 5 years of professional experience—passionate about performance and accessibility. I aim to produce semantic accessible markup, with modular CSS, and progressively enhance the experience with unobtrusive JavaScript.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nemo, recusandae atque, dolores sit minima porro velit tenetur blanditiis quia nobis. Molestias illo voluptatibus sequi exercitationem animi vel laborum eveniet.</p>
 
         <h3>NationBuilder</h3>
-        {{ definitionList({
-          class: "u-margin-top-025",
-          items: [{
-            title: "Title",
-            description: "Front-end Developer"
-          }, {
-            title: "Dates",
-            description: "Nov 2018 – Current"
-          }]
-        }) }}
-        <p>Work closely in between the design and engineering teams to help ensure the quality of UI implementations. Use Liquid,  React, Redux, Rails, Docker.</p>
+        <p class="u-margin-top-025 u-font-size-xs u-color-gray">UI Engineer</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi magnam libero deleniti illum, reprehenderit labore amet officiis animi fugit necessitatibus vitae mollitia. Eligendi sapiente, totam labore porro mollitia enim earum.</p>
         <h4>Key contributions</h4>
         <ul>
-          <li>Maintain and implement new features within our design system Radius.</li>
-          <li>Implement marketing landing pages for different product verticals.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, tempore.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, tempore.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, tempore.</li>
         </ul>
         {% Note {
           label: "NationBuilder.com",
@@ -42,22 +33,13 @@ permalink: /work/index.html
         <hr>
 
         <h3>Mighty in the Midwest</h3>
-        {{ definitionList({
-          class: "u-margin-top-025",
-          items: [{
-            title: "Title",
-            description: "Senior Developer"
-          }, {
-            title: "Dates",
-            description: "Oct 2015 – Nov 2018"
-          }]
-        }) }}
-        <p>Plan and develop performant and accessible solutions for Craft CMS powered websites. Used Craft CMS, Gulp, Webpack, Vanilla JS, Vue.js, Shopify.</p>
+        <p class="u-margin-top-025 u-font-size-xs u-color-gray">Senior Developer</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi magnam libero deleniti illum, reprehenderit labore amet officiis animi fugit necessitatibus vitae mollitia. Eligendi sapiente, totam labore porro mollitia enim earum.</p>
         <h4>Key contributions</h4>
         <ul>
-          <li>Architect solutions and estimate project scope for new and existing client features.</li>
-          <li>Introduced modern Javascript practices with Webpack and Rollup.</li>
-          <li>Implemented automatic continuous deployment setup to help improve developer performance.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, tempore.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, tempore.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, tempore.</li>
         </ul>
         {% Note {
           label: "Conservation Legacy",
@@ -71,31 +53,24 @@ permalink: /work/index.html
         <hr>
 
         <h3>Masuga Design</h3>
-        {{ definitionList({
-          class: "u-margin-top-025",
-          items: [{
-            title: "Title",
-            description: "Front-end Developer/Designer"
-          }, {
-            title: "Dates",
-            description: "Feb 2012 – Oct 2015"
-          }]
-        }) }}
-        <p>Designed and developed internal projects. Developed front-end code for responsive sites. Used ExpressionEngine, Laravel, Slim PHP, Gulp, CraftCMS.</p>
+        <p class="u-margin-top-025 u-font-size-xs u-color-gray">Front-end Developer and Designer</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi magnam libero deleniti illum, reprehenderit labore amet officiis animi fugit necessitatibus vitae mollitia. Eligendi sapiente, totam labore porro mollitia enim earum.</p>
         <h4>Key contributions</h4>
         <ul>
-          <li>Designed and developed a SaaS app built on Laravel.</li>
-          <li>Developed mobile-first front-end templates for clients such as FOX Networks Info and A+E Networks Affiliates.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, tempore.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, tempore.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, tempore.</li>
         </ul>
 
-        {# <hr>
+        <hr>
 
-        <a href="/assets/resume.pdf" class="c-button u-font-size-xs">Download resume</a> #}
+        <h3>Hybrid Media Co.</h3>
+        <p class="u-margin-top-025 u-font-size-xs u-color-gray">Co-founder and Creative Director</p>
       </div>
     </div>
   </section>
 
-  <section class="o-layout u-margin-top-2">
+  <section class="o-layout">
     <div class="o-layout__item u-width-two-thirds">
       <div class="c-prose">
         <h2>Recommendations</h2>
@@ -122,6 +97,5 @@ permalink: /work/index.html
         } %}
       </div>
     </div>
-
   </section>
 {% endblock %}
