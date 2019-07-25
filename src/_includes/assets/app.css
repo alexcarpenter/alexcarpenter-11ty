@@ -14,7 +14,7 @@
   --color-gray-90: #EEEEEE;
   --color-gray-95: #FAFAFA;
   --color-gray-100: #FFFFFF;
-  --font-scale-root: 1rem;
+  --font-size-root: 1rem;
   --font-size-xxxl: 3.2rem;
   --font-size-xxl: 2.4rem;
   --font-size-xl: 2rem;
@@ -42,7 +42,7 @@
 
 @media screen and (min-width: 700px) {
   :root {
-    --font-scale-root: 1.25rem;
+    --font-size-root: 1.25rem;
   }
 }
 
@@ -57,7 +57,7 @@
 }
 
 html {
-  font-size: var(--font-scale-root);
+  font-size: var(--font-size-root);
 }
 
 body {
@@ -606,6 +606,11 @@ td {
   font-size: var(--font-size-xs);
 }
 
+.c-note--highlight {
+  border-color: #ffd400;
+  background-color: var(--color-mark);
+}
+
 .c-note__label {
   text-transform: uppercase;
   font-weight: 700;
@@ -616,14 +621,6 @@ td {
   width: 1em;
   height: 1em;
   margin-left: .25em;
-}
-
-.c-note--warning {
-  border-color: var(--color-red);
-}
-
-.c-note--warning .c-note__label {
-  color: var(--color-red);
 }
 
 /* Logo block */
@@ -1126,6 +1123,14 @@ td {
   .u-font-size-xl {
     font-size: var(--font-size-xl) !important;
   }
+}
+
+.u-text-align-right {
+  text-align: right !important;
+}
+
+.u-text-align-center {
+  text-align: center !important;
 }
 
 .u-section-heading {

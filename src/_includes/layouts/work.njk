@@ -16,6 +16,7 @@
       <p>{{ offsiteLink({ url: link }) }}</p>
     </header>
 
+    {% if banner %}
     <div class="o-layout__item">
       {% Figure {
         src: '/assets/images/' + banner,
@@ -23,6 +24,7 @@
         border: true
       } %}
     </div>
+    {% endif %}
 
     <div class="o-layout__item u-width-two-thirds">
       <div class="c-prose">
@@ -39,8 +41,10 @@
     <aside class="o-layout__item u-width-one-third" role="complementary">
       <div class="c-prose">
         <dl>
+          {% if team %}
           <dt>Team</dt>
           <dd>{{ team }}</dd>
+          {% endif %}
           <dt>Role</dt>
           <dd>
             {% set comma = joiner() %}

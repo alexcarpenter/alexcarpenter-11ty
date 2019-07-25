@@ -124,7 +124,7 @@ module.exports = {
         <blockquote class="c-quote__text${size ? ` c-quote__text--${size}` : ''}">
           <p>${markdown.renderInline(text)}</p>
         </blockquote>
-        ${cite ? `<figcaption class="c-quote__cite">${markdown.renderInline(cite)}</figcaption>` : ''}
+        ${cite ? `<figcaption class="c-quote__cite${size ? ` u-text-align-right` : ''}">${markdown.renderInline(cite)}</figcaption>` : ''}
       </figure>
     `;
   }
