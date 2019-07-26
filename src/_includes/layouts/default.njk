@@ -32,12 +32,13 @@
 </head>
 <body>
   {% include "components/header.njk" %}
-  <div class="o-container">
-    <main id="main-content" tabindex="-1">
-      {% block main %}{% endblock %}
-    </main>
-  </div>
-  {% include "components/footer.njk" %}
+  <main id="main-content" tabindex="-1">
+    {% block beforeContent %}{% endblock %}
+    <div class="o-container">
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+  {# {% include "components/footer.njk" %} #}
   {% set js %}{% include "assets/app.js" %}{% endset %}
   <script>{{ js | jsmin | safe }}</script>
   <script src="//instant.page/1.2.1" type="module" integrity="sha384-/IkE5iZAM/RxPto8B0nvKlMzIyCWtYocF01PbGGp1qElJuxv9J4whdWBRtzZltWn"></script>

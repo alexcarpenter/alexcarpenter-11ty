@@ -12,7 +12,7 @@ pre[class*="language-"] {
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
-    font-size: .85rem;
+    /* font-size: .85em; */
     line-height: 1.2;
 
     -moz-tab-size: 4;
@@ -40,16 +40,15 @@ pre[class*="language-"] {
     padding-top: 1em;
     padding-bottom: 1em;
     overflow: auto;
-    border: 1px solid #dddddd;
-    background-color: #fafafa;
+    /* border: 1px solid #dddddd; */
+    background-color: var(--color-gray-100);
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
     padding: .2em;
     padding-top: 1px; padding-bottom: 1px;
-    background: #f8f8f8;
-    border: 1px solid #dddddd;
+    background: var(--color-gray-100);
 }
 
 .token.comment,

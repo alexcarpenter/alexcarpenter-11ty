@@ -17,10 +17,11 @@ module.exports = {
     alt = '',
     caption = '',
     ratio = '16/9',
+    fullWidth = false,
     border = false
   }) {
     return html `
-      <figure class="u-extend">
+      <figure${fullWidth ? ` class="o-content__fullWidth"` : ''}>
         <div${border ? ` class="u-bordered"` : ''} style="--aspect-ratio: ${ratio};">
           <img src="${src}" alt="${alt}" />
         </div>
@@ -38,7 +39,7 @@ module.exports = {
   }) {
     return html `
       <div class="c-note c-note--${type}">
-        <p><span class="c-note__label${labelHidden ? ' u-hidden-visually' : ''}">${label}: </span>${text}${link ? `<br><a href="${link.url}">${link.text}</a>${link.external ? ' <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><path fill="var(--color-gray)" d="M66 8H48V0h32v32h-8V14L38 48l-6-6L66 8zm6 40h8v32H0V0h32v8H8v64h64V48z"/></svg>' : ''}` : ''}</p>
+        <p><span class="c-note__label${labelHidden ? ' u-hidden-visually' : ''}">${label}: </span>${text}${link ? `<br><a class="c-note__anchor" href="${link.url}">${link.text}<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1em" height="1em" aria-hidden="true"viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>` : ''}</p>
       </div>
     `;
   },

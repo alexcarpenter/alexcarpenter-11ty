@@ -2,8 +2,26 @@
 {% from "components/definition-list.njk" import definitionList %}
 {% from "components/offsite-link.njk" import offsiteLink %}
 
-{% block main %}
-  <article class="o-layout">
+{% block content %}
+  <article>
+    <header class="o-content">
+      <span class="u-eyebrow">Case Study</span>
+      <h1>{{ title }}</h1>
+      <p class="u-lead">{{ summary }}</p>
+      {% if banner %}
+        {% Figure {
+          fullWidth: true,
+          src: '/assets/images/' + banner,
+          alt: title + ' graphics',
+          border: true
+        } %}
+      {% endif %}
+    </header>
+    <div class="o-content">
+      {{ content | safe }}
+    </div>
+  </article>
+  {# <article class="o-layout">
     <header class="o-layout__item">
       {{ definitionList({
         class: "u-margin-bottom-025",
@@ -28,12 +46,6 @@
 
     <div class="o-layout__item u-width-two-thirds">
       <div class="c-prose">
-        {# {% if summary %}
-          {% Note {
-            text: summary | markdownify_inline | safe,
-            label: 'TLDR'
-          } %}
-        {% endif %} #}
         {{ content | safe }}
       </div>
     </div>
@@ -58,5 +70,5 @@
         </dl>
       </div>
     </aside>
-  </article>
+  </article> #}
 {% endblock %}

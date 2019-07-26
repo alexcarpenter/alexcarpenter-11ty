@@ -3,59 +3,8 @@ title: "Hey, I’m Alex"
 summary: "I’m a front-end developer who is passionate about building inclusive web experiences. Currently I’m [teaching](/screencasts/) what I know about HTML, CSS, & JavaScript on [YouTube](https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg)."
 permalink: /index.html
 ---
-{% extends 'layouts/page.njk' %}
+{% extends 'layouts/default.njk' %}
 
 {% block content %}
-  <div class="o-layout">
-    <div class="o-layout__item">
-      {% Figure {
-        src: '/assets/images/banner.jpg',
-        alt: 'Photo of Alex Carpenter',
-        caption: 'Photo by Jill DeVries'
-      } %}
-    </div>
 
-    <div class="o-layout__item u-width-two-thirds">
-      <div class="c-prose">
-        <p>Throughout the past five years I've worked professionally as a hybrid front-end developer/designer. Working confidently throughout the stack to produce semantic accessible markup, with modular CSS, and progressively enhance the experience with unobtrusive JavaScript.</p>
-        <p>I live in Grand Rapids, Michigan, with my wife and our puppy, where we spend our time fly fishing, hiking, and seeking adventures offline.</p>
-        <p>Checkout my <a href="/now/">now page</a> to see what I am up to right now.</p>
-        <h2>Interviews</h2>
-        <ul>
-          <li><a href="https://developur.rs/posts/alex-carpenter/">Developurrs</a> - An interview series where web professionals about their beloved pets…and tech.</li>
-          <li><a href="https://itunes.apple.com/us/podcast/alex-carpenter-show-me-your-coffee/id602836998?i=1000330208077&amp;mt=2">Show Me Your Mic</a> - A show that talks to podcasters about gear, software, workflow, and philosophies behind podcasting.</li>
-          <li><a href="https://itunes.apple.com/us/podcast/013-alex-carpenter/id738646287?i=1000264786894&amp;mt=2">How to Hold a Pencil</a> - An interview show with self-taught designers and developers.</li>
-        </ul>
-        <h2>Experience</h2>
-        <ul>
-          {% for item in resume.experience %}
-          <li>
-            <p>{{ item.title | safe }} <span class="u-color-gray">@</span> {{ item.company }}</p>
-            <p class="u-color-gray u-font-size-xs">{{ item.startDate }} - {% if item.endDate %}{{ item.endDate }}{% else %}Current{% endif %}</p>
-          </li>
-          {% endfor %}
-        </ul>
-        <h2>Colophon</h2>
-        <ul>
-          <li>Site is built using the static site generator <a href="https://www.11ty.io/">11ty</a>.</li>
-          <li>Template code makes use of <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>.</li>
-          <li>Styles are written in vanilla CSS.</li>
-          <li>Site is hosted and built using <a href="https://www.netlify.com/">Netlify</a>.</li>
-          <li>View the source code on <a href="https://github.com/alexcarpenter/alexcarpenter.me">Github</a>.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="o-layout__item u-width-one-third">
-      <div class="c-prose">
-        <h2>Sidenotes</h2>
-        <p><strong>Pronouns</strong><br>He/him/his</p>
-        <p><strong>Current location</strong><br>Grand Rapids, MI.</p>
-        <p><strong>Top bookmarks</strong><br><a href="https://github.com/">github.com</a>, <a href="https://www.youtube.com/">youtube.com</a>, <a href="https://dribbble.com/">dribbble.com</a>, <a href="https://www.siteinspire.com/">siteInspire</a>, <a href="https://www.dwell.com/">dwell.com</a></p>
-        <p><strong>Top apps</strong><br>VSCode, Todoist, iTerm2, Bear, 1Password, Spectacle</p>
-        <p><strong>Audio</strong><br>Bear's Den, Damien Jurado, Chris Stapleton, Tycho</p>
-        <p><strong>Inspiration</strong><br>I am inspired by passionate people. People who share what they love with everyone else.</p>
-      </div>
-    </div>
-  </div>
 {% endblock %}
