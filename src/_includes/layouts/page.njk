@@ -1,11 +1,10 @@
 {% extends 'layouts/default.njk' %}
-{% from "components/masthead.njk" import masthead %}
 
-{% block main %}
-  {{ masthead({
-    title: title,
-    summary: summary
-  }) }}
-
-  {% block content %}{% endblock %}
+{% block header %}
+  <header class="o-content">
+    <h1 class="u-h1-decorate">{{ title }}</h1>
+    <p class="u-lead">{{ summary | markdownify_inline | safe }}</p>
+  </header>
 {% endblock %}
+
+{% block content %}{% endblock %}

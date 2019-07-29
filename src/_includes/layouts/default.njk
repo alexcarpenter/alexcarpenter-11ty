@@ -32,11 +32,12 @@
 </head>
 <body>
   {% include "components/header.njk" %}
-  <div class="o-container">
-    <main id="main-content" tabindex="-1">
-      {% block main %}{% endblock %}
-    </main>
-  </div>
+  <main id="main-content" tabindex="-1">
+    <div class="o-container">
+      {% block header %}{% endblock %}
+      {% block content %}{% endblock %}
+    </div>
+  </main>
   {% include "components/footer.njk" %}
   {% set js %}{% include "assets/app.js" %}{% endset %}
   <script>{{ js | jsmin | safe }}</script>

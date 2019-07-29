@@ -1,58 +1,22 @@
 {% extends 'layouts/default.njk' %}
-{% from "components/definition-list.njk" import definitionList %}
-{% from "components/offsite-link.njk" import offsiteLink %}
 
-{% block main %}
-  <article class="o-layout">
-    <header class="o-layout__item">
-      {{ definitionList({
-        class: "u-margin-bottom-025",
-        items: [{
-          title: "Type",
-          description: description
-        }]
-      }) }}
-      <h2 class="u-margin-bottom-025 u-font-size-xl">{{ title }}</h2>
-      <p>{{ offsiteLink({ url: link }) }}</p>
+{% block content %}
+  <article>
+    <header class="o-content u-text-center">
+      <span class="u-eyebrow">Case Study</span>
+      <h1>{{ title }}</h1>
+      <p class="u-lead">{{ summary }}</p>
+      {% if banner %}
+        {% Figure {
+          fullWidth: true,
+          src: '/assets/images/' + banner,
+          alt: title + ' graphics',
+          border: true
+        } %}
+      {% endif %}
     </header>
-
-    <div class="o-layout__item">
-      {% Figure {
-        src: '/assets/images/' + banner,
-        alt: title + ' graphics',
-        border: true
-      } %}
+    <div class="o-content">
+      {{ content | safe }}
     </div>
-
-    <div class="o-layout__item u-width-two-thirds">
-      <div class="c-prose">
-        {# {% if summary %}
-          {% Note {
-            text: summary | markdownify_inline | safe,
-            label: 'TLDR'
-          } %}
-        {% endif %} #}
-        {{ content | safe }}
-      </div>
-    </div>
-
-    <aside class="o-layout__item u-width-one-third" role="complementary">
-      <div class="c-prose">
-        <dl>
-          <dt>Team</dt>
-          <dd>{{ team }}</dd>
-          <dt>Role</dt>
-          <dd>
-            {% set comma = joiner() %}
-            {% for item in roles -%}{{ comma() }} {{ item }}{%- endfor %}
-          </dd>
-          <dt>Tech</dt>
-          <dd>
-            {% set comma = joiner() %}
-            {% for item in tech -%}{{ comma() }} {{ item }}{%- endfor %}
-          </dd>
-        </dl>
-      </div>
-    </aside>
   </article>
 {% endblock %}

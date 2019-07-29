@@ -17,10 +17,11 @@ module.exports = {
     alt = '',
     caption = '',
     ratio = '16/9',
+    fullWidth = false,
     border = false
   }) {
     return html `
-      <figure class="u-extend">
+      <figure${fullWidth ? ` class="o-content__fullWidth"` : ''}>
         <div${border ? ` class="u-bordered"` : ''} style="--aspect-ratio: ${ratio};">
           <img src="${src}" alt="${alt}" />
         </div>
@@ -38,7 +39,7 @@ module.exports = {
   }) {
     return html `
       <div class="c-note c-note--${type}">
-        <p><span class="c-note__label${labelHidden ? ' u-hidden-visually' : ''}">${label}: </span>${text}${link ? `<br><a href="${link.url}">${link.text}</a>${link.external ? ' <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><path fill="var(--color-gray)" d="M66 8H48V0h32v32h-8V14L38 48l-6-6L66 8zm6 40h8v32H0V0h32v8H8v64h64V48z"/></svg>' : ''}` : ''}</p>
+        <p><span class="c-note__label${labelHidden ? ' u-hidden-visually' : ''}">${label}: </span>${markdown.renderInline(text)}${link ? `<br><a class="c-note__anchor" href="${link.url}">${link.text}<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1em" height="1em" aria-hidden="true"viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>` : ''}</p>
       </div>
     `;
   },
@@ -53,22 +54,6 @@ module.exports = {
           <dd class="c-stats__description">${item.description}</dd>
         `).join('')}
       </dl>
-    `;
-  },
-
-  Timeline: function ({
-    items = []
-  }) {
-    return html `
-      <ol class="c-timeline">
-        ${items.map((item) => `
-          <li class="c-timeline__item">
-            <h3 class="c-timeline__date">${item.startDate} – ${item.endDate ? `${item.endDate}` : 'Current'}</h3>
-            <h3 class="u-font-size-sm u-margin-bottom-025">${item.title}</h3>
-            ${item.byline ? `<p class="u-color-gray">${markdown.renderInline(item.byline)}</p>` : ''}
-          </li>
-        `).join('')}
-      </ol>
     `;
   },
 
@@ -94,23 +79,11 @@ module.exports = {
     `;
   },
 
-  Youtube: function (id) {
+  Youtube: function (id, fullWidth = false) {
     return html `
-      <div style="--aspect-ratio: 16/9;">
+      <figure${fullWidth ? ` class="o-content__fullWidth"` : ''} style="--aspect-ratio: 16/9;">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-    `;
-  },
-
-  Link: function ({
-    url = '',
-    text = '',
-    type = 'default',
-    external = false,
-    size = ''
-  }) {
-    html `
-      <a href="${url}" ${external ? `rel="external"` : ''} class="c-link c-link--${type} ${size ? `c-link--${size}` : ''}"><span>${text}${external ? '<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><path fill="var(--color-gray)" d="M66 8H48V0h32v32h-8V14L38 48l-6-6L66 8zm6 40h8v32H0V0h32v8H8v64h64V48z"/></svg>' : ''}</span></a>
+      </figure>
     `;
   },
 
@@ -124,7 +97,7 @@ module.exports = {
         <blockquote class="c-quote__text${size ? ` c-quote__text--${size}` : ''}">
           <p>${markdown.renderInline(text)}</p>
         </blockquote>
-        ${cite ? `<figcaption class="c-quote__cite">${markdown.renderInline(cite)}</figcaption>` : ''}
+        ${cite ? `<figcaption class="c-quote__cite${size ? ` u-text-align-right` : ''}">${markdown.renderInline(cite)}</figcaption>` : ''}
       </figure>
     `;
   }

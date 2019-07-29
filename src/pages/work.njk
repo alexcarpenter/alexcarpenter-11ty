@@ -1,127 +1,77 @@
 ---
 title: Work
-summary: ""
+summary: "Currently interested in CSS architecture, React, design systems, and JavaScript testing."
 permalink: /work/index.html
 ---
 {% extends "layouts/page.njk" %}
-{% from "components/definition-list.njk" import definitionList %}
 
 {% block content %}
-  <section class="o-layout">
-    <div class="o-layout__item u-width-two-thirds">
-      <div class="c-prose">
-        <h2>Experience</h2>
-        <p>I am a user-focused front-end developer with more than 5 years of professional experience—passionate about performance and accessibility. I aim to produce semantic accessible markup, with modular CSS, and progressively enhance the experience with unobtrusive JavaScript.</p>
+  <section class="o-content">
+    <h2>Experience</h2>
+    <p>I am a user-focused front-end developer with more than 5 years of professional experience — passionate about performance and accessibility. I aim to produce semantic accessible markup, with modular CSS, and progressively enhance the experience with unobtrusive JavaScript.</p>
+    <p>In the past, I have worked on projects for clients such as FOX Networks Info, A+E Networks Affiliates, Herman Miller, Amway Global and a number of other clients during my time at Masuga Design and Mighty in the Midwest.</p>
 
-        <h3>NationBuilder</h3>
-        {{ definitionList({
-          class: "u-margin-top-025",
-          items: [{
-            title: "Title",
-            description: "Front-end Developer"
-          }, {
-            title: "Dates",
-            description: "Nov 2018 – Current"
-          }]
-        }) }}
-        <p>Work closely in between the design and engineering teams to help ensure the quality of UI implementations. Use Liquid,  React, Redux, Rails, Docker.</p>
-        <h4>Key contributions</h4>
-        <ul>
-          <li>Maintain and implement new features within our design system Radius.</li>
-          <li>Implement marketing landing pages for different product verticals.</li>
-        </ul>
-        {% Note {
-          label: "NationBuilder.com",
-          text: "Developed a new homepage to showcase the leaders who are using NationBuilder and highlight features from the new control panel.",
-          link: {
-            url: "/work/nationbuilder/",
-            text: "Read case study"
-          }
-        } %}
+    <hr>
 
-        <hr>
+    <h3>NationBuilder</h3>
+    <p class="u-color-gray u-margin-top-025">Nov 2018 – Present</p>
+    <p>Work closely in between the design and engineering teams to help ensure the quality of UI implementations. Use Liquid,  React, Redux, Rails, Docker.</p>
+    <ul>
+      <li>Implement marketing landing pages for different product verticals.</li>
+      <li>Maintain and implement new features within our design system Radius.</li>
+    </ul>
+    {% Note {
+      type: "highlight",
+      label: "NationBuilder homepage",
+      text: "Developed a new homepage to showcase leaders who are using NationBuilder and highlight features from the new control panel.",
+      link: {
+        url: "/work/nationbuilder/",
+        text: "Read case study"
+      }
+    } %}
 
-        <h3>Mighty in the Midwest</h3>
-        {{ definitionList({
-          class: "u-margin-top-025",
-          items: [{
-            title: "Title",
-            description: "Senior Developer"
-          }, {
-            title: "Dates",
-            description: "Oct 2015 – Nov 2018"
-          }]
-        }) }}
-        <p>Plan and develop performant and accessible solutions for Craft CMS powered websites. Used Craft CMS, Gulp, Webpack, Vanilla JS, Vue.js, Shopify.</p>
-        <h4>Key contributions</h4>
-        <ul>
-          <li>Architect solutions and estimate project scope for new and existing client features.</li>
-          <li>Introduced modern Javascript practices with Webpack and Rollup.</li>
-          <li>Implemented automatic continuous deployment setup to help improve developer performance.</li>
-        </ul>
-        {% Note {
-          label: "Conservation Legacy",
-          text: "Led the development of a platform of websites for Conservation Legacy, an organization that supports local conservation services across the US.",
-          link: {
-            url: "/work/conservation-legacy/",
-            text: "Read case study"
-          }
-        } %}
+    <hr>
 
-        <hr>
+    <h3>Mighty in the Midwest</h3>
+    <p class="u-color-gray u-margin-top-025">Oct 2015 – Nov 2018</p>
+    <p>Plan and develop performant and accessible solutions for Craft CMS powered websites. Used Craft CMS, Gulp, Webpack, Vanilla JS, Vue.js, Shopify.</p>
+    <ul>
+      <li>Architect solutions and estimate project scope for new and existing client features.</li>
+      <li>Introduced modern Javascript practices with Webpack and Rollup.</li>
+    </ul>
+    {% Note {
+      type: "highlight",
+      label: "Conservation Legacy",
+      text: "Led the development of a platform of websites for Conservation Legacy, an organization that supports local conservation services across the US.",
+      link: {
+        url: "/work/conservation-legacy/",
+        text: "Read case study"
+      }
+    } %}
 
-        <h3>Masuga Design</h3>
-        {{ definitionList({
-          class: "u-margin-top-025",
-          items: [{
-            title: "Title",
-            description: "Front-end Developer/Designer"
-          }, {
-            title: "Dates",
-            description: "Feb 2012 – Oct 2015"
-          }]
-        }) }}
-        <p>Designed and developed internal projects. Developed front-end code for responsive sites. Used ExpressionEngine, Laravel, Slim PHP, Gulp, CraftCMS.</p>
-        <h4>Key contributions</h4>
-        <ul>
-          <li>Designed and developed a SaaS app built on Laravel.</li>
-          <li>Developed mobile-first front-end templates for clients such as FOX Networks Info and A+E Networks Affiliates.</li>
-        </ul>
+    <hr>
 
-        {# <hr>
-
-        <a href="/assets/resume.pdf" class="c-button u-font-size-xs">Download resume</a> #}
-      </div>
-    </div>
+    <h3>Masuga Design</h3>
+    <p class="u-color-gray u-margin-top-025">Feb 2012 – Oct 2015</p>
+    <p>Designed and developed internal projects. Developed front-end code for responsive sites. Used ExpressionEngine, Laravel, Slim PHP, Gulp, CraftCMS.</p>
+    <ul>
+      <li>Designed and developed a SaaS app built on Laravel.</li>
+      <li>Developed mobile-first front-end templates for clients such as FOX Networks Info and A+E Networks Affiliates.</li>
+    </ul>
   </section>
 
-  <section class="o-layout u-margin-top-2">
-    <div class="o-layout__item u-width-two-thirds">
-      <div class="c-prose">
-        <h2>Recommendations</h2>
-        {% Quote {
-          text: "I would recommend Alex to any forward-thinking web team. His passion for web standards along with his friendly attitude made him an invaluable part of our development team. I'm always especially impressed with his commitment to continuous learning and I hope to have the chance to work with him again!",
-          cite: "Melissa Taylor (former co-worker)",
-          size: "root"
-        } %}
+  {# <section class="o-content">
+    <h2>Recommendations</h2>
+    {% Quote {
+      text: "I would recommend Alex to any forward-thinking web team. His passion for web standards along with his friendly attitude made him an invaluable part of our development team. I’m always especially impressed with his commitment to continuous learning and I hope to have the chance to work with him again!",
+      cite: "Melissa Taylor (former co-worker)"
+    } %}
+    <hr>
+    {% Quote {
+      text: "Alex is incredibly thorough and thoughtful with his work and is always seeking out improving in his craft. He's conscious of meeting deadlines and communicates concerns early so that project teams can be proactive in problem solving.",
+      cite: "Danielle Dunn (former co-worker)"
+    } %}
 
-        <hr>
-
-        {% Quote {
-          text: "Alex and I have worked together on several projects over the course of the last few years and it's been great to have him on my project teams. He is incredibly thorough and thoughtful with his work and is always seeking out improving in his craft. He's conscious of meeting deadlines and communicates concerns early so that project teams can be proactive in problem solving. Alex's passion for learning is contagious. He seeks out and initiates collaboration and through this passion he's taught me a ton about web development, performance, and accessibility. Working with him has made me a better in my work.",
-          cite: "Danielle Dunn (former co-worker)",
-          size: "root"
-        } %}
-
-        <hr>
-
-        {% Quote {
-          text: "Alex is a true autodidact that is dedicated to keeping up with the latest development tools, methods and trends.",
-          cite: "Benjamin Kohl (former co-worker)",
-          size: "root"
-        } %}
-      </div>
-    </div>
-
-  </section>
+    <div><a href="" class="c-button">View resume</a></div>
+  </section> #}
 {% endblock %}
