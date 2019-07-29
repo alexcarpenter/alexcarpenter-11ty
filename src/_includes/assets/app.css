@@ -65,6 +65,7 @@ body {
 }
 
 main {
+  margin-top: 4rem;
   margin-bottom: 4rem;
 }
 
@@ -126,6 +127,7 @@ video {
 figcaption {
   margin-top: .5rem;
   color: var(--color-gray-500);
+  text-align: center;
 }
 
 blockquote:not([class]) {
@@ -361,9 +363,7 @@ mark {
  * HEADER
  */
 
-.c-header {
-  margin-bottom: 4rem;
-}
+/* .c-header {} */
 
 .c-header__inner {
   display: flex;
@@ -693,3 +693,14 @@ mark {
   width: 1px !important;
 }
 
+.u-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.u-link svg {
+  margin-left: 0.25rem;
+  font-size: 0.9em;
+}
