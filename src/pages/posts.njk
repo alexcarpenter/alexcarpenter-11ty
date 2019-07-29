@@ -1,6 +1,6 @@
 ---
 title: Posts
-summary: '"Strong opinions, loosely held". Subscribe via [RSS](/feed.xml).'
+summary: 'Subscribe via [RSS](/feed.xml).'
 pagination:
   data: collections.posts
   size: 10
@@ -9,15 +9,8 @@ permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
 {% extends 'layouts/page.njk' %}
 
 {% block content %}
-  <div class="o-layout">
-    <div class="o-layout__item u-width-two-thirds">
-      {% include "components/listing.njk" %}
-    </div>
-  </div>
-
-  <div class="o-layout">
-    <div class="o-layout__item u-width-two-thirds">
-      {% include "components/pagination.njk" %}
-    </div>
+  <div class="o-content">
+    {% include "components/listing.njk" %}
+    {% include "components/pagination.njk" %}
   </div>
 {% endblock %}

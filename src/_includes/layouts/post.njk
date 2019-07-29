@@ -1,41 +1,13 @@
 {% extends 'layouts/default.njk' %}
-{% from "components/offsite-link.njk" import offsiteLink %}
 
-{% block main %}
-  <article class="o-layout">
-    <div class="o-layout__item u-width-two-thirds">
-      <header class="c-entry__header">
-        <dl class="c-entry__meta">
-          <dt class="u-hidden-visually">Published on</dt>
-          <dd><time class="c-entry__date">{{ date | date_formatted }}</time></dd>
-          {# <dt class="u-hidden-visually">Tagged</dt>
-          <dd>
-          {% for tag in tags %}
-            {% set tagUrl %}/{{ type }}/tagged/{{ tag }}/{% endset %}
-            <a href="{{ tagUrl | url }}" rel="tag">#{{ tag }}</a>{%- if not loop.last -%}, {% endif %}
-          {% endfor %}
-          </dd> #}
-        </dl>
-        {# {% if link %}
-        <h1 class="c-entry__title c-entry__title--lg"><a ref="external" href="{{ link }}">{{ title }}</a> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><path fill="var(--color-gray)" d="M66 8H48V0h32v32h-8V14L38 48l-6-6L66 8zm6 40h8v32H0V0h32v8H8v64h64V48z"/></svg></h1>
-        {% else %}
-        <h1 class="c-entry__title c-entry__title--lg">{{ title }}</h1>
-        {% endif %} #}
-        <h1 class="c-entry__title c-entry__title--lg">{{ title }}</h1>
-        {% if link %}
-          <p class="u-margin-top-025">{{ offsiteLink({ url: link, text: "Visit link" }) }}</p>
-        {% endif %}
-      </header>
+{% block content %}
+  <article>
+    <header class="o-content">
+      <time class="u-eyebrow">{{ date | date_formatted }}</time>
+      <h1>{{ title }}</h1>
+    </header>
+    <div class="o-content">
+      {{ content | safe }}
     </div>
-
-    <div class="o-layout__item u-width-two-thirds">
-      <div class="c-prose">
-        {{ content | safe }}
-      </div>
-    </div>
-
-    {# <div class="o-layout__item u-width-one-third">
-      {% include "components/actions.njk" %}
-    </div> #}
   </article>
 {% endblock %}

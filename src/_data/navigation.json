@@ -3,14 +3,11 @@
     "label": "Home",
     "url": "/"
   }, {
-    "label": "Screencasts",
-    "url": "/screencasts/"
+    "label": "Work",
+    "url": "/work/"
   }, {
     "label": "Posts",
     "url": "/posts/"
-  }, {
-    "label": "Notes",
-    "url": "/notes/"
   }, {
     "label": "Contact",
     "url": "/contact/"

@@ -1,10 +1,8 @@
 {% extends 'layouts/default.njk' %}
-{% from "components/definition-list.njk" import definitionList %}
-{% from "components/offsite-link.njk" import offsiteLink %}
 
 {% block content %}
   <article>
-    <header class="o-content">
+    <header class="o-content u-text-center">
       <span class="u-eyebrow">Case Study</span>
       <h1>{{ title }}</h1>
       <p class="u-lead">{{ summary }}</p>
@@ -21,54 +19,4 @@
       {{ content | safe }}
     </div>
   </article>
-  {# <article class="o-layout">
-    <header class="o-layout__item">
-      {{ definitionList({
-        class: "u-margin-bottom-025",
-        items: [{
-          title: "Type",
-          description: description
-        }]
-      }) }}
-      <h2 class="u-margin-bottom-025 u-font-size-xl">{{ title }}</h2>
-      <p>{{ offsiteLink({ url: link }) }}</p>
-    </header>
-
-    {% if banner %}
-    <div class="o-layout__item">
-      {% Figure {
-        src: '/assets/images/' + banner,
-        alt: title + ' graphics',
-        border: true
-      } %}
-    </div>
-    {% endif %}
-
-    <div class="o-layout__item u-width-two-thirds">
-      <div class="c-prose">
-        {{ content | safe }}
-      </div>
-    </div>
-
-    <aside class="o-layout__item u-width-one-third" role="complementary">
-      <div class="c-prose">
-        <dl>
-          {% if team %}
-          <dt>Team</dt>
-          <dd>{{ team }}</dd>
-          {% endif %}
-          <dt>Role</dt>
-          <dd>
-            {% set comma = joiner() %}
-            {% for item in roles -%}{{ comma() }} {{ item }}{%- endfor %}
-          </dd>
-          <dt>Tech</dt>
-          <dd>
-            {% set comma = joiner() %}
-            {% for item in tech -%}{{ comma() }} {{ item }}{%- endfor %}
-          </dd>
-        </dl>
-      </div>
-    </aside>
-  </article> #}
 {% endblock %}

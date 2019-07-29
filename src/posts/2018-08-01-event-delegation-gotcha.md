@@ -5,7 +5,9 @@ summary: While making a few small Javascript libraries, I discovered this one sm
 tags:
   - javascript
 ---
-**Notice:** Since posting this, Chris shared with me the `closest()` method which works without having to remove pointer events from nested elements. Read about the difference [here](/posts/2018/08/event-delegation-gotcha-follow-up/).
+{% Note {
+  text: "Since posting this, Chris shared with me the `closest()` method which works without having to remove pointer events from nested elements. Read about the difference [here](/posts/2018/08/event-delegation-gotcha-follow-up/)."
+} %}
 
 ---
 

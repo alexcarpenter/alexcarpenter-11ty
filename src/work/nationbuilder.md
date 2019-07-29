@@ -23,7 +23,7 @@ After the final designs were approved, I met with the designer to go over the id
   url: '/assets/videos/segmentation.mp4',
   ratio: '1620/1220',
   caption: 'Segmentation SVG animation',
-  controls: true,
+  controls: false,
   autoPlay: true,
   loop: true
 } %}
@@ -65,7 +65,7 @@ An extra benefit of using this setup, is that if JavaScript is disabled or fails
   url: '/assets/videos/permission-sets.mp4',
   ratio: '1620/1220',
   caption: 'Permission sets SVG animation',
-  controls: true,
+  controls: false,
   autoPlay: true,
   loop: true
 } %}
