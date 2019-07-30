@@ -17,6 +17,20 @@
       {% endif %}
     </header>
     <div class="o-content">
+      <dl class="c-meta">
+        <dt class="c-meta__title">Role</dt>
+        <dd class="c-meta__description">
+          {% set comma = joiner() %}
+          {% for item in roles -%}{{ comma() }} {{ item }}{%- endfor %}
+        </dd>
+        <dt class="c-meta__title">Tech</dt>
+        <dd class="c-meta__description">
+          {% set comma = joiner() %}
+          {% for item in tech -%}{{ comma() }} {{ item }}{%- endfor %}
+        </dd>
+        <dt class="c-meta__title">Team</dt>
+        <dd class="c-meta__description">{{ team }}</dd>
+      </dl>
       {{ content | safe }}
     </div>
   </article>

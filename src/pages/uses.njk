@@ -1,0 +1,44 @@
+---
+title: "Uses"
+summary: "Collection of tools and resources I use to get things done."
+permalink: /uses/index.html
+---
+{% extends "layouts/page.njk" %}
+
+{% set MD %}
+{% Figure {
+  fullWidth: true,
+  src: "http://placehold.it/1600x900",
+  alt: "My desk setup"
+} %}
+
+## Hardware
+
+### Desk
+
+### External monitor
+
+### Microphone: [Audio-Technica AT2020]()
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, quos ducimus odit, exercitationem sed quae veniam veritatis eos voluptates excepturi sint deleniti libero itaque alias nemo assumenda, eaque suscipit impedit.
+
+### Webcam
+
+### Laptop stand: [Roost Laptop Stand]()
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam hic ullam, reiciendis architecto beatae, laboriosam eveniet quasi odit nostrum nobis quisquam labore, fugit cumque? Amet dolores tempore architecto incidunt obcaecati?
+
+## Software
+
+### Text editor: [VSCode]()
+
+### Terminal: [iTerm 2]()
+
+### Todolist manager: [Todoist]()
+
+
+{% endset %}
+
+{% block content %}
+  <div class="o-content">
+    {{ MD | markdownify | safe }}
+  </div>
+{% endblock %}

@@ -136,6 +136,14 @@ blockquote:not([class]) {
   border-left: 10px solid var(--color-primary);
 }
 
+dt {
+  font-weight: 700;
+}
+
+dd + dt {
+  margin-top: 0.5rem;
+}
+
 hr {
   border: none;
   width: 100%;
@@ -253,6 +261,8 @@ mark {
 .o-content > * + h3,
 .o-content > * + .o-content__fullWidth,
 .o-content > .o-content__fullWidth + *,
+.o-content > * + .c-meta,
+.o-content > .c-meta + *,
 .o-content > * + pre[class*="language-"],
 .o-content > pre[class*="language-"] + *,
 .o-content > * + blockquote,
@@ -524,6 +534,32 @@ mark {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--color-gray-300);
+}
+
+
+/**
+ * META
+ */
+
+@media (min-width: 600px) {
+  .c-meta {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 2rem;
+    grid-auto-columns: 1fr;
+    grid-template-rows: repeat(50, min-content);
+  }
+
+  .c-meta__title {
+    margin-top: 0;
+    grid-row-start: 1;
+  }
+
+  .c-meta__title,
+  .c-meta__description {
+    padding-left: 1rem;
+    border-left: 1px solid var(--color-gray-300);
+  }
 }
 
 
