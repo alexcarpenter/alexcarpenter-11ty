@@ -28,8 +28,10 @@
           {% set comma = joiner() %}
           {% for item in tech -%}{{ comma() }} {{ item }}{%- endfor %}
         </dd>
+        {% if team %}
         <dt class="c-meta__title">Team</dt>
         <dd class="c-meta__description">{{ team }}</dd>
+        {% endif %}
       </dl>
       {{ content | safe }}
     </div>
