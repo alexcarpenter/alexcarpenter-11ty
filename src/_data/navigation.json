@@ -1,10 +1,10 @@
 {
   "primary": [{
-    "label": "Home",
-    "url": "/"
-  }, {
     "label": "Work",
     "url": "/work/"
+  }, {
+    "label": "Screencasts",
+    "url": "/screencasts/"
   }, {
     "label": "Posts",
     "url": "/posts/"
