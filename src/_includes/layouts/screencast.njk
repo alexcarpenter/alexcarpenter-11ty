@@ -8,6 +8,12 @@
     </header>
     <div class="o-content">
       {% Youtube youtubeId %}
+      <hr>
+      {% Note {
+        type: "highlight",
+        text: "Did you find this screencast helpful? Be sure to subscribe on [YouTube](https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg?sub_confirmation=1).",
+        labelHidden: true
+      } %}
       {{ content | safe }}
     </div>
   </article>
