@@ -19,8 +19,9 @@
   --color-yellow: #FC0;
   --color-yellow-light: #FFFAE6;
   --color-primary: var(--color-blue);
-  --color-gray-900: #111;
+  --color-gray-900: #111111;
   --color-gray-500: #767676;
+  --color-gray-400: #DDDDDD;
   --color-gray-300: #EFEFEF;
   --color-gray-100: #FAFAFA;
   --border-radius: 4px;
@@ -308,6 +309,10 @@ mark {
   font: inherit;
 }
 
+.c-button svg {
+  margin-left: 0.25rem;
+}
+
 .c-button:hover {
   background-color: #fff;
   color: var(--color-primary);
@@ -343,6 +348,7 @@ mark {
   padding: 4rem 1rem;
   text-align: center;
   background-color: var(--color-gray-100);
+  border-top: 1px solid var(--color-gray-300);
 }
 
 .c-footer__list {
@@ -487,6 +493,8 @@ mark {
   color: inherit;
 }
 
+.c-header__nav-list-anchor:hover,
+.c-header__nav-list-anchor:focus,
 .c-header__nav-list-anchor[aria-current] {
   color: var(--color-primary);
 }
@@ -599,16 +607,17 @@ mark {
 
 .c-pagination {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .c-pagination__item {
   display: inline-flex;
   align-items: center;
-  padding: 1rem;
+  padding: .5rem 1.5rem;
   color: var(--color-gray-900);
   text-decoration: none;
   background-color: var(--color-gray-100);
+  border: 1px solid var(--color-gray-300);
   border-radius: var(--border-radius);
   transition: var(--transition);
 }
@@ -627,6 +636,7 @@ mark {
 
 .c-pagination__item[rel="prev"] svg {
   margin-right: .25rem;
+  transform: rotate(180deg);
 }
 
 .c-pagination__item[rel="next"] svg {
@@ -706,7 +716,7 @@ mark {
 .u-h1-decorate::after {
   content: '\2009\00AC';
   display: inline-block;
-  color: var(--color-gray-300);
+  color: var(--color-gray-400);
 }
 
 .u-lead {
