@@ -18,12 +18,13 @@ module.exports = {
     caption = '',
     ratio = '16/9',
     fullWidth = false,
-    border = false
+    border = false,
+    lazyload = false
   }) {
     return html `
       <figure${fullWidth ? ` class="o-content__fullWidth"` : ''}>
         <div${border ? ` class="u-bordered"` : ''} style="--aspect-ratio: ${ratio};">
-          <img src="${src}" alt="${alt}" />
+          <img src="${src}" alt="${alt}"${lazyload ? ` loading="lazy"` : ''} />
         </div>
         ${caption ? `<figcaption>${markdown.renderInline(caption)}</figcaption>` : ''}
       </figure>
@@ -79,10 +80,10 @@ module.exports = {
     `;
   },
 
-  Youtube: function (id, fullWidth = false) {
+  Youtube: function (id, lazyload = false, fullWidth = false) {
     return html `
       <figure${fullWidth ? ` class="o-content__fullWidth"` : ''} style="--aspect-ratio: 16/9;">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe${lazyload ? ` loading="lazy"` : ''} width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </figure>
     `;
   },
