@@ -522,6 +522,7 @@ mark {
 }
 
 .c-form__input {
+  appearance: none;
   display: block;
   width: 100%;
   padding: .5rem 1rem;
