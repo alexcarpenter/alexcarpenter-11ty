@@ -31,7 +31,8 @@ Each programs needs were different in terms of pages needed. We built a fully cu
   src: '/assets/images/conservation-legacy-azcorps.jpg',
   ratio: '1000/367',
   alt: 'Photo of Alex Carpenter',
-  caption: '[Arizona Conservation Corps](https://azcorps.org) call to action'
+  caption: '[Arizona Conservation Corps](https://azcorps.org) call to action',
+  lazyload: true
 } %}
 
 Each site needed to be easily themeable. Choosing to stick to two color variable options, we created a Sass file for each program and defined the primary and secondary color variables before importing the master Sass file.
