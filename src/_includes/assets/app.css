@@ -688,9 +688,17 @@ mark {
 }
 
 .c-video__backdrop {
-  margin-right: -2rem;
-  margin-left: -2rem;
-  padding: 2rem;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .c-video__backdrop {
+    margin-right: -2rem;
+    margin-left: -2rem;
+    padding: 2rem;
+  }
 }
 
 
