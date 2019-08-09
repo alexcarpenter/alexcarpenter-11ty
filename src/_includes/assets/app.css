@@ -262,6 +262,8 @@ mark {
 .o-content > * + h3,
 .o-content > * + .o-content__fullWidth,
 .o-content > .o-content__fullWidth + *,
+.o-content > * + .c-video,
+.o-content > .c-video + *,
 .o-content > * + .c-meta,
 .o-content > .c-meta + *,
 .o-content > * + pre[class*="language-"],
@@ -683,6 +685,12 @@ mark {
 
 .c-skip:focus {
   transform: none;
+}
+
+.c-video__backdrop {
+  margin-right: -2rem;
+  margin-left: -2rem;
+  padding: 2rem;
 }
 
 
