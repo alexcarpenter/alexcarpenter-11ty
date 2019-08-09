@@ -26,7 +26,7 @@ After the final designs were approved, I met with the designer to go over the id
   controls: false,
   autoPlay: true,
   loop: true,
-  backgroundColor: '#1498BE'
+  backdrop: '#1498BE'
 } %}
 
 To do this, I reached for [anime.js](https://animejs.com/) to help with choreographing the animations.
@@ -69,7 +69,7 @@ An extra benefit of using this setup, is that if JavaScript is disabled or fails
   controls: false,
   autoPlay: true,
   loop: true,
-  backgroundColor: '#1498BE'
+  backdrop: '#1498BE'
 } %}
 
 After the launch, I created a handful of high quality GIFs and MP4s of the homepage animations for the marketing team to use within their marketing materials.

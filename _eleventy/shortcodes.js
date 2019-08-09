@@ -66,11 +66,11 @@ module.exports = {
     loop = false,
     mute = true,
     caption = '',
-    backgroundColor = 'var(--color-gray-100)'
+    backdrop = ''
   }) {
     return html `
       <figure class="c-video">
-        <div class="c-video__backdrop" style="background-color: ${backgroundColor}">
+        <div class="c-video__backdrop"${backdrop ? ` style="--backdrop: ${backdrop};"` : ''}>
           <div style="--aspect-ratio: ${ratio};">
             <video${controls ? ` controls` : ''}${autoPlay ? ` autoPlay` : ''}${loop ? ` loop` : ''}${mute ? ` muted` : ''}>
               <source src="${url}" type="video/mp4">
@@ -106,8 +106,8 @@ module.exports = {
     `;
   },
 
-  Link: function(url, text) {
-    return html`
+  Link: function (url, text) {
+    return html `
       <a href="${url}" class="u-link">
         ${text ? text : url.slice(url.indexOf(':') + 3)}
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1em" height="1em" aria-hidden="true"viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
