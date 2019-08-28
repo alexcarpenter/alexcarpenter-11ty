@@ -663,7 +663,7 @@ mark {
 }
 
 .c-quote__cite {
-  text-align: right;
+  text-align: left;
 }
 
 .c-quote__cite::before {
