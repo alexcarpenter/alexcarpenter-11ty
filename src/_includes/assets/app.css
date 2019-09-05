@@ -117,7 +117,7 @@ ul:not([class]) {
   padding-left: 1.2rem;
 }
 
-ul:not([class]) li+li {
+ul:not([class]) li + li {
   margin-top: 0.25rem;
 }
 
@@ -213,6 +213,22 @@ mark {
   margin-left: auto;
   padding-right: 1rem;
   padding-left: 1rem;
+}
+
+
+/**
+ * COLUMNS
+ */
+
+.o-columns {
+  list-style: disc !important;
+  padding-left: 1.2rem;
+  column-count: 2;
+  column-gap: 2rem;
+}
+
+.o-columns li + li {
+  margin-top: 0.25rem;
 }
 
 
