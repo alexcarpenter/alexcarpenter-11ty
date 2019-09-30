@@ -1,5 +1,5 @@
 ---
-title: "How to check if object within array contains a value"
+title: "How to check if an object within array contains a value"
 date: 2019-09-27
 tags:
   - javascript
