@@ -5,72 +5,246 @@ permalink: /uses/index.html
 ---
 {% extends 'layouts/page.njk' %}
 
+{% set TOC %}
+- [Hardware](#hardware)
+  - [Favorite laptop stand](#roost-laptop-stand)
+- [Everyday carry](#everyday-carry)
+  - [Favorite EDC knife](#benchmade-bugout)
+  - [Favorite EDC flashlight](#olight-s1-r-ii-baton)
+- [One bag travel](#one-bag-travel)
+  - [Favorite packing cube](#peak-design-packing-cube-medium)
+- [Camping](#camping)
+- [Grilling](#grilling)
+- [Coffee](#coffee)
+  - [Favorite coffee maker](#kalita-wave-185)
+{% endset %}
+
 {% set MD %}
-{% Figure {
-  src: '/assets/images/home-office.jpg',
-  fullWidth: true
-} %}
-
-{% Note {
-  text: "There are affiliate links included on the page. If you signup for a service I would get a free month."
-} %}
-
 ## Hardware
 
-### [2016 15-inch MacBook Pro](https://www.apple.com/macbook-pro/)
+<div class="o-grid o-grid--trio" style="--grid-gap: 1rem;">
+{% Gear {
+  favorite: true,
+  name: 'Roost Laptop Stand',
+  desc: 'Lightweight, compact',
+  img: '/assets/images/roost-laptop-stand.jpg',
+  link: {
+    url: 'https://amzn.to/30pH2pW',
+    label: 'Amazon'
+  }
+} %}
 
-### [Roost laptop stand](https://www.therooststand.com/)
+{% Gear {
+  name: 'Sonos Play:1',
+  desc: '',
+  img: '/assets/images/sonos-play-1.jpg',
+  link: {
+    url: 'https://amzn.to/303koIw',
+    label: 'Amazon'
+  }
+} %}
 
-### [Audio-technica AT2020](https://www.amazon.com/dp/B00B5ZX9FM)
+{% Gear {
+  name: 'Audio-technica AT2020 USB Mic',
+  desc: '',
+  img: '/assets/images/audio-technica-at2020.jpg',
+  link: {
+    url: 'https://amzn.to/2LTWKUJ',
+    label: 'Amazon'
+  }
+} %}
 
-### [Sonos Play:1](https://www.amazon.com/dp/B00EWCUK98)
-
-### [Dell UltraSharp 25 Monitor](https://www.dell.com/en-us/work/shop/dell-ultrasharp-25-monitor-u2518d/apd/210-amll/monitors-monitor-accessories)
-
----
-
-## Software
-
-### [VSCode](https://code.visualstudio.com/)
-
-### [iTerm 2](https://iterm2.com/)
-
-### [Todoist](https://todoist.com/)
-
-### [Alfred](https://www.alfredapp.com/)
-
-### [Spectacle](https://www.spectacleapp.com/)
-
----
-
-## Misc.
-
-### [Snow Peak TI-Double H450 Stacking Mug](https://snowpeak.com/products/ti-double-h450-stacking-mug-tw-122)
-
-### [Zojirushi Insulated Vacuum Bottle](https://www.zojirushi.com/app/category/vacuum-insulated-mugs-bottles)
-
-### [32oz Wide Mouth Hyrdo Flask](https://www.hydroflask.com/32-oz-wide-bottle)
+{% Gear {
+  name: 'Logitech C615 HD Webcam',
+  desc: '',
+  img: '/assets/images/logitech-c615-hd-webcam.jpg',
+  link: {
+    url: 'https://amzn.to/2O4I9sq',
+    label: 'Amazon'
+  }
+} %}
+</div>
 
 ---
 
 ## Everyday carry
 
-{% Figure {
-  src: '/assets/images/edc.jpg',
-  ratio: '4/3'
+When it comes to my EDC philosophy–simple, lightweight, and small. Also none of the gear I carry is used for tactical reasons.
+
+<div class="o-grid o-grid--trio" style="--grid-gap: 1rem;">
+{% Gear {
+  favorite: true,
+  name: 'Benchmade Bugout',
+  desc: '',
+  img: '/assets/images/benchmade-bugout.jpg',
+  link: {
+    url: 'https://amzn.to/305Nc3e',
+    label: 'Amazon'
+  }
 } %}
 
-### [CRKT Squid](https://www.crkt.com/squid.html)
+{% Gear {
+  favorite: true,
+  name: 'Olight S1R ii Baton',
+  desc: '',
+  img: '/assets/images/olight-s1r-baton-ii.jpg',
+  link: {
+    url: 'https://amzn.to/34O8zV4',
+    label: 'Amazon'
+  }
+} %}
 
-### [Olight S1R Baton II](https://www.olightstore.com/s1r-ii-baton.html)
+{% Gear {
+  name: 'Fisher Space Pen',
+  desc: '',
+  img: '/assets/images/fisher-space-pen.jpg',
+  link: {
+    url: 'https://amzn.to/34NN3A7',
+    label: 'Amazon'
+  }
+} %}
 
-### [Fisher Space Pen](https://www.spacepen.com/400B.aspx)
+{% Gear {
+  name: 'Corter Leather & Cloth Bottlehook',
+  desc: '',
+  img: '/assets/images/corter-leather-bottlehook.jpg',
+  link: {
+    url: 'https://corterleather.com/products/bottlehook',
+    label: 'Corter Leather'
+  }
+} %}
+</div>
 
-### [Leatherman FREE T4](https://www.leatherman.com/free-t4-581.html)
+---
+
+## One bag travel
+
+<div class="o-grid o-grid--trio" style="--grid-gap: 1rem;">
+{% Gear {
+  name: 'Topo Designs Travel Bag 30L',
+  desc: '',
+  img: '/assets/images/topo-designs-travel-bag.jpg',
+  link: {
+    url: 'https://topodesigns.com/collections/backpacks/products/convertible-travel-bag-laptop-backpack-30l',
+    label: 'Topo Designs'
+  }
+} %}
+
+{% Gear {
+  favorite: true,
+  name: 'Peak Design Packing Cube (Medium)',
+  desc: '',
+  img: '/assets/images/peak-design-packing-cube.jpg',
+  link: {
+    url: 'https://amzn.to/2LzwsrV',
+    label: 'Amazon'
+  }
+} %}
+
+{% Gear {
+  name: 'REI Co-op Travel Kit - Small',
+  desc: '',
+  img: '/assets/images/rei-co-op-travel-kit-small.jpg',
+  link: {
+    url: 'https://www.rei.com/product/127992/rei-co-op-travel-kit-small',
+    label: 'REI'
+  }
+} %}
+
+{% Gear {
+  name: 'Eddie Bauer Stowaway 30L Packable Pack',
+  desc: '',
+  img: '/assets/images/eddie-bauer-stowaway-30l-packable-pack.jpg',
+  link: {
+    url: 'https://amzn.to/2O3up1a',
+    label: 'Amazon'
+  }
+} %}
+</div>
+
+---
+
+## Camping
+
+<div class="o-grid o-grid--trio" style="--grid-gap: 1rem;">
+{% Gear {
+  name: 'NEMO Galaxi 2 Tent',
+  desc: '',
+  img: '/assets/images/nemo-galaxi-2-tent.jpg',
+  link: {
+    url: 'https://amzn.to/2Qer7Lh',
+    label: 'Amazon'
+  }
+} %}
+</div>
+
+---
+
+## Grilling
+
+This past year I've really gotten into smoking meats. Up until recently I've use a weber kettle grill for all of my grilling and smoking needs.
+
+<div class="o-grid o-grid--trio" style="--grid-gap: 1rem;">
+{% Gear {
+  name: 'Traeger Pro Series 22 Pellet Grill',
+  desc: '',
+  img: '/assets/images/traeger-pro-series-22-pellet-grill.jpg',
+  link: {
+    url: 'https://amzn.to/2Qci5OD',
+    label: 'Amazon'
+  }
+} %}
+
+{% Gear {
+  name: 'Big Green Egg Pizza Peel',
+  desc: '',
+  img: '/assets/images/big-green-egg-pizza-peel.jpg',
+  link: {
+    url: 'https://biggreenegg.com/product/aluminum-pizza-peel/',
+    label: 'Big Green Egg'
+  }
+} %}
+</div>
+
+---
+
+## Coffee
+
+I love brewing coffee at home. So much so that I had a podcast, all about brewing your own coffee titled [I Brew My Own Coffee]().
+
+<div class="o-grid o-grid--trio" style="--grid-gap: 1rem;">
+{% Gear {
+  favorite: true,
+  name: 'Kalita Wave 185',
+  desc: '',
+  img: '/assets/images/kalita-wave-185.jpg',
+  link: {
+    url: 'https://amzn.to/2ZUdN2f',
+    label: 'Amazon'
+  }
+} %}
+
+{% Gear {
+  name: 'Acaia Pearl Coffee Scale',
+  desc: '',
+  img: '/assets/images/acaia-pearl-coffee-scale.jpg',
+  link: {
+    url: 'https://amzn.to/301csYc',
+    label: 'Amazon'
+  }
+} %}
+</div>
 {% endset %}
 
 {% block content %}
-  <section class="o-content">
-    {{ MD | markdownify | safe }}
-  </section>
+<section class="o-content">
+  <details class="c-details" open>
+    <summary class="c-details__summary">Table of contents</summary>
+    <div class="c-details__content">
+      {{ TOC | markdownify | safe }}
+    </div>
+  </details>
+  <hr>
+  {{ MD | markdownify | safe }}
+</section>
 {% endblock %}

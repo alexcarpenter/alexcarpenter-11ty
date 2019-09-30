@@ -4,7 +4,7 @@ date: 2018-08-13
 summary: I think we can all agree that the default browser outline styling isn't the most beautiful design implementation.
 tags:
   - css
-  - accessiblity
+  - accessibility
 ---
 I think we can all agree that the default browser outline styling isn't the most beautiful design implementation. I also think we can agree that it may not be pretty but it does *function well*.
 
