@@ -169,14 +169,6 @@ mark {
   background-color: var(--color-yellow-light);
 }
 
-code:not([class]) {
-  padding: 2px;
-  font-family: var(--font-family-code);
-  font-size: .875rem;
-  background-color: var(--color-blue-light);
-  border-radius: var(--border-radius);
-}
-
 [tabindex='-1'] {
   outline: 0;
 }
