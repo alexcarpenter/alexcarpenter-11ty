@@ -838,6 +838,10 @@ mark {
   margin-top: 1rem !important;
 }
 
+.u-margin-right-1 {
+  margin-right: 1rem !important;
+}
+
 .u-font-size-xl {
   font-size: var(--font-size-xl);
 }
@@ -916,4 +920,16 @@ mark {
 
 .u-link:hover {
   text-decoration: underline;
+}
+
+.u-inline-flex {
+  display: inline-flex;
+}
+
+.u-align-center {
+  align-items: center;
+}
+
+.u-shrink-0 {
+  flex-shrink: 0;
 }

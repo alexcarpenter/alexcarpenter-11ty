@@ -5,6 +5,16 @@ permalink: /work/index.html
 ---
 {% extends "layouts/page.njk" %}
 
+{% macro header(company, title, timeline, logo) %}
+<header class="u-inline-flex u-align-center">
+  {{ logo | safe }}
+  <div>
+    <h3>{{ company }}</h3>
+    <p class="u-color-gray u-margin-top-025">{{ title | safe }} &bullet; {{ timeline | safe }}</p>
+  </div>
+</header>
+{% endmacro %}
+
 {% block content %}
   <section class="o-content">
     <h2>Experience</h2>
@@ -13,8 +23,12 @@ permalink: /work/index.html
 
     <hr>
 
-    <h3>NationBuilder</h3>
-    <p class="u-color-gray u-margin-top-025">UI Engineer &bullet; Nov 2018 – Present</p>
+    {{ header(
+      'NationBuilder',
+      'UI Engineer',
+      'Nov 2018 – Present',
+      '<svg class="u-margin-right-1 u-shrink-0" xmlns="http://www.w3.org/2000/svg" width="4rem" viewBox="0 0 200 200"><g fill="none" fill-rule="nonzero"><g transform="matrix(1 0 0 -1 0 200)"><path fill="#455A64" fill-opacity=".002" d="M100.06893 0c35.69125 0 68.66934 19.05904 86.51497 50 17.84562 30.94096 17.84562 69.05904 0 100-17.84563 30.94096-50.82372 50-86.51497 50-35.69124 0-68.66933-19.05904-86.51496-50-17.84562-30.94096-17.84562-69.05904 0-100C31.3996 19.05904 64.3777 0 100.06893 0v9.5941c-32.26662 0-62.08182 17.23247-78.21698 45.20295-16.13516 27.97048-16.13516 62.43542 0 90.4059 16.13516 27.97048 45.95036 45.20295 78.21698 45.20295 32.26663 0 62.08183-17.23247 78.217-45.20295 16.13515-27.97048 16.13515-62.43542 0-90.4059-16.13517-27.97048-45.95037-45.20295-78.217-45.20295V0z"/><path fill="#CE001B" d="M100.06893 0c30.40134 0 59.15119 13.85609 78.1064 37.64945l-7.49435 5.98155c-17.13784-21.50923-43.12662-34.0369-70.61205-34.0369V0z"/><path fill="#780011" d="M178.17533 37.64945c18.95522 23.79335 26.05513 54.93358 19.29067 84.60147l-9.3449-2.13284c6.11566-26.82288-.30228-54.97786-17.44012-76.48708l7.49435-5.98155z"/><path fill="#6D7096" d="M197.466 122.25092c-6.76445 29.6679-26.66337 54.64207-54.05295 67.84502l-4.1582-8.64207c24.7649-11.93726 42.7506-34.51291 48.86625-61.33579l9.3449 2.13284z"/><path fill="#60BBD5" d="M143.41305 190.09594c-27.38959 13.20295-59.29864 13.20295-86.68822 0l4.1582-8.64207c24.7649 11.93727 53.6069 11.93727 78.37181 0l4.1582 8.64207z"/><path fill="#0F99BE" d="M56.72483 190.09594C29.33524 176.893 9.43632 151.91882 2.67187 122.25092l9.3449-2.13284c6.11565 26.82288 24.10136 49.39852 48.86626 61.3358l-4.1582 8.64206z"/><path fill="#8C9D26" d="M2.67187 122.25092c-6.76446-29.6679.33545-60.80812 19.29067-84.60147l7.49435 5.98155C12.31905 65.14022 5.90111 93.2952 12.01677 120.11808l-9.3449 2.13284z"/><path fill="#FCD813" d="M21.96254 37.64945C40.91775 13.85609 69.6676 0 100.06894 0v9.5941c-27.48543 0-53.4742 12.52767-70.61205 34.0369l-7.49435-5.98155z"/></g><path fill="#000" d="M55.8 124.875v-8.7912h17.35849l5.65318-32.5674H61.6v-8.991h18.7499l4.6-28.1718h10.6347l-4.8 28.1718h26.9653l4.6-28.1718h10.62644l-4.6 28.1718H144.4v8.991h-17.55849l-5.65318 32.5674H138.6v8.7912h-18.75287l-4.8 28.7712h-10.42759l4.8-28.7712H82.44713l-4.8 28.7712H67.2276l4.6-28.7712H55.8zm60.42514-41.3586H89.05116l-5.2763 32.5674h27.17398l5.2763-32.5674z"/></g></svg>'
+    ) }}
     <p>Work closely in between the design and engineering teams to help ensure the quality of UI implementations. Use Liquid,  React, Redux, Rails, Docker.</p>
     <ul>
       <li>Maintain and implement new features within our design system Radius.</li>
@@ -31,20 +45,14 @@ permalink: /work/index.html
       }
     } %}
 
-    {# {% Note {
-      type: "highlight",
-      label: "NationBuilder automations",
-      text: "",
-      link: {
-        url: "/work/nationbuilder-automations/",
-        text: "Read case study"
-      }
-    } %} #}
-
     <hr>
 
-    <h3>Mighty in the Midwest</h3>
-    <p class="u-color-gray u-margin-top-025">Senior Web Developer &bullet; Oct 2015 – Nov 2018</p>
+    {{ header(
+      'Mighty in the Midwest',
+      'Senior Web Developer',
+      'Oct 2015 – Nov 2018',
+      '<svg class="u-margin-right-1 u-flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="4rem" viewBox="0 0 200 200"><g fill="none" fill-rule="evenodd"><path fill="#3C3F50" d="M0 0h200v200H0z"/><path fill="#FFF" d="M119.25416 50l-19.11771 60.60346L80.74584 50H48.76675L42 150h25.5206l2.97657-58.88289L89.59972 150h20.80561l18.87009-58.54988L132.4895 150H158l-6.61514-100z"/></g></svg>'
+    ) }}
     <p>Plan and develop performant and accessible solutions for Craft CMS powered websites. Used Craft CMS, Gulp, Webpack, Vanilla JS, Vue.js, Shopify.</p>
     <ul>
       <li>Architect solutions and estimate project scope for new and existing client features.</li>
@@ -62,8 +70,12 @@ permalink: /work/index.html
 
     <hr>
 
-    <h3>Masuga Design</h3>
-    <p class="u-color-gray u-margin-top-025">Front-end Developer &amp; Designer &bullet; Feb 2012 – Oct 2015</p>
+    {{ header(
+      'Masuga Design',
+      'Front-end Developer &amp; Designer',
+      'Feb 2012 – Oct 2015',
+      '<svg class="u-margin-right-1 u-flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="4rem" viewBox="0 0 174 200"><g fill="#C4D836" fill-rule="nonzero"><path d="M86.77043 0L0 49.90893v100.18214L86.77043 200l86.77043-49.90893V49.90893L86.77043 0zm66.71844 138.43351l-66.71844 38.61567-66.71844-38.61567V61.56649l66.71844-38.61566 66.71844 38.61566v76.86704z"/><path d="M133.46303 72.70278l-18.9105-12.02704L86.9141 76.7118 59.27567 60.31128 38.9105 72.33833v57.21957l18.9105 10.93368V86.91656l-8.36426-4.73792v-3.64456l8.36426 4.73792 29.09309 16.76497 36.36635-21.13844v3.64456l-8.36426 5.10238v53.21056l18.54684-10.93367z"/></g></svg>'
+    ) }}
     <p>Designed and developed internal projects. Developed front-end code for responsive sites. Used ExpressionEngine, Laravel, Slim PHP, Gulp, CraftCMS.</p>
     <ul>
       <li>Designed and developed a SaaS app built on Laravel.</li>
