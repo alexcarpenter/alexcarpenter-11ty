@@ -4,3 +4,21 @@ summary: "Currently interested in CSS architecture, React, design systems, state
 permalink: /index.html
 ---
 {% extends "layouts/page.njk" %}
+
+{% macro renderList(items, heading) %}
+  {% if heading %}<h2>{{ heading }}</h2>{% endif %}
+  <ul>
+    {% for item in items %}
+    <li>
+      <strong>{% Link item.url, item.title %}</strong>{% if item.description %}<br><span>{{ item.description}}</span>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+{# {% block content %}
+  <div class="o-content o-content--post">
+    {{ renderList(site.projects, 'Projects') }}
+    {{ renderList(site.interviews, 'Interviews') }}
+  </div>
+{% endblock %} #}

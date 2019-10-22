@@ -1,6 +1,6 @@
 # alexcarpenter.me
 
-> Source files for my [personal website](https://alexcarpenter.me) built with my personal [Eleventy boilerplate](https://github.com/alexcarpenter/eleventy-boilerplate) and hosted with Netlify.
+> Source files for my [personal website](https://alexcarpenter.me) built with my [Eleventy boilerplate](https://github.com/alexcarpenter/eleventy-boilerplate) and hosted with Netlify.
 
 ## Development
 

@@ -127,7 +127,7 @@ ul:not([class]) {
 }
 
 ul:not([class]) ul:not([class]),
-ul:not([class]) li + li {
+ul:not([class]) li+li {
   margin-top: 0.25rem;
 }
 
@@ -201,7 +201,7 @@ mark {
     padding-bottom: calc(100% / (var(--aspect-ratio)));
   }
 
-  [style*='--aspect-ratio'] > :first-child {
+  [style*='--aspect-ratio']> :first-child {
     position: absolute;
     top: 0;
     left: 0;
@@ -236,7 +236,7 @@ mark {
   column-gap: 2rem;
 }
 
-.o-columns li + li {
+.o-columns li+li {
   margin-top: 0.25rem;
 }
 
@@ -279,7 +279,7 @@ mark {
     grid-column-gap: 2rem;
   }
 
-  .o-content > * {
+  .o-content>* {
     grid-column: 3/11;
   }
 
@@ -288,34 +288,34 @@ mark {
   }
 }
 
-.o-content + .o-content {
+.o-content+.o-content {
   margin-top: 3rem;
 }
 
-.o-content > * + * {
+.o-content>*+* {
   margin-top: 1rem;
 }
 
-.o-content > * + h2,
-.o-content > * + h3,
-.o-content > * + .o-content__fullWidth,
-.o-content > .o-content__fullWidth + *,
-.o-content > * + .o-grid,
-.o-content > .o-grid + *,
-.o-content > * + .c-video,
-.o-content > .c-video + *,
-.o-content > * + .c-meta,
-.o-content > .c-meta + *,
-.o-content > * + hr,
-.o-content > hr + * {
+.o-content>*+h2,
+.o-content>*+h3,
+.o-content>*+.o-content__fullWidth,
+.o-content>.o-content__fullWidth+*,
+.o-content>*+.o-grid,
+.o-content>.o-grid+*,
+.o-content>*+.c-video,
+.o-content>.c-video+*,
+.o-content>*+.c-meta,
+.o-content>.c-meta+*,
+.o-content>*+hr,
+.o-content>hr+* {
   margin-top: 2rem;
 }
 
-.o-content > .u-eyebrow + h1 {
+.o-content>.u-eyebrow+h1 {
   margin-top: 0;
 }
 
-.o-content h1 + .u-lead {
+.o-content h1+.u-lead {
   margin-top: .5rem;
 }
 
@@ -392,7 +392,7 @@ mark {
   justify-content: center;
 }
 
-.c-footer__list + .c-footer__list {
+.c-footer__list+.c-footer__list {
   margin-top: 1rem;
 }
 
@@ -843,19 +843,19 @@ mark {
 }
 
 .u-font-size-xl {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xl) !important;
 }
 
 .u-font-size-lg {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-lg) !important;
 }
 
 .u-font-size-md {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-md) !important;
 }
 
 .u-font-size-sm {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-sm) !important;
 }
 
 .u-h1-decorate::after {
