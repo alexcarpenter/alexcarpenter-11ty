@@ -24,7 +24,7 @@ code:not([class]) {
   padding: 2px;
   font-family: var(--font-family-code);
   font-size: .875rem;
-  background-color: var(--color-blue-light);
+  background-color: var(--color-gray-100);
   border-radius: var(--border-radius);
 }
 
@@ -43,4 +43,21 @@ pre[class*="language-"] {
 
 .highlight-line-active {
   background-color: var(--color-blue-light);
+}
+
+.token.comment { color: #999999; }
+
+.token.function,
+.token.tag,
+.token.class-name,
+.token.number {
+  color: #0076ff;
+}
+
+.token.keyword {
+  color: #ff0078;
+}
+
+.token.string {
+  color: #028265;
 }
