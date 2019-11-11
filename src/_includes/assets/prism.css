@@ -47,7 +47,7 @@ pre[class*="language-"] {
 
 .token.comment { color: #999999; }
 
-.token.function,
+/* .token.function,
 .token.tag,
 .token.class-name,
 .token.number {
@@ -60,4 +60,4 @@ pre[class*="language-"] {
 
 .token.string {
   color: #028265;
-}
+} */
