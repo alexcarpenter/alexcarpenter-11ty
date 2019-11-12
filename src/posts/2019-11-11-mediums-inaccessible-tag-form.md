@@ -61,6 +61,4 @@ We should even take this a step further and wrap the checkboxes in a fieldset an
 </form>
 ```
 
-It's disapointing to see patterns like this in the wild [so often](https://www.htmhell.dev/). We can do better.
-
 [Here is a link to a CodePen](https://codepen.io/alexcarpenter/details/RwwBEBL) to see it in action.
