@@ -1,6 +1,5 @@
 ---
 title: "How to convert a NodeList to an array"
-date: 2019-11-11
 tags:
   - javascript
 ---

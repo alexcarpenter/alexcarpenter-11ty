@@ -1,6 +1,5 @@
 ---
 title: "US Coffee Roasters"
-date: 2019-06-10
 link: https://us-coffee-roasters.com
 tags:
 ---

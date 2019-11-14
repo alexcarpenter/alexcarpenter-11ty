@@ -3,7 +3,7 @@
 {% block content %}
   <article>
     <header class="o-content">
-      <time class="u-eyebrow">{{ date | date_formatted }}</time>
+      <time class="u-eyebrow">{{ page.date | date_formatted }}</time>
       <h1>{{ title }}</h1>
       {% if link %}
         <p class="u-margin-top-025">

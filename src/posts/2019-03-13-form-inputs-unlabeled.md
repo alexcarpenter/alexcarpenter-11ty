@@ -1,6 +1,5 @@
 ---
 title: "59% of form inputs unlabeled"
-date: 2019-03-13
 tags:
   - accessibility
 ---

@@ -1,6 +1,5 @@
 ---
 title: "How to filter boolean values from an array"
-date: 2019-11-11
 tags:
   - javascript
 ---

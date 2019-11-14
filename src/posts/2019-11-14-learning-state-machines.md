@@ -1,6 +1,5 @@
 ---
 title: Learning finite state machines
-date: 2019-11-14
 tags:
   - learning
 ---
@@ -8,7 +7,7 @@ Since watching the [learn state machines with David K. Piano](https://www.youtub
 
 > is a mathematical model of computation. It is an abstract machine that can be in exactly one of a finite number of states at any given time.
 
-So it the most common example, a form can move from an idle state to a loading state and a loading state to either a successful or error state. You shouldn't get into an successful state without transitioning through the loading state. And more importantly, you shouldn't be able to hit the submit button when not in the idle state.
+So it the most common example, a form can move from an idle state to a loading state and a loading state to either a successful or error state. You shouldn't get into an successful state without transitioning through the loading state. And more importantly, you shouldn't be able to hit the submit button when not in the idle state or error state.
 
 ## Concepts
 

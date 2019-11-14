@@ -1,6 +1,5 @@
 ---
 title: Event delegation gotcha follow-up
-date: 2018-08-02
 summary: Yesterday I wrote about an event delegation gotcha that I ran into while building a few small JS libraries. Since posting, Chris Ferdinandi shared with me another alternative solution.
 tags:
   - javascript

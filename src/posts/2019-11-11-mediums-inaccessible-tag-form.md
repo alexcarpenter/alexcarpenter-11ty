@@ -1,6 +1,5 @@
 ---
 title: "Medium's inaccessible tag selector form"
-date: 2019-11-11
 tags:
   - accessibility
 ---

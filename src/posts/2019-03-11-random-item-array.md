@@ -1,6 +1,5 @@
 ---
 title: "Consecutively return a random item from a JavaScript array"
-date: 2019-03-11
 tags:
   - javascript
 ---
