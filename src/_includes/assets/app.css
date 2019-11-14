@@ -147,7 +147,7 @@ figcaption {
 
 blockquote:not([class]) {
   padding-left: 1rem;
-  border-left: 10px solid var(--color-primary);
+  border-left: 10px solid var(--color-gray-400);
 }
 
 dt {
