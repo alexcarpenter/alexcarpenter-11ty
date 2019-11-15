@@ -10,9 +10,9 @@ I have a few posts started that are living documents on topics I am learning so 
 It looks like:
 
 ```js
-hasTag: function(arr, str) {
+eleventyConfig.addFilter('hasTag', function(arr, str) {
   return arr.includes(str);
-}
+});
 ```
 
 and then in my post layout template, I can use it like:
