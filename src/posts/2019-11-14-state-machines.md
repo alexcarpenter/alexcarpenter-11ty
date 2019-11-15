@@ -1,8 +1,9 @@
 ---
-title: Learning finite state machines
+title: Finite state machines
 tags:
   - learning
 ---
+
 Since watching the [learn state machines with David K. Piano](https://www.youtube.com/watch?v=czi24DqUfSA) on YouTube, I have been intrigued about state machinces and the issues they help alleviate.
 
 > is a mathematical model of computation. It is an abstract machine that can be in exactly one of a finite number of states at any given time.

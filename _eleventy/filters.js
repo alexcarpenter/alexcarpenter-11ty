@@ -81,6 +81,10 @@ module.exports = {
 
   permalink: function(str) {
     return str.replace(/\.html/g, '')
+  },
+
+  hasTag: function(arr, str) {
+    return arr.includes(str);
   }
 }
 

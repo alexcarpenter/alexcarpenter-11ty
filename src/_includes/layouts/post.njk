@@ -15,6 +15,11 @@
       {% endif %}
     </header>
     <div class="o-content o-content--post">
+      {% if tags and tags | hasTag('learning') %}
+        {% Note {
+          text: "This post is a collection of notes and resources for my learning. Feel free to bookmark and check back occasionally as this post will be updated every now and then."
+        } %}
+      {% endif %}
       {{ content | safe }}
     </div>
   </article>
