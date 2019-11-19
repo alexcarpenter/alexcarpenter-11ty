@@ -1,0 +1,37 @@
+[{
+    "title": "alexcarpenter.me",
+    "url": "https://github.com/alexcarpenter/alexcarpenter.me",
+    "description": "Source files for my personal website built with Eleventy and hosted with Netlify.",
+    "language": "HTML"
+  },
+  {
+    "title": "butane-combobox",
+    "url": "https://github.com/alexcarpenter/butane-combobox",
+    "description": "An accessible combobox/autocomplete library.",
+    "language": "JavaScript"
+  },
+  {
+    "title": "butane-toasts",
+    "url": "https://github.com/alexcarpenter/butane-toasts",
+    "description": "A small library for creating toast messages.",
+    "language": "JavaScript"
+  },
+  {
+    "title": "butane-show-hide",
+    "url": "https://github.com/alexcarpenter/butane-show-hide",
+    "description": "An accessible show/hide JS library.",
+    "language": "JavaScript"
+  },
+  {
+    "title": "eleventy-boilerplate",
+    "url": "https://github.com/alexcarpenter/eleventy-boilerplate",
+    "description": "An opinionated boilerplate for new projects built with Eleventy.",
+    "language": "JavaScript"
+  },
+  {
+    "title": "us-coffee-roasters",
+    "url": "https://github.com/alexcarpenter/us-coffee-roasters",
+    "description": "Crowd-sourced list of US coffee roasters",
+    "language": "JavaScript"
+  }
+]
