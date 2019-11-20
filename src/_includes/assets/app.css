@@ -61,7 +61,7 @@ body {
   min-height: 100vh;
   padding-top: 4rem;
   font-family: var(--font-family-system);
-  line-height: 1.4;
+  line-height: 1.5;
   text-rendering: optimizeLegibility;
   color: var(--color-gray-900);
   border-top: 10px solid var(--color-gray-100);
@@ -125,11 +125,6 @@ ul[class] {
 
 ul:not([class]) {
   padding-left: 1.2rem;
-}
-
-ul:not([class]) ul:not([class]),
-ul:not([class]) li+li {
-  margin-top: 0.25rem;
 }
 
 img,
@@ -601,7 +596,7 @@ mark {
   .c-meta__title,
   .c-meta__description {
     padding-left: 1rem;
-    border-left: 1px solid var(--color-gray-300);
+    border-left: 1px solid var(--color-gray-400);
   }
 }
 
