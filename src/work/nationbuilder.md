@@ -2,7 +2,7 @@
 order: 1
 title: "NationBuilder homepage"
 team: "NationBuilder"
-summary: "Developed a new homepage to showcase the leaders who are using NationBuilder and highlight features from the new control panel."
+summary: "Developed a new homepage to showcase the leaders who are using NationBuilder and highlight features from the new control&nbsp;panel."
 year: "2019"
 roles:
   - "Front-end development"

@@ -2,9 +2,9 @@
 
 {% block content %}
   <article>
-    <header class="o-content">
+    <header class="u-margin-bottom-2">
       <time class="u-eyebrow">{{ page.date | date_formatted }}</time>
-      <h1>{{ title }}</h1>
+      <h1 class="u-font-size-xl">{{ title }}</h1>
       {% if link %}
         <p class="u-margin-top-025">
           {% Link link, "Visit link" %}
@@ -14,7 +14,7 @@
         <p class="u-lead">{{ intro }}</p>
       {% endif %}
     </header>
-    <div class="o-content o-content--post">
+    <div class="u-linear">
       {% if tags and tags | hasTag('learning') %}
         {% Note {
           text: "This post is a collection of notes and resources for my learning. Feel free to bookmark and check back occasionally as this post will be updated every now and then."

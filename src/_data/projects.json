@@ -29,6 +29,24 @@
     "language": "JavaScript"
   },
   {
+    "title": "object-to-querystring",
+    "url": "https://github.com/alexcarpenter/object-to-querystring",
+    "description": "Convert a object into a query string.",
+    "language": "JavaScript"
+  },
+  {
+    "title": "querystring-to-object",
+    "url": "https://github.com/alexcarpenter/querystring-to-object",
+    "description": "Convert a query string into an object.",
+    "language": "JavaScript"
+  },
+  {
+    "title": "slugify",
+    "url": "https://github.com/alexcarpenter/slugify",
+    "description": "Convert a string into a slug",
+    "language": "JavaScript"
+  },
+  {
     "title": "us-coffee-roasters",
     "url": "https://github.com/alexcarpenter/us-coffee-roasters",
     "description": "Crowd-sourced list of US coffee roasters",

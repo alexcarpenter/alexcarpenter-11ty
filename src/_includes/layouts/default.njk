@@ -17,9 +17,6 @@
   <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png" />
   <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png" />
   <link rel="manifest" href="/manifest.json" />
-  <link rel="preload" href="/assets/fonts/IBMPlexSans-Text.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/IBMPlexSans-Italic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/IBMPlexSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
   {% set css %}
     {% include "assets/fonts.css" %}
     {% include "assets/app.css" %}
@@ -32,16 +29,13 @@
 </head>
 <body>
   <a href="#main-content" class="c-skip">Skip to main content</a>
-  {% include "components/header.njk" %}
-  <main id="main-content" tabindex="-1">
-    <div class="o-container">
+  <div class="o-container">
+    {% include "components/header.njk" %}
+    <main id="main-content">
       {% block header %}{% endblock %}
       {% block content %}{% endblock %}
-    </div>
-  </main>
+    </main>
+  </div>
   {% include "components/footer.njk" %}
-  {% set js %}{% include "assets/app.js" %}{% endset %}
-  <script>{{ js | jsmin | safe }}</script>
-  <script src="//instant.page/1.2.1" type="module" integrity="sha384-/IkE5iZAM/RxPto8B0nvKlMzIyCWtYocF01PbGGp1qElJuxv9J4whdWBRtzZltWn"></script>
 </body>
 </html>

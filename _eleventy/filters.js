@@ -1,5 +1,6 @@
 const htmlmin = require('html-minifier')
 const CleanCSS = require('clean-css')
+const R = require('ramda')
 const UglifyJS = require('uglify-js')
 const { DateTime } = require('luxon')
 const markdown = require('markdown-it')({
@@ -85,6 +86,23 @@ module.exports = {
 
   hasTag: function(arr, str) {
     return arr.includes(str);
+  },
+
+  head: function(arr, n) {
+    if( n < 0 ) {
+      return arr.slice(n);
+    }
+    return arr.slice(0, n);
+  },
+
+  favorites: function(arr, n = 5) {
+    var favorited = [];
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i].data.favorite) {
+        favorited.push(arr[i]);
+      }
+    }
+    return favorited.slice(0, n);
   }
 }
 

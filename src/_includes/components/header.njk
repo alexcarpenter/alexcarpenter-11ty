@@ -1,20 +1,12 @@
-<div class="o-container">
-  <header class="c-header">
-    <div class="c-header__inner">
-      <a href="/" class="c-header__branding">
-        <span class="u-hidden-visually">{{ site.title }}</span>
-        {% include "components/logo.njk" %}
-      </a>
-      <button class="c-header__toggle js-nav-toggle" aria-label="Toggle mobile nav" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-      <nav class="c-header__nav js-nav" id="primary-nav">
-        <ul class="c-header__nav-list">
-          {% for item in navigation.primary %}
-          <li class="c-header__nav-list-item">
-            <a class="c-header__nav-list-anchor" {% if page.url == item.url %}aria-current="page"{% endif %} href="{{ item.url }}">{{ item.label }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </div>
-  </header>
-</div>
+<header class="c-header">
+  <a class="c-header__branding" href="/">{% include "components/logo.njk" %}</a>
+  <nav class="c-header__nav">
+    <ul class="c-header__nav-list">
+      {% for item in navigation.primary %}
+      <li class="c-header__nav-item">
+        <a class="c-header__nav-anchor" {% if page.url == item.url %}aria-current="page"{% endif %} href="{{ item.url }}">{{ item.label }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
