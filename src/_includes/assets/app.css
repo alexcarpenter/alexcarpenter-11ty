@@ -18,6 +18,9 @@
   --color-gray-300: #EFEFEF;
   --color-gray-100: #FAFAFA;
   --border-radius: 3px;
+  --line-height-loose: 1.5;
+  --line-height-tighten: 1.4;
+  --line-height-strict: 1.3;
   --outline: 3px solid var(--color-yellow);
   --transition: all ease-in-out 0.2s;
 }
@@ -48,7 +51,7 @@ body {
   min-height: 100vh;
   padding-top: 4rem;
   font-family: var(--font-family-system);
-  line-height: 1.5;
+  line-height: var(--line-height-loose);
   text-rendering: optimizeLegibility;
   color: var(--color-gray-900);
   border-top: 10px solid var(--color-gray-100);
@@ -60,7 +63,7 @@ main {
 }
 
 h1, h2, h3 {
-  line-height: 1.3;
+  line-height: var(--line-height-strict);
 }
 
 img,
@@ -258,6 +261,12 @@ ul ul {
   color: #fff;
 }
 
+.c-button--secondary {
+  color: var(--color-gray-900);
+  text-decoration: none;
+  background-color: var(--color-gray-100);
+  border-color: var(--color-gray-100);
+}
 
 .c-button:focus {
   outline: var(--outline);
@@ -272,9 +281,17 @@ ul ul {
 .c-header {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 4rem;
+}
+
+a[href="#footer-menu"] {
+  display: block;
+}
+
+.c-header__nav {
+  display: none;
 }
 
 .c-header__nav-list {
@@ -296,8 +313,12 @@ ul ul {
 }
 
 @media (min-width: 768px) {
-  .c-header {
-    align-items: center;
+  a[href="#footer-menu"] {
+    display: none;
+  }
+
+  .c-header__nav {
+    display: block;
   }
 
   .c-header__nav-list {
@@ -544,11 +565,29 @@ ul ul {
  * FONT-SIZING
  */
 
-.u-font-size-xxl { font-size: 3rem; }
-.u-font-size-xl  { font-size: 2.5rem; }
-.u-font-size-lg  { font-size: 2rem; }
-.u-font-size-md  { font-size: 1.5rem; }
-.u-font-size-sm  { font-size: smaller; }
+.u-font-size-xxl {
+  font-size: 3rem;
+  line-height: var(--line-height-strict);
+}
+
+.u-font-size-xl {
+  font-size: 2.5rem;
+  line-height: var(--line-height-strict);
+}
+
+.u-font-size-lg {
+  font-size: 2rem;
+  line-height: var(--line-height-strict);
+}
+
+.u-font-size-md {
+  font-size: 1.5rem;
+  line-height: var(--line-height-tighten);
+}
+
+.u-font-size-sm {
+  font-size: smaller;
+}
 
 
 /**
@@ -558,6 +597,7 @@ ul ul {
 .u-margin-top-0   { margin-top: 0; }
 .u-margin-top-025 { margin-top: 0.25rem; }
 .u-margin-top-05  { margin-top: 0.5rem; }
+.u-margin-top-1   { margin-top: 1rem; }
 .u-margin-top-2   { margin-top: 2rem; }
 
 .u-margin-bottom-2 { margin-bottom: 2rem; }
