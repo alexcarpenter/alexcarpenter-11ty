@@ -1,5 +1,5 @@
 <footer class="c-footer">
-  <ul class="c-footer__list">
+  <ul class="c-footer__list" id="footer-menu">
     {% for item in navigation.primary %}
     <li class="c-footer__list-item">
       <a class="c-footer__list-anchor" {% if page.url == item.url %}aria-current="page"{% endif %} href="{{ item.url }}">{{ item.label }}</a>
