@@ -5,22 +5,19 @@ permalink: /index.html
 ---
 {% extends "layouts/default.njk" %}
 
-{% set new_window_icon = '<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" focusable="false" width="1em" height="1em" aria-hidden="true" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>' %}
-
 {% block content %}
-  <header class="u-margin-bottom-3">
+  <header class="u-linear u-margin-bottom-3">
     <h1 class="u-font-size-xxl u-heading-decorate">UI Engineer</h1>
-    {# <div class="c-avatar" style="--aspect-ratio: 1/1;">
-      <img src="/assets/images/photo-300.jpg" alt="">
-    </div> #}
-    <p class="u-font-size-md u-margin-top-05">Currently interested in CSS architecture, functional programming, React, design systems, and state machines.</p>
-    {# <p>I am a self taught developer that works best as the glue between design and engineering teams. I enjoy sharing what I know via screencasting and writing.</p> #}
-    {# <p>I am a proponent of the open web and believe everyone should have access to the work I produce. That means focusing on performance and accessibility in every aspect of my work.</p> #}
+    <div class="c-avatar" style="--aspect-ratio: 1/1;">
+      <img src="/assets/images/photo-300.jpg" alt="Photo of Alex Carpenter">
+    </div>
+    <p class="u-font-size-md u-line-height-tighten u-margin-top-05">Currently interested in CSS architecture, functional programming, React, design systems, and state machines.</p>
+    <p>I am a self taught developer that works best when floating in between design and engineering teams. I enjoy sharing what I know via short intructional screencasts and the occasional written post.</p>
     {# <div><a href="" class="c-button c-button--muted">Download resume</a></div> #}
   </header>
 
   <section class="u-linear">
-    <h2>Top screencasts</h2>
+    <h2>Popular screencasts</h2>
     <ul class="c-listing">
       {% for post in collections.screencasts | favorites(4) %}
       <li class="c-listing__item">
@@ -48,7 +45,7 @@ permalink: /index.html
     <ul class="c-listing">
       {% for project in projects | head(4) %}
       <li class="c-listing__item">
-        {% Link project.url, project.title, new_window_icon %}
+        {% Link project.url, project.title, true %}
         <br>
         <span class="u-color-gray">{{ project.description }}</span>
       </li>
