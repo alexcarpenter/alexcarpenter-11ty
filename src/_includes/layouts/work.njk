@@ -6,7 +6,7 @@
       <span class="u-eyebrow">Case Study</span>
       <h1 class="u-margin-top-0 u-font-size-xl">{{ title }}</h1>
       {% if link %}
-        <div class="u-margin-top-025">{% Link link %}</div>
+        <div class="u-margin-top-025">{% Link link, null, true %}</div>
       {% endif %}
       <p class="u-font-size-md">{{ summary | safe }}</p>
       {% if banner %}
