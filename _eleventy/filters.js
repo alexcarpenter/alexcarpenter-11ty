@@ -1,8 +1,8 @@
-const htmlmin = require('html-minifier')
-const CleanCSS = require('clean-css')
-const R = require('ramda')
-const UglifyJS = require('uglify-js')
-const { DateTime } = require('luxon')
+const htmlmin = require('html-minifier');
+const CleanCSS = require('clean-css');
+const R = require('ramda');
+const UglifyJS = require('uglify-js');
+const { DateTime } = require('luxon');
 const markdown = require('markdown-it')({
   html: true,
   breaks: true,
@@ -11,15 +11,15 @@ const markdown = require('markdown-it')({
 }).use(require('markdown-it-anchor'), {
   level: [2],
   permalink: false,
-})
+});
 
 const parseDate = str => {
   if (str instanceof Date) {
-    return str
+    return str;
   }
-  const date = DateTime.fromISO(str, { zone: 'utc' })
-  return date.toJSDate()
-}
+  const date = DateTime.fromISO(str, { zone: 'utc' });
+  return date.toJSDate();
+};
 
 module.exports = {
   htmlmin: function(content, outputPath) {
@@ -28,60 +28,60 @@ module.exports = {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true,
-      })
-      return minified
+      });
+      return minified;
     }
-    return content
+    return content;
   },
 
   cssmin: function(code) {
-    return new CleanCSS({}).minify(code).styles
+    return new CleanCSS({}).minify(code).styles;
   },
 
   jsmin: function(code) {
-    let minified = UglifyJS.minify(code)
+    let minified = UglifyJS.minify(code);
     if (minified.error) {
-      console.log('UglifyJS error: ', minified.error)
-      return code
+      console.log('UglifyJS error: ', minified.error);
+      return code;
     }
-    return minified.code
+    return minified.code;
   },
 
   markdownify: function(str) {
-    return markdown.render(str)
+    return markdown.render(str);
   },
 
   markdownify_inline: function(str) {
-    return markdown.renderInline(str)
+    return markdown.renderInline(str);
   },
 
   strip_html: function(str) {
-    return str.replace(/<script.*?<\/script>|<!--.*?-->|<style.*?<\/style>|<.*?>/g, '')
+    return str.replace(/<script.*?<\/script>|<!--.*?-->|<style.*?<\/style>|<.*?>/g, '');
   },
 
   sortByOrder: function(value) {
     return value.sort((a, b) => {
-      return parseInt(a.data.order, 10) - parseInt(b.data.order, 10)
-    })
+      return parseInt(a.data.order, 10) - parseInt(b.data.order, 10);
+    });
   },
 
   date_to_permalink: function(obj) {
-    const date = parseDate(obj)
-    return DateTime.fromJSDate(date).toFormat('yyyy/MM')
+    const date = parseDate(obj);
+    return DateTime.fromJSDate(date).toFormat('yyyy/MM');
   },
 
   date_formatted: function(obj) {
-    const date = parseDate(obj)
-    return DateTime.fromJSDate(date).toFormat('DD')
+    const date = parseDate(obj);
+    return DateTime.fromJSDate(date).toFormat('DD');
   },
 
   date_time: function(obj) {
-    const date = parseDate(obj)
-    return DateTime.fromJSDate(date).toFormat('ff')
+    const date = parseDate(obj);
+    return DateTime.fromJSDate(date).toFormat('ff');
   },
 
   permalink: function(str) {
-    return str.replace(/\.html/g, '')
+    return str.replace(/\.html/g, '');
   },
 
   hasTag: function(arr, str) {
@@ -89,7 +89,7 @@ module.exports = {
   },
 
   head: function(arr, n) {
-    if( n < 0 ) {
+    if (n < 0) {
       return arr.slice(n);
     }
     return arr.slice(0, n);
@@ -103,6 +103,5 @@ module.exports = {
       }
     }
     return favorited.slice(0, n);
-  }
-}
-
+  },
+};
