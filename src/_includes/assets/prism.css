@@ -1,22 +1,22 @@
 code[class*="language-"],
 pre[class*="language-"] {
-    font-family: var(--font-family-code);
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    font-size: .875rem;
-    line-height: 1.2;
+  font-family: var(--font-family-code);
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  font-size: .875rem;
+  line-height: 1.2;
 
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
 
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
 
 /* Inline code */
@@ -36,6 +36,35 @@ pre[class*="language-"] {
   background-color: var(--color-gray-100);
 }
 
+pre[class*="language-scss"],
+pre[class*="language-css"],
+pre[class*="language-html"],
+pre[class*="language-js"],
+pre[class*="language-twig"] {
+  padding-top: 0;
+}
+
+pre[class*="language-scss"]::before,
+pre[class*="language-css"]::before,
+pre[class*="language-html"]::before,
+pre[class*="language-js"]::before,
+pre[class*="language-twig"]::before {
+  content: '';
+  display: block;
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
+  background-color: var(--color-gray-300);
+  text-transform: uppercase;
+  font-size: smaller;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+pre[class*="language-scss"]::before { content: 'SCSS'; }
+pre[class*="language-css"]::before  { content: 'CSS'; }
+pre[class*="language-html"]::before { content: 'HTML'; }
+pre[class*="language-js"]::before   { content: 'JavaScript'; }
+pre[class*="language-twig"]::before { content: 'Nunjucks' }
 
 .highlight-line {
   padding: 0.25rem 1rem;
@@ -45,7 +74,9 @@ pre[class*="language-"] {
   background-color: var(--color-blue-light);
 }
 
-.token.comment { color: #999999; }
+.token.comment {
+  color: #999999;
+}
 
 /* .token.function,
 .token.tag,

@@ -157,4 +157,15 @@ module.exports = {
       </${as}>
     `;
   },
+
+  Pill: function(str, url) {
+    if (url) {
+      return html`
+        <a class="c-pill" href="${url}">${str}</a>
+      `;
+    }
+    return html`
+      <span class="c-pill">${str}</span>
+    `;
+  },
 };

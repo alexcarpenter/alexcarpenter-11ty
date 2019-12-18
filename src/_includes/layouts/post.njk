@@ -22,5 +22,13 @@
       {% endif %}
       {{ content | safe }}
     </div>
+    <div class="u-margin-top-3">
+      {% include "components/share.njk" %}
+    </div>
+    {# <footer class="c-entry-footer">
+      {% for tag in tags %}
+        {% Pill tag | upper, '/tagged/' + tag %}
+      {% endfor %}
+    </footer> #}
   </article>
 {% endblock %}
