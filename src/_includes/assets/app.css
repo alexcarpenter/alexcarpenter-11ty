@@ -373,6 +373,9 @@ a[href="#footer-menu"] {
   position: relative;
   padding-right: 1rem;
   background-color: #fff;
+  color: var(--color-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
   z-index: 10;
 }
 
