@@ -10,6 +10,7 @@
   --color-blue-light: #E6EEFF;
   --color-red: #FF3300;
   --color-yellow: #FFCC00;
+  --color-yellow-light: #FFFECA;
   --color-green: #57B26A;
   --color-primary: var(--color-blue);
   --color-gray-900: #111111;
@@ -108,11 +109,18 @@ dt {
 }
 
 mark {
-  background-color: #fffeca;
+  background-color: var(--color-yellow-light);
 }
 
 ul ul {
   list-style-type: disc;
+}
+
+hr {
+  border: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-gray-300);
 }
 
 
@@ -598,6 +606,21 @@ a[href="#footer-menu"] {
 }
 
 
+.c-tags {
+  margin-top: 1rem;
+  margin-bottom: -.5rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.c-tags__item {
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+}
+
+
 /* ==========================================================================
    UTILITIES
    ========================================================================== */
@@ -720,6 +743,10 @@ a[href="#footer-menu"] {
 .u-link svg {
   margin-left: 0.25rem;
   font-size: 0.9em;
+}
+
+.u-link[rel="external"] svg {
+  transform: translateY(1px);
 }
 
 .u-link:hover {

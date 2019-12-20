@@ -30,6 +30,7 @@ code:not([class]) {
 
 /* Code blocks */
 pre[class*="language-"] {
+  position: relative;
   padding-top: 1em;
   padding-bottom: 1em;
   overflow: auto;
@@ -50,6 +51,9 @@ pre[class*="language-html"]::before,
 pre[class*="language-js"]::before,
 pre[class*="language-twig"]::before {
   content: '';
+  position: sticky;
+  left: 0;
+  right: 0;
   display: block;
   margin-bottom: 1rem;
   padding: .5rem 1rem;
@@ -71,7 +75,7 @@ pre[class*="language-twig"]::before { content: 'Nunjucks' }
 }
 
 .highlight-line-active {
-  background-color: var(--color-blue-light);
+  background-color: var(--color-yellow-light);
 }
 
 .token.comment {

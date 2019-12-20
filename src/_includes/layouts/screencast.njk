@@ -13,8 +13,9 @@
       {% Youtube youtubeId %}
       {{ content | safe }}
     </div>
-    <div class="u-margin-top-3">
+    <footer class="u-margin-top-3">
       {% include "components/share.njk" %}
-    </div>
+      {% include "components/tags.njk" %}
+    </footer>
   </article>
 {% endblock %}
