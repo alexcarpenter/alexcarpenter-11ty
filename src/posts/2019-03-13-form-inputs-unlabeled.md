@@ -16,8 +16,6 @@ What stood out to me was <mark>59% of form inputs unlabeled</mark>.
 
 To combat this issue, let's take a look at how we can take advantage of the system we are using (in our case [Nunjucks](https://mozilla.github.io/nunjucks/)) to bake accessibility into our workflow.
 
----
-
 {% Note {
   text: 'This example is built using Nunjuck macros, but can also be translated to other templating languages or JavaScript frameworks.',
   link: {
