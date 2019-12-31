@@ -16,6 +16,11 @@ permalink: /index.html
     {# <div><a href="" class="c-button c-button--muted">Download resume</a></div> #}
   </header>
 
+  {# <section class="u-linear">
+    <h2>Newsletter</h2>
+    {% include "components/newsletter-form.njk" %}
+  </section> #}
+
   <section class="u-linear">
     <h2>Popular screencasts</h2>
     <ul class="c-listing">
@@ -31,7 +36,7 @@ permalink: /index.html
   <section class="u-linear">
     <h2>Recent posts</h2>
     <ul class="c-listing">
-      {% for post in collections.posts | head(4) %}
+      {% for post in collections.posts | take(4) %}
       <li class="c-listing__item">
         <a href="{{ post.url }}">{{ post.data.title }}</a>
       </li>
@@ -43,7 +48,7 @@ permalink: /index.html
   <section class="u-linear">
     <h2>Projects</h2>
     <ul class="c-listing">
-      {% for project in projects | head(4) %}
+      {% for project in projects | take(4) %}
       <li class="c-listing__item">
         {% Link project.url, project.title, true %}
         <br>
