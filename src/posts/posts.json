@@ -1,4 +1,5 @@
 {
   "layout": "layouts/post",
-  "permalink": "posts/{{ page.date | date_to_permalink }}/{{ page.fileSlug }}/index.html"
+  "permalink": "posts/{{ page.date | date_to_permalink }}/{{ page.fileSlug }}/index.html",
+  "type": "post"
 }
