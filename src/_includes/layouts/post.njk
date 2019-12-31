@@ -15,9 +15,18 @@
       {% endif %}
     </header>
     <div class="u-linear">
-      {% if tags and tags | hasTag('learning') %}
+      {% if tags and tags | includes('learning') %}
         {% Note {
           text: "This post is a collection of notes and resources for my learning. Feel free to bookmark and check back occasionally as this post will be updated every now and then."
+        } %}
+      {% endif %}
+      {% if tags and tags | includes('newsletter') %}
+        {% Note {
+          text: "This post was orginally published on my newsletter. If you want to get future posts like this in your inbox, make sure you subscribe.",
+          link: {
+            url: '/newsletter',
+            text: 'Subscribe'
+          }
         } %}
       {% endif %}
       {{ content | safe }}
