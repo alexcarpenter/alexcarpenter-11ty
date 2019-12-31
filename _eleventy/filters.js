@@ -1,6 +1,6 @@
+const R = require('ramda');
 const htmlmin = require('html-minifier');
 const CleanCSS = require('clean-css');
-const R = require('ramda');
 const UglifyJS = require('uglify-js');
 const { DateTime } = require('luxon');
 const markdown = require('markdown-it')({
@@ -21,8 +21,10 @@ const parseDate = str => {
   return date.toJSDate();
 };
 
+const isFavorited = R.hasPath(['data', 'favorite']);
+
 module.exports = {
-  htmlmin: function(content, outputPath) {
+  htmlmin: (content, outputPath) => {
     if (outputPath.indexOf('.html') > -1) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
@@ -34,11 +36,9 @@ module.exports = {
     return content;
   },
 
-  cssmin: function(code) {
-    return new CleanCSS({}).minify(code).styles;
-  },
+  cssmin: code => new CleanCSS({}).minify(code).styles,
 
-  jsmin: function(code) {
+  jsmin: code => {
     let minified = UglifyJS.minify(code);
     if (minified.error) {
       console.log('UglifyJS error: ', minified.error);
@@ -47,61 +47,31 @@ module.exports = {
     return minified.code;
   },
 
-  markdownify: function(str) {
-    return markdown.render(str);
-  },
+  markdownify: str => markdown.render(str),
 
-  markdownify_inline: function(str) {
-    return markdown.renderInline(str);
-  },
+  markdownify_inline: str => markdown.renderInline(str),
 
-  strip_html: function(str) {
-    return str.replace(/<script.*?<\/script>|<!--.*?-->|<style.*?<\/style>|<.*?>/g, '');
-  },
+  strip_html: str => str.replace(/<script.*?<\/script>|<!--.*?-->|<style.*?<\/style>|<.*?>/g, ''),
 
-  sortByOrder: function(value) {
-    return value.sort((a, b) => {
-      return parseInt(a.data.order, 10) - parseInt(b.data.order, 10);
-    });
-  },
-
-  date_to_permalink: function(obj) {
+  date_to_permalink: obj => {
     const date = parseDate(obj);
     return DateTime.fromJSDate(date).toFormat('yyyy/MM');
   },
 
-  date_formatted: function(obj) {
+  date_formatted: obj => {
     const date = parseDate(obj);
     return DateTime.fromJSDate(date).toFormat('DD');
   },
 
-  date_time: function(obj) {
-    const date = parseDate(obj);
-    return DateTime.fromJSDate(date).toFormat('ff');
+  permalink: str => str.replace(/\.html/g, ''),
+
+  take: (arr, n = 1) => R.take(n, arr),
+
+  favorites: (arr, n = 5) => {
+    return R.compose(R.take(n), R.filter(isFavorited))(arr);
   },
 
-  permalink: function(str) {
-    return str.replace(/\.html/g, '');
-  },
+  newsletterPosts: arr => arr.filter(x => x.data.tags && x.data.tags.includes('newsletter')),
 
-  hasTag: function(arr, str) {
-    return arr.includes(str);
-  },
-
-  head: function(arr, n) {
-    if (n < 0) {
-      return arr.slice(n);
-    }
-    return arr.slice(0, n);
-  },
-
-  favorites: function(arr, n = 5) {
-    var favorited = [];
-    for (var i = 0; i < arr.length; i++) {
-      if (arr[i].data.favorite) {
-        favorited.push(arr[i]);
-      }
-    }
-    return favorited.slice(0, n);
-  },
+  includes: (x, y) => R.includes(y, x),
 };
