@@ -23,6 +23,10 @@ module.exports = function(eleventyConfig) {
     return collection.getFilteredByGlob('**/posts/*.md').reverse();
   });
 
+  eleventyConfig.addCollection('bookmarks', collection => {
+    return collection.getFilteredByGlob('**/bookmarks/*.md').reverse();
+  });
+
   eleventyConfig.addCollection('screencasts', collection => {
     return collection.getFilteredByGlob('**/screencasts/*.md').reverse();
   });
