@@ -7,7 +7,7 @@
       <h1 class="u-font-size-xl">{{ title }}</h1>
       {% if link %}
         <p class="u-margin-top-025">
-          {% Link link, "Visit link" %}
+          {% Link link, null, true %}
         </p>
       {% endif %}
       {% if intro %}

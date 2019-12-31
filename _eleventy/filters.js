@@ -1,7 +1,7 @@
 const R = require('ramda');
 const htmlmin = require('html-minifier');
 const CleanCSS = require('clean-css');
-const UglifyJS = require('uglify-js');
+const Terser = require('terser');
 const { DateTime } = require('luxon');
 const markdown = require('markdown-it')({
   html: true,
@@ -39,9 +39,9 @@ module.exports = {
   cssmin: code => new CleanCSS({}).minify(code).styles,
 
   jsmin: code => {
-    let minified = UglifyJS.minify(code);
+    let minified = Terser.minify(code);
     if (minified.error) {
-      console.log('UglifyJS error: ', minified.error);
+      console.log('Terser error: ', minified.error);
       return code;
     }
     return minified.code;
@@ -74,4 +74,12 @@ module.exports = {
   newsletterPosts: arr => arr.filter(x => x.data.tags && x.data.tags.includes('newsletter')),
 
   includes: (x, y) => R.includes(y, x),
+
+  hostname: href => {
+    const match = href.match(
+      /^(https?\:)\/\/(([^:\/?#]*)(?:\:([0-9]+))?)([\/]{0,1}[^?#]*)(\?[^#]*|)(#.*|)$/,
+    );
+    const hostUrl = match[3];
+    return hostUrl.replace(/(?:www\.)?/g, '');
+  },
 };
