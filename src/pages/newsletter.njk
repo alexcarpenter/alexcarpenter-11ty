@@ -1,0 +1,51 @@
+---
+title: Newsletter
+summary: "Each week I plan to learn a new topic or tool, document my learnings, and share with my newsletter subscribers. If that sounds interesting to you, join the list using the form below."
+permalink: /newsletter/index.html
+---
+{% extends 'layouts/page.njk' %}
+
+{% set topics = [
+  { label: 'TypeScript', checked: false },
+  { label: 'RxJS', checked: false },
+  { label: 'styled-components', checked: false },
+  { label: 'Redux Toolkit', checked: false },
+  { label: 'XState', checked: false },
+  { label: 'Variable Fonts', checked: false },
+  { label: 'react-transition-group', checked: false },
+  { label: 'react-testing-library', checked: false }
+] %}
+
+{% block content %}
+  <section class="u-linear">
+    <h2 class="u-hidden-visually">Subscribe</h2>
+    {% include "components/newsletter-form.njk" %}
+  </section>
+  <section class="u-linear">
+    <h2>Upcoming topics</h2>
+    <ul class="o-columns">
+      {% for topic in topics | sort(false, false, 'label') %}
+      <li>
+        <label class="c-control c-control--readonly">
+          <input class="u-hidden-visually" type="checkbox" {% if topic.checked %}checked{% endif %} readonly disabled />
+          <span class="c-control__indicator"></span>
+          {{ topic.label }}
+        </label>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% set newsletters = collections.posts | newsletterPosts %}
+  {% if newsletters.length >= 1 %}
+  <section class="u-linear">
+    <h2>Previous newsletters</h2>
+    <ol class="c-listing c-listing--ordered">
+      {% for post in newsletters %}
+      <li class="c-listing__item">
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+{% endblock %}
