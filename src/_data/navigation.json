@@ -9,6 +9,9 @@
     "label": "Posts",
     "url": "/posts/"
   }, {
+    "label": "Bookmarks",
+    "url": "/bookmarks/"
+  }, {
     "label": "Contact",
     "url": "/contact/"
   }]

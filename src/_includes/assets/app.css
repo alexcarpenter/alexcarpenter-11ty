@@ -486,9 +486,10 @@ a[href="#footer-menu"] {
   list-style: none;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-.c-footer__list+.c-footer__list {
+.c-footer__list + .c-footer__list {
   margin-top: 1rem;
 }
 
