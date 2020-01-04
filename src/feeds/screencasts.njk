@@ -1,0 +1,32 @@
+---
+permalink: /screencasts/feed.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.name }}</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <link href="https://alexcarpenter.me/screencasts/feed" rel="self"/>
+  <link href="https://alexcarpenter.me"/>
+  <updated>{{ collections.screencasts | rssLastUpdatedDate }}</updated>
+  <id>https://alexcarpenter.me</id>
+  <author>
+    <name>Alex Carpenter</name>
+    <email>im.alexcarpenter@gmail.com</email>
+  </author>
+  {%- for post in collections.screencasts %}
+  {% set idUrl %}{{ post.url | url | absoluteUrl('https://alexcarpenter.me') }}{% endset %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl('https://alexcarpenter.me') }}{% endset %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="https://www.youtube.com/watch?v={{ post.data.youtubeId }}" rel="alternate" type="text/html"/>
+    <link href="{{ absolutePostUrl }}" rel="related" type="text/html"/>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | rssDate }}</updated>
+    <id>{{ idUrl }}</id>
+    <content type="html">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ post.data.youtubeId }}"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+    </content>
+  </entry>
+  {%- endfor %}
+</feed>

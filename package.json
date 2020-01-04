@@ -6,8 +6,8 @@
     "build": "npx eleventy --config=_eleventy/config.js"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.8.2",
-    "@11ty/eleventy-plugin-rss": "^1.0.2",
+    "@11ty/eleventy": "^0.8.3",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^1.0.5",
     "clean-css": "^4.1.11",
     "common-tags": "^1.8.0",

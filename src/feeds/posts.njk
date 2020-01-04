@@ -1,0 +1,34 @@
+---
+permalink: /posts/feed.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.name }}</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <link href="https://alexcarpenter.me/posts/feed" rel="self"/>
+  <link href="https://alexcarpenter.me"/>
+  <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
+  <id>https://alexcarpenter.me</id>
+  <author>
+    <name>Alex Carpenter</name>
+    <email>im.alexcarpenter@gmail.com</email>
+  </author>
+  {%- for post in collections.posts %}
+  {% set idUrl %}{{ post.url | url | absoluteUrl('https://alexcarpenter.me') }}{% endset %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl('https://alexcarpenter.me') }}{% endset %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    {% if post.data.link %}
+    <link href="{{ post.data.link }}" rel="alternate" type="text/html"/>
+    <link href="{{ absolutePostUrl }}" rel="related" type="text/html"/>
+    {% else %}
+    <link href="{{ absolutePostUrl }}" rel="alternate" type="text/html"/>
+    {% endif %}
+    <updated>{{ post.date | rssDate }}</updated>
+    <id>{{ idUrl }}</id>
+    <content type="html">
+      {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+    </content>
+  </entry>
+  {%- endfor %}
+</feed>
