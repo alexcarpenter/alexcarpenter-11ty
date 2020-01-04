@@ -24,7 +24,7 @@ permalink: /screencasts/feed.xml
     <updated>{{ post.date | rssDate }}</updated>
     <id>{{ idUrl }}</id>
     <content type="html">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ post.data.youtubeId }}"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ post.data.youtubeId }}"></iframe>
       {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
     </content>
   </entry>
