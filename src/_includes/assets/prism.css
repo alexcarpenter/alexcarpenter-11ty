@@ -41,6 +41,8 @@ pre[class*="language-scss"],
 pre[class*="language-css"],
 pre[class*="language-html"],
 pre[class*="language-js"],
+pre[class*="language-jsx"],
+pre[class*="language-tsx"],
 pre[class*="language-twig"] {
   padding-top: 0;
 }
@@ -49,6 +51,8 @@ pre[class*="language-scss"]::before,
 pre[class*="language-css"]::before,
 pre[class*="language-html"]::before,
 pre[class*="language-js"]::before,
+pre[class*="language-jsx"]::before,
+pre[class*="language-tsx"]::before,
 pre[class*="language-twig"]::before {
   content: '';
   position: sticky;
@@ -68,6 +72,8 @@ pre[class*="language-scss"]::before { content: 'SCSS'; }
 pre[class*="language-css"]::before  { content: 'CSS'; }
 pre[class*="language-html"]::before { content: 'HTML'; }
 pre[class*="language-js"]::before   { content: 'JavaScript'; }
+pre[class*="language-jsx"]::before   { content: 'JSX'; }
+pre[class*="language-tsx"]::before   { content: 'TypeScript'; }
 pre[class*="language-twig"]::before { content: 'Nunjucks' }
 
 .highlight-line {

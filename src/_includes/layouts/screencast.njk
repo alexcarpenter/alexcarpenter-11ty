@@ -3,7 +3,7 @@
 {% block content %}
   <article>
     <header class="u-margin-bottom-2">
-      <time class="u-eyebrow">{{ date | date_formatted }}</time>
+      <time class="u-eyebrow">{{ page.date | date_formatted }}</time>
       <h1 class="u-font-size-xl">{{ title }}</h1>
       <p class="u-margin-top-025">
         {% Link site.youtubeSubscribe, "Subscribe on Youtube" %}
