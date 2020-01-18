@@ -200,8 +200,15 @@ hr {
 
 .o-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .o-grid {
+    --grid-columns: 2;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+  }
 }
 
 
@@ -275,6 +282,8 @@ a.c-pill:hover {
 
 .c-button {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding: .75rem 1rem;
   font: inherit;
   color: #fff;
@@ -282,6 +291,7 @@ a.c-pill:hover {
   border: 1px solid var(--color-primary);
   cursor: pointer;
   text-decoration: none;
+  text-align: center;
   border-radius: var(--border-radius);
   transition: var(--transition);
 }
