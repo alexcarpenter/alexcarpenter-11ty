@@ -281,6 +281,7 @@ a.c-pill:hover {
  */
 
 .c-button {
+  appearance: none;
   display: inline-flex;
   justify-content: center;
   align-items: center;
