@@ -127,6 +127,8 @@ ul ul {
 }
 
 hr {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem;
   border: 0;
   width: 100%;
   height: 1px;
