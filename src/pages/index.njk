@@ -29,7 +29,7 @@ permalink: /index.html
       </li>
       {% endfor %}
     </ul>
-    <div>{% Link '/screencasts', 'View more' %}</div>
+    <div>{% Link '/screencasts', 'View more <span class="u-hidden-visually">screencasts</span>' %}</div>
   </section>
 
   <section class="u-linear">
@@ -41,7 +41,7 @@ permalink: /index.html
       </li>
       {% endfor %}
     </ul>
-    <div>{% Link '/posts', 'View more' %}</div>
+    <div>{% Link '/posts', 'View more <span class="u-hidden-visually">posts</span>' %}</div>
   </section>
 
   <section class="u-linear">
@@ -55,6 +55,6 @@ permalink: /index.html
       </li>
       {% endfor %}
     </ul>
-    <div>{% Link 'https://github.com/alexcarpenter', 'View more', true %}</div>
+    <div>{% Link 'https://github.com/alexcarpenter', 'View more <span class="u-hidden-visually">on Github</span>', true %}</div>
   </section>
 {% endblock %}
