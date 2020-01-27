@@ -20,6 +20,7 @@ permalink: /uses/index.html
 - [Roost Laptop Stand](https://amzn.to/2R6L9Wr)
 - [RØDE PodMic](https://amzn.to/2G192Zd)
 - [Focusrite Scarlett 2i2 3rd Gen](https://amzn.to/2uaQvqv)
+- [Cloudlifter CL-1](https://amzn.to/37vAV7P)
 - [RØDE PSA1 Boom Arm](https://amzn.to/369XHQR)
 - [RØDE PSA1 Boom Arm](https://amzn.to/369XHQR)
 - [Elgato Key Light](https://amzn.to/2G2dV47)
