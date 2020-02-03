@@ -11,7 +11,7 @@
   --color-red: #FF3300;
   --color-yellow: #FFCC00;
   --color-yellow-light: #FFFECA;
-  --color-green: #57B26A;
+  --color-green: #4CA55E;
   --color-primary: var(--color-blue);
   --color-gray-900: #111111;
   --color-gray-500: #767676;
@@ -133,6 +133,25 @@ hr {
   width: 100%;
   height: 1px;
   background-color: var(--color-gray-300);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  border-bottom: 1px solid var(--color-gray-300);
+}
+
+th, td {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+tr:not(:last-of-type) td {
+  border-bottom: 1px solid var(--color-gray-300);
 }
 
 
@@ -273,19 +292,38 @@ hr {
  */
 
 .c-pill {
+  position: relative;
   padding: .25rem .75rem;
   border-radius: 1rem;
-  background-color: var(--color-blue-light);
-  color: var(--color-blue);
+  /* background-color: var(--color-blue-light); */
+  color: var(--color-primary);
   text-decoration: none;
   font-size: smaller;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
+.c-pill:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: 1rem;
+  opacity: .15;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  z-index: -1;
+}
+
 a.c-pill:hover {
-  background-color: var(--color-blue);
   color: #fff;
+}
+
+a.c-pill:hover:after {
+  opacity: 1;
 }
 
 

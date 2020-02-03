@@ -22,9 +22,9 @@ permalink: /uses/index.html
 - [Focusrite Scarlett 2i2 3rd Gen](https://amzn.to/2uaQvqv)
 - [Cloudlifter CL-1](https://amzn.to/37vAV7P)
 - [RØDE PSA1 Boom Arm](https://amzn.to/369XHQR)
-- [RØDE PSA1 Boom Arm](https://amzn.to/369XHQR)
 - [Elgato Key Light](https://amzn.to/2G2dV47)
 - [Sonos Play 1](https://amzn.to/2uTAtSb)
+- [Sennheiser HD280PRO](https://amzn.to/2S7r7Kx)
 
 ## Software
 
@@ -40,3 +40,7 @@ permalink: /uses/index.html
 - [Signal](https://signal.org/)
 - [Soulver](https://soulver.app/)
 - [Reeder 4](https://www.reederapp.com/)
+
+---
+
+{% Note { text: site.affiliateDisclosure } %}
