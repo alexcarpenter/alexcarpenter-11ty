@@ -291,11 +291,10 @@ tr:not(:last-of-type) td {
  * PILL
  */
 
-.c-pill {
+ .c-pill {
   position: relative;
   padding: .25rem .75rem;
   border-radius: 1rem;
-  /* background-color: var(--color-blue-light); */
   color: var(--color-primary);
   text-decoration: none;
   font-size: smaller;
