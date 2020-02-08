@@ -6,4 +6,5 @@ youtubeId: "sZJrcOfBaNY"
 duration: "3:47"
 tags:
   - css
+primaryColor: "#643DA7"
 ---

@@ -5,4 +5,5 @@ youtubeId: "Fhu83TS9Mls"
 duration: "1:50"
 tags:
   - css
+primaryColor: "#643DA7"
 ---
