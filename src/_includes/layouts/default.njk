@@ -5,21 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0055FF" />
   <meta name="robots" content="index,follow" />
+
   <title>{% if title and page.url != '/' %}{{ title }}{% else %}UI Engineer{% endif %} - {{ site.title }}</title>
   <meta name="description" content="{% if description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.description }}{% endif %}" />
+
   <meta property="og:title" content="{% if title and page.url != '/' %}{{ title }}{% else %}UI Engineer{% endif %} - {{ site.title }}">
   <meta property="og:description" content="{% if description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ page.url | permalink }}">
   <meta property="og:image" content="{{ site.url }}{%if thumbnail %}{{ thumbnail }}{% else %}/assets/images/og-image.png{% endif %}">
+
+  <meta name="twitter:site" content="@hybrid_alex">
+  <meta name="twitter:creator" content="@hybrid_alex">
+  <meta name="twitter:title" content="{% if title and page.url != '/' %}{{ title }}{% else %}UI Engineer{% endif %} - {{ site.title }}">
   <meta name="twitter:card" content="summary">
-  <link rel="icon apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180" type="image/png" />
-  <link rel="icon" href="/assets/images/favicon-96x96.png" sizes="96x96" type="image/png" />
-  <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png" />
-  <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png" />
-  <link rel="manifest" href="/manifest.json" />
+  <meta name="twitter:image" content="{{ site.url }}{%if thumbnail %}{{ thumbnail }}{% else %}/assets/images/og-image.png{% endif %}">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+
   <link rel="alternate" type="application/rss+xml" title="Feed for posts" href="/posts/feed.xml" />
   <link rel="alternate" type="application/rss+xml" title="Feed for bookmarks" href="/bookmarks/feed.xml" />
   <link rel="alternate" type="application/rss+xml" title="Feed for screencasts" href="/screencasts/feed.xml" />
+
   {% set css %}
     {% include "assets/fonts.css" %}
     {% include "assets/app.css" %}

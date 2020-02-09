@@ -280,7 +280,7 @@ tr:not(:last-of-type) td {
   .c-avatar {
     display: block;
     float: right;
-    max-width: 25%;
+    max-width: 30%;
     margin-bottom: 1rem;
     margin-left: 1rem;
   }
