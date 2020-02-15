@@ -6,7 +6,8 @@ permalink: /uses/index.html
 ---
 
 {% Figure {
-  src: '/assets/images/desktop-hardware.jpg',
+  breakout: true,
+  src: '/assets/images/desktop-setup.jpg',
   alt: 'Home desktop setup',
   ratio: '3/2'
 } %}
@@ -22,6 +23,9 @@ permalink: /uses/index.html
 - [Focusrite Scarlett 2i2 3rd Gen](https://amzn.to/2uaQvqv)
 - [Cloudlifter CL-1](https://amzn.to/37vAV7P)
 - [RØDE PSA1 Boom Arm](https://amzn.to/369XHQR)
+- [Sony A5100](https://amzn.to/31RJB6g)
+- [Sony ACPW20 AC Adaptor](https://amzn.to/37rGfrI)
+- [Elgato Cam Link 4K](https://amzn.to/3bB7tje)
 - [Elgato Key Light](https://amzn.to/2G2dV47)
 - [Sonos Play 1](https://amzn.to/2uTAtSb)
 - [Sennheiser HD280PRO](https://amzn.to/2S7r7Kx)
