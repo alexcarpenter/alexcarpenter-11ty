@@ -18,12 +18,23 @@
   --color-gray-400: #DDDDDD;
   --color-gray-300: #EFEFEF;
   --color-gray-100: #FAFAFA;
-  --border-radius: 3px;
+  --border-radius: 4px;
   --line-height-loose: 1.5;
   --line-height-tighten: 1.4;
   --line-height-strict: 1.3;
-  --outline: 3px solid var(--color-yellow);
+  --outline: 0 0 0 3px var(--color-yellow);
   --transition: all ease-in-out 0.2s;
+  --shadow: 0 1px 2px rgba(0,0,0,0.07),
+            0 2px 4px rgba(0,0,0,0.07),
+            0 4px 8px rgba(0,0,0,0.07),
+            0 8px 16px rgba(0,0,0,0.07),
+            0 16px 32px rgba(0,0,0,0.07),
+            0 32px 64px rgba(0,0,0,0.07);
+  --shadow-lg: 0 2px 1px rgba(0,0,0,0.09),
+               0 4px 2px rgba(0,0,0,0.09),
+               0 8px 4px rgba(0,0,0,0.09),
+               0 16px 8px rgba(0,0,0,0.09),
+               0 32px 16px rgba(0,0,0,0.09);
 }
 
 
@@ -98,8 +109,8 @@ a:not([class]):focus {
 }
 
 a:focus {
-  outline: var(--outline);
-  outline-offset: 0;
+  outline: 0;
+  box-shadow: var(--outline) !important;
 }
 
 blockquote {
@@ -240,6 +251,12 @@ tr:not(:last-of-type) td {
   }
 }
 
+.o-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2rem;
+}
+
 
 /* ==========================================================================
    COMPONENTS
@@ -346,8 +363,8 @@ a.c-pill:hover:after {
   padding: .75rem 1rem;
   font: inherit;
   color: #fff;
-  background-color: var(--color-primary);
-  border: 1px solid var(--color-primary);
+  background-color: var(--color-gray-900);
+  border: 1px solid var(--color-gray-900);
   cursor: pointer;
   text-decoration: none;
   text-align: center;
@@ -357,33 +374,57 @@ a.c-pill:hover:after {
 }
 
 .c-button:hover {
-  background-color: var(--color-gray-900);
-  border-color: var(--color-gray-900);
-  color: var(--color-gray-100);
-}
-
-.c-button--muted {
-  background-color: var(--color-blue-light);
-  border-color: var(--color-blue-light);
-  color: var(--color-blue);
-}
-
-.c-button--muted:hover {
-  background-color: var(--color-blue);
-  border-color: var(--color-blue);
-  color: #fff;
-}
-
-.c-button--secondary {
+  background-color: #fff;
   color: var(--color-gray-900);
-  text-decoration: none;
-  background-color: var(--color-gray-100);
-  border-color: var(--color-gray-100);
 }
 
 .c-button:focus {
-  outline: var(--outline);
-  outline-offset: 0;
+  outline: 0;
+  box-shadow: 0 0 0 3px var(--color-yellow) !important;
+}
+
+.c-button--primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.c-button--primary:hover {
+  color: var(--color-primary);
+}
+
+.c-button--secondary {
+  background-color: var(--color-gray-100);
+  border-color: var(--color-gray-400);
+  color: var(--color-gray-500);
+}
+
+.c-button--secondary:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.c-button--inverted {
+  background-color: #fff;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.c-button--inverted:hover {
+  background-color: var(--color-gray-900);
+  border-color: var(--color-gray-900);
+  color: #fff;
+}
+
+.c-button--shadow {
+  box-shadow: var(--shadow);
+}
+
+.c-button--shadow:focus {
+  box-shadow: var(--outline), var(--shadow) !important;
+}
+
+.c-button svg {
+  margin-right: .5rem;
 }
 
 
@@ -572,6 +613,56 @@ a[href="#footer-menu"] {
 }
 
 
+.c-callout {
+  margin-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  clip-path: polygon(
+    0 0, /* left top */
+    100% 2rem, /* right top */
+    100% 100%, /* right bottom */
+    0 calc(100% - 2rem) /* left bottom */
+  );
+}
+
+
+.c-testimonial {
+  text-align: center;
+}
+
+.c-testimonial__media {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
+
+.c-testimonial__media img {
+  display: block;
+  border-radius: 50%;
+  width: 100%;
+}
+
+.c-testimonial__quote {
+  border: 0;
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.c-testimonial__quote p::before { content: '“'; }
+.c-testimonial__quote p::after { content: '”'; }
+
+.c-testimonial__cite {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: .75;
+}
+
+
 /**
  * FOOTER
  */
@@ -658,13 +749,14 @@ a[href="#footer-menu"] {
   width: 100%;
   padding: .75rem;
   border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius);
   background-color: var(--color-gray-100);
   font: inherit;
 }
 
 .c-form__input:focus {
-  outline: var(--outline);
-  outline-offset: 0;
+  outline: 0;
+  box-shadow: var(--outline) !important;
 }
 
 .c-form--boxed .c-form__input {

@@ -33,15 +33,15 @@ permalink: /index.html
   </section>
 
   <section class="u-linear">
-    <h2>Recent posts</h2>
+    <h2>Recent bookmarks</h2>
     <ul class="c-listing">
-      {% for post in collections.posts | take(4) %}
+      {% for post in collections.bookmarks | take(4) %}
       <li class="c-listing__item">
         <a href="{{ post.url }}">{{ post.data.title }}</a>
       </li>
       {% endfor %}
     </ul>
-    <div>{% Link '/posts', 'View more <span class="u-hidden-visually">posts</span>' %}</div>
+    <div>{% Link '/bookmarks', 'View more <span class="u-hidden-visually">bookmarks</span>' %}</div>
   </section>
 
   <section class="u-linear">

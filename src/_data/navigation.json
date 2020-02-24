@@ -1,16 +1,16 @@
 {
   "primary": [{
-    "label": "Work",
-    "url": "/work/"
-  }, {
     "label": "Screencasts",
     "url": "/screencasts/"
+  }, {
+    "label": "Bookmarks",
+    "url": "/bookmarks/"
   }, {
     "label": "Posts",
     "url": "/posts/"
   }, {
-    "label": "Bookmarks",
-    "url": "/bookmarks/"
+    "label": "Work",
+    "url": "/work/"
   }, {
     "label": "Contact",
     "url": "/contact/"

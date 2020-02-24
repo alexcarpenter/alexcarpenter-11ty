@@ -1,0 +1,11 @@
+{% macro testimonial(params) %}
+  <figure class="c-testimonial">
+    <a class="c-testimonial__media" href="https://twitter.com/{{ params.twitter }}">
+      <img src="https://avatars.io/twitter/{{ params.twitter }}" alt="{{ params.name }}" loading="lazy">
+    </a>
+    <blockquote class="c-testimonial__quote">
+      <p>{{ params.text }}</p>
+    </blockquote>
+    <figcaption class="c-testimonial__cite">{{ params.name }} ({{ params.occupation }})</figcaption>
+  </figure>
+{% endmacro %}

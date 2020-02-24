@@ -1,0 +1,7 @@
+{% macro checkmark(params) %}
+<svg width="{{ params.size if params.size else '1.5em' }}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z" fill="{{ params.fill if params.fill else 'var(--color-primary)' }}"/>
+  <path d="M7.714 12.286l2.5 2.5 5.357-5.357" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+</svg>
+{% endmacro %}
+

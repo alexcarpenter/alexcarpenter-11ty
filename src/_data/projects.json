@@ -5,6 +5,12 @@
     "language": "HTML"
   },
   {
+    "title": "us-coffee-roasters",
+    "url": "https://github.com/alexcarpenter/us-coffee-roasters",
+    "description": "Crowd-sourced list of US coffee roasters",
+    "language": "JavaScript"
+  },
+  {
     "title": "butane-combobox",
     "url": "https://github.com/alexcarpenter/butane-combobox",
     "description": "An accessible combobox/autocomplete library.",
@@ -44,12 +50,6 @@
     "title": "slugify",
     "url": "https://github.com/alexcarpenter/slugify",
     "description": "Convert a string into a slug",
-    "language": "JavaScript"
-  },
-  {
-    "title": "us-coffee-roasters",
-    "url": "https://github.com/alexcarpenter/us-coffee-roasters",
-    "description": "Crowd-sourced list of US coffee roasters",
     "language": "JavaScript"
   }
 ]
