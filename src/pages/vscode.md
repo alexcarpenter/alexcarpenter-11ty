@@ -1,7 +1,7 @@
 ---
 layout: layouts/markdown.njk
 title: VSCode
-description: My current Visual Studio Code settings and extensions.
+summary: My current Visual Studio Code settings and extensions.
 permalink: /vscode/index.html
 ---
 

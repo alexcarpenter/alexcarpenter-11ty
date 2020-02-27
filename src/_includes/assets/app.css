@@ -370,8 +370,8 @@ a.c-pill:hover:after {
 }
 
 .c-button:hover {
-  background-color: #fff;
-  color: var(--color-gray-900);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .c-button:focus {
@@ -385,11 +385,13 @@ a.c-pill:hover:after {
 }
 
 .c-button--primary:hover {
-  color: var(--color-primary);
+  background-color: var(--color-gray-900);
+  border-color: var(--color-gray-900);
+  color: #fff;
 }
 
 .c-button--secondary {
-  background-color: var(--color-gray-100);
+  background-color: #fff;
   border-color: var(--color-gray-400);
   color: var(--color-gray-500);
 }
@@ -848,15 +850,18 @@ a[href="#footer-menu"] {
   -webkit-box-align: center;
           align-items: center;
   padding: .75rem 1rem;
-  color: var(--color-gray-900);
   text-decoration: none;
-  background-color: var(--color-gray-100);
+  color: var(--color-gray-500);
+  background-color: #fff;
+  border: 1px solid;
+  border-color: var(--color-gray-400);
   border-radius: var(--border-radius);
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
 .c-pagination__item:hover {
+  border-color: var(--color-primary);
   color: var(--color-primary);
 }
 

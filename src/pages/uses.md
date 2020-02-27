@@ -1,7 +1,7 @@
 ---
 layout: layouts/markdown.njk
 title: Uses
-description: The tools I use to get things done.
+summary: The tools I use to get things done.
 permalink: /uses/index.html
 ---
 

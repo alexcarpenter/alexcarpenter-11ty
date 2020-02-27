@@ -9,8 +9,6 @@ permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
 {% extends 'layouts/page.njk' %}
 
 {% block content %}
-  <div class="o-content">
-    {% include "components/listing.njk" %}
-    {% include "components/pagination.njk" %}
-  </div>
+  {% include "components/listing.njk" %}
+  {% include "components/pagination.njk" %}
 {% endblock %}
