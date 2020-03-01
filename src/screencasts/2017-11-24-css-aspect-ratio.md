@@ -6,4 +6,5 @@ youtubeId: "iSaBRUgAXnk"
 duration: "5:52"
 tags:
   - css
+primaryColor: "#356959"
 ---

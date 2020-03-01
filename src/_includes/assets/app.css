@@ -475,6 +475,18 @@ a.c-pill:hover:after {
 
 
 /**
+ * BOX
+ */
+
+.c-box {
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-gray-300);
+  background-color: var(--color-gray-100);
+}
+
+
+/**
  * HEADER
  */
 
@@ -698,13 +710,6 @@ a[href="#footer-menu"] {
 
 /* .c-form {} */
 
-.c-form--boxed {
-  padding: 1rem;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--color-gray-300);
-  background-color: var(--color-gray-100);
-}
-
 .c-form__row+.c-form__row {
   margin-top: 1rem;
 }
@@ -737,12 +742,23 @@ a[href="#footer-menu"] {
   font: inherit;
 }
 
+.giant {
+  padding: 3rem;
+  background-image: linear-gradient(to right bottom, red, blue);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 3rem;
+  border-radius: 6rem;
+}
+
 .c-form__input:focus {
   outline: 0;
   box-shadow: var(--outline) !important;
 }
 
-.c-form--boxed .c-form__input {
+.c-box .c-form__input {
   background-color: #fff;
 }
 

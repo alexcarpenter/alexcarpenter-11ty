@@ -12,13 +12,15 @@ permalink: /index.html
       <img src="/assets/images/alexcarpenter-avatar-500.jpg" alt="Photo of Alex Carpenter">
     </div>
     <p class="u-font-size-md u-line-height-tighten u-margin-top-05">Currently interested in CSS architecture, functional programming, React, design systems, and state machines.</p>
-    <p>I am a self taught developer that works best when floating in between design and engineering teams. I enjoy sharing what I know via short instructional screencasts and the occasional written post.</p>
+    <p>I am a self taught developer that works best when floating in between design and engineering teams. I enjoy sharing what I know via short instructional <a href="/screencasts">screencasts</a> and the occasional written post.</p>
   </header>
 
-  <section class="u-linear">
+  {# <section class="u-linear">
     <h2>Join my newsletter</h2>
-    {% include "components/newsletter-form.njk" %}
-  </section>
+    <div class="c-box">
+      {% include "components/newsletter-form.njk" %}
+    </div>
+  </section> #}
 
   <section class="u-linear">
     <h2>Popular screencasts</h2>
@@ -29,7 +31,9 @@ permalink: /index.html
       </li>
       {% endfor %}
     </ul>
-    <div>{% Link '/screencasts', 'View more <span class="u-hidden-visually">screencasts</span>' %}</div>
+    <div>
+      {% Link '/screencasts', 'View more <span class="u-hidden-visually">screencasts</span>' %}
+    </div>
   </section>
 
   <section class="u-linear">
