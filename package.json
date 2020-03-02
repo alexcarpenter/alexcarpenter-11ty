@@ -2,8 +2,9 @@
   "name": "alexcarpenter.me",
   "version": "1.0.0",
   "scripts": {
-    "start": "npx eleventy --config=_eleventy/config.js --serve --watch",
-    "build": "npx eleventy --config=_eleventy/config.js"
+    "start": "ELEVENTY_ENV=development npx eleventy --config=_eleventy/config.js --serve --watch",
+    "dev": "ELEVENTY_ENV=development npx eleventy --config=_eleventy/config.js",
+    "build": "ELEVENTY_ENV=production npx eleventy --config=_eleventy/config.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",

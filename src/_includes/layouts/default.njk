@@ -34,8 +34,15 @@
       :root { --color-primary: {{ primaryColor }}; }
     {% endif %}
   {% endset %}
-  <style>{{ css | cssmin | safe }}</style>
+  <style>
+  {% if env.environment == "production" %}
+    {{ css | cssmin | safe }}
+  {% else %}
+    {{ css | safe }}
+  {% endif %}
+  </style>
 
+  {% if env.environment == "production" %}
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43034013-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -44,6 +51,7 @@
 
     gtag('config', 'UA-43034013-1');
   </script>
+  {% endif %}
 </head>
 <body>
   <a href="#main-content" class="c-skip">Skip to main content</a>
