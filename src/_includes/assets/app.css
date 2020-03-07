@@ -397,6 +397,7 @@ a.c-pill:hover:after {
 }
 
 .c-button--secondary:hover {
+  background-color: #fff;
   border-color: var(--color-primary);
   color: var(--color-primary);
 }
@@ -630,6 +631,11 @@ a[href="#footer-menu"] {
 
 .c-testimonial {
   text-align: center;
+  color: inherit;
+}
+
+.c-testimonial > * + * {
+  margin-top: 1rem;
 }
 
 .c-testimonial__media {
@@ -648,7 +654,6 @@ a[href="#footer-menu"] {
 
 .c-testimonial__quote {
   border: 0;
-  margin-top: 1rem;
   padding-left: 0;
   font-size: 1.25rem;
 }
@@ -657,10 +662,25 @@ a[href="#footer-menu"] {
 .c-testimonial__quote p::after { content: '”'; }
 
 .c-testimonial__cite {
-  color: #fff;
+  color: inherit;
   text-transform: uppercase;
   letter-spacing: 1px;
   opacity: .75;
+}
+
+.c-tick-list {
+  list-style: none;
+}
+
+.c-tick-list__item {
+  display: flex;
+}
+
+.c-tick-list__item::before {
+  content: '–';
+  display: inline-block;
+  margin-right: .5rem;
+  color: var(--color-gray-500);
 }
 
 
