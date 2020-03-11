@@ -127,6 +127,8 @@ dt {
 }
 
 mark {
+  padding-left: .2em;
+  padding-right: .2em;
   background-color: var(--color-yellow-light);
 }
 
@@ -422,10 +424,6 @@ a.c-pill:hover:after {
   box-shadow: var(--outline), var(--shadow) !important;
 }
 
-.c-button svg {
-  margin-right: .5rem;
-}
-
 
 /**
  * CONTROL
@@ -644,6 +642,7 @@ a[href="#footer-menu"] {
   height: 3rem;
   border-radius: 50%;
   box-shadow: var(--shadow);
+  border: 2px solid #fff;
 }
 
 .c-testimonial__media img {
@@ -1053,8 +1052,28 @@ a[href="#footer-menu"] {
   margin-bottom: 3rem;
 }
 
+.u-margin-right-025 {
+  margin-right: 0.25rem;
+}
+
+.u-margin-right-05 {
+  margin-right: 0.5rem;
+}
+
 .u-margin-right-1 {
   margin-right: 1rem;
+}
+
+.u-margin-left-025 {
+  margin-left: 0.25rem;
+}
+
+.u-margin-left-05 {
+  margin-left: 0.5rem;
+}
+
+.u-margin-left-1 {
+  margin-left: 1rem;
 }
 
 

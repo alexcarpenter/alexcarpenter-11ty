@@ -4,9 +4,9 @@
   <header class="u-margin-bottom-3">
     <h1 class="u-font-size-xxl u-heading-decorate">{{ title }}</h1>
     {% if summary %}
-      <p class="u-margin-top-05 u-font-size-md">{{ summary | markdownify_inline | safe }}</p>
+      <p role="doc-subtitle" class="u-margin-top-05 u-font-size-md">{{ summary | markdownify_inline | safe }}</p>
     {% elif description %}
-      <p class="u-margin-top-05 u-font-size-md">{{ description | markdownify_inline | safe }}</p>
+      <p role="doc-subtitle" class="u-margin-top-05 u-font-size-md">{{ description | markdownify_inline | safe }}</p>
     {% endif %}
   </header>
 {% endblock %}
