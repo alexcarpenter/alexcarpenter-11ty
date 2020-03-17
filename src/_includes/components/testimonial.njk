@@ -1,8 +1,8 @@
 {% macro testimonial(params) %}
   <figure class="c-testimonial">
-    {% if params.twitter %}
+    {% if params.twitter and params.thumbnail %}
     <a class="c-testimonial__media" href="https://twitter.com/{{ params.twitter }}">
-      <img src="https://avatars.io/twitter/{{ params.twitter }}" alt="{{ params.name }}" loading="lazy">
+      <img src="{{ params.thumbnail }}" alt="{{ params.name }}" loading="lazy">
     </a>
     {% endif %}
     <blockquote class="c-testimonial__quote">
