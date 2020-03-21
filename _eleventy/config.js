@@ -1,5 +1,6 @@
 const filters = require('./filters');
 const shortcodes = require('./shortcodes');
+const markdown = require('./utils');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
@@ -37,6 +38,9 @@ module.exports = function(eleventyConfig) {
 
   // Transforms
   eleventyConfig.addTransform('htmlmin', filters.htmlmin);
+
+  // Markdown
+  eleventyConfig.setLibrary("md", markdown);
 
   // ETC.
   eleventyConfig

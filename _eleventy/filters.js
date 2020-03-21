@@ -1,17 +1,9 @@
+const markdown = require('./utils');
 const R = require('ramda');
 const htmlmin = require('html-minifier');
 const CleanCSS = require('clean-css');
 const Terser = require('terser');
 const { DateTime } = require('luxon');
-const markdown = require('markdown-it')({
-  html: true,
-  breaks: true,
-  linkify: true,
-  typographer: true,
-}).use(require('markdown-it-anchor'), {
-  level: [2],
-  permalink: false,
-});
 
 const parseDate = str => {
   if (str instanceof Date) {
@@ -82,4 +74,10 @@ module.exports = {
     const hostUrl = match[3];
     return hostUrl.replace(/(?:www\.)?/g, '');
   },
+
+  totalDuration: (arr, key = 'duration') => {
+    return arr
+            .map(x => parseFloat(x.data[key]))
+            .reduce((a, b) => a + b, 0);
+  }
 };

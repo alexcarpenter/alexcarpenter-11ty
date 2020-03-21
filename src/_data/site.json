@@ -2,14 +2,122 @@
   "url": "https://alexcarpenter.me",
   "title": "Alex Carpenter",
   "description": "Self taught developer that works best when floating in between design and engineering teams. I enjoy sharing what I know via short instructional screencasts and the occasional written post.",
-  "youtubeSubscribe": "https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg?sub_confirmation=1",
-  "affiliateDisclosure": "This page contains Amazon Affiliate links. If you purchase something via those links, I will recieve a small kickback at no extra charge to you.",
-  "social": {
-    "youtube": "https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg",
-    "twitter": "https://twitter.com/hybrid_alex",
-    "github": "https://github.com/alexcarpenter",
-    "codepen": "https://codepen.io/alexcarpenter",
-    "dribbble": "https://dribbble.com/alexcarpenter",
-    "linkedin": "https://www.linkedin.com/in/imalexcarpenter"
-  }
+  "navigation": [
+    {
+      "label": "Screencasts",
+      "url": "/screencasts/"
+    }, {
+      "label": "Bookmarks",
+      "url": "/bookmarks/"
+    }, {
+      "label": "Posts",
+      "url": "/posts/"
+    }, {
+      "label": "Work",
+      "url": "/work/"
+    }, {
+      "label": "Contact",
+      "url": "/contact/"
+    }
+  ],
+  "social": [
+    {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg",
+      "subscribe": "https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg?sub_confirmation=1"
+    },
+    {
+      "label": "Twitter",
+      "url": "https://twitter.com/hybrid_alex"
+    },
+    {
+      "label": "Github",
+      "url": "https://github.com/alexcarpenter"
+    },
+    {
+      "label": "Codepen",
+      "url": "https://codepen.io/alexcarpenter"
+    },
+    {
+      "label": "Dribbble",
+      "url": "https://dribbble.com/alexcarpenter"
+    },
+    {
+      "label": "Linkedin",
+      "url": "https://www.linkedin.com/in/imalexcarpenter"
+    }
+  ],
+  "projects": [
+    {
+      "title": "alexcarpenter.me",
+      "url": "https://github.com/alexcarpenter/alexcarpenter.me",
+      "description": "Source files for my personal website built with Eleventy and hosted with Netlify.",
+      "language": "HTML"
+    },
+    {
+      "title": "us-coffee-roasters",
+      "url": "https://github.com/alexcarpenter/us-coffee-roasters",
+      "description": "Crowd-sourced list of US coffee roasters",
+      "language": "JavaScript"
+    },
+    {
+      "title": "butane-combobox",
+      "url": "https://github.com/alexcarpenter/butane-combobox",
+      "description": "An accessible combobox/autocomplete library.",
+      "language": "JavaScript"
+    },
+    {
+      "title": "butane-toasts",
+      "url": "https://github.com/alexcarpenter/butane-toasts",
+      "description": "A small library for creating toast messages.",
+      "language": "JavaScript"
+    },
+    {
+      "title": "butane-show-hide",
+      "url": "https://github.com/alexcarpenter/butane-show-hide",
+      "description": "An accessible show/hide JS library.",
+      "language": "JavaScript"
+    },
+    {
+      "title": "eleventy-boilerplate",
+      "url": "https://github.com/alexcarpenter/eleventy-boilerplate",
+      "description": "An opinionated boilerplate for new projects built with Eleventy.",
+      "language": "JavaScript"
+    },
+    {
+      "title": "object-to-querystring",
+      "url": "https://github.com/alexcarpenter/object-to-querystring",
+      "description": "Convert a object into a query string.",
+      "language": "JavaScript"
+    },
+    {
+      "title": "querystring-to-object",
+      "url": "https://github.com/alexcarpenter/querystring-to-object",
+      "description": "Convert a query string into an object.",
+      "language": "JavaScript"
+    },
+    {
+      "title": "slugify",
+      "url": "https://github.com/alexcarpenter/slugify",
+      "description": "Convert a string into a slug",
+      "language": "JavaScript"
+    }
+  ],
+  "interviews": [
+    {
+      "title": "Show Me Your Mic",
+      "description": "Joined Chris Enns to talk about how I started the I Brew My Own Coffee Podcast, and the tools used to create the show.",
+      "url": "https://itunes.apple.com/us/podcast/alex-carpenter-show-me-your-coffee/id602836998?i=1000330208077&mt=2"
+    },
+    {
+      "title": "How to Hold a Pencil",
+      "description": "Reuben Ingber invited me to join him on his podcast Hold to Hold a Pencil to talk about my start in web development industry and being self-taught.",
+      "url": "https://itunes.apple.com/us/podcast/013-alex-carpenter/id738646287?i=1000264786894&mt=2"
+    },
+    {
+      "title": "Statamic Series",
+      "description": "Question and answer interview by Q Digital Studio about my experience building websites with the flat-file CMS Statamic.",
+      "url": "http://www.qdigitalstudio.com/library/statamic-series-alex-carpenter"
+    }
+  ]
 }

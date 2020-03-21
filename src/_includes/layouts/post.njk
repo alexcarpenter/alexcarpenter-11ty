@@ -29,7 +29,7 @@
           }
         } %}
       {% endif %}
-      {{ content | safe }}
+      {{ content | markdownify | safe }}
     </div>
     <footer class="u-margin-top-3">
       {% include "components/share.njk" %}

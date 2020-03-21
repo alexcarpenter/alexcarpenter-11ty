@@ -1,12 +1,12 @@
 ---
 title: "UI Engineer"
-summary: "Currently interested in CSS architecture, functional programming, React, design systems, and state machines."
+description: "Currently interested in CSS architecture, functional programming, React, design systems, and state machines."
 permalink: /index.html
 ---
 {% extends "layouts/default.njk" %}
 
 {% block content %}
-  <header class="u-linear u-margin-bottom-3">
+  <header class="c-header">
     <h1 class="u-font-size-xxl u-heading-decorate">UI Engineer</h1>
     <div class="c-avatar" style="--aspect-ratio: 1/1;">
       <img src="/assets/images/alexcarpenter-avatar-500.jpg" alt="Photo of Alex Carpenter">
@@ -20,13 +20,6 @@ permalink: /index.html
       </a>
     </div>
   </header>
-
-  {# <section class="u-linear">
-    <h2>Join my newsletter</h2>
-    <div class="c-box">
-      {% include "components/newsletter-form.njk" %}
-    </div>
-  </section> #}
 
   <section class="u-linear">
     <h2>Popular screencasts</h2>
@@ -57,7 +50,7 @@ permalink: /index.html
   <section class="u-linear">
     <h2>Projects</h2>
     <ul class="c-listing">
-      {% for project in projects | take(4) %}
+      {% for project in site.projects | take(4) %}
       <li class="c-listing__item">
         {% Link project.url, project.title, true %}
         <br>

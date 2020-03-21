@@ -1,13 +1,9 @@
-<header class="c-header">
-  <a class="c-header__branding" href="/">{% include "components/logo.njk" %}</a>
-  <a class="c-button c-button--secondary" href="#footer-menu">Menu</a>
-  <nav class="c-header__nav">
-    <ul class="c-header__nav-list">
-      {% for item in navigation.primary %}
-      <li class="c-header__nav-item">
-        <a class="c-header__nav-anchor" {% if page.url == item.url %}aria-current="page"{% endif %} href="{{ item.url }}">{{ item.label }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
-</header>
+{% macro header(params) %}
+  <header class="c-header c-header--{{ params.type | default('page') }}">
+    <h1 class="c-header__heading u-font-size-xxl u-heading-decorate">{{ params.title }}</h1>
+    <p class="c-header__description u-font-size-md u-line-height-tighten u-margin-top-05">{{ params.description }}</p>
+    {% if params.extra %}
+      {{ params.extra | markdownify | safe }}
+    {% endif %}
+  </header>
+{% endmacro %}

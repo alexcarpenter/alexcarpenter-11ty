@@ -9,6 +9,19 @@ permalink: /screencasts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pag
 {% extends 'layouts/page.njk' %}
 {% from "components/testimonial.njk" import testimonial %}
 
+{# {% block headerExtra %}
+  {% if pagination.pageNumber == 0 %}
+  <dl class="c-meta c-meta--stats">
+    <dt class="c-meta__title">{{ collections.screencasts | length }}</dt>
+    <dd class="c-meta__description">Practical tutorials</dd>
+    <dt class="c-meta__title">2.2K</dt>
+    <dd class="c-meta__description">Views this past month</dd>
+    <dt class="c-meta__title">575</dt>
+    <dd class="c-meta__description">YouTube subscribers</dd>
+  </dl>
+  {% endif %}
+{% endblock %} #}
+
 {% block content %}
   {% if pagination.pageNumber == 0 %}
   <div class="u-breakout">
@@ -22,7 +35,7 @@ permalink: /screencasts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pag
           occupation: 'Front-end web developer'
         })}}
         <div class="u-text-center u-margin-top-2">
-          <a href="{{ site.youtubeSubscribe }}" class="c-button c-button--inverted c-button--shadow">
+          <a href="{{ site.social[0].subscribe }}" class="c-button c-button--inverted c-button--shadow">
             <svg class="u-margin-right-05" focusable="false" aria-hidden="true" width="1.5em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"></path></svg>
             Subscribe on YouTube
           </a>

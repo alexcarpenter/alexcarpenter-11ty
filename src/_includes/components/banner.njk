@@ -1,0 +1,13 @@
+<header class="c-banner" role="banner">
+  <a class="c-banner__branding" href="/">{% include "components/logo.njk" %}</a>
+  <a class="c-button c-button--secondary" href="#footer-menu">Menu</a>
+  <nav class="c-banner__nav">
+    <ul class="c-banner__nav-list">
+      {% for item in site.navigation %}
+      <li class="c-banner__nav-item">
+        <a class="c-banner__nav-anchor" {% if page.url == item.url %}aria-current="page"{% endif %} href="{{ item.url }}">{{ item.label }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
