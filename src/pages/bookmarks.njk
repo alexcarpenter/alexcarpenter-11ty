@@ -9,8 +9,8 @@ permalink: /bookmarks/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageN
 {% extends 'layouts/page.njk' %}
 
 {% block content %}
-  <div class="o-content">
-    {% include "components/listing.njk" %}
-    {% include "components/pagination.njk" %}
+  {% include "components/listing.njk" %}
+  <div class="u-margin-top-3">
+  {% include "components/pagination.njk" %}
   </div>
 {% endblock %}

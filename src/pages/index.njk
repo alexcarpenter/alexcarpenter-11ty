@@ -4,9 +4,10 @@ description: "Currently interested in CSS architecture, functional programming, 
 permalink: /index.html
 ---
 {% extends "layouts/default.njk" %}
+{% from "components/header.njk" import header %}
 
-{% block content %}
-  <header class="c-header">
+{% block header %}
+  <header class="u-stack u-margin-bottom-3">
     <h1 class="u-font-size-xxl u-heading-decorate">UI Engineer</h1>
     <div class="c-avatar" style="--aspect-ratio: 1/1;">
       <img src="/assets/images/alexcarpenter-avatar-500.jpg" alt="Photo of Alex Carpenter">
@@ -20,8 +21,10 @@ permalink: /index.html
       </a>
     </div>
   </header>
+{% endblock %}
 
-  <section class="u-linear">
+{% block content %}
+  <section class="u-stack">
     <h2>Popular screencasts</h2>
     <ul class="c-listing">
       {% for post in collections.screencasts | favorites(4) %}
@@ -35,7 +38,7 @@ permalink: /index.html
     </div>
   </section>
 
-  <section class="u-linear">
+  <section class="u-stack">
     <h2>Recent bookmarks</h2>
     <ul class="c-listing">
       {% for post in collections.bookmarks | take(4) %}
@@ -47,10 +50,10 @@ permalink: /index.html
     <div>{% Link '/bookmarks', 'View more <span class="u-hidden-visually">bookmarks</span>' %}</div>
   </section>
 
-  <section class="u-linear">
+  <section class="u-stack">
     <h2>Projects</h2>
     <ul class="c-listing">
-      {% for project in site.projects | take(4) %}
+      {% for project in site.projects | shuffle | take(4) %}
       <li class="c-listing__item">
         {% Link project.url, project.title, true %}
         <br>

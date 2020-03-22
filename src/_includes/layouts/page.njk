@@ -1,7 +1,7 @@
 {% extends 'layouts/default.njk' %}
 
 {% block header %}
-  <header class="c-header">
+  <header class="u-stack u-margin-bottom-3">
     <h1 class="u-font-size-xxl u-heading-decorate">{{ title }}</h1>
     {% if summary %}
       <p role="doc-subtitle" class="u-margin-top-05 u-font-size-md">{{ summary | markdownify_inline | safe }}</p>

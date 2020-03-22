@@ -57,7 +57,3 @@ permalink: /uses/index.html
 ### [Pro-Tech Calmigo](https://www.bladehq.com/item--Protech-Calmigo-CA-Legal-Automatic--51690)
 ### [Olight S1R Baton II](https://amzn.to/3aToGDc)
 ### [Leatherman Style PS](https://amzn.to/2WeRD8s)
-
----
-
-{% Note { text: site.affiliateDisclosure } %}

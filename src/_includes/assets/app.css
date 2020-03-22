@@ -136,8 +136,7 @@ ul ul {
 }
 
 hr {
-  margin-top: 2rem !important;
-  margin-bottom: 2rem;
+  margin: 2rem 0 !important;
   border: 0;
   width: 100%;
   height: 1px;
@@ -515,6 +514,10 @@ a[href="#footer-menu"] {
 }
 
 
+/**
+ * SHARE
+ */
+
 .c-share {
   position: relative;
   display: -webkit-box;
@@ -796,19 +799,6 @@ a[href="#footer-menu"] {
 
 
 /**
- * HEADER
- */
-
-.c-header {
-  margin-bottom: 3rem;
-}
-
-.c-header > * + * {
-  margin-top: 1rem;
-}
-
-
-/**
  * NOTE
  */
 
@@ -845,7 +835,6 @@ a[href="#footer-menu"] {
 .c-pagination {
   display: -webkit-box;
   display: flex;
-  margin-top: 4rem;
 }
 
 .c-pagination__item {
@@ -899,7 +888,6 @@ a[href="#footer-menu"] {
 
 
 .c-tags {
-  margin-top: 1rem;
   margin-bottom: -.5rem;
   list-style: none;
   display: -webkit-box;
@@ -932,25 +920,16 @@ a[href="#footer-menu"] {
   margin-top: 2rem;
 }
 
+.u-stack--3 > * + * {
+  margin-top: 3rem;
+}
+
 .u-stack--4 > * + * {
   margin-top: 4rem;
 }
 
-
-/**
- * LINEAR - create vertical rythmn throughout page content
- */
-
-.u-linear + .u-linear {
-  margin-top: 2rem;
-}
-
-.u-linear > * + * {
-  margin-top: 1.125rem;
-}
-
-.u-linear > * + h2,
-.u-linear > * + h3 {
+.u-stack > * + h2,
+.u-stack > * + h3 {
   margin-top: 2rem;
 }
 

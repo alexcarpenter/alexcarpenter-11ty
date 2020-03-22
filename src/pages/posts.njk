@@ -10,5 +10,7 @@ permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
 
 {% block content %}
   {% include "components/listing.njk" %}
+  <div class="u-margin-top-3">
   {% include "components/pagination.njk" %}
+  </div>
 {% endblock %}

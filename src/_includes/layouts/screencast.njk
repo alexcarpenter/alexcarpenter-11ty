@@ -1,19 +1,19 @@
 {% extends 'layouts/default.njk' %}
 
 {% block content %}
-  <article>
-    <header class="u-margin-bottom-2">
+  <article class="u-stack u-stack--2">
+    <header>
       <time class="u-eyebrow">{{ page.date | date_formatted }}</time>
       <h1 class="u-font-size-xl">{{ title }}</h1>
       <p class="u-margin-top-025">
         {% Link site.social[0].subscribe, "Subscribe on Youtube" %}
         </p>
     </header>
-    <div class="u-linear">
+    <div class="u-stack">
       {% Youtube youtubeId %}
       {{ content | safe }}
     </div>
-    <footer class="u-margin-top-3">
+    <footer class="u-stack u-margin-top-3">
       {% include "components/share.njk" %}
       {% include "components/tags.njk" %}
     </footer>
