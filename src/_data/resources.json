@@ -54,30 +54,6 @@
     "category": "Accessibility"
   },
   {
-    "title": "ShopTalk Show",
-    "author": "",
-    "url": "https://shoptalkshow.com/",
-    "category": "Podcast"
-  },
-  {
-    "title": "React Podcast",
-    "author": "",
-    "url": "https://spec.fm/podcasts/reactpodcast",
-    "category": "Podcast"
-  },
-  {
-    "title": "Toolsday",
-    "author": "",
-    "url": "https://spec.fm/podcasts/toolsday",
-    "category": "Podcast"
-  },
-  {
-    "title": "The CSS Podcast",
-    "author": "",
-    "url": "https://pod.link/thecsspodcast",
-    "category": "Podcast"
-  },
-  {
     "title": "Pure UI",
     "author": "Guillermo Rauch",
     "url": "https://rauchg.com/2015/pure-ui",
@@ -90,16 +66,16 @@
     "category": "Design"
   },
   {
-    "title": "Egghead.io",
-    "author": "",
-    "url": "https://egghead.io/",
-    "category": "Subscription"
-  },
-  {
     "title": "Beginner JavaScript",
     "author": "Wes Bos",
     "url": "https://beginnerjavascript.com/",
-    "category": "Course"
+    "category": "JavaScript"
+  },
+  {
+    "title": "Testing JavaScript",
+    "author": "Kent C. Dodds",
+    "url": "https://testingjavascript.com/",
+    "category": "JavaScript"
   },
   {
     "title": "The Critical Request",
@@ -130,5 +106,11 @@
     "author": "Ethan Marcotte",
     "url": "https://ethanmarcotte.com/wrote/accessibility-is-not-a-feature/",
     "category": "Accessibility"
+  },
+  {
+    "title": "Using Composition in React to Avoid \"Prop Drilling\"",
+    "author": "Michael Jackson",
+    "url": "https://www.youtube.com/watch?v=3XaXKiXtNjw",
+    "category": "JavaScript"
   }
 ]
