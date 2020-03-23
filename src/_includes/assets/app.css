@@ -987,6 +987,10 @@ a[href="#footer-menu"] {
   line-height: var(--line-height-tighten);
 }
 
+.u-font-size-default {
+  font-size: 1rem;
+}
+
 .u-font-size-sm {
   font-size: smaller;
 }

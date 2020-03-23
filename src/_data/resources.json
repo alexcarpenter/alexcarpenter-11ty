@@ -1,0 +1,134 @@
+[
+  {
+    "title": "8-Point Grid",
+    "author": "",
+    "url": "https://spec.fm/specifics/8-pt-grid",
+    "category": "Design"
+  },
+  {
+    "title": "CSS Utility Classes and \"Separation of Concerns\"",
+    "author": "Adam Wathan",
+    "url": "https://adamwathan.me/css-utility-classes-and-separation-of-concerns/",
+    "category": "CSS"
+  },
+  {
+    "title": "Time to First Byte: What It Is and Why It Matters",
+    "author": "Harry Roberts",
+    "url": "https://csswizardry.com/2019/08/time-to-first-byte-what-it-is-and-why-it-matters/",
+    "category": "Performance"
+  },
+  {
+    "title": "Axiomatic CSS and Lobotomized Owls",
+    "author": "Heydon Pickering",
+    "url": "https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/",
+    "category": "CSS"
+  },
+  {
+    "title": "The Media Object Saves Hundreds Of Lines Of Code",
+    "author": "Nicole Sullivan",
+    "url": "http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/",
+    "category": "CSS"
+  },
+  {
+    "title": "About HTML semantics and front-end architecture",
+    "author": "Nicolas Gallagher",
+    "url": "http://nicolasgallagher.com/about-html-semantics-front-end-architecture/",
+    "category": "CSS"
+  },
+  {
+    "title": "frontend design, react, and a bridge over the great divide",
+    "author": "Brad Frost",
+    "url": "https://bradfrost.com/blog/post/frontend-design-react-and-a-bridge-over-the-great-divide/",
+    "category": "JavaScript"
+  },
+  {
+    "title": "What the heck is the event loop anyway",
+    "author": "Philip Roberts",
+    "url": "https://www.youtube.com/watch?v=8aGhZQkoFbQ",
+    "category": "JavaScript"
+  },
+  {
+    "title": "Accessibility is a Civil Right",
+    "author": "Marcy Sutton",
+    "url": "https://marcysutton.com/accessibility-is-a-civil-right",
+    "category": "Accessibility"
+  },
+  {
+    "title": "ShopTalk Show",
+    "author": "",
+    "url": "https://shoptalkshow.com/",
+    "category": "Podcast"
+  },
+  {
+    "title": "React Podcast",
+    "author": "",
+    "url": "https://spec.fm/podcasts/reactpodcast",
+    "category": "Podcast"
+  },
+  {
+    "title": "Toolsday",
+    "author": "",
+    "url": "https://spec.fm/podcasts/toolsday",
+    "category": "Podcast"
+  },
+  {
+    "title": "The CSS Podcast",
+    "author": "",
+    "url": "https://pod.link/thecsspodcast",
+    "category": "Podcast"
+  },
+  {
+    "title": "Pure UI",
+    "author": "Guillermo Rauch",
+    "url": "https://rauchg.com/2015/pure-ui",
+    "category": "Design"
+  },
+  {
+    "title": "Learning how to see",
+    "author": "Matthew Ström",
+    "url": "https://matthewstrom.com/writing/learning-how-to-see",
+    "category": "Design"
+  },
+  {
+    "title": "Egghead.io",
+    "author": "",
+    "url": "https://egghead.io/",
+    "category": "Subscription"
+  },
+  {
+    "title": "Beginner JavaScript",
+    "author": "Wes Bos",
+    "url": "https://beginnerjavascript.com/",
+    "category": "Course"
+  },
+  {
+    "title": "The Critical Request",
+    "author": "Ben Schwarz",
+    "url": "https://calibreapp.com/blog/critical-request",
+    "category": "Performance"
+  },
+  {
+    "title": "Beyond the Bubble: Real-World Web Performance",
+    "author": "Ben Schwarz",
+    "url": "https://calibreapp.com/blog/beyond-the-bubble",
+    "category": "Performance"
+  },
+  {
+    "title": "Space, Grids, and Layouts",
+    "author": "Elliot Dahl",
+    "url": "https://www.designsystems.com/space-grids-and-layouts/",
+    "category": "Design"
+  },
+  {
+    "title": "Systems, Mistakes, and the Sea",
+    "author": "Robin Rendle",
+    "url": "https://www.robinrendle.com/essays/systems-mistakes-and-the-sea",
+    "category": "Design"
+  },
+  {
+    "title": "Accessibility is not a feature.",
+    "author": "Ethan Marcotte",
+    "url": "https://ethanmarcotte.com/wrote/accessibility-is-not-a-feature/",
+    "category": "Accessibility"
+  }
+]

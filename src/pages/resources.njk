@@ -1,0 +1,24 @@
+---
+title: "Resources"
+description: "A running list of my favorite front-end development related articles, videos, podcasts, courses, and subscriptions."
+permalink: /resources/index.html
+---
+{% extends "layouts/page.njk" %}
+
+{% block content %}
+  {% for category, resources in resources | sort(false, true, "category") | groupby("category") %}
+  {% if loop.index > 1 %}<hr>{% endif %}
+  <section class="u-stack">
+    <h2 class="u-heading-decorate" id="section-{{ category | lower }}">{{ category }}</h2>
+    <ul class="c-listing">
+      {% for item in resources %}
+        <li class="c-listing__item">
+          <h3 class="u-font-size-default">{{ item.title }}</h3>
+          {% Link item.url, null, true %}<br>
+          {# <span class="u-color-gray">{{ item.blurb }}</span> #}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+{% endblock %}
