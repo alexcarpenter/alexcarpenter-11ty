@@ -90,7 +90,8 @@ svg {
   vertical-align: middle;
 }
 
-ul:not([class]) {
+ul:not([class]),
+ol:not([class]) {
   padding-left: 1.2rem;
 }
 
