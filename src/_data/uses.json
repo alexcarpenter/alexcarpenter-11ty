@@ -1,0 +1,132 @@
+[
+  {
+    "title":"15in Macbook Pro",
+    "url":"https://www.apple.com/macbook-pro/",
+    "category":"Hardware"
+  },
+  {
+    "title":"Apple Magic Keyboard",
+    "url":"https://amzn.to/2u8ZFDY",
+    "category":"Hardware"
+  },
+  {
+    "title":"Apple Magic Trackpad 2",
+    "url":"https://amzn.to/2RrIjKs",
+    "category":"Hardware"
+  },
+  {
+    "title":"Dell UltraSharp 25 Monitor",
+    "url":"https://amzn.to/2RsOZIq",
+    "category":"Hardware"
+  },
+  {
+    "title":"Logitech HD C615 Webcam",
+    "url":"https://amzn.to/376HZYf",
+    "category":"Hardware"
+  },
+  {
+    "title":"Roost Laptop Stand",
+    "url":"https://amzn.to/2R6L9Wr",
+    "category":"Hardware"
+  },
+  {
+    "title":"Sonos Play 1",
+    "url":"https://amzn.to/2uTAtSb",
+    "category":"Hardware"
+  },
+  {
+    "title":"Visual Studio Code",
+    "url":"https://code.visualstudio.com/",
+    "category":"Software"
+  },
+  {
+    "title":"iTerm2",
+    "url":"https://iterm2.com/",
+    "category":"Software"
+  },
+  {
+    "title":"Alfred",
+    "url":"https://www.alfredapp.com/",
+    "category":"Software"
+  },
+  {
+    "title":"Spectacle",
+    "url":"https://www.spectacleapp.com/",
+    "category":"Software"
+  },
+  {
+    "title":"Todoist",
+    "url":"https://todoist.com/r/alex_carpenter_dpslyf",
+    "category":"Software"
+  },
+  {
+    "title":"Github Desktop",
+    "url":"https://desktop.github.com/",
+    "category":"Software"
+  },
+  {
+    "title":"Signal",
+    "url":"https://signal.org/",
+    "category":"Software"
+  },
+  {
+    "title":"Soulver",
+    "url":"https://soulver.app/",
+    "category":"Software"
+  },
+  {
+    "title":"Reeder 4",
+    "url":"https://www.reederapp.com/",
+    "category":"Software"
+  },
+  {
+    "title":"RØDE PodMic",
+    "url":"https://amzn.to/2G192Zd",
+    "category":"Screencasting"
+  },
+  {
+    "title":"Focusrite Scarlett 2i2 3rd Gen",
+    "url":"https://amzn.to/2uaQvqv",
+    "category":"Screencasting"
+  },
+  {
+    "title":"Cloudlifter CL-1",
+    "url":"https://amzn.to/37vAV7P",
+    "category":"Screencasting"
+  },
+  {
+    "title":"RØDE PSA1 Boom Arm",
+    "url":"https://amzn.to/369XHQR",
+    "category":"Screencasting"
+  },
+  {
+    "title":"Sony A5100",
+    "url":"https://amzn.to/31RJB6g",
+    "category":"Screencasting"
+  },
+  {
+    "title":"Sony ACPW20 AC Adaptor",
+    "url":"https://amzn.to/37rGfrI",
+    "category":"Screencasting"
+  },
+  {
+    "title":"Elgato Cam Link 4K",
+    "url":"https://amzn.to/3bB7tje",
+    "category":"Screencasting"
+  },
+  {
+    "title":"Elgato Key Light",
+    "url":"https://amzn.to/2G2dV47",
+    "category":"Screencasting"
+  },
+  {
+    "title":"Sennheiser HD280PRO",
+    "url":"https://amzn.to/2S7r7Kx",
+    "category":"Screencasting"
+  },
+  {
+    "title":"Screenflow",
+    "url":"https://www.telestream.net/screenflow/",
+    "category":"Screencasting"
+  }
+]

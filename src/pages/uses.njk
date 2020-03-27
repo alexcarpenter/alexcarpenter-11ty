@@ -1,0 +1,39 @@
+---
+layout: layouts/markdown.njk
+title: Uses
+summary: The tools I use to get things done.
+permalink: /uses/index.html
+---
+
+{% block content %}
+  <div class="u-breakout u-margin-bottom-3">
+    <div class="o-container o-container--lg">
+      <div style="--aspect-ratio: 3/2">
+        <picture>
+          <picture>
+            <source srcset="/assets/images/desktop-setup.webp" type="image/webp">
+            <source srcset="/assets/images/desktop-setup.jpg" type="image/jpeg">
+            <img src="/assets/images/desktop-setup.jpg" alt="Home desktop setup">
+          </picture>
+        </picture>
+      </div>
+    </div>
+  </div>
+  {% for category, uses in uses | sort(false, true, "category") | groupby("category") %}
+  {% if loop.index > 1 %}<hr>{% endif %}
+  <section class="u-stack">
+    <h2 class="u-heading-decorate u-margin-bottom-2" id="section-{{ category | lower }}">{{ category }}</h2>
+    <ul class="c-listing c-listing--md">
+      {% for item in uses %}
+        <li class="c-listing__item">
+          <h3 class="u-font-size-default">{{ item.title }}</h3>
+          {% Link item.url, null, true %}<br>
+          {% if item.blurb %}
+            <span class="u-color-gray">{{ item.blurb }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+{% endblock %}

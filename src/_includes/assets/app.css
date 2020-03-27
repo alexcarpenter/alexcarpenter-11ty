@@ -20,7 +20,7 @@
   --border-radius: 4px;
   --line-height-loose: 1.5;
   --line-height-tighten: 1.4;
-  --line-height-strict: 1.3;
+  --line-height-strict: 1.2;
   --outline: 0 0 0 3px var(--color-yellow);
   --transition: all ease-in-out 0.2s;
   --shadow: 0 1px 2px rgba(0,0,0,0.07),
@@ -747,6 +747,11 @@ a[href="#footer-menu"] {
   margin-bottom: .5rem;
   padding-bottom: .5rem;
   border-bottom: 1px solid var(--color-gray-300);
+}
+
+.c-listing--md .c-listing__item:not(:last-of-type) {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .c-listing--lg .c-listing__item:not(:last-of-type) {

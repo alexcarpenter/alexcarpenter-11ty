@@ -9,13 +9,15 @@ permalink: /resources/index.html
   {% for category, resources in resources | sort(false, true, "category") | groupby("category") %}
   {% if loop.index > 1 %}<hr>{% endif %}
   <section class="u-stack">
-    <h2 class="u-heading-decorate" id="section-{{ category | lower }}">{{ category }}</h2>
-    <ul class="c-listing">
+    <h2 class="u-heading-decorate u-margin-bottom-2" id="section-{{ category | lower }}">{{ category }}</h2>
+    <ul class="c-listing c-listing--md">
       {% for item in resources %}
         <li class="c-listing__item">
           <h3 class="u-font-size-default">{{ item.title }}</h3>
           {% Link item.url, null, true %}<br>
-          {# <span class="u-color-gray">{{ item.blurb }}</span> #}
+          {% if item.blurb %}
+            <span class="u-color-gray">{{ item.blurb }}</span>
+          {% endif %}
         </li>
       {% endfor %}
     </ul>
