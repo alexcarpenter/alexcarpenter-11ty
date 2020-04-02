@@ -17,7 +17,7 @@ permalink: /posts/feed.xml
   {% set idUrl %}{{ post.url | url | absoluteUrl('https://alexcarpenter.me') }}{% endset %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl('https://alexcarpenter.me') }}{% endset %}
   <entry>
-    <title>{%- if post.data.type == 'note' %}Note: {{ post.date | date_time_formatted }}{% else %}{{ post.data.title }}{% endif -%}</title>
+    <title>{{ post.data.title }}</title>
     {% if post.data.link %}
     <link href="{{ post.data.link }}" rel="alternate" type="text/html"/>
     <link href="{{ absolutePostUrl }}" rel="related" type="text/html"/>
