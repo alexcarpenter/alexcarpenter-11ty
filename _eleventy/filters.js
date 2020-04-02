@@ -55,9 +55,9 @@ module.exports = {
     return DateTime.fromJSDate(date).toFormat('DD');
   },
 
-  date_time_formatted: val => {
-    const n = parseFloat(val);
-    return DateTime.fromSeconds(n).toFormat('DD, t');
+  date_time_formatted: obj => {
+    const date = parseDate(obj);
+    return DateTime.fromJSDate(date).toFormat('ff');
   },
 
   permalink: str => str.replace(/\.html/g, ''),

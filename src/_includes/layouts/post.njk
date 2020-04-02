@@ -5,7 +5,7 @@
     <header>
       <time class="u-eyebrow">
         {%- if type == 'note' %}
-          {{ page.fileSlug | date_time_formatted }}
+          {{ page.date | date_time_formatted }}
         {% else %}
           {{ page.date | date_formatted }}
         {% endif -%}
