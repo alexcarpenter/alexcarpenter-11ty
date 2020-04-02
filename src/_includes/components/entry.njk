@@ -1,6 +1,11 @@
 <article class="c-entry">
-  <header>
-    <time class="u-eyebrow">{{ entry.date | date_formatted }}</time>
+  {% if entry.data.type == 'note' %}
+    <a class="c-entry__anchor" href="{{ entry.url }}"><time datetime="{{ entry.date }}">{{ entry.date | date_time_formatted }}</time></a>
+    <div class="u-margin-top-025">
+      <div class="u-stack">{{ entry.templateContent | safe }}</div>
+    </div>
+  {% else %}
+    <a class="c-entry__anchor" href="{{ entry.url }}"><time datetime="{{ entry.date }}">{{ entry.date | date_formatted }}</time></a>
     <h2 class="c-entry__heading">{% if entry.data.favorite %}⭐️ {% endif %}<a href="{{ entry.url }}">{{ entry.data.title }}</a></h2>
-  </header>
+  {% endif %}
 </article>

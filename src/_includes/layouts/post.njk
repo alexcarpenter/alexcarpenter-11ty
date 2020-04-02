@@ -3,8 +3,16 @@
 {% block content %}
   <article class="u-stack u-stack--2">
     <header>
-      <time class="u-eyebrow">{{ page.date | date_formatted }}</time>
-      <h1 class="u-font-size-xl">{{ title }}</h1>
+      <time class="u-eyebrow">
+        {%- if type == 'note' %}
+          {{ page.date | date_time_formatted }}
+        {% else %}
+          {{ page.date | date_formatted }}
+        {% endif -%}
+      </time>
+      {% if title %}
+        <h1 class="u-font-size-xl">{{ title }}</h1>
+      {% endif %}
       {% if link %}
         <p class="u-margin-top-025">
           {% Link link, null, true %}

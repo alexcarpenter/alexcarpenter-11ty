@@ -21,7 +21,7 @@ module.exports = function(eleventyConfig) {
 
   // Collections
   eleventyConfig.addCollection('posts', collection => {
-    return collection.getFilteredByGlob('**/posts/*.md').reverse();
+    return collection.getFilteredByGlob(['**/posts/*.md', '**/notes/*md']).reverse();
   });
 
   eleventyConfig.addCollection('bookmarks', collection => {
