@@ -5,12 +5,12 @@
     <header>
       <time class="u-eyebrow">
         {%- if type == 'note' %}
-          {{ page.date | date_time_formatted }}
+          {{ title | date_time_formatted }}
         {% else %}
           {{ page.date | date_formatted }}
         {% endif -%}
       </time>
-      {% if title %}
+      {% if type != 'note' %}
         <h1 class="u-font-size-xl">{{ title }}</h1>
       {% endif %}
       {% if link %}

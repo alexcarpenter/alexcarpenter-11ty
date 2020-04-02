@@ -1,6 +1,6 @@
 <article class="c-entry">
   {% if entry.data.type == 'note' %}
-    <a class="c-entry__anchor" href="{{ entry.url }}"><time datetime="{{ entry.date }}">{{ entry.date | date_time_formatted }}</time></a>
+    <a class="c-entry__anchor" href="{{ entry.url }}"><time datetime="{{ entry.date }}">{{ entry.data.title | date_time_formatted }}</time></a>
     <div class="u-margin-top-05">
       <div class="u-stack">{{ entry.templateContent | safe }}</div>
     </div>
