@@ -1,5 +1,4 @@
 ---
-draft: true
 title: Return a string
 tags:
   - javascript
