@@ -1,4 +1,5 @@
 {% extends 'layouts/default.njk' %}
+{% from "components/testimonial.njk" import testimonial %}
 
 {% block content %}
   <article>
@@ -8,13 +9,17 @@
       {% if link %}
         <div class="u-margin-top-025">{% Link link, null, true %}</div>
       {% endif %}
-      <p class="u-font-size-md">{{ summary | safe }}</p>
+      {% if summary %}
+        <p class="u-font-size-md u-margin-top-05">{{ summary | safe }}</p>
+      {% endif %}
       {% if banner %}
-        {% Figure {
-          breakout: true,
-          src: '/assets/images/' + banner,
-          alt: title + ' graphics'
-        } %}
+        <div class="u-margin-top-2">
+          {% Figure {
+            breakout: true,
+            src: '/assets/images/' + banner,
+            alt: title + ' graphics'
+          } %}
+        </div>
       {% endif %}
     </header>
     <div class="u-stack">
@@ -35,6 +40,14 @@
         {% endif %}
       </dl>
       {{ content | safe }}
+      {% if quote %}
+        <hr />
+        {{ testimonial({
+          name: quote.name,
+          text: quote.text,
+          occupation: quote.occupation
+        }) }}
+      {% endif %}
     </div>
   </article>
 {% endblock %}
