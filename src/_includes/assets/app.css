@@ -76,6 +76,7 @@ body {
 
 main {
   margin-bottom: 4rem;
+  outline: none;
 }
 
 h1,
@@ -645,11 +646,16 @@ a[href="#footer-menu"] {
   color: inherit;
   text-transform: uppercase;
   letter-spacing: 1px;
-  opacity: .75;
+  opacity: .8;
 }
 
 .c-tick-list {
   list-style: none;
+}
+
+.c-tick-list--cols {
+  column-count: 3;
+  column-gap: 2rem;
 }
 
 .c-tick-list__item {
@@ -736,7 +742,7 @@ a[href="#footer-menu"] {
   display: block;
   width: 100%;
   padding: .75rem;
-  border: 1px solid var(--color-gray-300);
+  border: 1px solid var(--color-gray-400);
   border-radius: var(--border-radius);
   background-color: var(--color-gray-100);
   font: inherit;

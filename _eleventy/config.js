@@ -1,18 +1,26 @@
 const filters = require('./filters');
 const shortcodes = require('./shortcodes');
+const pairedShortcodes = require('./paired-shortcodes');
 const markdown = require('./utils');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
-module.exports = function(eleventyConfig) {
+const ENV = require('../src/_data/env.js');
+
+module.exports = function (eleventyConfig) {
   // Filters
-  Object.keys(filters).forEach(filterName => {
+  Object.keys(filters).forEach((filterName) => {
     eleventyConfig.addFilter(filterName, filters[filterName]);
   });
 
   // Shortcodes
-  Object.keys(shortcodes).forEach(shortCodeName => {
+  Object.keys(shortcodes).forEach((shortCodeName) => {
     eleventyConfig.addShortcode(shortCodeName, shortcodes[shortCodeName]);
+  });
+
+  // Paired shortcodes
+  Object.keys(pairedShortcodes).forEach((shortCodeName) => {
+    eleventyConfig.addPairedShortcode(shortCodeName, pairedShortcodes[shortCodeName]);
   });
 
   // Plugins
@@ -20,23 +28,28 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
   // Collections
-  eleventyConfig.addCollection('posts', collection => {
-    return collection.getFilteredByGlob('**/posts/*.md').reverse();
+  eleventyConfig.addCollection('posts', (collection) => {
+    const now = new Date();
+    const published = (p) =>
+      ENV.environment === 'production' ? !p.data.draft : true;
+    return [
+      ...collection.getFilteredByGlob('**/posts/*.md').filter(published),
+    ].reverse();
   });
 
-  eleventyConfig.addCollection('notes', collection => {
+  eleventyConfig.addCollection('notes', (collection) => {
     return collection.getFilteredByGlob('**/notes/*.md').reverse();
   });
 
-  eleventyConfig.addCollection('bookmarks', collection => {
+  eleventyConfig.addCollection('bookmarks', (collection) => {
     return collection.getFilteredByGlob('**/bookmarks/*.md').reverse();
   });
 
-  eleventyConfig.addCollection('screencasts', collection => {
+  eleventyConfig.addCollection('screencasts', (collection) => {
     return collection.getFilteredByGlob('**/screencasts/*.md').reverse();
   });
 
-  eleventyConfig.addCollection('work', collection => {
+  eleventyConfig.addCollection('work', (collection) => {
     return collection.getFilteredByGlob('**/work/*.md').reverse();
   });
 
@@ -44,7 +57,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addTransform('htmlmin', filters.htmlmin);
 
   // Markdown
-  eleventyConfig.setLibrary("md", markdown);
+  eleventyConfig.setLibrary('md', markdown);
 
   // ETC.
   eleventyConfig

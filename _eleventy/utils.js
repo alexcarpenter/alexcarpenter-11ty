@@ -5,9 +5,9 @@ const markdown = require('markdown-it')({
   typographer: true,
 })
   .use(require('markdown-it-anchor'), {
-    level: [2,3],
+    level: [2, 3],
   })
   .use(require('markdown-it-kbd'))
   .use(require('markdown-it-mark'));
 
-module.exports = markdown
+module.exports = markdown;

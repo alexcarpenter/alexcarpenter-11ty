@@ -16,7 +16,7 @@ primaryColor: "#C46C27"
 ---
 Conservation Legacy is the third largest non-profit conservation corps program in the country. With eight seperate programs, Conservation Legacy needed a new website platform to showcase the work they do and move people to join their programs.
 
-I worked closely with our team lead to define and lead the development of the platform based on work we had previously done for [Herman Miller certified dealers](http://mightyinthemidwest.com/work/herman-miller-dealer-platform).
+I worked closely with our team lead to define and lead the development of the platform based on work we had previously done for [Herman Miller certified dealers](http://mightyinthemidwest.com/work/herman-miller-dealer-platform). In about half a year, we launched eight different websites simultaneously.
 
 ## Flexible templating and navigation
 

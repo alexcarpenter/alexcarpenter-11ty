@@ -1,17 +1,9 @@
-const { html } = require('common-tags');
-const markdown = require('markdown-it')({
-  html: true,
-  breaks: true,
-  linkify: true,
-  typographer: true,
-}).use(require('markdown-it-anchor'), {
-  level: [2, 3],
-  permalink: false,
-});
-const { hostname } = require('./filters');
+const {html} = require('common-tags');
+const {hostname} = require('./filters');
+const markdown = require('./utils');
 
 module.exports = {
-  Figure: function({
+  Figure: function ({
     src,
     alt = '',
     caption = '',
@@ -25,7 +17,9 @@ module.exports = {
           <img src="${src}" alt="${alt}" ${lazyload ? ` loading="lazy"` : ''} />
         </div>
         ${caption
-          ? `<figcaption class="u-text-center">${markdown.renderInline(caption)}</figcaption>`
+          ? `<figcaption class="u-text-center">${markdown.renderInline(
+              caption,
+            )}</figcaption>`
           : ''}
       </figure>
     `;
@@ -40,11 +34,19 @@ module.exports = {
     `;
   },
 
-  Note: function({ label = 'Note', text = '', type = 'default', labelHidden = false, link }) {
+  Note: function ({
+    label = 'Note',
+    text = '',
+    type = 'default',
+    labelHidden = false,
+    link,
+  }) {
     return html`
       <div class="c-note c-note--${type}">
         <p>
-          <span class="c-note__label${labelHidden ? ' u-hidden-visually' : ''}">${label}:</span>
+          <span class="c-note__label${labelHidden ? ' u-hidden-visually' : ''}"
+            >${label}:</span
+          >
           ${markdown.renderInline(text)}${link
             ? `<br><a class="u-link" href="${link.url}">${link.text} <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="1em" height="1em" aria-hidden="true" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none" /><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" /></svg></a>`
             : ''}
@@ -53,12 +55,12 @@ module.exports = {
     `;
   },
 
-  Stats: function({ items = [] }) {
+  Stats: function ({items = []}) {
     return html`
       <dl class="c-stats">
         ${items
           .map(
-            item => `
+            (item) => `
           <dt class="c-stats__title">${item.title}</dt>
           <dd class="c-stats__description">${item.description}</dd>
         `,
@@ -68,7 +70,7 @@ module.exports = {
     `;
   },
 
-  Video: function({
+  Video: function ({
     url = '',
     ratio = '16/9',
     controls = true,
@@ -80,7 +82,9 @@ module.exports = {
   }) {
     return html`
       <figure class="c-video">
-        <div class="c-video__backdrop"${backdrop ? ` style="--backdrop: ${backdrop};"` : ''}>
+        <div class="c-video__backdrop"${
+          backdrop ? ` style="--backdrop: ${backdrop};"` : ''
+        }>
           <div style="--aspect-ratio: ${ratio};">
             <video${controls ? ` controls` : ''}${autoPlay ? ` autoPlay` : ''}${
       loop ? ` loop` : ''
@@ -101,9 +105,11 @@ module.exports = {
     `;
   },
 
-  Youtube: function(id, lazyload = false, fullWidth = false, title = '') {
+  Youtube: function (id, lazyload = false, fullWidth = false, title = '') {
     return html`
-      <figure class="u-shadow${fullWidth ? ' o-content__fullWidth' : ''}" style="--aspect-ratio: 16/9;">
+      <figure class="u-shadow${
+        fullWidth ? ' o-content__fullWidth' : ''
+      }" style="--aspect-ratio: 16/9;">
         <iframe${
           lazyload ? ` loading="lazy"` : ''
         } title="${title}" width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -111,10 +117,12 @@ module.exports = {
     `;
   },
 
-  Quote: function({ text, cite, size }) {
+  Quote: function ({text, cite, size}) {
     return html`
       <figure class="c-quote">
-        <blockquote class="c-quote__text${size ? ` c-quote__text--${size}` : ''}">
+        <blockquote
+          class="c-quote__text${size ? ` c-quote__text--${size}` : ''}"
+        >
           <p>${markdown.renderInline(text)}</p>
         </blockquote>
         ${cite
@@ -126,7 +134,7 @@ module.exports = {
     `;
   },
 
-  Link: function(url, text, external = false) {
+  Link: function (url, text, external = false) {
     return html`
       <a href="${url}" class="u-link" ${external ? 'rel="external"' : ''}>
         ${text ? text : hostname(url)}
@@ -137,7 +145,7 @@ module.exports = {
     `;
   },
 
-  Heading: function({
+  Heading: function ({
     as = 'h2',
     text = '',
     size = 'md',
@@ -158,14 +166,10 @@ module.exports = {
     `;
   },
 
-  Pill: function(str, url) {
+  Pill: function (str, url) {
     if (url) {
-      return html`
-        <a class="c-pill" href="${url}">${str}</a>
-      `;
+      return html` <a class="c-pill" href="${url}">${str}</a> `;
     }
-    return html`
-      <span class="c-pill">${str}</span>
-    `;
+    return html` <span class="c-pill">${str}</span> `;
   },
 };

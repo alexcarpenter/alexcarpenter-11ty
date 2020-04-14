@@ -4,6 +4,10 @@
     <a class="c-testimonial__media" href="https://twitter.com/{{ params.twitter }}">
       <img src="{{ params.thumbnail }}" alt="{{ params.name }}" loading="lazy">
     </a>
+    {% elseif params.thumbnail %}
+    <div class="c-testimonial__media">
+      <img src="{{ params.thumbnail }}" alt="{{ params.name }}" loading="lazy">
+    </div>
     {% endif %}
     <blockquote class="c-testimonial__quote">
       <p>{{ params.text }}</p>
