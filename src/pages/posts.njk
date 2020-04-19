@@ -9,8 +9,18 @@ permalink: /posts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumbe
 {% extends 'layouts/page.njk' %}
 
 {% block content %}
-  {% include "components/listing.njk" %}
-  <div class="u-margin-top-3">
-  {% include "components/pagination.njk" %}
+  <div class="o-grid o-grid--justify-end">
+    {# <div class="o-grid__col u-width-4of12@md">
+      <p class="u-color-gray">Popular tags</p>
+      <div class="u-margin-top-3">
+        <p><a href="/tagged/accessibility">Accessibility</a>, <a href="/tagged/css">CSS</a>, <a href="/tagged/javascript">JavaScript</a>, <a href="/tagged/performance">Performance</a></p>
+      </div>
+    </div> #}
+    <div class="o-grid__col u-width-8of12@md">
+      {% include "components/listing.njk" %}
+      <div class="u-margin-top-4">
+        {% include "components/pagination.njk" %}
+      </div>
+    </div>
   </div>
 {% endblock %}

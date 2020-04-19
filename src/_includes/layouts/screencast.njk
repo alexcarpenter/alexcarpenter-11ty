@@ -1,21 +1,29 @@
 {% extends 'layouts/default.njk' %}
 
-{% block content %}
-  <article class="u-stack u-stack--2">
-    <header>
-      <time class="u-eyebrow">{{ page.date | date_formatted }}</time>
-      <h1 class="u-font-size-xl">{{ title }}</h1>
-      <p class="u-margin-top-025">
-        {% Link site.social[0].subscribe, "Subscribe on Youtube" %}
-        </p>
+{% block main %}
+  <div class="o-grid o-grid--justify-end">
+    <header class="o-grid__col u-width-8of12@md">
+      <time class="c-eyebrow">{{ page.date | date_formatted }}</time>
+      <h1 class="u-font-size-2xl">{{ title }}</h1>
+      {% Link site.social[0].subscribe, "Subscribe on Youtube", true %}
     </header>
-    <div class="u-stack">
+  </div>
+  <div class="o-grid">
+    <div class="o-grid__col">
       {% Youtube youtubeId, false, false, title %}
-      {{ content | safe }}
     </div>
-    <footer class="u-stack u-margin-top-3">
+  </div>
+  <div class="o-grid o-grid--justify-end">
+    {% if content %}
+    <div class="o-grid__col u-width-8of12@md">
+      <div class="o-stack o-stack--prose">
+        {{ content | safe }}
+      </div>
+    </div>
+    {% endif %}
+    <div class="o-grid__col u-width-8of12@md">
       {% include "components/share.njk" %}
       {% include "components/tags.njk" %}
-    </footer>
-  </article>
+    </div>
+  </div>
 {% endblock %}

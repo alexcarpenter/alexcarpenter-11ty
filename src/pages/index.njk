@@ -1,64 +1,53 @@
 ---
+headerSpacing: '3'
 title: "UI Engineer"
 description: "Currently interested in CSS architecture, functional programming, React, design systems, and state machines."
 permalink: /index.html
 ---
-{% extends "layouts/default.njk" %}
-{% from "components/header.njk" import header %}
-
-{% block header %}
-  <header class="u-stack u-margin-bottom-3">
-    <h1 class="u-font-size-xxl u-heading-decorate">UI Engineer</h1>
-    <div class="c-avatar" style="--aspect-ratio: 1/1;">
-      <picture>
-        <source srcset="/assets/images/alexcarpenter-avatar-250.webp" type="image/webp">
-        <source srcset="/assets/images/alexcarpenter-avatar-250.jpg" type="image/jpeg">
-        <img src="/assets/images/alexcarpenter-avatar-250.jpg" alt="Photo of Alex Carpenter">
-      </picture>
-    </div>
-    <p class="u-font-size-md u-line-height-tighten u-margin-top-05">Currently interested in CSS architecture, functional programming, React, design systems, and state machines.</p>
-    <p>I am a self taught developer that works best when floating between <a href="/work">design and engineering teams</a>. I enjoy sharing what I know via short <a href="/screencasts">instructional screencasts</a> and the occasional <a href="/posts">written post</a>.</p>
-  </header>
-{% endblock %}
+{% extends "layouts/page.njk" %}
 
 {% block content %}
-  <section class="u-stack">
-    <h2>Popular screencasts</h2>
-    <ul class="c-listing">
-      {% for post in collections.screencasts | favorites(4) %}
-      <li class="c-listing__item">
-        <a href="{{ post.url }}">{{ post.data.title }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-    <div>
-      {% Link '/screencasts', 'View more <span class="u-hidden-visually">screencasts</span>' %}
+  <div class="o-grid o-grid--justify-end">
+    <div class="o-grid__col u-width-8of12@md">
+      <div class="o-stack">
+        <p>I am a self taught developer, floating between <a href="/work">design and engineering teams</a>. I enjoy sharing what I know via short instructional <a href="/screencasts">screencasts</a> and the occasional written <a href="/posts">post</a>.</p>
+      </div>
     </div>
-  </section>
-
-  <section class="u-stack">
-    <h2>Recent bookmarks</h2>
-    <ul class="c-listing">
-      {% for post in collections.bookmarks | take(4) %}
-      <li class="c-listing__item">
-        <a href="{{ post.url }}">{{ post.data.title }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-    <div>{% Link '/bookmarks', 'View more <span class="u-hidden-visually">bookmarks</span>' %}</div>
-  </section>
-
-  <section class="u-stack">
-    <h2>Projects</h2>
-    <ul class="c-listing">
-      {% for project in site.projects | shuffle | take(4) %}
-      <li class="c-listing__item">
-        {% Link project.url, project.title, true %}
-        <br>
-        <span class="u-color-gray">{{ project.description }}</span>
-      </li>
-      {% endfor %}
-    </ul>
-    <div>{% Link 'https://github.com/alexcarpenter', 'View more <span class="u-hidden-visually">on Github</span>', true %}</div>
-  </section>
+  </div>
 {% endblock %}
+
+{# {% block content %}
+  <div class="o-grid">
+    <div class="o-grid__col">
+      <img src="/assets/images/banner.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="o-grid">
+    <aside class="o-grid__col u-width-4of12@md">
+      <dl>
+        <dt>Current location</dt>
+        <dd>Grand Rapids, MI</dd>
+        <dt>Top bookmarks</dt>
+        <dd>Github, Twitter, CSS-Tricks</dd>
+        <dt>Top apps</dt>
+        <dd>VS Code, iTerm 2, Todoist, Drafts</dd>
+        <dt>Tea or coffee</dt>
+        <dd>Coffee in the morning, tea in the afternoon</dd>
+      </dl>
+    </aside>
+
+    <div class="o-grid__col u-width-8of12@md">
+      <div class="o-stack">
+        <p>I am a self taught developer, floating between design and engineering teams. I enjoy sharing what I know via short instructional screencasts and the occasional written post.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores aperiam, vel ex architecto id, voluptas vitae impedit officia incidunt ea quod. Eaque voluptate distinctio ea qui provident placeat esse a.</p>
+        <blockquote>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis tenetur delectus iste consectetur deleniti aspernatur totam. Pariatur suscipit magnam rem iure omnis, quisquam incidunt, adipisci illo ullam corporis earum sunt.</p>
+        </blockquote>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, rerum veritatis! Molestiae voluptatibus porro hic.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, rerum veritatis! Molestiae voluptatibus porro hic.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, rerum veritatis! Molestiae voluptatibus porro hic.</p>
+      </div>
+    </div>
+  </div>
+{% endblock %} #}

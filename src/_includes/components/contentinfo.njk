@@ -1,19 +1,23 @@
 <footer class="c-contentinfo" role="contentinfo">
-  <ul class="c-contentinfo__list" id="footer-menu">
-    {% for item in site.navigation %}
-    <li class="c-contentinfo__list-item">
-      <a class="c-contentinfo__list-anchor" {% if page.url == item.url %}aria-current="page"{% endif %} href="{{ item.url }}">{{ item.label }}</a>
-    </li>
-    {% endfor %}
-  </ul>
+  <div class="o-grid o-grid--justify-end">
+    <div class="o-grid__col u-width-8of12@md">
+      <ul class="c-contentinfo__list">
+        {% for item in site.navigation %}
+        <li class="c-contentinfo__list-item">
+          <a class="c-contentinfo__list-anchor" {% if page.url == item.url %}aria-current="page"{% endif %} href="{{ item.url }}">{{ item.label }}</a>
+        </li>
+        {% endfor %}
+      </ul>
 
-  <ul class="c-contentinfo__list">
-    {% for item in site.social %}
-    <li class="c-contentinfo__list-item">
-      <a class="c-contentinfo__list-anchor" rel="me" aria-label="{{ item.label }}" href="{{ item.url }}">
-        {% include "icons/" + item.label | lower + '.svg' %}
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
+      <ul class="c-contentinfo__list">
+        {% for item in site.social %}
+        <li class="c-contentinfo__list-item">
+          <a class="c-contentinfo__list-anchor" rel="me" aria-label="{{ item.label }}" href="{{ item.url }}">
+            {% include "icons/" + item.label | lower + '.svg' %}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 </footer>

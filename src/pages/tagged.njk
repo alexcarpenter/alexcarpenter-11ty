@@ -13,21 +13,29 @@ permalink: /tagged/{{ tag }}/index.html
 ---
 {% extends "layouts/default.njk" %}
 
-{% block header %}
-  <header class="u-margin-bottom-3">
-    <h1 class="u-font-size-xxl">Tagged “{{ tag }}”</h1>
+{% block main %}
+  <header>
+    <div class="o-grid o-grid--justify-end">
+      <div class="o-grid__col u-width-8of12@md">
+        <h1 class="u-font-size-2xl">Tagged “{{ tag }}”</h1>
+      </div>
+    </div>
   </header>
-{% endblock %}
-
-{% block content %}
-  <div class="o-content">
-    {% set taglist = collections[tag] %}
-    <ul class="c-listing">
-    {% for entry in taglist | reverse %}
-      <li class="c-listing__item">
-        <a href="{{ entry.url }}">{{ entry.data.title }}</a>
-      </li>
-    {% endfor %}
-    </ul>
+  <div class="u-margin-top-5">
+    <div class="o-grid o-grid--justify-end">
+      <div class="o-grid__col u-width-8of12@md">
+        {% set taglist = collections[tag] %}
+        <ul class="c-listing c-listing--4">
+        {% for entry in taglist | reverse %}
+          <li class="c-listing__item">
+            <article>
+              <time class="c-eyebrow" datetime="{{ entry.date }}">{{ entry.date | date_formatted }}</time>
+              <h2 class="u-font-size-lg u-font-weight-normal">{% if entry.data.favorite %}⭐️ {% endif %}<a class="u-primary-anchor" href="{{ entry.url }}">{{ entry.data.title }}</a></h2>
+            </article>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
   </div>
 {% endblock %}

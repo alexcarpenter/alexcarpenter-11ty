@@ -4,10 +4,13 @@ const pairedShortcodes = require('./paired-shortcodes');
 const markdown = require('./utils');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const caniuse = require('@alexcarpenter/eleventy-plugin-caniuse');
 
 const ENV = require('../src/_data/env.js');
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(caniuse);
+
   // Filters
   Object.keys(filters).forEach((filterName) => {
     eleventyConfig.addFilter(filterName, filters[filterName]);
@@ -50,7 +53,10 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addCollection('work', (collection) => {
-    return collection.getFilteredByGlob('**/work/*.md').reverse();
+    const published = (p) => !p.data.draft;
+    return [
+      ...collection.getFilteredByGlob('**/work/*.md').filter(published),
+    ].reverse();
   });
 
   // Transforms

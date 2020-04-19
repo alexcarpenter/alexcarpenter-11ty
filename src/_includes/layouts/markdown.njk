@@ -1,5 +1,9 @@
 {% extends 'layouts/page.njk' %}
 
 {% block content %}
-  <div class="u-stack">{{ content | safe }}</div>
+  <div class="o-grid o-grid--justify-end">
+    <div class="o-grid__col u-width-8of12@md">
+      <div class="o-stack o-stack--prose">{{ content | safe }}</div>
+    </div>
+  </div>
 {% endblock %}

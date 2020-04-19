@@ -17,8 +17,8 @@
 @font-face {
   font-family: 'IBM Plex Sans';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-display: swap;
-  src: local('IBM Plex Sans Bold'), local('IBMPlexSans-Bold'),
-       url('/assets/fonts/IBMPlexSans-Bold.woff2') format('woff2');
+  src: local('IBM Plex Sans Semi-bold'), local('IBMPlexSans-Semi-bold'),
+       url('/assets/fonts/IBMPlexSans-SemiBold.woff2') format('woff2');
 }

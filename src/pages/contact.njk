@@ -6,5 +6,9 @@ permalink: /contact/index.html
 {% extends 'layouts/page.njk' %}
 
 {% block content %}
-  {% include "components/contact-form.njk" %}
+  <div class="o-grid o-grid--justify-end">
+    <div class="o-grid__col u-width-8of12@md">
+      {% include "components/contact-form.njk" %}
+    </div>
+  </div>
 {% endblock %}

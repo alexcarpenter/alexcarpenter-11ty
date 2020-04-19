@@ -4,20 +4,18 @@ title: VSCode
 summary: My current Visual Studio Code settings and extensions.
 permalink: /vscode/index.html
 ---
-
-{% Figure {
+<!-- {% Figure {
   src: '/assets/images/vscode.png',
-  breakout: true,
   alt: 'Screenshot of my Visual Studio Code setup',
   ratio: '1200/687'
-} %}
+} %} -->
 
 ## Theme and font family
 
-- **Theme:**
-  - Dark: [Night Owl](https://github.com/sdras/night-owl-vscode-theme)
-  - Light: [Github Light Theme](https://marketplace.visualstudio.com/items?itemName=Hyzeta.vscode-theme-github-light)
-- **Font family:** [Victor Mono](https://rubjo.github.io/victor-mono/)
+* **Theme:**<br>
+  * Dark: [Night Owl](https://github.com/sdras/night-owl-vscode-theme)
+  * Light: [Github Light Theme](https://marketplace.visualstudio.com/items?itemName=Hyzeta.vscode-theme-github-light)
+* **Font family:** [Victor Mono](https://rubjo.github.io/victor-mono/)
 
 Outside of a good theme and font family, I usually bump up the font size to `20` and increase the line-height (currently set to `50` in VSCode) which I find improves readability.
 
@@ -65,8 +63,6 @@ Outside of a good theme and font family, I usually bump up the font size to `20`
 - [whatwedo.twig](https://marketplace.visualstudio.com/items?itemName=whatwedo.twig)
 - [zeit.zeit](https://marketplace.visualstudio.com/items?itemName=zeit.zeit)
 - [Zignd.html-css-class-completion](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)
-
----
 
 ## Generate your own extensions list:
 

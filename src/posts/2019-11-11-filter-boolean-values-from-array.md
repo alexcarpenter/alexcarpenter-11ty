@@ -2,6 +2,7 @@
 title: "How to filter boolean values from an array"
 tags:
   - javascript
+  - til
 ---
 ```js
 const values = ['Alex', '', true, false, 1, 0];

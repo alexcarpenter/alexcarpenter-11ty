@@ -1,15 +1,17 @@
 {% extends 'layouts/default.njk' %}
 
-{% block header %}
-  <header class="u-stack u-margin-bottom-3">
-    <h1 class="u-font-size-xxl u-heading-decorate">{{ title }}</h1>
-    {% if summary %}
-      <p role="doc-subtitle" class="u-margin-top-05 u-font-size-md">{{ summary | markdownify_inline | safe }}</p>
-    {% elif description %}
-      <p role="doc-subtitle" class="u-margin-top-05 u-font-size-md">{{ description | markdownify_inline | safe }}</p>
-    {% endif %}
-    {% block headerExtra %}{% endblock %}
-  </header>
+{% block main %}
+  <div class="o-grid{% if headerOffset != false %} o-grid--justify-end{% endif %}">
+    <div class="o-grid__col u-width-8of12@md">
+      <h1 class="c-heading-decorate u-font-size-2xl u-font-size-3xl@md">{{ title }}</h1>
+      {% if summary %}
+        <p role="doc-subtitle" class="u-font-size-lg u-leading-tight u-margin-top-2">{{ summary | markdownify_inline | safe }}</p>
+      {% elif description %}
+        <p role="doc-subtitle" class="u-font-size-lg u-leading-tight u-margin-top-2">{{ description | markdownify_inline | safe }}</p>
+      {% endif %}
+    </div>
+  </div>
+  <div class="u-margin-top-{{ headerSpacing | default('5') }}">
+    {% block content %}{% endblock %}
+  </div>
 {% endblock %}
-
-{% block content %}{% endblock %}

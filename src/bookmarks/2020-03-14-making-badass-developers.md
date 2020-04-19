@@ -1,5 +1,5 @@
 ---
-title: Making Badass Developers - Kathy Sierra (Serious Pony) keynote
+title: Making Badass Developers
 author: Kathy Sierra
 link: https://www.youtube.com/watch?v=FKTxC9pl-WM
 tags:

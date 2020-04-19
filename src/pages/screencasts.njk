@@ -7,45 +7,52 @@ pagination:
 permalink: /screencasts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html
 ---
 {% extends 'layouts/page.njk' %}
-{% from "components/testimonial.njk" import testimonial %}
-
-{# {% block headerExtra %}
-  {% if pagination.pageNumber == 0 %}
-  <dl class="c-meta c-meta--stats">
-    <dt class="c-meta__title">{{ collections.screencasts | length }}</dt>
-    <dd class="c-meta__description">Practical tutorials</dd>
-    <dt class="c-meta__title">2.2K</dt>
-    <dd class="c-meta__description">Views this past month</dd>
-    <dt class="c-meta__title">575</dt>
-    <dd class="c-meta__description">YouTube subscribers</dd>
-  </dl>
-  {% endif %}
-{% endblock %} #}
 
 {% block content %}
-  {% if pagination.pageNumber == 0 %}
-  <div class="u-breakout">
-    <div class="c-callout">
-      <div class="o-container">
-        {{ testimonial({
-          twitter: 'TreyGordon',
-          thumbnail: '/assets/images/trey-gordon.jpg',
-          name: 'Trey Gordon',
-          text: "Alex's tutorials are direct and to the point, while covering practical topics that can be useful to developers of any skill level.",
-          occupation: 'Front-end web developer'
-        })}}
-        <div class="u-text-center u-margin-top-2">
-          <a href="{{ site.social[0].subscribe }}" class="c-button c-button--inverted c-button--shadow">
-            <svg class="u-margin-right-05" focusable="false" aria-hidden="true" width="1.5em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"></path></svg>
-            Subscribe on YouTube
-          </a>
+  <div class="o-grid">
+    <aside class="o-grid__col u-width-4of12@md">
+      <div class="o-stack o-stack--4">
+        <div>
+          <p class="u-color-gray">Popular screencasts</p>
+          <div class="u-margin-top-3">
+            <ul>
+              {% for entry in collections.screencasts | favorites(5) %}
+              <li><a href="{{ entry.url }}">{{ entry.data.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <figure class="c-testimonial">
+            <blockquote>
+              <p>Alex's tutorials are direct and to the point, while covering practical topics that can be useful to developers of any skill level.</p>
+            </blockquote>
+            <figcaption class="u-margin-top-3">
+              <div class="o-flag o-flag--align-center">
+                <div class="o-flag__media">
+                  <img class="u-disc" width="48" height="48" src="/assets/images/trey-gordon.jpg" alt="" loading="lazy">
+                </div>
+                <div class="o-flag__body">
+                  <p class="u-font-weight-semi-bold u-leading-tight">Trey Gordon</p>
+                  <p class="u-font-size-small u-color-gray">Front-end web developer</p>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div>
+          <a href="{{ site.social[0].subscribe }}" class="c-button"><svg focusable="false" aria-hidden="true" width="1.25em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"></path></svg> Subscribe on YouTube</a>
         </div>
       </div>
+    </aside>
+
+    <div class="o-grid__col u-width-8of12@md u-margin-top-5 u-margin-top-0@md">
+      {% include "components/listing.njk" %}
+      <div class="u-margin-top-4">
+        {% include "components/pagination.njk" %}
+      </div>
     </div>
-  </div>
-  {% endif %}
-  {% include "components/listing.njk" %}
-  <div class="u-margin-top-3">
-  {% include "components/pagination.njk" %}
   </div>
 {% endblock %}

@@ -1,8 +1,8 @@
 {% if tags %}
-<ul class="c-tags">
+<ul class="o-tags">
   {% for tag in tags %}
-    <li class="c-tags__item">
-      {% Pill '#' + tag | upper, '/tagged/' + tag %}
+    <li class="o-tags__item">
+      {% Pill tag | upper, '/tagged/' + tag %}
     </li>
   {% endfor %}
 </ul>

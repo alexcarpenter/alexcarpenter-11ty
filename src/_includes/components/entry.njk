@@ -1,11 +1,5 @@
-<article class="c-entry">
-  {% if entry.data.type == 'note' %}
-    <a class="c-entry__anchor" href="{{ entry.url }}"><time datetime="{{ entry.date }}">{{ entry.data.title | date_time_formatted }}</time></a>
-    <div class="u-margin-top-05">
-      <div class="u-stack">{{ entry.templateContent | safe }}</div>
-    </div>
-  {% else %}
-    <a class="c-entry__anchor" href="{{ entry.url }}"><time datetime="{{ entry.date }}">{{ entry.date | date_formatted }}</time></a>
-    <h2 class="c-entry__heading">{% if entry.data.favorite %}⭐️ {% endif %}<a href="{{ entry.url }}">{{ entry.data.title }}</a></h2>
-  {% endif %}
+<article>
+  <time class="c-eyebrow" datetime="{{ entry.date }}">{{ entry.date | date_formatted }}</time>
+  <h2 class="u-font-size-lg u-font-weight-normal">{% if entry.data.favorite %}⭐️ {% endif %}<a class="u-primary-anchor" href="{{ entry.url }}">{{ entry.data.title }}</a></h2>
+  {# <p class="u-margin-top-05">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates dolor laborum accusamus quam dolorum. Ratione nobis error asperiores, vel aspernatur cum illum quidem voluptate nostrum optio? Impedit incidunt officiis quam.</p> #}
 </article>

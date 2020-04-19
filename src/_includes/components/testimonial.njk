@@ -1,6 +1,6 @@
 {% macro testimonial(params) %}
   <figure class="c-testimonial">
-    {% if params.twitter and params.thumbnail %}
+    {# {% if params.twitter and params.thumbnail %}
     <a class="c-testimonial__media" href="https://twitter.com/{{ params.twitter }}">
       <img src="{{ params.thumbnail }}" alt="{{ params.name }}" loading="lazy">
     </a>
@@ -8,10 +8,13 @@
     <div class="c-testimonial__media">
       <img src="{{ params.thumbnail }}" alt="{{ params.name }}" loading="lazy">
     </div>
-    {% endif %}
+    {% endif %} #}
     <blockquote class="c-testimonial__quote">
       <p>{{ params.text }}</p>
     </blockquote>
+    <a class="c-testimonial__media" href="https://twitter.com/{{ params.twitter }}">
+      <img src="{{ params.thumbnail }}" alt="{{ params.name }}" loading="lazy">
+    </a>
     <figcaption class="c-testimonial__cite">{{ params.name }} ({{ params.occupation }})</figcaption>
   </figure>
 {% endmacro %}

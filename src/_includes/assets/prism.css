@@ -34,11 +34,11 @@ pre[class*="language-"] {
   padding-top: 1em;
   padding-bottom: 1em;
   overflow: auto;
-  background-color: var(--color-gray-900);
-  color: var(--color-gray-300);
+  background-color: #222222;
+  color: #FFFFFF;
 }
 
-pre[class*="language-scss"],
+/* pre[class*="language-scss"],
 pre[class*="language-css"],
 pre[class*="language-html"],
 pre[class*="language-js"],
@@ -62,8 +62,6 @@ pre[class*="language-twig"]::before {
   display: block;
   margin-bottom: 1rem;
   padding: .5rem 1rem;
-  background-color: var(--color-gray-300);
-  color: var(--color-gray-900);
   text-transform: uppercase;
   font-size: smaller;
   font-weight: 700;
@@ -76,7 +74,7 @@ pre[class*="language-html"]::before { content: 'HTML'; }
 pre[class*="language-js"]::before   { content: 'JavaScript'; }
 pre[class*="language-jsx"]::before   { content: 'JSX'; }
 pre[class*="language-tsx"]::before   { content: 'TypeScript'; }
-pre[class*="language-twig"]::before { content: 'Nunjucks' }
+pre[class*="language-twig"]::before { content: 'Nunjucks' } */
 
 .highlight-line {
   padding: 0.25rem 1rem;

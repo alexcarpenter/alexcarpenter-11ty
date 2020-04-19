@@ -1,33 +1,33 @@
 {% extends 'layouts/default.njk' %}
 
-{% block content %}
-  <article class="u-stack u-stack--2">
-    <header>
-      <time class="u-eyebrow">
-        {%- if type == 'note' %}
-          {{ title | date_time_formatted }}
-        {% else %}
-          {{ page.date | date_formatted }}
-        {% endif -%}
-      </time>
-      {% if type != 'note' %}
-        <h1 class="u-font-size-xl">{{ title }}</h1>
-      {% endif %}
-      {% if link %}
-        <p class="u-margin-top-025">
-          {% Link link, null, true %}
-        </p>
-      {% endif %}
-      {% if intro %}
-        <p class="u-lead">{{ intro }}</p>
-      {% endif %}
+{% block main %}
+  <article>
+    <header class="o-grid o-grid--justify-end">
+      <div class="o-grid__col u-width-8of12@md">
+        <time class="c-eyebrow">{{ page.date | date_formatted }}</time>
+        <h1 class="u-font-size-2xl">{{ title }}</h1>
+        {% if link %}
+          <p class="u-margin-top-1">
+            {% Link link + '?ref=alexcarpenter.me', null, true %}
+          </p>
+        {% endif %}
+        {% if intro %}
+          <p class="u-lead">{{ intro }}</p>
+        {% endif %}
+      </div>
     </header>
-    <div class="u-stack u-stack--post">
-      {{ content | markdownify | safe }}
+    <div class="o-grid o-grid--justify-end">
+      {% if content %}
+      <div class="o-grid__col u-width-8of12@md">
+        <div class="o-stack o-stack--prose">
+          {{ content | markdownify | safe }}
+        </div>
+      </div>
+      {% endif %}
+      <div class="o-grid__col u-width-8of12@md">
+        {% include "components/share.njk" %}
+        {% include "components/tags.njk" %}
+      </div>
     </div>
-    <footer class="u-stack u-margin-top-3">
-      {% include "components/share.njk" %}
-      {% include "components/tags.njk" %}
-    </footer>
   </article>
 {% endblock %}

@@ -25,13 +25,13 @@
   <link rel="alternate" type="application/rss+xml" title="Feed for posts" href="/posts/feed.xml" />
   <link rel="alternate" type="application/rss+xml" title="Feed for bookmarks" href="/bookmarks/feed.xml" />
   <link rel="alternate" type="application/rss+xml" title="Feed for screencasts" href="/screencasts/feed.xml" />
-
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   {% set css %}
     {% include "assets/fonts.css" %}
     {% include "assets/app.css" %}
     {% include "assets/prism.css" %}
     {% if primaryColor %}
-      :root { --color-primary: {{ primaryColor }}; }
+      :root { --theme-color-primary: {{ primaryColor }}; }
     {% endif %}
   {% endset %}
   <style>
@@ -42,16 +42,13 @@
   {% endif %}
   </style>
 </head>
-<body>
-  <a href="#main-content" class="c-skip">Skip to main content</a>
+<body class="t-{{ theme|default('light') }}">
   <div class="o-container">
     {% include "components/banner.njk" %}
-    <main id="main-content" class="u-stack u-stack--2" tabindex="-1">
-      {% block header %}{% endblock %}
-      {% block content %}{% endblock %}
-    </main>
+    {# {% block header %}{% endblock %} #}
+    <main id="main" tabindex="-1">{% block main %}{% endblock %}</main>
+    {% include "components/contentinfo.njk" %}
   </div>
-  {% include "components/contentinfo.njk" %}
   <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 </body>
 </html>

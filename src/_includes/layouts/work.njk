@@ -1,11 +1,61 @@
 {% extends 'layouts/default.njk' %}
 {% from "components/testimonial.njk" import testimonial %}
 
-{% block content %}
+{% block main %}
   <article>
+    <header>
+      <div class="o-grid o-grid--justify-end">
+        <div class="o-grid__col u-width-8of12@md">
+          <p class="c-eyebrow">Case study</p>
+          <h1 class="u-font-size-2xl">{{ title }}</h1>
+          {% if summary %}
+            <p role="doc-subtitle" class="u-font-size-lg u-margin-top-2">{{ summary | markdownify_inline | safe }}</p>
+          {% endif %}
+          {% if link %}
+            <div class="u-margin-top-1">{% Link link, null, true %}</div>
+          {% endif %}
+        </div>
+      </div>
+    </header>
+    <div class="o-grid u-margin-top-4">
+      <div class="o-grid__col">
+        {% Figure {
+          src: '/assets/images/' + banner,
+          alt: title + ' graphics'
+        } %}
+      </div>
+    </div>
+    <div class="o-grid">
+      <div class="o-grid__col u-width-4of12@md">
+        <dl>
+          <dt>Role</dt>
+          <dd>
+            {% set comma = joiner() %}
+            {% for item in roles -%}{{ comma() }} {{ item }}{%- endfor %}
+          </dd>
+          <dt>Tech</dt>
+          <dd>
+            {% set comma = joiner() %}
+            {% for item in tech -%}{{ comma() }} {{ item }}{%- endfor %}
+          </dd>
+          {% if team %}
+          <dt>Team</dt>
+          <dd>{{ team }}</dd>
+          {% endif %}
+        </dl>
+      </div>
+      <div class="o-grid__col u-width-8of12@md">
+        <div class="o-stack o-stack--prose">
+          {{ content | safe }}
+        </div>
+      </div>
+    </div>
+  </article>
+
+  {# <article>
     <header class="u-stack u-text-center u-margin-bottom-3">
-      <span class="u-eyebrow">Case Study</span>
-      <h1 class="u-margin-top-0 u-font-size-xl">{{ title }}</h1>
+      <span class="c-eyebrow">Case Study</span>
+      <h1 class="u-margin-top-0 u-font-size-4">{{ title }}</h1>
       {% if link %}
         <div class="u-margin-top-025">{% Link link, null, true %}</div>
       {% endif %}
@@ -49,5 +99,5 @@
         }) }}
       {% endif %}
     </div>
-  </article>
+  </article> #}
 {% endblock %}
