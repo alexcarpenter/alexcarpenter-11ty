@@ -1,4 +1,5 @@
 const markdown = require('./utils');
+const slugify = require('@sindresorhus/slugify');
 const R = require('ramda');
 const htmlmin = require('html-minifier');
 const CleanCSS = require('clean-css');
@@ -71,6 +72,8 @@ module.exports = {
   newsletterPosts: arr => arr.filter(x => x.data.tags && x.data.tags.includes('newsletter')),
 
   includes: (x, y) => R.includes(y, x),
+
+  kebab: str => slugify(str),
 
   hostname: href => {
     const match = href.match(

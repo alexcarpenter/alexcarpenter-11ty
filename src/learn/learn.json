@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/learn",
+  "permalink": "learn/{{ page.fileSlug }}/index.html"
+}

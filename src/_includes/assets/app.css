@@ -181,6 +181,14 @@ mark {
   background-color: #fff294;
 }
 
+hr {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem;
+  width: 100%;
+  border: 0;
+  height: 2px;
+  background-color: var(--theme-border-color);
+}
 
 
 
