@@ -143,7 +143,7 @@ ul:not([class]) li::before {
 }
 
 dt {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 dd {
@@ -401,6 +401,7 @@ hr {
 
 .c-button {
   -webkit-appearance: none;
+  outline: none;
   appearance: none;
   display: inline-flex;
   align-items: center;
@@ -531,6 +532,13 @@ hr {
   opacity: .25;
 }
 
+.c-box {
+  padding: var(--space-4);
+  background-color: #eee;
+  border: 1px solid var(--theme-border-color);
+  border-radius: 4px;
+}
+
 
 /**
  * FORM
@@ -538,6 +546,16 @@ hr {
 
 .c-form__row + .c-form__row {
   margin-top: var(--space-3);
+}
+
+.c-form__row--button {
+  display: flex;
+  align-items: flex-end;
+}
+
+.c-form__row--button div {
+  flex: 1;
+  margin-right: var(--space-3);
 }
 
 .c-form__label {
@@ -553,6 +571,7 @@ hr {
   font: inherit;
   border: 1px solid var(--theme-border-color);
   border-radius: 4px;
+  outline: none;
 }
 
 .c-form__input:focus {
