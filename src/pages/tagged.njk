@@ -29,7 +29,7 @@ permalink: /tagged/{{ tag }}/index.html
         {% for entry in taglist | reverse %}
           <li class="c-listing__item">
             <article>
-              <time class="c-eyebrow" datetime="{{ entry.date }}">{{ entry.date | date_formatted }}</time>
+              <time class="u-color-gray u-text-uppercase" datetime="{{ entry.date }}">{{ entry.date | date_formatted }}</time>
               <h2 class="u-font-size-lg u-font-weight-normal">{% if entry.data.favorite %}⭐️ {% endif %}<a class="u-primary-anchor" href="{{ entry.url }}">{{ entry.data.title }}</a></h2>
             </article>
           </li>

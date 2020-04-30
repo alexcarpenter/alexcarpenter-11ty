@@ -32,16 +32,11 @@ module.exports = function (eleventyConfig) {
 
   // Collections
   eleventyConfig.addCollection('posts', (collection) => {
-    const now = new Date();
     const published = (p) =>
       ENV.environment === 'production' ? !p.data.draft : true;
     return [
       ...collection.getFilteredByGlob('**/posts/*.md').filter(published),
     ].reverse();
-  });
-
-  eleventyConfig.addCollection('notes', (collection) => {
-    return collection.getFilteredByGlob('**/notes/*.md').reverse();
   });
 
   eleventyConfig.addCollection('bookmarks', (collection) => {
@@ -57,6 +52,16 @@ module.exports = function (eleventyConfig) {
     return [
       ...collection.getFilteredByGlob('**/work/*.md').filter(published),
     ].reverse();
+  });
+
+  eleventyConfig.addCollection("all", function(collection) {
+    const published = (p) =>
+      ENV.environment === 'production' ? !p.data.draft : true;
+    return collection.getFilteredByGlob([
+      '**/posts/*.md',
+      '**/screencasts/*.md',
+      '**/bookmarks/*.md'
+    ]).filter(published).reverse();
   });
 
   // Transforms

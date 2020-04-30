@@ -13,7 +13,7 @@ permalink: /screencasts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pag
     <aside class="o-grid__col u-width-4of12@md">
       <div class="o-stack o-stack--4">
         <div>
-          <p class="u-color-gray">Popular screencasts</p>
+          <p class="u-font-weight-normal u-color-gray u-text-uppercase">Popular screencasts</p>
           <div class="u-margin-top-3">
             <ul>
               {% for entry in collections.screencasts | favorites(5) %}

@@ -6,7 +6,7 @@
     <header>
       <div class="o-grid o-grid--justify-end">
         <div class="o-grid__col u-width-8of12@md">
-          <p class="c-eyebrow">Case study</p>
+          <p class="u-color-gray u-text-uppercase">Case study</p>
           <h1 class="u-font-size-2xl">{{ title }}</h1>
           {% if summary %}
             <p role="doc-subtitle" class="u-font-size-lg u-margin-top-2">{{ summary | markdownify_inline | safe }}</p>
@@ -54,7 +54,7 @@
 
   {# <article>
     <header class="u-stack u-text-center u-margin-bottom-3">
-      <span class="c-eyebrow">Case Study</span>
+      <span class="u-color-gray u-text-uppercase">Case Study</span>
       <h1 class="u-margin-top-0 u-font-size-4">{{ title }}</h1>
       {% if link %}
         <div class="u-margin-top-025">{% Link link, null, true %}</div>

@@ -1,5 +1,5 @@
 {% if tags %}
-<ul class="o-tags">
+<ul class="o-tags o-tags--center">
   {% for tag in tags %}
     <li class="o-tags__item">
       {% Pill tag | upper, '/tagged/' + tag %}

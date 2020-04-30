@@ -3,7 +3,7 @@
 {% block main %}
   <div class="o-grid o-grid--justify-end">
     <header class="o-grid__col u-width-8of12@md">
-      <time class="c-eyebrow">{{ page.date | date_formatted }}</time>
+      <time class="u-color-gray u-text-uppercase">{{ page.date | date_formatted }}</time>
       <h1 class="u-font-size-2xl">{{ title }}</h1>
       {% Link site.social[0].subscribe, "Subscribe on Youtube", true %}
     </header>
