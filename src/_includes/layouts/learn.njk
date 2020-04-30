@@ -1,38 +1,61 @@
 {% extends "layouts/page.njk" %}
 
 {% block content %}
-  <div class="u-margin-top-5">
-    <div class="o-grid o-grid--justify-end">
-      <div class="o-grid__col u-width-4of12@md">
-        <div class="c-toc">
-          <p class="u-color-gray">Table of contents</p>
-          <div class="u-margin-top-3">
-            <ul class="c-toc__list">
-              {% for section in sections %}
-              <li class="c-toc__list-item"><a href="#section-{{ section.heading | kebab }}">{{ section.heading }}</a></li>
-              {% endfor %}
-            </ul>
-          </div>
+  {% if sections.length %}
+  <div class="o-grid o-grid--justify-end">
+    <div class="o-grid__col u-width-4of12@md">
+      <div class="c-toc">
+        <p class="u-color-gray">Table of contents</p>
+        <div class="u-margin-top-3">
+          <ul class="c-toc__list">
+            {% for section in sections %}
+            <li class="c-toc__list-item"><a href="#section-{{ section.heading | kebab }}">{{ section.heading }}</a></li>
+            {% endfor %}
+          </ul>
         </div>
       </div>
-      <div class="o-grid__col u-width-8of12@md u-margin-top-2 u-margin-top-0@md">
-        <ul class="c-listing c-listing--4">
-          {% for section in sections %}
-          <li class="c-listing__item" id="section-{{ section.heading | kebab }}">
-            <div class="o-stack o-stack--prose">
-              <h2>{{ section.heading }}</h2>
-              {% Youtube section.youtubeId, false, false, title %}
-              {% if section.description %}
-                <p>{{ section.description | markdownify_inline }}</p>
-              {% endif %}
+    </div>
+    <div class="o-grid__col u-width-8of12@md u-margin-top-2 u-margin-top-0@md">
+      <ul class="c-listing c-listing--4">
+        {% for section in sections %}
+        <li class="c-listing__item" id="section-{{ section.heading | kebab }}">
+          <div class="o-stack o-stack--prose">
+            <h2>{{ section.heading }}</h2>
+            {% if loop.index > 1 %}
+              {% set lazyload = true %}
+            {% else %}
+              {% set lazyload = false %}
+            {% endif %}
+            {% if section.youtubeId %}
+              {% Youtube section.youtubeId, lazyload, false, title %}
+            {% endif %}
+            {% if section.description %}
+              <p>{{ section.description | markdownify_inline }}</p>
+            {% endif %}
+            {# <div class="o-columns">
+              <ul>
+                <li>{% Link section.docs, section.heading + ' documentation', true %}</li>
+                <li>{% Link section.repo, 'View source files', true %}</li>
+                <li>{% Link section.docs, 'Watch on YouTube', true %}</li>
+                <li>{% Link section.transcript, 'Download transcript', false, true %}</li>
+              </ul>
+            </div> #}
+            <p>
               {% if section.docs %}
-                {% Link section.docs, section.heading + ' documentation', true %}
+                <span class="u-margin-right-3">{% Link section.docs, section.heading + ' documentation', true %}</span>
               {% endif %}
-            </div>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+              {% if section.repo %}
+                <span class="u-margin-right-3">{% Link section.repo, 'View source files', true %}</span>
+              {% endif %}
+              {# {% if section.transcript %}
+                <span class="u-margin-right-3">{% Link section.transcript, 'Download transcript', false, true %}</span>
+              {% endif %} #}
+            </p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
+  {% endif %}
 {% endblock %}
