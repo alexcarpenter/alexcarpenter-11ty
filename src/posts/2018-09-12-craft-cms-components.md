@@ -4,7 +4,9 @@ summary: In this screencast I demonstrate how to move repeatable HTML elements i
 tags:
   - craftcms
 ---
-{% Youtube "FNIM8MvUL-Q" %}
+{% import "components/macros.njk" as components %}
+
+{{ components.youtube({ id: "FNIM8MvUL-Q" }) }}
 
 It is typically best practice to not repeat yourself. Keep it DRY. In this screencast I demonstrate how to move repeatable HTML elements into reusable components for portability.
 

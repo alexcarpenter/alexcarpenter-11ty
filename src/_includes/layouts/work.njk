@@ -1,5 +1,5 @@
 {% extends 'layouts/default.njk' %}
-{% from "components/testimonial.njk" import testimonial %}
+{% import "components/macros.njk" as components %}
 
 {% block main %}
   <article>
@@ -12,17 +12,17 @@
             <p role="doc-subtitle" class="u-font-size-lg u-margin-top-2">{{ summary | markdownify_inline | safe }}</p>
           {% endif %}
           {% if link %}
-            <div class="u-margin-top-1">{% Link link, null, true %}</div>
+            <div class="u-margin-top-1">{{ components.link({ url: link, external: true }) }}</div>
           {% endif %}
         </div>
       </div>
     </header>
     <div class="o-grid u-margin-top-4">
       <div class="o-grid__col">
-        {% Figure {
+        {{ components.figure({
           src: '/assets/images/' + banner,
           alt: title + ' graphics'
-        } %}
+        }) }}
       </div>
     </div>
     <div class="o-grid">
@@ -51,53 +51,4 @@
       </div>
     </div>
   </article>
-
-  {# <article>
-    <header class="u-stack u-text-center u-margin-bottom-3">
-      <span class="u-color-gray u-text-uppercase">Case Study</span>
-      <h1 class="u-margin-top-0 u-font-size-4">{{ title }}</h1>
-      {% if link %}
-        <div class="u-margin-top-025">{% Link link, null, true %}</div>
-      {% endif %}
-      {% if summary %}
-        <p class="u-font-size-md u-margin-top-05">{{ summary | safe }}</p>
-      {% endif %}
-      {% if banner %}
-        <div class="u-margin-top-2">
-          {% Figure {
-            breakout: true,
-            src: '/assets/images/' + banner,
-            alt: title + ' graphics'
-          } %}
-        </div>
-      {% endif %}
-    </header>
-    <div class="u-stack">
-      <dl class="c-meta">
-        <dt class="c-meta__title">Role</dt>
-        <dd class="c-meta__description">
-          {% set comma = joiner() %}
-          {% for item in roles -%}{{ comma() }} {{ item }}{%- endfor %}
-        </dd>
-        <dt class="c-meta__title">Tech</dt>
-        <dd class="c-meta__description">
-          {% set comma = joiner() %}
-          {% for item in tech -%}{{ comma() }} {{ item }}{%- endfor %}
-        </dd>
-        {% if team %}
-        <dt class="c-meta__title">Team</dt>
-        <dd class="c-meta__description">{{ team }}</dd>
-        {% endif %}
-      </dl>
-      {{ content | safe }}
-      {% if quote %}
-        <hr />
-        {{ testimonial({
-          name: quote.name,
-          text: quote.text,
-          occupation: quote.occupation
-        }) }}
-      {% endif %}
-    </div>
-  </article> #}
 {% endblock %}

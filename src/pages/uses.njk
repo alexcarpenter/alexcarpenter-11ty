@@ -4,6 +4,8 @@ summary: The tools I use to get things done.
 permalink: /uses/index.html
 ---
 {% extends "layouts/page.njk" %}
+{% import "components/macros.njk" as components %}
+
 {% block main %}
   <div class="u-margin-top-5">
     <div class="o-grid">
@@ -40,7 +42,11 @@ permalink: /uses/index.html
             {% for item in uses %}
               <li class="c-listing__item">
                 <h3 class="u-font-size-base">{{ item.title }}</h3>
-                {% Link item.url, null, true %}<br>
+                {{ components.link({
+                  url: item.url,
+                  external: true
+                }) }}
+                <br>
                 {% if item.blurb %}
                   <span class="u-color-gray">{{ item.blurb }}</span>
                 {% endif %}

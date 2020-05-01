@@ -1,53 +1,55 @@
 ---
-headerSpacing: '3'
 title: "UI Engineer"
 description: "Currently interested in CSS architecture, functional programming, React, design systems, and state machines."
 permalink: /index.html
 ---
 {% extends "layouts/page.njk" %}
+{% import "components/macros.njk" as components %}
 
 {% block content %}
-  <div class="o-grid o-grid--justify-end">
-    <div class="o-grid__col u-width-8of12@md">
-      <div class="o-stack">
-        <p>I am a self taught developer, floating between <a href="/work">design and engineering teams</a>. I enjoy sharing what I know via short instructional <a href="/screencasts">screencasts</a> and the occasional written <a href="/posts">post</a>.</p>
-      </div>
-    </div>
-  </div>
-{% endblock %}
-
-{# {% block content %}
-  <div class="o-grid">
+  {# <div class="o-grid">
     <div class="o-grid__col">
-      <img src="/assets/images/banner.jpg" alt="">
+      {{ components.figure({
+        src: "/assets/images/banner.jpg",
+        alt: "Photo of Alex Carpenter"
+      }) }}
     </div>
-  </div>
+  </div> #}
 
-  <div class="o-grid">
-    <aside class="o-grid__col u-width-4of12@md">
-      <dl>
-        <dt>Current location</dt>
-        <dd>Grand Rapids, MI</dd>
-        <dt>Top bookmarks</dt>
-        <dd>Github, Twitter, CSS-Tricks</dd>
-        <dt>Top apps</dt>
-        <dd>VS Code, iTerm 2, Todoist, Drafts</dd>
-        <dt>Tea or coffee</dt>
-        <dd>Coffee in the morning, tea in the afternoon</dd>
-      </dl>
-    </aside>
-
+  <section class="u-margin-top-5 o-grid o-grid--justify-end">
+    <div class="o-grid__col u-width-4of12@md">
+      <h2 class="u-font-size-base u-font-weight-normal u-color-gray u-text-uppercase">Latest entries</h2>
+    </div>
     <div class="o-grid__col u-width-8of12@md">
-      <div class="o-stack">
-        <p>I am a self taught developer, floating between design and engineering teams. I enjoy sharing what I know via short instructional screencasts and the occasional written post.</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores aperiam, vel ex architecto id, voluptas vitae impedit officia incidunt ea quod. Eaque voluptate distinctio ea qui provident placeat esse a.</p>
-        <blockquote>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis tenetur delectus iste consectetur deleniti aspernatur totam. Pariatur suscipit magnam rem iure omnis, quisquam incidunt, adipisci illo ullam corporis earum sunt.</p>
-        </blockquote>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, rerum veritatis! Molestiae voluptatibus porro hic.</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, rerum veritatis! Molestiae voluptatibus porro hic.</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, rerum veritatis! Molestiae voluptatibus porro hic.</p>
-      </div>
+      <ul class="c-listing">
+        {% for entry in collections.all | take(5) %}
+        <li class="c-listing__item">
+          {{ components.entry({
+            entry: entry,
+            size: 'md',
+            icons: true
+          }) }}
+        </li>
+        {% endfor %}
+      </ul>
     </div>
-  </div>
-{% endblock %} #}
+  </section>
+
+  <section class="u-margin-top-5 o-grid o-grid--justify-end">
+    <div class="o-grid__col u-width-4of12@md">
+      <h2 class="u-font-size-base u-font-weight-normal u-color-gray u-text-uppercase">Popular screenscasts</h2>
+    </div>
+    <div class="o-grid__col u-width-8of12@md">
+      <ul class="c-listing">
+        {% for entry in collections.screencasts | favorites | take(5) %}
+        <li class="c-listing__item">
+          {{ components.entry({
+            entry: entry,
+            size: 'md'
+          }) }}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+{% endblock %}

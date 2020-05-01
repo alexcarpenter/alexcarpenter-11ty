@@ -17,9 +17,9 @@ module.exports = function (eleventyConfig) {
   });
 
   // Shortcodes
-  Object.keys(shortcodes).forEach((shortCodeName) => {
-    eleventyConfig.addShortcode(shortCodeName, shortcodes[shortCodeName]);
-  });
+  // Object.keys(shortcodes).forEach((shortCodeName) => {
+  //   eleventyConfig.addShortcode(shortCodeName, shortcodes[shortCodeName]);
+  // });
 
   // Paired shortcodes
   Object.keys(pairedShortcodes).forEach((shortCodeName) => {

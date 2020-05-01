@@ -5,11 +5,12 @@ summary: Last week I got the chance to chat with Andy Bell about my wife and I's
 tags:
   - interview
 ---
-{% Figure {
+{% import "components/macros.njk" as components %}
+{{ components.figure({
   src: '/assets/images/frankie.jpg',
   alt: 'Frankie holding stick in her mouth',
   caption: 'Frankie doing yoga.',
   ratio: '1200/899'
-} %}
+}) }}
 
 Last week I got the chance to chat with Andy Bell about my wife and I's new puppy Frankie-for an interview series about web professionals and their beloved pets called Developurrs.

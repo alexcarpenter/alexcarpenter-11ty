@@ -3,17 +3,16 @@ title: "Medium's inaccessible tag selector form"
 tags:
   - accessibility
 ---
-
+{% import "components/macros.njk" as components %}
 It had been awhile since I had visited Medium's homepage, mostly because I tend to exit when I am immediately prompted to login to read the article.
 
 Upon landing on the homepage today I noticed a new to me checkbox form to help you get started with an account, sort of.
 
-{% Figure {
+{{ components.figure ({
   src: '/assets/images/medium-checkbox-form.jpg',
   alt: "Screenshot of Medium's homepage checkbox form",
-  ratio: '1000/466',
-  border: true
-} %}
+  ratio: '1000/466'
+}) }}
 
 Upon further inspection I noticed what looked to be a group of checkboxes was ultimately a collection of div's.
 

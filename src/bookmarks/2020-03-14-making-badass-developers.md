@@ -5,5 +5,5 @@ link: https://www.youtube.com/watch?v=FKTxC9pl-WM
 tags:
   - inspiration
 ---
-
-{% Youtube 'FKTxC9pl-WM' %}
+{% import "components/macros.njk" as components %}
+{{ components.youtube({ id: "FKTxC9pl-WM" }) }}

@@ -4,6 +4,7 @@ summary: "UI Engineer excited about design systems thinking and component API de
 permalink: /work/index.html
 ---
 {% extends "layouts/page.njk" %}
+{% import "components/macros.njk" as components %}
 
 {% block content %}
   {# <section class="u-margin-top-5">
@@ -115,26 +116,29 @@ permalink: /work/index.html
 
       <div class="o-grid__col u-width-8of12@md">
         <div class="o-stack o-stack--4">
-          <figure>
-            <blockquote>
-              <p>I would recommend Alex to any forward-thinking web team. His passion for web standards along with his friendly attitude made him an invaluable part of our development team. I’m always especially impressed with his commitment to continuous learning and I hope to have the chance to work with him again!</p>
-            </blockquote>
-            <figcaption class="u-margin-top-2 u-color-gray">– Melissa Taylor (former co-worker)</figcaption>
-          </figure>
+          {{ components.quote({
+            text: "I would recommend Alex to any forward-thinking web team. His passion for web standards along with his friendly attitude made him an invaluable part of our development team. I’m always especially impressed with his commitment to continuous learning and I hope to have the chance to work with him again!",
+            cite: {
+              name: "Melissa Taylor",
+              title: "Former co-worker"
+            }
+          }) }}
 
-          <figure>
-            <blockquote>
-              <p>Alex is incredibly thorough and thoughtful with his work and is always seeking out improving in his craft. He’s conscious of meeting deadlines and communicates concerns early so that project teams can be proactive in problem solving.</p>
-            </blockquote>
-            <figcaption class="u-margin-top-2 u-color-gray">– Danielle Dunn (former co-worker)</figcaption>
-          </figure>
+          {{ components.quote({
+            text: "Alex is incredibly thorough and thoughtful with his work and is always seeking out improving in his craft. He’s conscious of meeting deadlines and communicates concerns early so that project teams can be proactive in problem solving.",
+            cite: {
+              name: "Danielle Dunn",
+              title: "Former co-worker"
+            }
+          }) }}
 
-          <figure>
-            <blockquote>
-              <p>Alex is a true autodidact that is dedicated to keeping up with the latest development tools, methods and trends.</p>
-            </blockquote>
-            <figcaption class="u-margin-top-2 u-color-gray">– Benjamin Kohl (former co-worker)</figcaption>
-          </figure>
+          {{ components.quote({
+            text: "Alex is a true autodidact that is dedicated to keeping up with the latest development tools, methods and trends.",
+            cite: {
+              name: "Benjamin Kohl",
+              title: "Former co-worker"
+            }
+          }) }}
         </div>
       </div>
     </div>

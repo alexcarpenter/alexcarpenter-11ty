@@ -1,0 +1,142 @@
+{#
+  Component macros:
+
+  {% import "components/macros.njk" as components %}
+  {{ components.youtube({ title: "Sample title", id: "fdafd32fka" }) }}
+
+  Currently not indenting since when using these macros in markdown files
+  it will render as code snippets...
+#}
+
+
+{% macro newsletter(params) %}
+<div class="c-box">
+<div class="o-stack">
+<h3 class="u-font-size-md u-flex u-align-center">
+<svg class="u-flex-shrink-0 u-margin-right-2" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 24 24">
+<path d="M0 0h24v24H0z" fill="none"/>
+<path fill="var(--theme-color-gray)" d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5a2 2 0 00-2 2v4h2V5h14v14H5v-4H3v4a2 2 0 002 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+</svg>
+{{ params.heading | default('Keep up to date') }}
+</h3>
+{% if params.description %}
+<p>{{ params.description }}</p>
+{% endif %}
+{% include "components/newsletter-form.njk" %}
+</div>
+</div>
+{% endmacro %}
+
+
+{% macro youtube(params) %}
+<figure style="--aspect-ratio: 16/9;">
+<iframe title="{{ params.title }}" width="560" height="315" src="https://www.youtube.com/embed/{{ params.id }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</figure>
+{% endmacro %}
+
+
+{% macro pill(params) %}
+{% if params.url %}
+<a class="c-pill" href="{{ params.url }}">{{ params.label }}</a>
+{% else %}
+<span class="c-pill">{{ params.label }}</span>
+{% endif %}
+{% endmacro %}
+
+
+{% macro link(params) %}
+<a href="{{ params.url }}" class="c-link"{% if params.external %} rel="external"{% endif %}{% if params.download %} download{% endif %}>
+{% if params.text %}{{ params.text }}{% else %}{{ params.url | hostname }}{% endif %}
+{% if params.download %}
+<svg xmlns="http://www.w3.org/2000/svg" focusable="false" width="1em" height="1em" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+{% else %}
+{% if params.external %}
+<svg xmlns="http://www.w3.org/2000/svg" focusable="false" width="1em" height="1em" aria-hidden="true"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+{% else %}
+<svg xmlns="http://www.w3.org/2000/svg" focusable="false" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+{% endif %}
+{% endif %}
+</a>
+{% endmacro %}
+
+
+{% macro figure(params) %}
+<figure>
+<div style="--aspect-ratio: {{ params.ratio | default('16/9') }};">
+<img src="{{ params.src }}" alt="{{ params.alt }}"{% if params.lazyload | default(false) %} loading="lazy"{% endif %} />
+</div>
+{% if params.caption %}
+<figcaption class="u-text-center u-margin-top-05 u-color-gray">{{ params.caption | markdownify_inline }}</figcaption>
+{% endif %}
+</figure>
+{% endmacro %}
+
+
+{% macro note(params) %}
+<div class="c-note c-note--{{ params.type | default('default') }}">
+<p><span class="c-note__label{% if labelHidden%} u-hidden-visually{% endif %}">{{ params.label | default('Note') }}:</span> {{ params.text | markdownify_inline }}{% if params.link %}<br>{{ link({ url: params.link.url, text: params.link.text }) }}{% endif %}</p>
+</div>
+{% endmacro %}
+
+
+{% macro quote(params) %}
+<figure>
+<blockquote>
+<p>{{ params.text }}</p>
+</blockquote>
+{% if params.cite %}
+<figcaption class="u-margin-top-3">
+<div class="o-flag o-flag--align-center">
+{% if params.cite.twitter %}
+<div class="o-flag__media">
+<img class="u-disc" width="48" height="48" src="https://unavatar.now.sh/twitter/{{ params.cite.twitter }}" alt="" loading="lazy">
+</div>
+{% endif %}
+<div class="o-flag__body">
+<p class="u-font-weight-semi-bold u-leading-tight">{{ params.cite.name }}</p>
+{% if params.cite.title %}
+<p class="u-font-size-small u-color-gray">{{ params.cite.title }}</p>
+{% endif %}
+</div>
+</div>
+</figcaption>
+</figure>
+{% endif %}
+{% endmacro %}
+
+
+{% macro entry(params) %}
+<article>
+<span class="u-color-gray u-flex u-align-center">
+{% if params.icons | default(false) %}
+<span class="u-hidden-visually">{{ params.entry.data.type }}</span>
+{% if params.entry.data.type == 'bookmark' %}
+<svg class="u-margin-right-2 u-flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+{% elif params.entry.data.type == 'screencast' %}
+<svg class="u-margin-right-2 u-flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+{% else %}
+<svg class="u-margin-right-2 u-flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+{% endif %}
+{% endif %}
+<time class="u-color-gray u-text-uppercase" datetime="{{ params.entry.date }}">{{ params.entry.date | date_formatted }}</time>
+</span>
+<h2 class="u-font-size-{{ params.size | default('lg') }} u-font-weight-normal"><a class="u-primary-anchor" href="{{ params.entry.url }}">{{ params.entry.data.title }}</a></h2>
+</article>
+{% endmacro %}
+
+
+{% macro video(params) %}
+<figure class="c-video">
+<div class="c-video__backdrop"{% if params.backdrop %} style="--backdrop: {{ params.backdrop }};"{% endif %}>
+<div style="--aspect-ratio: {{ params.ratio | default('16/9') }};">
+<video autoPlay loop muted>
+<source src="{{ params.url }}" type="video/mp4">
+<p>Your browser doesn't support HTML5 video. Here is a <a href="{{ params.url }}">link to the video</a> instead.</p>
+</video>
+</div>
+</div>
+{% if params.caption %}
+<figcaption class="u-text-center c-video__caption">{{ params.caption | markdownify_inline }}</figcaption>
+{% endif %}
+</figure>
+{% endmacro %}

@@ -4,12 +4,6 @@ title: VSCode
 summary: My current Visual Studio Code settings and extensions.
 permalink: /vscode/index.html
 ---
-<!-- {% Figure {
-  src: '/assets/images/vscode.png',
-  alt: 'Screenshot of my Visual Studio Code setup',
-  ratio: '1200/687'
-} %} -->
-
 ## Theme and font family
 
 * **Theme:**<br>

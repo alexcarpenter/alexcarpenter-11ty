@@ -3,6 +3,7 @@ title: "59% of form inputs unlabeled"
 tags:
   - accessibility
 ---
+{% import "components/macros.njk" as components %}
 WebAIM recently released a large volume of [accessibility data](https://webaim.org/projects/million/) they collected from the "top" 1 million web sites. Here are some of the data points they collected 😔.
 
 * Home pages averaged 59.6 detectable errors each
@@ -16,14 +17,14 @@ What stood out to me was <mark>59% of form inputs unlabeled</mark>.
 
 To combat this issue, let's take a look at how we can take advantage of the system we are using (in our case [Nunjucks](https://mozilla.github.io/nunjucks/)) to bake accessibility into our workflow.
 
-{% Note {
+{{ components.note({
   text: 'This example is built using Nunjuck macros, but can also be translated to other templating languages or JavaScript frameworks.',
   link: {
     external: true,
     url: "https://mozilla.github.io/nunjucks/templating.html#macro",
     text: "Nunjuck macros documentation"
   }
-} %}
+}) }}
 
 ## 1. Create text input macro
 

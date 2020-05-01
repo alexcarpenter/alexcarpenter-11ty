@@ -7,6 +7,7 @@ pagination:
 permalink: /screencasts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html
 ---
 {% extends 'layouts/page.njk' %}
+{% import "components/macros.njk" as components %}
 
 {% block content %}
   <div class="o-grid">
@@ -24,22 +25,14 @@ permalink: /screencasts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pag
         </div>
 
         <div>
-          <figure class="c-testimonial">
-            <blockquote>
-              <p>Alex's tutorials are direct and to the point, while covering practical topics that can be useful to developers of any skill level.</p>
-            </blockquote>
-            <figcaption class="u-margin-top-3">
-              <div class="o-flag o-flag--align-center">
-                <div class="o-flag__media">
-                  <img class="u-disc" width="48" height="48" src="/assets/images/trey-gordon.jpg" alt="" loading="lazy">
-                </div>
-                <div class="o-flag__body">
-                  <p class="u-font-weight-semi-bold u-leading-tight">Trey Gordon</p>
-                  <p class="u-font-size-small u-color-gray">Front-end web developer</p>
-                </div>
-              </div>
-            </figcaption>
-          </figure>
+          {{ components.quote({
+            text: "Alex's tutorials are direct and to the point, while covering practical topics that can be useful to developers of any skill level.",
+            cite: {
+              twitter: "treygordon",
+              name: "Trey Gordon",
+              title: "Front-end web developer"
+            }
+          }) }}
         </div>
 
         <div>

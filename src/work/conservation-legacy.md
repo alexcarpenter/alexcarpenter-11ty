@@ -12,8 +12,10 @@ tech:
   - "Webpack"
 link: "https://conservationlegacy.org"
 banner: "conservation-legacy.png"
+thumbnail: "/assets/images/conservation-legacy.png"
 primaryColor: "#C46C27"
 ---
+{% import "components/macros.njk" as components %}
 Conservation Legacy is the third largest non-profit conservation corps program in the country. With eight seperate programs, Conservation Legacy needed a new website platform to showcase the work they do and move people to join their programs.
 
 I worked closely with our team lead to define and lead the development of the platform based on work we had previously done for [Herman Miller certified dealers](http://mightyinthemidwest.com/work/herman-miller-dealer-platform). In about half a year, we launched eight different websites simultaneously.
@@ -27,13 +29,13 @@ Each programs needs were different in terms of pages needed. We built a fully cu
 
 ## Themeing
 
-{% Figure {
+{{ components.figure ({
   src: '/assets/images/conservation-legacy-azcorps.jpg',
   ratio: '1000/367',
   alt: 'Photo of Alex Carpenter',
   caption: '[Arizona Conservation Corps](https://azcorps.org) call to action',
   lazyload: true
-} %}
+}) }}
 
 Each site needed to be easily themeable. Choosing to stick to two color variable options, we created a Sass file for each program and defined the primary and secondary color variables before importing the master Sass file.
 

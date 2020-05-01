@@ -1,4 +1,5 @@
 {% extends 'layouts/default.njk' %}
+{% import "components/macros.njk" as components %}
 
 {% block main %}
   <article>
@@ -8,7 +9,10 @@
         <h1 class="u-font-size-2xl">{{ title }}</h1>
         {% if link %}
           <p class="u-margin-top-1">
-            {% Link link + '?ref=alexcarpenter.me', null, true %}
+            {{ components.link({
+              url: link + '?ref=alexcarpenter.me',
+              external: true
+            }) }}
           </p>
         {% endif %}
         {% if intro %}

@@ -107,9 +107,7 @@ module.exports = {
 
   Youtube: function (id, lazyload = false, fullWidth = false, title = '') {
     return html`<figure style="--aspect-ratio: 16/9;">
-      <iframe${
-        lazyload ? ` loading="lazy"` : ''
-      } title="${title}" width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe title="${title}" width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </figure>`;
   },
 

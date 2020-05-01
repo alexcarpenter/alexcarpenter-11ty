@@ -3,17 +3,14 @@
   method="post"
   target="popupwindow"
   onsubmit="window.open('https://buttondown.email/alexcarpenter', 'popupwindow')"
-  class="c-form embeddable-buttondown-form"
+  class="embeddable-buttondown-form"
 >
-  <div class="c-form__row c-form__row--inline">
-    <div class="c-form__row-item">
-      <label class="c-form__label" for="bd-email">Enter your email</label>
+  <input type="hidden" value="1" name="embed"></input>
+  <div class="c-form__row c-form__row--button">
+    <div>
+      <label class="c-form__label" for="bd-email">Your email</label>
       <input class="c-form__input" type="email" name="email" id="bd-email" required>
     </div>
-
-    <div class="c-form__row-item">
-      <input type="hidden" value="1" name="embed"></input>
-      <input class="c-button c-button--primary c-button--shadow" type="submit" value="Subscribe"></input>
-    </div>
+    <input class="c-button c-button--primary" type="submit" value="Subscribe"></input>
   </div>
 </form>

@@ -1,7 +1,8 @@
+{% import "components/macros.njk" as components %}
 <ul class="c-listing c-listing--4">
   {% for entry in pagination.items %}
   <li class="c-listing__item">
-    {% include "components/entry.njk" %}
+    {{ components.entry({ entry: entry }) }}
   </li>
   {% endfor %}
 </ul>

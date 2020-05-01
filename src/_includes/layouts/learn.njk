@@ -1,4 +1,5 @@
 {% extends "layouts/page.njk" %}
+{% import "components/macros.njk" as components %}
 
 {% block content %}
   {% if sections.length %}
@@ -21,35 +22,22 @@
         <li class="c-listing__item" id="section-{{ section.heading | kebab }}">
           <div class="o-stack o-stack--prose">
             <h2>{{ section.heading }}</h2>
-            {% if loop.index > 1 %}
-              {% set lazyload = true %}
-            {% else %}
-              {% set lazyload = false %}
-            {% endif %}
             {% if section.youtubeId %}
-              {% Youtube section.youtubeId, lazyload, false, title %}
+              {{ components.youtube({
+                id: section.youtubeId,
+                title: title
+              }) }}
             {% endif %}
             {% if section.description %}
               <p>{{ section.description | markdownify_inline }}</p>
             {% endif %}
-            {# <div class="o-columns">
-              <ul>
-                <li>{% Link section.docs, section.heading + ' documentation', true %}</li>
-                <li>{% Link section.repo, 'View source files', true %}</li>
-                <li>{% Link section.docs, 'Watch on YouTube', true %}</li>
-                <li>{% Link section.transcript, 'Download transcript', false, true %}</li>
-              </ul>
-            </div> #}
             <p>
               {% if section.docs %}
-                <span class="u-margin-right-3">{% Link section.docs, section.heading + ' documentation', true %}</span>
+                <span class="u-margin-right-3">{{ components.link({ url: section.docs, text: section.heading + " documentation", external: true }) }}</span>
               {% endif %}
               {% if section.repo %}
-                <span class="u-margin-right-3">{% Link section.repo, 'View source files', true %}</span>
+                <span class="u-margin-right-3">{{ components.link({ url: section.repo, text: "View source files", external: true }) }}</span>
               {% endif %}
-              {# {% if section.transcript %}
-                <span class="u-margin-right-3">{% Link section.transcript, 'Download transcript', false, true %}</span>
-              {% endif %} #}
             </p>
           </div>
         </li>
@@ -58,4 +46,12 @@
     </div>
   </div>
   {% endif %}
+  <div class="o-grid o-grid--justify-end u-margin-top-5">
+    <div class="o-grid__col u-width-8of12@md">
+      <div class="o-stack o-stack--4">
+        {# {{ components.note({ text: "The turotrials all use Nunjucks as the templating language. Eleventy supports multiple languages, so the syntax may differ based on what you are using." }) }} #}
+        {{ components.newsletter() }}
+      </div>
+    </div>
+  </div>
 {% endblock %}

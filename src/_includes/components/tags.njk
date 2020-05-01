@@ -1,8 +1,12 @@
+{% import "components/macros.njk" as components %}
 {% if tags %}
 <ul class="o-tags o-tags--center">
   {% for tag in tags %}
     <li class="o-tags__item">
-      {% Pill tag | upper, '/tagged/' + tag %}
+      {{ components.pill({
+        url: '/tagged/' + tag,
+        label: tag | upper
+      }) }}
     </li>
   {% endfor %}
 </ul>
