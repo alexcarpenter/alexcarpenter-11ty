@@ -14,6 +14,7 @@ tech:
 link: "https://nationbuilder.com"
 banner: "nationbuilder.png"
 thumbnail: "/assets/images/nationbuilder.png"
+thumbnail_sm: "/assets/images/nationbuilder_sm.png"
 primaryColor: "#D0021B"
 ---
 {% import "components/macros.njk" as components %}

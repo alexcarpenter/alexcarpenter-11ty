@@ -61,7 +61,7 @@
 
 
 {% macro figure(params) %}
-<figure>
+<figure{% if params.bordered %} class="u-bordered"{% endif %}>
 <div style="--aspect-ratio: {{ params.ratio | default('16/9') }};">
 <img src="{{ params.src }}" alt="{{ params.alt }}"{% if params.lazyload | default(false) %} loading="lazy"{% endif %} />
 </div>

@@ -13,6 +13,7 @@ tech:
 link: "https://conservationlegacy.org"
 banner: "conservation-legacy.png"
 thumbnail: "/assets/images/conservation-legacy.png"
+thumbnail_sm: "/assets/images/conservation-legacy_sm.png"
 primaryColor: "#C46C27"
 ---
 {% import "components/macros.njk" as components %}
