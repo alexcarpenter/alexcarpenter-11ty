@@ -7,33 +7,37 @@ permalink: /work/index.html
 {% import "components/macros.njk" as components %}
 
 {% block content %}
-  {# <section class="u-margin-top-5">
+  <section class="u-margin-top-5">
     <div class="o-grid">
       <div class="o-grid__col u-width-4of12@md">
-        <h2 class="u-font-weight-normal u-color-gray">Case studies</h2>
+        <h2 class="u-font-weight-normal u-color-gray u-text-uppercase">Case studies</h2>
       </div>
 
       <div class="o-grid__col u-width-8of12@md">
-        <div class="o-grid">
-          {% for entry in collections.work | take(2) %}
-          <div class="o-grid__col u-width-6of12@md">
-            <article class="c-card" style="--card-background-color: {{ entry.data.primaryColor }};">
-              <div class="c-card__body">
-                <h3 class="c-card__heading"><a href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, labore?</p>
+        <ul class="c-listing c-listing--4">
+          {% for entry in collections.work %}
+          <li class="c-listing__item">
+            <div class="o-flag o-flag--work">
+              <div class="o-flag__media">
+                {{ components.figure({
+                  src: entry.data.thumbnail_sm,
+                  alt: entry.data.title,
+                  bordered: true
+                }) }}
               </div>
-              <div class="c-card__media">
-                <img src="/assets/images/brunswick-bowling-thumbnail.jpg" alt="">
+              <div class="o-flag__body">
+                <h3 class="u-font-size-lg u-font-weight-semi-bold"><a class="u-primary-anchor" href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
+                <p class="u-margin-top-2">{{ entry.data.summary | markdownify_inline }}</p>
               </div>
-            </article>
-          </div>
+            </div>
+          </li>
           {% endfor %}
-        </div>
+        </ul>
       </div>
     </div>
-  </section> #}
+  </section>
 
-  <section>
+  <section class="u-margin-top-5">
     <div class="o-grid">
       <div class="o-grid__col u-width-4of12@md">
         <h2 class="u-font-weight-normal u-color-gray u-text-uppercase">Experience</h2>
@@ -82,7 +86,7 @@ permalink: /work/index.html
   {# <section class="u-margin-top-5">
     <div class="o-grid">
       <div class="o-grid__col u-width-4of12@md">
-        <h2 class="u-font-weight-normal u-color-gray">Interests</h2>
+        <h2 class="u-font-weight-normal u-color-gray u-text-uppercase">Interests</h2>
       </div>
 
       <div class="o-grid__col u-width-8of12@md">
