@@ -17,15 +17,16 @@ permalink: /work/index.html
         <ul class="c-listing c-listing--4">
           {% for entry in collections.work %}
           <li class="c-listing__item">
-            <div class="o-flag o-flag--work">
-              <div class="o-flag__media">
+            <div class="o-grid o-grid--reversed@md">
+              <div class="o-grid__col u-width-6of12@md">
                 {{ components.figure({
                   src: entry.data.thumbnail_sm,
                   alt: entry.data.title,
                   bordered: true
                 }) }}
               </div>
-              <div class="o-flag__body">
+
+              <div class="o-grid__col u-width-6of12@md">
                 <h3 class="u-font-size-lg u-font-weight-semi-bold"><a class="u-primary-anchor" href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
                 <p class="u-margin-top-2">{{ entry.data.summary | markdownify_inline }}</p>
               </div>

@@ -270,33 +270,6 @@ hr {
   flex-shrink: 0;
 }
 
-.o-flag--work {
-  flex-direction: column;
-}
-
-.o-flag--work .o-flag__media {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.o-flag--work .o-flag__body {
-  margin-top: var(--space-3);
-}
-
-@media (min-width: 720px) {
-  .o-flag--work {
-    flex-direction: row-reverse;
-  }
-  .o-flag--work .o-flag__media {
-    margin-left: var(--space-3);
-    margin-right: 0;
-    width: 50%;
-  }
-  .o-flag--work .o-flag__body {
-    margin-top: 0;
-  }
-}
-
 
 /**
  * GRID
