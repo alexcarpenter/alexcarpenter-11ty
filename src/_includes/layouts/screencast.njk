@@ -29,6 +29,19 @@
       </div>
     </div>
     {% endif %}
+    {% if tags and tags | hasTag('11ty') %}
+    <div class="o-grid__col u-width-8of12@md">
+      {{ components.note({
+        labelHidden: true,
+        type: "primary",
+        text: "Interested in learning more about Eleventy? Check out my collection of Eleventy tutorials to help you become an experienced Eleventy developer.",
+        link: {
+          url: "/learn/eleventy",
+          text: "Learn Eleventy"
+        }
+      }) }}
+    </div>
+    {% endif %}
     <div class="o-grid__col u-width-8of12@md">
       {% include "components/share.njk" %}
       {% include "components/tags.njk" %}
