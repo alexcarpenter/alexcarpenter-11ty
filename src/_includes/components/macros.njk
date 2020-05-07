@@ -74,34 +74,32 @@
 
 {% macro note(args) %}
 <div class="c-note c-note--{{ args.type | default('default') }}">
-<p><span class="c-note__label{% if labelHidden%} u-hidden-visually{% endif %}">{{ args.label | default('Note') }}:</span> {{ args.text | markdownify_inline | safe }}{% if args.link %}<br>{{ link({ url: args.link.url, text: args.link.text }) }}{% endif %}</p>
+<p><span class="c-note__label{% if args.labelHidden%} u-hidden-visually{% endif %}">{{ args.label | default('Note') }}: </span>{{ args.text | markdownify_inline | safe }}{% if args.link %}<br>{{ link({ url: args.link.url, text: args.link.text }) }}{% endif %}</p>
 </div>
 {% endmacro %}
 
 
 {% macro quote(args) %}
-<figure>
-<blockquote>
-<p>{{ args.text }}</p>
+<figure class="c-quote c-quote--{{ args.variant | default('default') }}">
+<blockquote class="c-quote__blockquote">
+<p>{{ args.text | markdownify_inline | safe }}</p>
 </blockquote>
 {% if args.cite %}
-<figcaption class="u-margin-top-3">
-<div class="o-flag o-flag--align-center">
+<figcaption class="c-quote__cite">
 {% if args.cite.twitter or args.cite.avatar %}
-<div class="o-flag__media">
+<div class="c-quote__cite-media">
 {% if args.cite.twitter %}
-<img class="u-disc" width="48" height="48" src="https://unavatar.now.sh/twitter/{{ args.cite.twitter }}" alt="{{ args.cite.name }}" loading="lazy">
+<img class="c-avatar u-flex-shrink-0" width="48" height="48" src="https://unavatar.now.sh/twitter/{{ args.cite.twitter }}" alt="{{ args.cite.name }}" loading="lazy">
 {% elif args.cite.avatar %}
-<img class="u-disc" width="48" height="48" src="{{ args.cite.avatar }}" alt="{{ args.cite.name }}" loading="lazy">
+<img class="c-avatar u-flex-shrink-0" width="48" height="48" src="{{ args.cite.avatar }}" alt="{{ args.cite.name }}" loading="lazy">
 {% endif %}
 </div>
 {% endif %}
-<div class="o-flag__body">
+<div class="c-quote__cite-body">
 <p class="u-font-weight-semi-bold u-leading-tight">{{ args.cite.name }}</p>
 {% if args.cite.title %}
 <p class="u-font-size-small u-color-gray">{{ args.cite.title }}</p>
 {% endif %}
-</div>
 </div>
 </figcaption>
 </figure>
