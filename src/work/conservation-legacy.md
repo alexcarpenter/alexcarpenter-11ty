@@ -1,5 +1,5 @@
 ---
-order: 2
+order: 3
 title: "Conservation Legacy"
 team: "Mighty in the Midwest"
 summary: "Led the development of a platform of websites for Conservation Legacy, an organization that supports local conservation services across the US."

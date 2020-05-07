@@ -17,6 +17,7 @@
         </div>
       </div>
     </header>
+    {% if banner %}
     <div class="o-grid u-margin-top-4">
       <div class="o-grid__col">
         {{ components.figure({
@@ -25,7 +26,8 @@
         }) }}
       </div>
     </div>
-    <div class="o-grid">
+    {% endif %}
+    <div class="o-grid u-margin-top-4">
       <div class="o-grid__col u-width-4of12@md">
         <dl>
           <dt>Role</dt>

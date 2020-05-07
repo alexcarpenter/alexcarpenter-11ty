@@ -1,6 +1,7 @@
 ---
+headerSpacing: 4
 title: Newsletter
-description:
+description: Each week I curate an email to send to my subscribers. I talk about front-end development and share a bit of what I am working on.
 permalink: /newsletter/index.html
 ---
 {% extends 'layouts/page.njk' %}
@@ -8,9 +9,20 @@ permalink: /newsletter/index.html
 
 {% block content %}
   <div class="o-grid o-grid--justify-end">
-    {# <div class="o-grid__col u-width-4of12@md"></div> #}
     <div class="o-grid__col u-width-8of12@md">
-      {% include "components/newsletter-form.njk" %}
+      <div class="o-stack o-stack--prose">
+        {% include "components/newsletter-form.njk" %}
+        <p class="u-margin-top-4"><strong>Some topics you can expect to hear about</strong></p>
+        <div class="o-columns">
+          <ul>
+            <li>Eleventy</li>
+            <li>CSS architecture</li>
+            <li>Design systems</li>
+            <li>React</li>
+            <li>Coffee</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 {% endblock %}
