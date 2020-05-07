@@ -167,7 +167,7 @@ figure blockquote p::before { content: '“'; }
 figure blockquote p::after { content: '”'; }
 
 figure blockquote p {
-  text-indent: -.3rem;
+  text-indent: -.25rem;
 }
 
 blockquote {
@@ -191,7 +191,7 @@ hr {
   margin-bottom: 2rem;
   width: 100%;
   border: 0;
-  height: 2px;
+  height: 4px;
   background-color: var(--theme-border-color);
 }
 
@@ -362,6 +362,16 @@ hr {
 /* ==========================================================================
    COMPONENTS
    ========================================================================== */
+
+
+/**
+ * AVATART
+ */
+
+.c-avatar {
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--theme-border-color);
+}
 
 
 /**
@@ -602,6 +612,11 @@ hr {
   border-radius: 4px;
 }
 
+.c-note--primary {
+  border-color: var(--theme-color-primary);
+  /* box-shadow: 0 0 0 3px rgba(0, 85, 255,.25); */
+}
+
 .c-note__label {
   font-weight: 600;
 }
@@ -807,15 +822,6 @@ a.c-pill:hover:after {
 
 
 /**
- * TESTIMONIAL
- */
-
-.c-testimonial blockquote {
-  padding-left: 0;
-  border-left: 0;
-}
-
-/**
  * VIDEO
  */
 
@@ -828,6 +834,41 @@ a.c-pill:hover:after {
   margin-top: var(--space-2);
   text-align: center;
   color: var(--theme-color-gray);
+}
+
+
+/**
+ * QUOTE
+ */
+
+.c-quote {}
+
+.c-quote__blockquote {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.c-quote--feature .c-quote__blockquote {
+  text-align: center;
+  font-size: var(--font-size-md);
+}
+
+.c-quote__cite {
+  margin-top: var(--space-3);
+  display: flex;
+}
+
+.c-quote--feature .c-quote__cite {
+  flex-direction: column;
+  text-align: center;
+}
+
+.c-quote--default .c-quote__cite-media {
+  margin-right: var(--space-3);
+}
+
+.c-quote--feature .c-quote__cite-body {
+  margin-top: var(--space-2);
 }
 
 
@@ -948,6 +989,7 @@ a.c-pill:hover:after {
   .u-margin-top-6\@md { margin-top: var(--space-6) !important; }
 }
 
+.u-padding-left-0 { padding-left: 0 !important; }
 
 /**
  * FONT-SCALE
@@ -1025,10 +1067,6 @@ a.c-pill:hover:after {
   text-decoration: underline;
 }
 
-.u-bordered {
-  border: 1px solid var(--theme-border-color);
-}
-
 
 /**
  * HIDDEN-VISUALLY
@@ -1064,15 +1102,15 @@ a.c-pill:hover:after {
 
 
 /**
- * DISC
+ * FLEXBOX
  */
-
-.u-disc {
-  border-radius: 50%;
-}
 
 .u-flex {
   display: flex;
+}
+
+.u-justify-center {
+  justify-content: center;
 }
 
 .u-justify-between {
@@ -1085,6 +1123,19 @@ a.c-pill:hover:after {
 
 .u-flex-shrink-0 {
   flex-shrink: 0;
+}
+
+
+/**
+ * BORDERS
+ */
+
+.u-bordered {
+  border: 1px solid var(--theme-border-color);
+}
+
+.u-border-none {
+  border: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
