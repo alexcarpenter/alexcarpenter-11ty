@@ -95,5 +95,7 @@ module.exports = {
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
     return arr;
-  }
+  },
+
+  hasTag: (arr, str) => arr.includes(str)
 };
