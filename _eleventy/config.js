@@ -22,9 +22,9 @@ module.exports = function (eleventyConfig) {
   // });
 
   // Paired shortcodes
-  Object.keys(pairedShortcodes).forEach((shortCodeName) => {
-    eleventyConfig.addPairedShortcode(shortCodeName, pairedShortcodes[shortCodeName]);
-  });
+  // Object.keys(pairedShortcodes).forEach((shortCodeName) => {
+  //   eleventyConfig.addPairedShortcode(shortCodeName, pairedShortcodes[shortCodeName]);
+  // });
 
   // Plugins
   eleventyConfig.addPlugin(pluginRss);
@@ -49,9 +49,12 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection('work', (collection) => {
     const published = (p) => !p.data.draft;
-    return [
-      ...collection.getFilteredByGlob('**/work/*.md').filter(published),
-    ].reverse();
+    const entries = collection.getFilteredByGlob('**/work/*.md')
+      .sort((a, b) => {
+        return Number(a.data.order) - Number(b.data.order);
+      })
+      .filter(published);
+    return entries;
   });
 
   eleventyConfig.addCollection("all", function(collection) {
