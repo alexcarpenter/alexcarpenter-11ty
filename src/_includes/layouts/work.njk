@@ -9,7 +9,7 @@
           <p class="u-color-gray u-text-uppercase">Case study</p>
           <h1 class="u-font-size-2xl">{{ title }}</h1>
           {% if summary %}
-            <p role="doc-subtitle" class="u-font-size-lg u-margin-top-2">{{ summary | markdownify_inline | safe }}</p>
+            <p role="doc-subtitle" class="u-font-size-lg u-leading-tight u-margin-top-2">{{ summary | markdownify_inline | safe }}</p>
           {% endif %}
           {% if link %}
             <div class="u-margin-top-1">{{ components.link({ url: link, external: true }) }}</div>
@@ -22,7 +22,8 @@
       <div class="o-grid__col">
         {{ components.figure({
           src: '/assets/images/' + banner,
-          alt: title + ' graphics'
+          alt: title + ' graphics',
+          bordered: true
         }) }}
       </div>
     </div>

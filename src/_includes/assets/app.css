@@ -233,6 +233,25 @@ hr {
   }
 }
 
+
+/**
+ * BREAK-OUT
+ */
+
+ .o-breakout {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+
+/**
+ * COLUMNS
+ */
+
 .o-columns ul {
   column-count: 2;
   column-gap: var(--space-3);
@@ -245,7 +264,7 @@ hr {
 
 .o-container {
   width: 100%;
-  max-width: 60.25rem;
+  max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto;
   padding-right: var(--space-3);
@@ -1084,20 +1103,6 @@ a.c-pill:hover:after {
   position: absolute !important;
   white-space: nowrap !important;
   width: 1px !important;
-}
-
-
-/**
- * BREAK-OUT
- */
-
-.u-breakout {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
 }
 
 
