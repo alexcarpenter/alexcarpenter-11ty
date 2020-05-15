@@ -1021,6 +1021,7 @@ a.c-pill:hover:after {
 .u-font-size-xl   { font-size: var(--font-size-xl) !important; }
 .u-font-size-2xl  { font-size: var(--font-size-2xl) !important; }
 .u-font-size-3xl  { font-size: var(--font-size-3xl) !important; }
+.u-font-size-4xl  { font-size: var(--font-size-4xl) !important; }
 
 @media (min-width: 720px) {
   .u-font-size-sm\@md   { font-size: 88.8888889% !important; }
@@ -1030,6 +1031,7 @@ a.c-pill:hover:after {
   .u-font-size-xl\@md   { font-size: var(--font-size-xl) !important; }
   .u-font-size-2xl\@md  { font-size: var(--font-size-2xl) !important; }
   .u-font-size-3xl\@md  { font-size: var(--font-size-3xl) !important; }
+  .u-font-size-4xl\@md  { font-size: var(--font-size-4xl) !important; }
 }
 
 

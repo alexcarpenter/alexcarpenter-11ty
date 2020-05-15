@@ -1,4 +1,5 @@
 ---
+favorite: true
 order: 3
 title: "Conservation Legacy"
 team: "Mighty in the Midwest"
@@ -52,3 +53,15 @@ $secondary-color: #918c10;
 This allowed us to output only the CSS needed for each program, keeping things performant. This also allowed us to easily add a new program to the platform with little configuration needed.
 
 We made heavy use of SVGs to create the torn edges look which allowed us to be able to change the background color based on the variables as well.
+
+---
+
+{{ components.quote({
+  variant: 'feature',
+  text: "Alex's leadership in the technical design and development of Conservation Legacy's platform of websites helped our team solve a complex problem for our client simply and effectively. Alex's work made it possible for each of the Conservation Legacy sites to share similar structure and layout while also being uniquely different in identity. He created simple CMS's that were easy to train many different teams to use. Our team absolutely delighted the client and Alex's contribution was foundational in the success of this project.",
+  cite: {
+    avatar: "/assets/images/danielle-dunn.jpg",
+    name: "Danielle Dunn",
+    title: "Project Manager, Mighty"
+  }
+}) }}
