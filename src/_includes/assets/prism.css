@@ -6,8 +6,8 @@ pre[class*="language-"] {
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  font-size: .875rem;
-  line-height: 1.2;
+  font-size: .95rem;
+  line-height: 1.3;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -19,69 +19,35 @@ pre[class*="language-"] {
   hyphens: none;
 }
 
-/* Inline code */
 code:not([class]) {
-  padding: 2px;
+  padding: 2px 4px;
   font-family: var(--font-family-code);
   font-size: .875rem;
-  background-color: var(--color-gray-100);
-  border-radius: var(--border-radius);
+  background-color: #DDDDDD;
+  border-radius: 3px;
 }
 
 /* Code blocks */
 pre[class*="language-"] {
   position: relative;
+  /* margin-top: 2rem; */
+  /* margin-bottom: 2rem; */
   padding-top: 1em;
   padding-bottom: 1em;
   overflow: auto;
-  background-color: #222222;
+  background-color: #111111;
   color: #FFFFFF;
+  border-radius: 4px;
 }
-
-/* pre[class*="language-scss"],
-pre[class*="language-css"],
-pre[class*="language-html"],
-pre[class*="language-js"],
-pre[class*="language-jsx"],
-pre[class*="language-tsx"],
-pre[class*="language-twig"] {
-  padding-top: 0;
-}
-
-pre[class*="language-scss"]::before,
-pre[class*="language-css"]::before,
-pre[class*="language-html"]::before,
-pre[class*="language-js"]::before,
-pre[class*="language-jsx"]::before,
-pre[class*="language-tsx"]::before,
-pre[class*="language-twig"]::before {
-  content: '';
-  position: sticky;
-  left: 0;
-  right: 0;
-  display: block;
-  margin-bottom: 1rem;
-  padding: .5rem 1rem;
-  text-transform: uppercase;
-  font-size: smaller;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-pre[class*="language-scss"]::before { content: 'SCSS'; }
-pre[class*="language-css"]::before  { content: 'CSS'; }
-pre[class*="language-html"]::before { content: 'HTML'; }
-pre[class*="language-js"]::before   { content: 'JavaScript'; }
-pre[class*="language-jsx"]::before   { content: 'JSX'; }
-pre[class*="language-tsx"]::before   { content: 'TypeScript'; }
-pre[class*="language-twig"]::before { content: 'Nunjucks' } */
 
 .highlight-line {
   padding: 0.25rem 1rem;
+  border-left: 4px solid #111111;
 }
 
 .highlight-line-active {
-  background-color: var(--color-yellow-light);
+  background-color: #222222;
+  border-color: var(--theme-color-primary);
 }
 
 .token.comment {
