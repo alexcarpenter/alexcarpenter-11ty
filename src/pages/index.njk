@@ -1,55 +1,52 @@
 ---
-title: "UI Engineer"
-description: "Currently interested in CSS architecture, React, TypeScript, design systems, and state machines."
+title: "Hey, I'm Alex"
+description: "a user interface engineer currently interested in CSS architecture, React, TypeScript, design systems, and state machines."
+intro: |
+  a detail oriented user interface engineer currently interested in CSS architecture, React, TypeScript, design systems, and state machines.
 permalink: /index.html
 ---
 {% extends "layouts/page.njk" %}
 {% import "components/macros.njk" as components %}
 
 {% block content %}
-  {# <div class="o-grid">
-    <div class="o-grid__col">
-      {{ components.figure({
-        src: "/assets/images/banner.jpg",
-        alt: "Photo of Alex Carpenter"
-      }) }}
-    </div>
-  </div> #}
-
-  <section class="u-margin-top-5 o-grid o-grid--justify-end">
-    <div class="o-grid__col u-width-4of12@md">
-      <h2 class="u-font-size-base u-font-weight-normal u-color-gray u-text-uppercase">Latest entries</h2>
-    </div>
-    <div class="o-grid__col u-width-8of12@md">
-      <ul class="c-listing">
-        {% for entry in collections.all | take(5) %}
-        <li class="c-listing__item">
-          {{ components.entry({
-            entry: entry,
-            size: 'md',
-            icons: true
-          }) }}
-        </li>
-        {% endfor %}
-      </ul>
+  <section class="u-margin-top-5">
+    <div class="o-grid">
+      <div class="o-grid__col u-width-4of12@md">
+        <h2 class="u-font-size-base u-font-weight-normal u-color-gray u-text-uppercase">Latest entries</h2>
+      </div>
+      <div class="o-grid__col u-width-8of12@md">
+        <ul class="c-listing">
+          {% for entry in collections.all | take(5) %}
+          <li class="c-listing__item">
+            {{ components.entry({
+              entry: entry,
+              size: 'md',
+              icons: true
+            }) }}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </section>
 
-  <section class="u-margin-top-5 o-grid o-grid--justify-end">
-    <div class="o-grid__col u-width-4of12@md">
-      <h2 class="u-font-size-base u-font-weight-normal u-color-gray u-text-uppercase">Popular screencasts</h2>
-    </div>
-    <div class="o-grid__col u-width-8of12@md">
-      <ul class="c-listing">
-        {% for entry in collections.screencasts | favorites | take(5) %}
-        <li class="c-listing__item">
-          {{ components.entry({
-            entry: entry,
-            size: 'md'
-          }) }}
-        </li>
-        {% endfor %}
-      </ul>
+  <section class="u-margin-top-5">
+    <div class="o-grid">
+      <div class="o-grid__col u-width-4of12@md">
+        <h2 class="u-font-size-base u-font-weight-normal u-color-gray u-text-uppercase">Popular screencasts</h2>
+      </div>
+      <div class="o-grid__col u-width-8of12@md">
+        <ul class="c-listing">
+          {% for entry in collections.screencasts | favorites | take(5) %}
+          <li class="c-listing__item">
+            {{ components.entry({
+              entry: entry,
+              size: 'md'
+            }) }}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </section>
 {% endblock %}

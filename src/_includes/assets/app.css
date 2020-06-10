@@ -40,7 +40,7 @@
   --theme-color: #111111;
   --theme-color-primary: var(--color-blue);
   --theme-color-gray: #666666;
-  --theme-background-color: #FAFAFA;
+  --theme-background-color: #F7F6F3;
   --theme-border-color: #DDDDDD;
 }
 
@@ -49,6 +49,15 @@
     --gap: var(--space-4);
   }
 }
+
+/* .t-green {
+  #435938
+  --theme-color: #515F44;
+  --theme-color-primary: #515F44;
+  --theme-color-gray: #8B977F;
+  --theme-background-color: #F9F7EA;
+  --theme-border-color: #DDDDDD;
+} */
 
 
 

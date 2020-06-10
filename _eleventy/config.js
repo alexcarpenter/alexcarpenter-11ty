@@ -57,7 +57,7 @@ module.exports = function (eleventyConfig) {
     return entries;
   });
 
-  eleventyConfig.addCollection("all", function(collection) {
+  eleventyConfig.addCollection("all", function (collection) {
     const published = (p) =>
       ENV.environment === 'production' ? !p.data.draft : true;
     return collection.getFilteredByGlob([
@@ -91,5 +91,5 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
     passthroughFileCopy: true,
-  };
+  }
 };

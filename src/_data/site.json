@@ -1,4 +1,5 @@
 {
+  "theme": "light",
   "url": "https://alexcarpenter.me",
   "title": "Alex Carpenter",
   "description": "Self taught developer that works best when floating in between design and engineering teams. I enjoy sharing what I know via short instructional screencasts and the occasional written post.",
@@ -6,16 +7,20 @@
     {
       "label": "Screencasts",
       "url": "/screencasts/"
-    }, {
+    },
+    {
       "label": "Posts",
       "url": "/posts/"
-    }, {
+    },
+    {
       "label": "Bookmarks",
       "url": "/bookmarks/"
-    }, {
+    },
+    {
       "label": "Work",
       "url": "/work/"
-    }, {
+    },
+    {
       "label": "Contact",
       "url": "/contact/"
     }

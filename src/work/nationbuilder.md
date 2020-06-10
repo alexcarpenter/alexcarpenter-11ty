@@ -1,4 +1,5 @@
 ---
+favorite: true
 order: 2
 title: "NationBuilder homepage"
 team: "NationBuilder"

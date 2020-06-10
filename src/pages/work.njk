@@ -15,7 +15,7 @@ permalink: /work/index.html
 
       <div class="o-grid__col u-width-8of12@md">
         <ul class="c-listing c-listing--4">
-          {% for entry in collections.work %}
+          {% for entry in collections.work | favorites %}
           <li class="c-listing__item">
             <div class="o-grid o-grid--reversed@md">
               <div class="o-grid__col u-width-6of12@md">
@@ -36,6 +36,12 @@ permalink: /work/index.html
           </li>
           {% endfor %}
         </ul>
+        {# <div class="u-margin-top-3">
+          {{ components.link({
+            url: "/work/case-studies/",
+            text: "View more case studies"
+          }) }}
+        </div> #}
       </div>
     </div>
   </section>
@@ -162,6 +168,9 @@ permalink: /work/index.html
             }) }}
           </li>
         </ul>
+        {# <div class="u-margin-top-5">
+          <a href="" class="c-button c-button--primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg> Download resume</a>
+        </div> #}
       </div>
     </div>
   </section>

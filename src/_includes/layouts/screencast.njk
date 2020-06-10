@@ -6,11 +6,13 @@
     <header class="o-grid__col u-width-8of12@md">
       <time class="u-color-gray u-text-uppercase">{{ page.date | date_formatted }}</time>
       <h1 class="u-font-size-2xl">{{ title }}</h1>
-      {{ components.link({
-        url: site.social[0].subscribe,
-        text: "Subscribe on Youtube",
-        external: true
-      }) }}
+      <div class="u-margin-top-1">
+        {{ components.link({
+          url: site.social[0].subscribe,
+          text: "Subscribe on YouTube",
+          external: true
+        }) }}
+      </div>
     </header>
   </div>
   <div class="o-grid">

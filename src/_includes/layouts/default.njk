@@ -1,3 +1,4 @@
+{% set theme = theme | default(site.theme) %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +42,7 @@
   {% endif %}
   </style>
 </head>
-<body class="t-{{ theme|default('light') }}">
+<body class="t-{{ theme }}">
   <div class="o-container">
     {% include "components/banner.njk" %}
     <main id="main" tabindex="-1">{% block main %}{% endblock %}</main>

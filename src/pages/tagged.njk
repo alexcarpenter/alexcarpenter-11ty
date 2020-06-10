@@ -11,6 +11,7 @@ pagination:
     - screencasts
 permalink: /tagged/{{ tag }}/index.html
 ---
+{% import "components/macros.njk" as components %}
 {% extends "layouts/default.njk" %}
 
 {% block main %}
@@ -28,10 +29,10 @@ permalink: /tagged/{{ tag }}/index.html
         <ul class="c-listing c-listing--4">
         {% for entry in taglist | reverse %}
           <li class="c-listing__item">
-            <article>
-              <time class="u-color-gray u-text-uppercase" datetime="{{ entry.date }}">{{ entry.date | date_formatted }}</time>
-              <h2 class="u-font-size-lg u-font-weight-normal">{% if entry.data.favorite %}⭐️ {% endif %}<a class="u-primary-anchor" href="{{ entry.url }}">{{ entry.data.title }}</a></h2>
-            </article>
+            {{ components.entry({
+              entry: entry,
+              icons: true
+            }) }}
           </li>
         {% endfor %}
         </ul>
