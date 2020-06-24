@@ -854,7 +854,7 @@ a.c-pill:hover:after {
  * VIDEO
  */
 
-.c-video__backdrop {
+.c-video__backdrop[style] {
   padding: var(--space-4);
   background-color: var(--backdrop);
 }
