@@ -1,5 +1,5 @@
 ---
-title: TypeScript extend React ButtonHTMLAttributes props
+title: TypeScript extend React Button HTML Attributes
 tags:
   - til
   - typescript
