@@ -9,7 +9,7 @@ When I got started learning TypeScript, I found myself defining all of the prop 
 
 For example, when I created my `<Button />` component, I was defining the `type`, `disabled`, `onClick`, etc. attributes and props types.
 
-Instead of having to define each of the attributes/props available on button elements, we can extend Reacts `React.ButtonHTMLAttributes<HTMLButtonElement>` on buttons.
+Instead of having to define each of the attributes/props available on button elements, we can extend `React.ButtonHTMLAttributes<HTMLButtonElement>` on buttons.
 
 ```js/2/3-5
 // Button.tsx
@@ -28,8 +28,7 @@ Now when we make use of the `<Button />` component, we get intelliSense support 
 {{ components.video({
   url: '/assets/videos/react-html-button.mp4',
   ratio: '846/708',
-  caption: 'Button intelliSense example in Visual Studio Code',
-  backdrop: '#ddd'
+  caption: 'Button intelliSense example in Visual Studio Code'
 }) }}
 
 This method applies to other interactive elements like inputs as well.

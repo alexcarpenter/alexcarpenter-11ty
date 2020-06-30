@@ -23,8 +23,9 @@ code:not([class]) {
   padding: 2px 4px;
   font-family: var(--font-family-code);
   font-size: .875rem;
-  background-color: #DDDDDD;
-  border-radius: 3px;
+  background-color: #FAFAFA;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
 }
 
 /* Code blocks */
@@ -33,30 +34,30 @@ pre[class*="language-"] {
   padding-top: 1em;
   padding-bottom: 1em;
   overflow: auto;
-  background-color: #ddd;
-  color: #111;
+  background-color: #FAFAFA;
+  border: 1px solid #EAEAEA;
+  color: #222222;
   border-radius: 4px;
 }
 
 .highlight-line {
   padding: 0.25rem 1rem;
-  border-left: 4px solid #ddd;
+  border-left: 4px solid #FAFAFA;
 }
 
 .highlight-line-active {
-  background-color: #ccc;
+  background-color: var(--color-blue-100);
   border-color: var(--theme-color-primary);
 }
 
 .highlight-line-add {
-  background-color: rgba(76, 165, 94, 0.1);
+  background-color: var(--color-green-100);
   border-color: var(--color-green);
 }
 
 .highlight-line-remove {
-  background-color: rgba(255, 51, 0, 0.1);
+  background-color: var(--color-red-100);
   border-color: var(--color-red);
-  /* color: rgba(255, 255, 255, 0.75); */
 }
 
 .token.comment {

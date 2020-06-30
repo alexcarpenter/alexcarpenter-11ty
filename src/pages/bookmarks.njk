@@ -1,4 +1,5 @@
 ---
+layout: layouts/listing
 title: Bookmarks
 summary: Subscribe via [RSS](/bookmarks/feed.xml).
 pagination:
@@ -6,15 +7,3 @@ pagination:
   size: 10
 permalink: /bookmarks/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html
 ---
-{% extends 'layouts/page.njk' %}
-
-{% block content %}
-  <div class="o-grid o-grid--justify-end">
-    <div class="o-grid__col u-width-8of12@md">
-      {% include "components/listing.njk" %}
-      <div class="u-margin-top-4">
-        {% include "components/pagination.njk" %}
-      </div>
-    </div>
-  </div>
-{% endblock %}

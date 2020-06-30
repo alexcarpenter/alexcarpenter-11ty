@@ -1,4 +1,5 @@
 ---
+layout: layouts/listing
 title: Screencasts
 summary: "Short video tutorials for front-end web developers released every week. Subscribe on [YouTube](https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg?sub_confirmation=1)."
 pagination:
@@ -6,46 +7,3 @@ pagination:
   size: 10
 permalink: /screencasts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html
 ---
-{% extends 'layouts/page.njk' %}
-{% import "components/macros.njk" as components %}
-
-{% block content %}
-  <div class="o-grid">
-    <aside class="o-grid__col u-width-4of12@md">
-      <div class="o-stack o-stack--4">
-        <div>
-          <p class="u-font-weight-normal u-color-gray u-text-uppercase">Popular screencasts</p>
-          <div class="u-margin-top-3">
-            <ul>
-              {% for entry in collections.screencasts | favorites(5) %}
-              <li><a href="{{ entry.url }}">{{ entry.data.title }}</a></li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-
-        <div>
-          {{ components.quote({
-            text: "Alex's tutorials are direct and to the point, while covering practical topics that can be useful to developers of any skill level.",
-            cite: {
-              twitter: "treygordon",
-              name: "Trey Gordon",
-              title: "Front-end web developer"
-            }
-          }) }}
-        </div>
-
-        <div>
-          <a href="{{ site.social[0].subscribe }}" class="c-button"><svg focusable="false" aria-hidden="true" width="1.25em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"></path></svg> Subscribe on YouTube</a>
-        </div>
-      </div>
-    </aside>
-
-    <div class="o-grid__col u-width-8of12@md u-margin-top-5 u-margin-top-0@md">
-      {% include "components/listing.njk" %}
-      <div class="u-margin-top-4">
-        {% include "components/pagination.njk" %}
-      </div>
-    </div>
-  </div>
-{% endblock %}

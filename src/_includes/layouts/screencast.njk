@@ -1,52 +1,38 @@
-{% extends 'layouts/default.njk' %}
+{% extends 'layouts/article.njk' %}
 {% import "components/macros.njk" as components %}
 
-{% block main %}
-  <div class="o-grid o-grid--justify-end">
-    <header class="o-grid__col u-width-8of12@md">
-      <time class="u-color-gray u-text-uppercase">{{ page.date | date_formatted }}</time>
-      <h1 class="u-font-size-2xl">{{ title }}</h1>
-      <div class="u-margin-top-1">
-        {{ components.link({
-          url: site.social[0].subscribe,
-          text: "Subscribe on YouTube",
-          external: true
-        }) }}
-      </div>
-    </header>
-  </div>
-  <div class="o-grid">
-    <div class="o-grid__col">
-      {{ components.youtube({
-        id: youtubeId,
-        title: title
+{% block content %}
+  <header>
+    <time class="u-color-gray u-text-uppercase">{{ page.date | date_formatted }}</time>
+    <h1 class="u-font-size-2xl">{{ title }}</h1>
+    <div class="u-margin-top-1">
+      {{ components.link({
+        url: site.social[0].subscribe,
+        text: "Subscribe on YouTube",
+        external: true
       }) }}
     </div>
-  </div>
-  <div class="o-grid o-grid--justify-end">
-    {% if content %}
-    <div class="o-grid__col u-width-8of12@md">
-      <div class="o-stack o-stack--prose">
-        {{ content | safe }}
-      </div>
+  </header>
+  {{ components.youtube({
+    id: youtubeId,
+    title: title
+  }) }}
+  {% if content %}
+    <div class="o-stack o-stack--prose">
+      {{ content | safe }}
     </div>
-    {% endif %}
-    {% if tags and tags | hasTag('11ty') %}
-    <div class="o-grid__col u-width-8of12@md">
-      {{ components.note({
-        labelHidden: true,
-        type: "primary",
-        text: "Interested in learning more about Eleventy? Check out my collection of Eleventy tutorials to help you become an experienced Eleventy developer.",
-        link: {
-          url: "/learn/eleventy",
-          text: "Learn Eleventy"
-        }
-      }) }}
-    </div>
-    {% endif %}
-    <div class="o-grid__col u-width-8of12@md">
-      {% include "components/share.njk" %}
-      {% include "components/tags.njk" %}
-    </div>
-  </div>
+  {% endif %}
+  {% if tags and tags | hasTag('11ty') %}
+    {{ components.note({
+      labelHidden: true,
+      type: "primary",
+      text: "Interested in learning more about Eleventy? Check out my collection of Eleventy tutorials to help you become an experienced Eleventy developer.",
+      link: {
+        url: "/learn/eleventy",
+        text: "Learn Eleventy"
+      }
+    }) }}
+  {% endif %}
+  {% include "components/share.njk" %}
+  {% include "components/tags.njk" %}
 {% endblock %}

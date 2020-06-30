@@ -8,170 +8,110 @@ permalink: /work/index.html
 
 {% block content %}
   <section class="u-margin-top-5">
-    <div class="o-grid">
-      <div class="o-grid__col u-width-4of12@md">
-        <h2 class="u-font-weight-normal u-color-gray u-text-uppercase">Case studies</h2>
-      </div>
-
-      <div class="o-grid__col u-width-8of12@md">
-        <ul class="c-listing c-listing--4">
-          {% for entry in collections.work | favorites %}
-          <li class="c-listing__item">
-            <div class="o-grid o-grid--reversed@md">
-              <div class="o-grid__col u-width-6of12@md">
-              {% if entry.data.thumbnail_sm %}
-                {{ components.figure({
-                  src: entry.data.thumbnail_sm,
-                  alt: entry.data.title,
-                  bordered: true
-                }) }}
-              {% endif %}
-              </div>
-
-              <div class="o-grid__col u-width-6of12@md">
-                <h3 class="u-font-size-lg u-font-weight-semi-bold"><a class="u-primary-anchor" href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
-                <p class="u-margin-top-2">{{ entry.data.summary | markdownify_inline }}</p>
-              </div>
-            </div>
-          </li>
-          {% endfor %}
-        </ul>
-        {# <div class="u-margin-top-3">
-          {{ components.link({
-            url: "/work/case-studies/",
-            text: "View more case studies"
-          }) }}
-        </div> #}
-      </div>
-    </div>
-  </section>
-
-  <section class="u-margin-top-5">
-    <div class="o-grid">
-      <div class="o-grid__col u-width-4of12@md">
-        <h2 class="u-font-weight-normal u-color-gray u-text-uppercase">Experience</h2>
-      </div>
-
-      <div class="o-grid__col u-width-8of12@md">
-        <ul class="c-listing c-listing--4">
-          <li class="c-listing__item">
-            <p class="u-color-gray u-text-uppercase">Nov 2018 – Present</p>
-            <h3 class="u-font-size-lg u-margin-top-1">NationBuilder – UI Engineer</h3>
-            <div class="u-margin-top-2">
-              <ul>
-                <li>Maintain and implement new features within our design system Radius.</li>
-                <li>Implement new components and features using React, Redux, and React Router.</li>
-                <li>Implement marketing landing pages for different product verticals.</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="c-listing__item">
-            <p class="u-color-gray u-text-uppercase">Oct 3015 – Nov 2018</p>
-            <h3 class="u-font-size-lg u-margin-top-1">Mighty in the Midwest – Senior Developer</h3>
-            <div class="u-margin-top-2">
-              <ul>
-                <li>Architected solutions and estimate project scope for new and existing client features.</li>
-                <li>Introduced modern Javascript practices with Webpack and Rollup.</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="c-listing__item">
-            <p class="u-color-gray u-text-uppercase">Feb 2012 – Oct 2015</p>
-            <h3 class="u-font-size-lg u-margin-top-1">Masuga Design – Front-end Developer</h3>
-            <div class="u-margin-top-2">
-              <ul>
-                <li>Designed and developed a SaaS app built on Laravel.</li>
-                <li>Developed mobile-first front-end templates for clients such as FOX Networks Info and A+E Networks Affiliates.</li>
-              </ul>
-            <div class="u-margin-top-2">
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  {# <section class="u-margin-top-5">
-    <div class="o-grid">
-      <div class="o-grid__col u-width-4of12@md">
-        <h2 class="u-font-weight-normal u-color-gray u-text-uppercase">Interests</h2>
-      </div>
-
-      <div class="o-grid__col u-width-8of12@md">
-        <div class="o-grid">
+    <ul class="c-listing c-listing--4">
+      {% for entry in collections.work | favorites %}
+      <li class="c-listing__item">
+        <div class="o-grid o-grid--reversed@md">
           <div class="o-grid__col u-width-6of12@md">
-            <h3 class="u-font-size-lg">CSS Architecture</h3>
-            <p class="u-margin-top-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum neque labore delectus aliquam.</p>
+          {% if entry.data.thumbnail_sm %}
+            {{ components.figure({
+              src: entry.data.thumbnail_sm,
+              alt: entry.data.title,
+              bordered: true
+            }) }}
+          {% endif %}
           </div>
 
           <div class="o-grid__col u-width-6of12@md">
-            <h3 class="u-font-size-lg">Design systems</h3>
-            <p class="u-margin-top-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum neque labore delectus aliquam. Reiciendis nisi dolorem.</p>
-          </div>
-
-          <div class="o-grid__col u-width-6of12@md">
-            <h3 class="u-font-size-lg">React</h3>
-            <p class="u-margin-top-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum neque labore delectus aliquam. Reiciendis nisi dolorem.</p>
+            <h3 class="u-font-size-lg u-font-weight-semi-bold"><a class="u-primary-anchor" href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
+            <p class="u-margin-top-2">{{ entry.data.summary | markdownify_inline }}</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section> #}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
 
   <section class="u-margin-top-5">
-    <div class="o-grid">
-      <div class="o-grid__col u-width-4of12@md">
-        <h2 class="u-font-weight-normal u-color-gray u-text-uppercase">Recommendations</h2>
-      </div>
+    <ul class="c-listing c-listing--4">
+      <li class="c-listing__item">
+        <p class="u-color-gray u-text-uppercase">Nov 2018 – Present</p>
+        <h3 class="u-font-size-lg u-margin-top-1">NationBuilder – UI Engineer</h3>
+        <div class="u-margin-top-2">
+          <ul>
+            <li>Maintain and implement new features within our design system Radius.</li>
+            <li>Implement new components and features using React, Redux, and React Router.</li>
+            <li>Implement marketing landing pages for different product verticals.</li>
+          </ul>
+        </div>
+      </li>
 
-      <div class="o-grid__col u-width-8of12@md">
-        <ul class="c-listing c-listing--4">
-          <li class="c-listing__item">
-            {{ components.quote({
-              text: "Alex is incredibly skilled, efficient, and thorough in his work. Perhaps more than any other co-worker I have had, Alex possesses a deep and wide understanding of modern web technologies, while his steady passion for producing best-of-class work inspires his peers to write cleaner, simpler, and more elegant code.",
-              cite: {
-                avatar: "/assets/images/kyle-luck.jpg",
-                name: "Kyle Luck",
-                title: "Developer, Mighty"
-              }
-            }) }}
-          </li>
-          <li class="c-listing__item">
-            {{ components.quote({
-              text: "I would recommend Alex to any forward-thinking web team. His passion for web standards along with his friendly attitude made him an invaluable part of our development team. I’m always especially impressed with his commitment to continuous learning and I hope to have the chance to work with him again!",
-              cite: {
-                avatar: "/assets/images/melissa-taylor.jpg",
-                name: "Melissa Taylor",
-                title: "Director of Client Services, Mighty"
-              }
-            }) }}
-          </li>
-          <li class="c-listing__item">
-            {{ components.quote({
-              text: "Alex is incredibly thorough and thoughtful with his work and is always seeking out improving in his craft. He’s conscious of meeting deadlines and communicates concerns early so that project teams can be proactive in problem solving.",
-              cite: {
-                avatar: "/assets/images/danielle-dunn.jpg",
-                name: "Danielle Dunn",
-                title: "Project Manager, Mighty"
-              }
-            }) }}
-          </li>
-          <li class="c-listing__item">
-            {{ components.quote({
-              text: "Alex is a true autodidact that is dedicated to keeping up with the latest development tools, methods and trends.",
-              cite: {
-                avatar: "/assets/images/ben-kohl.jpg",
-                name: "Benjamin Kohl",
-                title: "Back-end Developer, Masuga"
-              }
-            }) }}
-          </li>
-        </ul>
-        {# <div class="u-margin-top-5">
-          <a href="" class="c-button c-button--primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg> Download resume</a>
-        </div> #}
-      </div>
-    </div>
+      <li class="c-listing__item">
+        <p class="u-color-gray u-text-uppercase">Oct 3015 – Nov 2018</p>
+        <h3 class="u-font-size-lg u-margin-top-1">Mighty in the Midwest – Senior Developer</h3>
+        <div class="u-margin-top-2">
+          <ul>
+            <li>Architected solutions and estimate project scope for new and existing client features.</li>
+            <li>Introduced modern Javascript practices with Webpack and Rollup.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="c-listing__item">
+        <p class="u-color-gray u-text-uppercase">Feb 2012 – Oct 2015</p>
+        <h3 class="u-font-size-lg u-margin-top-1">Masuga Design – Front-end Developer</h3>
+        <div class="u-margin-top-2">
+          <ul>
+            <li>Designed and developed a SaaS app built on Laravel.</li>
+            <li>Developed mobile-first front-end templates for clients such as FOX Networks Info and A+E Networks Affiliates.</li>
+          </ul>
+        <div class="u-margin-top-2">
+      </li>
+    </ul>
+  </section>
+
+  <section class="u-margin-top-5">
+    <ul class="c-listing c-listing--4">
+      <li class="c-listing__item">
+        {{ components.quote({
+          text: "Alex is incredibly skilled, efficient, and thorough in his work. Perhaps more than any other co-worker I have had, Alex possesses a deep and wide understanding of modern web technologies, while his steady passion for producing best-of-class work inspires his peers to write cleaner, simpler, and more elegant code.",
+          cite: {
+            avatar: "/assets/images/kyle-luck.jpg",
+            name: "Kyle Luck",
+            title: "Developer, Mighty"
+          }
+        }) }}
+      </li>
+      <li class="c-listing__item">
+        {{ components.quote({
+          text: "I would recommend Alex to any forward-thinking web team. His passion for web standards along with his friendly attitude made him an invaluable part of our development team. I’m always especially impressed with his commitment to continuous learning and I hope to have the chance to work with him again!",
+          cite: {
+            avatar: "/assets/images/melissa-taylor.jpg",
+            name: "Melissa Taylor",
+            title: "Director of Client Services, Mighty"
+          }
+        }) }}
+      </li>
+      <li class="c-listing__item">
+        {{ components.quote({
+          text: "Alex is incredibly thorough and thoughtful with his work and is always seeking out improving in his craft. He’s conscious of meeting deadlines and communicates concerns early so that project teams can be proactive in problem solving.",
+          cite: {
+            avatar: "/assets/images/danielle-dunn.jpg",
+            name: "Danielle Dunn",
+            title: "Project Manager, Mighty"
+          }
+        }) }}
+      </li>
+      <li class="c-listing__item">
+        {{ components.quote({
+          text: "Alex is a true autodidact that is dedicated to keeping up with the latest development tools, methods and trends.",
+          cite: {
+            avatar: "/assets/images/ben-kohl.jpg",
+            name: "Benjamin Kohl",
+            title: "Back-end Developer, Masuga"
+          }
+        }) }}
+      </li>
+    </ul>
   </section>
 {% endblock %}

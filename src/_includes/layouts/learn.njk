@@ -2,55 +2,30 @@
 {% import "components/macros.njk" as components %}
 
 {% block content %}
-  {% if sections.length %}
-  <div class="o-grid o-grid--justify-end">
-    <div class="o-grid__col u-width-4of12@md">
-      <div class="c-toc">
-        <p class="u-color-gray">Table of contents</p>
-        <div class="u-margin-top-3">
-          <ul class="c-toc__list">
-            {% for section in sections %}
-            <li class="c-toc__list-item"><a href="#section-{{ section.heading | kebab }}">{{ section.heading }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
+  <ul class="c-listing c-listing--4">
+    {% for section in sections %}
+    <li class="c-listing__item" id="section-{{ section.heading | kebab }}">
+      <div class="o-stack o-stack--prose">
+        <h2>{{ section.heading }}</h2>
+        {% if section.youtubeId %}
+          {{ components.youtube({
+            id: section.youtubeId,
+            title: title
+          }) }}
+        {% endif %}
+        {% if section.description %}
+          <p>{{ section.description | markdownify_inline }}</p>
+        {% endif %}
+        <p>
+          {% if section.docs %}
+            <span class="u-margin-right-3">{{ components.link({ url: section.docs, text: section.heading + " documentation", external: true }) }}</span>
+          {% endif %}
+          {% if section.repo %}
+            <span class="u-margin-right-3">{{ components.link({ url: section.repo, text: "View source files", external: true }) }}</span>
+          {% endif %}
+        </p>
       </div>
-    </div>
-    <div class="o-grid__col u-width-8of12@md u-margin-top-2 u-margin-top-0@md">
-      <ul class="c-listing c-listing--4">
-        {% for section in sections %}
-        <li class="c-listing__item" id="section-{{ section.heading | kebab }}">
-          <div class="o-stack o-stack--prose">
-            <h2>{{ section.heading }}</h2>
-            {% if section.youtubeId %}
-              {{ components.youtube({
-                id: section.youtubeId,
-                title: title
-              }) }}
-            {% endif %}
-            {% if section.description %}
-              <p>{{ section.description | markdownify_inline }}</p>
-            {% endif %}
-            <p>
-              {% if section.docs %}
-                <span class="u-margin-right-3">{{ components.link({ url: section.docs, text: section.heading + " documentation", external: true }) }}</span>
-              {% endif %}
-              {% if section.repo %}
-                <span class="u-margin-right-3">{{ components.link({ url: section.repo, text: "View source files", external: true }) }}</span>
-              {% endif %}
-            </p>
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-  {% endif %}
-  {# <div class="o-grid o-grid--justify-end u-margin-top-5">
-    <div class="o-grid__col u-width-8of12@md">
-      <div class="o-stack o-stack--4">
-        {{ components.newsletter() }}
-      </div>
-    </div>
-  </div> #}
+    </li>
+    {% endfor %}
+  </ul>
 {% endblock %}

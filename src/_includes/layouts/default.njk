@@ -18,7 +18,7 @@
   <meta name="twitter:site" content="@hybrid_alex">
   <meta name="twitter:creator" content="@hybrid_alex">
   <meta name="twitter:title" content="{% if title and page.url != '/' %}{{ title }}{% else %}UI Engineer{% endif %} - {{ site.title }}">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="{% if thumbnail %}summary_large_image{% else %}summary{% endif %}">
   <meta name="twitter:image" content="{{ site.url }}{%if thumbnail %}{{ thumbnail }}{% else %}/assets/images/og-image.png{% endif %}">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
@@ -43,11 +43,9 @@
   </style>
 </head>
 <body class="t-{{ theme }}">
-  <div class="o-container">
-    {% include "components/banner.njk" %}
-    <main id="main" tabindex="-1">{% block main %}{% endblock %}</main>
-    {% include "components/contentinfo.njk" %}
-  </div>
+  {% include "components/banner.njk" %}
+  <main id="main" tabindex="-1">{% block main %}{% endblock %}</main>
+  {% include "components/contentinfo.njk" %}
   <script src="//instant.page/5.0.1" type="module" integrity="sha384-0DvoZ9kNcB36fWcQApIMIGQoTzoBDYTQ85e8nmsfFOGz4RHAdUhADqJt4k3K2uLS"></script>
 </body>
 </html>

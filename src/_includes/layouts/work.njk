@@ -4,54 +4,44 @@
 {% block main %}
   <article>
     <header>
-      <div class="o-grid o-grid--justify-end">
-        <div class="o-grid__col u-width-8of12@md">
-          <p class="u-color-gray u-text-uppercase">Case study</p>
-          <h1 class="u-font-size-2xl">{{ title }}</h1>
-          {% if summary %}
-            <p role="doc-subtitle" class="u-font-size-lg u-leading-tight u-margin-top-2">{{ summary | markdownify_inline | safe }}</p>
-          {% endif %}
-          {% if link %}
-            <div class="u-margin-top-1">{{ components.link({ url: link, external: true }) }}</div>
-          {% endif %}
-        </div>
-      </div>
+      <p class="u-color-gray u-text-uppercase">Case study</p>
+      <h1 class="u-font-size-2xl">{{ title }}</h1>
+      {% if summary %}
+        <p role="doc-subtitle" class="u-font-size-lg u-leading-tight u-margin-top-2">{{ summary | markdownify_inline | safe }}</p>
+      {% endif %}
+      {% if link %}
+        <div class="u-margin-top-1">{{ components.link({ url: link, external: true }) }}</div>
+      {% endif %}
     </header>
     {% if banner %}
-    <div class="o-grid u-margin-top-4">
-      <div class="o-grid__col">
-        {{ components.figure({
-          src: '/assets/images/' + banner,
-          alt: title + ' graphics',
-          bordered: true
-        }) }}
-      </div>
+    <div class="u-margin-top-4">
+      {{ components.figure({
+        src: '/assets/images/' + banner,
+        alt: title + ' graphics',
+        bordered: true
+      }) }}
     </div>
     {% endif %}
-    <div class="o-grid u-margin-top-4">
-      <div class="o-grid__col u-width-4of12@md">
-        <dl>
-          <dt>Role</dt>
-          <dd>
-            {% set comma = joiner() %}
-            {% for item in roles -%}{{ comma() }} {{ item }}{%- endfor %}
-          </dd>
-          <dt>Tech</dt>
-          <dd>
-            {% set comma = joiner() %}
-            {% for item in tech -%}{{ comma() }} {{ item }}{%- endfor %}
-          </dd>
-          {% if team %}
-          <dt>Team</dt>
-          <dd>{{ team }}</dd>
-          {% endif %}
-        </dl>
-      </div>
-      <div class="o-grid__col u-width-8of12@md">
-        <div class="o-stack o-stack--prose">
-          {{ content | safe }}
-        </div>
-      </div>
+    <div class="u-margin-top-4">
+      <dl class="c-meta">
+        <dt class="c-meta__title">Role</dt>
+        <dd class="u-color-gray">
+          {% set comma = joiner() %}
+          {% for item in roles -%}{{ comma() }} {{ item }}{%- endfor %}
+        </dd>
+        <dt class="c-meta__title">Tech</dt>
+        <dd class="u-color-gray">
+          {% set comma = joiner() %}
+          {% for item in tech -%}{{ comma() }} {{ item }}{%- endfor %}
+        </dd>
+        {% if team %}
+        <dt class="c-meta__title">Team</dt>
+        <dd class="u-color-gray">{{ team }}</dd>
+        {% endif %}
+      </dl>
+    </div>
+    <div class="o-stack o-stack--prose u-margin-top-4">
+      {{ content | safe }}
     </div>
   </article>
 {% endblock %}

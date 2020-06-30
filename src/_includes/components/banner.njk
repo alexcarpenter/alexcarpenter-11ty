@@ -1,21 +1,15 @@
 <header class="c-banner" role="banner">
-  <div class="o-grid o-grid--align-center@md">
-    <div class="o-grid__col u-width-4of12">
-      <a class="c-banner__branding" href="/">
-        <span class="u-hidden-visually">{{ site.title }}</span>
-        {% include "components/logo.njk" %}
-      </a>
-    </div>
-    <div class="o-grid__col u-width-8of12">
-      <nav class="c-banner__nav">
-        <ul class="c-banner__nav-list">
-          {% for item in site.navigation %}
-          <li class="c-banner__nav-item">
-            <a class="c-banner__nav-anchor" {% if page.url == item.url %}aria-current="page"{% endif %} href="{{ item.url }}">{{ item.label }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </div>
-  </div>
+  <a class="c-banner__branding" href="/">
+    <span class="u-hidden-visually">{{ site.title }}</span>
+    {% include "components/logo.njk" %}
+  </a>
+  <nav class="c-banner__nav">
+    <ul class="c-banner__nav-list">
+      {% for item in site.navigation %}
+      <li class="c-banner__nav-item">
+        <a class="c-banner__nav-anchor" {% if page.url == item.url %}aria-current="page"{% endif %} href="{{ item.url }}">{{ item.label }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
 </header>

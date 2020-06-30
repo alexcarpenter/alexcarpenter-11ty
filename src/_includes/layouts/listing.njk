@@ -1,0 +1,9 @@
+{% extends 'layouts/page.njk' %}
+{% import "components/macros.njk" as components %}
+
+{% block content %}
+  {% include "components/listing.njk" %}
+  <div class="u-margin-top-5">
+    {% include "components/pagination.njk" %}
+  </div>
+{% endblock %}

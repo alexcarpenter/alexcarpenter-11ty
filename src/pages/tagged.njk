@@ -11,32 +11,22 @@ pagination:
     - screencasts
 permalink: /tagged/{{ tag }}/index.html
 ---
-{% import "components/macros.njk" as components %}
 {% extends "layouts/default.njk" %}
+{% import "components/macros.njk" as components %}
 
 {% block main %}
-  <header>
-    <div class="o-grid o-grid--justify-end">
-      <div class="o-grid__col u-width-8of12@md">
-        <h1 class="u-font-size-2xl">Tagged “{{ tag }}”</h1>
-      </div>
-    </div>
-  </header>
+  <h1 class="u-font-size-2xl">Tagged “{{ tag }}”</h1>
   <div class="u-margin-top-5">
-    <div class="o-grid o-grid--justify-end">
-      <div class="o-grid__col u-width-8of12@md">
-        {% set taglist = collections[tag] %}
-        <ul class="c-listing c-listing--4">
-        {% for entry in taglist | reverse %}
-          <li class="c-listing__item">
-            {{ components.entry({
-              entry: entry,
-              icons: true
-            }) }}
-          </li>
-        {% endfor %}
-        </ul>
-      </div>
-    </div>
+    {% set taglist = collections[tag] %}
+    <ul class="c-listing c-listing--4">
+    {% for entry in taglist | reverse %}
+      <li class="c-listing__item">
+        {{ components.entry({
+          entry: entry,
+          icons: true
+        }) }}
+      </li>
+    {% endfor %}
+    </ul>
   </div>
 {% endblock %}

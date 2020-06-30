@@ -1,37 +1,27 @@
-{% extends 'layouts/default.njk' %}
+{% extends 'layouts/article.njk' %}
 {% import "components/macros.njk" as components %}
 
-{% block main %}
-  <article>
-    <header class="o-grid o-grid--justify-end">
-      <div class="o-grid__col u-width-8of12@md">
-        <time class="u-color-gray u-text-uppercase">{{ page.date | date_formatted }}</time>
-        <h1 class="u-font-size-2xl">{{ title }}</h1>
-        {% if link %}
-          <p class="u-margin-top-1">
-            {{ components.link({
-              url: link + '?ref=alexcarpenter.me',
-              external: true
-            }) }}
-          </p>
-        {% endif %}
-        {% if intro %}
-          <p class="u-lead">{{ intro }}</p>
-        {% endif %}
-      </div>
-    </header>
-    <div class="o-grid o-grid--justify-end">
-      {% if content %}
-      <div class="o-grid__col u-width-8of12@md">
-        <div class="o-stack o-stack--prose">
-          {{ content | markdownify | safe }}
-        </div>
-      </div>
-      {% endif %}
-      <div class="o-grid__col u-width-8of12@md">
-        {% include "components/share.njk" %}
-        {% include "components/tags.njk" %}
-      </div>
+{% block content %}
+  <header>
+    <time class="u-color-gray u-text-uppercase">{{ page.date | date_formatted }}</time>
+    <h1 class="u-font-size-2xl">{{ title }}</h1>
+    {% if link %}
+      <p class="u-margin-top-1">
+        {{ components.link({
+          url: link + '?ref=alexcarpenter.me',
+          external: true
+        }) }}
+      </p>
+    {% endif %}
+    {% if intro %}
+      <p class="u-lead">{{ intro }}</p>
+    {% endif %}
+  </header>
+  {% if content %}
+    <div class="o-stack o-stack--prose">
+      {{ content | markdownify | safe }}
     </div>
-  </article>
+  {% endif %}
+  {% include "components/share.njk" %}
+  {% include "components/tags.njk" %}
 {% endblock %}

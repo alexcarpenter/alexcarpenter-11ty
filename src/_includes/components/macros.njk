@@ -111,7 +111,6 @@
 {% set data = args.entry.data %}
 <article>
 <span class="u-color-gray u-flex u-align-center">
-{% if args.icons | default(false) %}
 <span class="u-hidden-visually">{{ data.type }}</span>
 {% if data.type == 'bookmark' %}
 <svg class="u-margin-right-2 u-flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
@@ -120,10 +119,9 @@
 {% else %}
 <svg class="u-margin-right-2 u-flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
 {% endif %}
-{% endif %}
 <time class="u-color-gray u-text-uppercase" datetime="{{ args.entry.date }}">{{ args.entry.date | date_formatted }}</time>
 </span>
-<h2 class="u-font-size-{{ args.size | default('lg') }} u-font-weight-normal u-margin-top-1"><a class="u-primary-anchor" href="{{ args.entry.url }}">{{ data.title }}</a></h2>
+<h2 class="u-font-size-{{ args.size | default('lg') }} u-font-weight-normal u-margin-top-1"><a href="{{ args.entry.url }}">{{ data.title }}</a></h2>
 {% if data.type == 'bookmark' %}
 <p class="u-margin-top-2 u-color-gray">{{ data.link | hostname }}</p>
 {% endif %}
