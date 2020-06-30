@@ -8,7 +8,8 @@ permalink: /work/index.html
 
 {% block content %}
   <section class="u-margin-top-5">
-    <ul class="c-listing c-listing--4">
+    <h2 class="u-text-uppercase">Case studies</h2>
+    <ul class="c-listing c-listing--4 u-margin-top-4">
       {% for entry in collections.work | favorites %}
       <li class="c-listing__item">
         <div class="o-grid o-grid--reversed@md">
@@ -33,7 +34,8 @@ permalink: /work/index.html
   </section>
 
   <section class="u-margin-top-5">
-    <ul class="c-listing c-listing--4">
+    <h2 class="u-text-uppercase">Experience</h2>
+    <ul class="c-listing c-listing--4 u-margin-top-4">
       <li class="c-listing__item">
         <p class="u-color-gray u-text-uppercase">Nov 2018 – Present</p>
         <h3 class="u-font-size-lg u-margin-top-1">NationBuilder – UI Engineer</h3>
@@ -71,7 +73,8 @@ permalink: /work/index.html
   </section>
 
   <section class="u-margin-top-5">
-    <ul class="c-listing c-listing--4">
+    <h2 class="u-text-uppercase">Recommendations</h2>
+    <ul class="c-listing c-listing--4 u-margin-top-4">
       <li class="c-listing__item">
         {{ components.quote({
           text: "Alex is incredibly skilled, efficient, and thorough in his work. Perhaps more than any other co-worker I have had, Alex possesses a deep and wide understanding of modern web technologies, while his steady passion for producing best-of-class work inspires his peers to write cleaner, simpler, and more elegant code.",
