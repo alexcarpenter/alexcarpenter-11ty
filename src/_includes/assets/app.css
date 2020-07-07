@@ -89,18 +89,12 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-@media (min-width: 720px) {
-  html {
-    font-size: 112.5%; /* 18px */
-  }
-}
-
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
-  max-width: 43.333333333rem; /* 780px */
+  max-width: 45rem;
   margin-right: auto;
   margin-left: auto;
   padding: var(--space-5) var(--space-3);
