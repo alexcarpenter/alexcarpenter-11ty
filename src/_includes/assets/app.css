@@ -42,12 +42,22 @@
             0 16px 32px rgba(0,0,0,0.07),
             0 32px 64px rgba(0,0,0,0.07);
 
-  --theme-color: #111111;
+  --theme-color: #24292e;
   --theme-color-primary: var(--color-blue);
-  --theme-color-gray: #777777;
+  --theme-color-gray: #6a737d;
   --theme-background-color: #FFFFFF;
-  --theme-border-color: #DDDDDD;
+  --theme-border-color: #EEEEEE;
 }
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --theme-color: #fafafa;
+    --theme-color-primary: #eb5424;
+    --theme-color-gray: #999999;
+    --theme-background-color: #111111;
+    --theme-border-color: #333333;
+  }
+} */
 
 @media (min-width: 720px) {
   :root {
@@ -81,7 +91,7 @@ html {
 
 @media (min-width: 720px) {
   html {
-    font-size: 106.25%; /* 17px */
+    font-size: 112.5%; /* 18px */
   }
 }
 
@@ -90,7 +100,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
-  max-width: 44.705882353rem; /* 760px */
+  max-width: 43.333333333rem; /* 780px */
   margin-right: auto;
   margin-left: auto;
   padding: var(--space-5) var(--space-3);
@@ -143,6 +153,10 @@ a:focus {
 h2 a {
   color: var(--theme-color-primary);
   text-decoration: none;
+}
+
+h2 a:hover {
+  text-decoration: underline;
 }
 
 strong {
