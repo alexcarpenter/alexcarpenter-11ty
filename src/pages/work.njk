@@ -12,7 +12,7 @@ permalink: /work/index.html
     <ul class="c-listing c-listing--4 u-margin-top-4">
       {% for entry in collections.work | favorites %}
       <li class="c-listing__item">
-        <div class="o-grid o-grid--reversed@md">
+        <div class="o-grid">
           <div class="o-grid__col u-width-6of12@md">
           {% if entry.data.thumbnail_sm %}
             {{ components.figure({
@@ -26,6 +26,9 @@ permalink: /work/index.html
           <div class="o-grid__col u-width-6of12@md">
             <h3 class="u-font-size-lg u-font-weight-semi-bold"><a class="u-primary-anchor" href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
             <p class="u-margin-top-2">{{ entry.data.summary | markdownify_inline }}</p>
+            <div class="u-margin-top-2">
+              {{ components.link({ url: entry.data.link, external: true }) }}
+            </div>
           </div>
         </div>
       </li>
