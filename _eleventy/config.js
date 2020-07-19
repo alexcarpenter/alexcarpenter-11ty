@@ -39,10 +39,6 @@ module.exports = function (eleventyConfig) {
     ].reverse();
   });
 
-  eleventyConfig.addCollection('bookmarks', (collection) => {
-    return collection.getFilteredByGlob('**/bookmarks/*.md').reverse();
-  });
-
   eleventyConfig.addCollection('screencasts', (collection) => {
     return collection.getFilteredByGlob('**/screencasts/*.md').reverse();
   });
@@ -63,7 +59,6 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob([
       '**/posts/*.md',
       '**/screencasts/*.md',
-      '**/bookmarks/*.md'
     ]).filter(published).reverse();
   });
 
