@@ -1,7 +1,7 @@
 ---
 favorite: true
 order: 2
-title: "NationBuilder homepage"
+title: "NationBuilder"
 team: "NationBuilder"
 summary: "Developed a new homepage to showcase the leaders who are using NationBuilder and highlight features from the new control&nbsp;panel."
 year: "2019"

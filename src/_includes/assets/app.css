@@ -45,27 +45,13 @@
   --theme-color: #24292e;
   --theme-color-primary: var(--color-blue);
   --theme-color-gray: #6a737d;
+  --theme-color-gray-light: #F6F8FA;
   --theme-background-color: #FFFFFF;
   --theme-border-color: #EEEEEE;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --theme-color: #fafafa;
-    --theme-color-primary: #eb5424;
-    --theme-color-gray: #999999;
-    --theme-background-color: #111111;
-    --theme-border-color: #333333;
-  }
-} */
-
 @media (min-width: 720px) {
   :root {
-    --font-size-xl: 2rem;
-    --font-size-2xl: 2.5rem;
-    --font-size-3xl: 3rem;
-    --font-size-4xl: 4rem;
-
     --gap: var(--space-4);
   }
 }
@@ -227,6 +213,19 @@ hr {
   background-color: var(--theme-border-color);
 }
 
+kbd {
+  display: inline-block;
+  padding-right: 4px;
+  padding-left: 4px;
+  background-color: #FAFAFA;
+  border: 1px solid #EAEAEA;
+  box-shadow: inset 0 -1px 0 #D9EFDE;
+  border-radius: 4px;
+  font-family: var(--font-family-code);
+  font-size: .95rem;
+  color: #222222;
+}
+
 
 
 /* ==========================================================================
@@ -302,6 +301,8 @@ hr {
 }
 
 .o-grid__col {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding-left: var(--gap);
   margin-bottom: var(--gap);
@@ -312,9 +313,9 @@ hr {
  * STACK
  */
 
+.o-stack > * + *    { margin-top: var(--space-3); }
 .o-stack--1 > * + * { margin-top: var(--space-1); }
 .o-stack--2 > * + * { margin-top: var(--space-2); }
-.o-stack > * + *,
 .o-stack--3 > * + * { margin-top: var(--space-3); }
 .o-stack--4 > * + * { margin-top: var(--space-4); }
 .o-stack--5 > * + * { margin-top: var(--space-5); }
@@ -350,6 +351,7 @@ hr {
  */
 
 .c-avatar {
+  flex-shrink: 0;
   border-radius: 50%;
   box-shadow: 0 0 0 3px var(--theme-border-color);
 }
@@ -455,6 +457,19 @@ hr {
 .c-button svg {
   margin-right: var(--space-2);
   flex-shrink: 0;
+}
+
+
+/**
+ * CARD
+ */
+
+.c-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: var(--space-4);
+  background-color: var(--theme-color-gray-light);
 }
 
 
@@ -795,6 +810,7 @@ a.c-pill:hover:after {
 }
 
 .c-quote--default .c-quote__cite-media {
+  flex-shrink: 0;
   margin-right: var(--space-3);
 }
 
