@@ -1,5 +1,6 @@
 ---
 title: Optimizing my keyboard for efficiency
+description: How I started using Karabiner-Elements to optimize my keyboard for efficiency
 tags:
   - productivity
 ---
