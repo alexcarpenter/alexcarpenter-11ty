@@ -1,5 +1,0 @@
-{
-  "layout": "layouts/work",
-  "permalink": "work/{{ page.fileSlug }}/index.html",
-  "type": "work"
-}

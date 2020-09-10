@@ -4,6 +4,6 @@ summary: ''
 youtubeId: 'l5Hckd_V8do'
 duration: '3:58'
 tags:
-  - css
+  - CSS
 primaryColor: '#DD4B00'
 ---

@@ -2,7 +2,7 @@
 title: How to make an ordered list with leading zero's using CSS
 summary: How to create an ordered list with leading zero's.
 tags:
-  - css
+  - CSS
 ---
 Adam Duncan posted a [question on Twitter](https://twitter.com/duncanadam/status/1043104880049774593) this morning, asking for tweet-sized solutions to achieve an ordered list with leading zero's using CSS.
 

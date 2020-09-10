@@ -1,7 +1,7 @@
 ---
 title: "How to convert a NodeList to an array"
 tags:
-  - javascript
+  - JavaScript
 ---
 ```html
 <!-- Example HTML markup -->

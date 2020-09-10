@@ -1,0 +1,36 @@
+---
+title: Case studies
+summary: ""
+permalink: /case-studies/
+---
+{% extends "layouts/page.njk" %}
+{% import "components/macros.njk" as components %}
+
+{% block content %}
+  <ul class="c-listing c-listing--4 u-margin-top-4">
+    {% set cn = cycler("o-grid", "o-grid o-grid--reversed@md") %}
+    {% for entry in collections.caseStudies %}
+    <li class="c-listing__item">
+      <div class="{{ cn.next() }}">
+        <div class="o-grid__col u-width-6of12@md">
+        {% if entry.data.thumbnail_sm %}
+          {{ components.figure({
+            src: entry.data.thumbnail_sm,
+            alt: entry.data.title,
+            bordered: true
+          }) }}
+        {% endif %}
+        </div>
+
+        <div class="o-grid__col u-width-6of12@md">
+          <h3 class="u-font-size-lg u-font-weight-semi-bold"><a class="u-primary-anchor" href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
+          <p class="u-margin-top-2">{{ entry.data.summary | markdownify_inline }}</p>
+          <div class="u-margin-top-2">
+            {{ components.link({ url: entry.data.link, external: true }) }}
+          </div>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

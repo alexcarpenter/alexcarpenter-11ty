@@ -2,7 +2,7 @@
 title: 5 tips for styling the component layer
 summary: Here are 5 tips to consider next time you begin styling components for a project.
 tags:
-  - css
+  - CSS
 ---
 When working within the component layer of your project here are five tips that I have found to be helpful–independent of what methodology or tooling you may be using.
 

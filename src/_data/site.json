@@ -5,16 +5,16 @@
   "description": "Self taught developer that works best when floating in between design and engineering teams. I enjoy sharing what I know via short instructional screencasts and the occasional written post.",
   "navigation": [
     {
+      "label": "Work",
+      "url": "/work/"
+    },
+    {
       "label": "Screencasts",
       "url": "/screencasts/"
     },
     {
       "label": "Posts",
       "url": "/posts/"
-    },
-    {
-      "label": "Work",
-      "url": "/work/"
     },
     {
       "label": "Contact",

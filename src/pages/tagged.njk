@@ -9,7 +9,7 @@ pagination:
     - work
     - posts
     - screencasts
-permalink: /tagged/{{ tag }}/index.html
+permalink: /tagged/{{ tag | kebab }}/index.html
 ---
 {% extends "layouts/default.njk" %}
 {% import "components/macros.njk" as components %}

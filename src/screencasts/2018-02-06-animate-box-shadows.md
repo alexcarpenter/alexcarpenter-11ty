@@ -6,5 +6,5 @@ thumbnail: "/assets/images/thumbnail-animate-box-shadows.png"
 youtubeId: "ZkDWCCHiPg4"
 duration: "5:45"
 tags:
-  - css
+  - CSS
 ---

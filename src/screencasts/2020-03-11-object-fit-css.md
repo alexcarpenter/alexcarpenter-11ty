@@ -5,5 +5,5 @@ thumbnail: '/assets/images/thumbnail-object-fit-css.png'
 youtubeId: 'mLZjKBC3R34'
 duration: '1:14'
 tags:
-  - css
+  - CSS
 ---

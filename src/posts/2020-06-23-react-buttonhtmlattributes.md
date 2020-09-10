@@ -1,8 +1,8 @@
 ---
 title: TypeScript extend React Button HTML Attributes
 tags:
-  - til
-  - typescript
+  - TIL
+  - TypeScript
 ---
 {% import "components/macros.njk" as components %}
 When I got started learning TypeScript, I found myself defining all of the prop types I expected the component to need instead of extending some of the types React provides by default.

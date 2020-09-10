@@ -4,5 +4,5 @@ summary: ""
 youtubeId: "t4Lps7eUKfM"
 duration: "3:56"
 tags:
-  - css
+  - CSS
 ---

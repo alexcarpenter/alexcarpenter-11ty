@@ -1,6 +1,8 @@
 ---
 title: eleventy-boilerplate
 summary: I figured it was time to create a boilerplate to get up and running quickly for future projects. So I created my slightly opinionated Eleventy boilerplate.
+tags:
+  - 11ty
 ---
 If you are subscribed to my [newsletter](https://alexcarpenter.me/newsletter/) or follow me on [Twitter](https://twitter.com/hybrid_alex), you probably have noticed my excitement for the new static site generator [Eleventy](https://www.11ty.io/). This very site you are reading is built with Eleventy, and my recent side project [Front-end Foundations](https://frontend-foundations.com/) is built with it as well.
 

@@ -5,6 +5,6 @@ summary: ""
 youtubeId: "sZJrcOfBaNY"
 duration: "3:47"
 tags:
-  - css
+  - CSS
 primaryColor: "#643DA7"
 ---

@@ -2,7 +2,7 @@
 title: Unsetting buttons
 summary: One line of CSS to get you to a sane starting point when making button and link elements look visually similar.
 tags:
-  - css
+  - CSS
 ---
 It's not uncommon to style the `button` and `a[href]` elements to look the same throughout your website or application. This often means resetting the default button styling and dealing with browser inconsistencies to make them visually similar.
 

@@ -2,7 +2,7 @@
 title: Optimizing my keyboard for efficiency
 description: How I started using Karabiner-Elements to optimize my keyboard for efficiency
 tags:
-  - productivity
+  - Productivity
 ---
 I recently watched a [video](https://www.youtube.com/watch?v=emNG5DuEzaY) by John Lindquist, expressing the importance of typing skills to become a more efficient developer. In this video, he demonstrates the use of Karabiner-Elements to be able to remap keys on your keyboard.
 

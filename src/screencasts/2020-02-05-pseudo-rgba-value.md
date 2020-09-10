@@ -4,6 +4,6 @@ summary: "How I used a pseudo element to mimic an rgba value for the pill compon
 youtubeId: "qPRvEJr1LvI"
 duration: "4:23"
 tags:
-  - css
+  - CSS
 primaryColor: "#4CA55E"
 ---

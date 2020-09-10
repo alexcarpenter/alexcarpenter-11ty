@@ -5,5 +5,5 @@ thumbnail: "/assets/images/thumbnail-breakout-css.png"
 youtubeId: "UQpvYbFNzFc"
 duration: "3:46"
 tags:
-  - css
+  - CSS
 ---

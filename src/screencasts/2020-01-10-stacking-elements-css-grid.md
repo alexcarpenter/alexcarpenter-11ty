@@ -4,6 +4,6 @@ summary: "Learn how to use CSS Grid to stack tab panels on top of one another to
 youtubeId: "Fhu83TS9Mls"
 duration: "1:50"
 tags:
-  - css
+  - CSS
 primaryColor: "#643DA7"
 ---

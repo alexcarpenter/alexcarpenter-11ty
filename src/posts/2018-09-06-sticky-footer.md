@@ -2,7 +2,7 @@
 title: Sticky footer with flexbox auto margins
 summary: How to create a sticky footer with flexbox auto margins.
 tags:
-  - css
+  - CSS
 ---
 There have been a multitude of different methods to create a sticky footer with CSS. Most have used a mix of absolutely positioned elements and some type of viewport math to achieve this seemingly simple pattern.
 

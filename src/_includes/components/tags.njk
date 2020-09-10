@@ -4,8 +4,8 @@
   {% for tag in tags %}
     <li class="o-tags__item">
       {{ components.pill({
-        url: '/tagged/' + tag,
-        label: tag | upper
+        url: '/tagged/' + tag | kebab,
+        label: tag
       }) }}
     </li>
   {% endfor %}

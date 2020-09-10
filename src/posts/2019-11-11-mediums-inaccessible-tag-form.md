@@ -1,7 +1,7 @@
 ---
 title: "Medium's inaccessible tag selector form"
 tags:
-  - accessibility
+  - Accessibility
 ---
 {% import "components/macros.njk" as components %}
 It had been awhile since I had visited Medium's homepage, mostly because I tend to exit when I am immediately prompted to login to read the article.

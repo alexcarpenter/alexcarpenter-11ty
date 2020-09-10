@@ -5,6 +5,6 @@ thumbnail: '/assets/images/thumbnail-css-text-gradient.png'
 youtubeId: 'hXsJ0BuFh9I'
 duration: '2:17'
 tags:
-  - css
+  - CSS
 primaryColor: '#B5004A'
 ---

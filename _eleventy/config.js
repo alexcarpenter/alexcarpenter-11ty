@@ -43,9 +43,9 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob('**/screencasts/*.md').reverse();
   });
 
-  eleventyConfig.addCollection('work', (collection) => {
+  eleventyConfig.addCollection('caseStudies', (collection) => {
     const published = (p) => !p.data.draft;
-    const entries = collection.getFilteredByGlob('**/work/*.md')
+    const entries = collection.getFilteredByGlob('**/case-studies/*.md')
       .sort((a, b) => {
         return Number(a.data.order) - Number(b.data.order);
       })

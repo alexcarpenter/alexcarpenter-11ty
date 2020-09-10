@@ -4,5 +4,5 @@ summary: "Originally created by Nicole Sullivan back in 2010, the media object i
 youtubeId: "8omyNs6s390"
 duration: "3:54"
 tags:
-  - css
+  - CSS
 ---

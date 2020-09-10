@@ -1,6 +1,8 @@
 ---
 title: Back to static
 summary: Towards the beginning of the year I had migrated my personal site setup from Jekyll over to Craft CMS.
+tags:
+  - 11ty
 ---
 {{ description }}
 

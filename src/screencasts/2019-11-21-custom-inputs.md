@@ -4,7 +4,7 @@ summary: ""
 youtubeId: "54YeIQ7Eo_g"
 duration: "6:39"
 tags:
-  - css
+  - CSS
 primaryColor: "#4ca55e"
 ---
 One major thing I forgot to outline in the screencast is ensuring there is a focused state applied to the custom indicator when the user has focused the input. The code provided below includes a focus state.

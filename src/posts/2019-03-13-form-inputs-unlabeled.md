@@ -1,7 +1,7 @@
 ---
 title: "59% of form inputs unlabeled"
 tags:
-  - accessibility
+  - Accessibility
 ---
 {% import "components/macros.njk" as components %}
 WebAIM recently released a large volume of [accessibility data](https://webaim.org/projects/million/) they collected from the "top" 1 million web sites. Here are some of the data points they collected 😔.

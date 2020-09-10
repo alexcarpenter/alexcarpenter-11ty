@@ -4,7 +4,7 @@ summary: ""
 youtubeId: "P_Ao8OuI_vI"
 duration: "44:23"
 tags:
-  - css
+  - CSS
   - learning
 primaryColor: "#09838B"
 ---

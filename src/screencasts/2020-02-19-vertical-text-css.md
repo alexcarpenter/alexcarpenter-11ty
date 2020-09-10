@@ -5,5 +5,5 @@ thumbnail: '/assets/images/thumbnail-vertical-text-css.png'
 youtubeId: 'x5Dx5zgDwnI'
 duration: '1:10'
 tags:
-  - css
+  - CSS
 ---

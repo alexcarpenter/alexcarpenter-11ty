@@ -1,7 +1,6 @@
 ---
 title: "US Coffee Roasters"
 link: https://us-coffee-roasters.com
-tags:
 ---
 Back when I was hosting the [I Brew My Own Coffee podcast](http://www.ibrewmyowncoffee.com/) – I had crowd-sourced a list of US Coffee Roasters from a Reddit thread and piped that data into a spreadsheet. Last week I happened across that spreadsheet again and I thought I'd make a little site so folks could have access to the data.
 

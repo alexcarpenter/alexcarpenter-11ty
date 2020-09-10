@@ -1,8 +1,7 @@
 ---
 title: "How to check if an object within array contains a value"
 tags:
-  - javascript
-  - til
+  - JavaScript
 ---
 When needing to check whether or not an object within an array contains a value, we can use the `some()` method which returns a Boolean value.
 

@@ -1,7 +1,7 @@
 ---
 title: Return a string
 tags:
-  - javascript
+  - JavaScript
 ---
 The other day I needed to return a string based on a piece of data returned from the server. At that moment my brain decided to create a reponse variable and use a conditional to return the correct response based on that value. It looked something like this.
 

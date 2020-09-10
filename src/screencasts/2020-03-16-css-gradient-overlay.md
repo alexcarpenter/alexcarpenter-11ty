@@ -6,5 +6,5 @@ youtubeId: 'mT10ZJdlh9Y'
 duration: '2:10'
 primaryColor: '#000'
 tags:
-  - css
+  - CSS
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Consecutively return a random item from a JavaScript array"
 tags:
-  - javascript
+  - JavaScript
 ---
 The other week I was working on a [side project](https://github.com/alexcarpenter/standup-starter) where I needed to consecutively return a random item from an array via a button click.
 

@@ -4,6 +4,6 @@ summary: ""
 youtubeId: "OmmM_a_AMNE"
 duration: "4:47"
 tags:
-  - css
+  - CSS
 primaryColor: "#DD4B00"
 ---

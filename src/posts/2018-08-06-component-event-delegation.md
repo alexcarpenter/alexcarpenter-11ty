@@ -2,7 +2,7 @@
 title: Component event delegation
 summary: Lets take a look at how we can make use of event delegation to manage our components event listeners efficiently.
 tags:
-  - javascript
+  - JavaScript
 ---
 Last week I wrote about [checking for an element on a page](/posts/2018/08/check-for-element/) before executing our Javascript to avoid errors. That example works well if you only have one element to attach an event listener to. If you have multiple components and triggers, we should look into using event delegation to keep our code performant.
 

@@ -2,7 +2,7 @@
 title: Check for an element on a page before running Javascript code
 summary: It can be common to run a piece of Javascript code based on the availability of an element on the page like a button.
 tags:
-  - javascript
+  - JavaScript
 ---
 It can be common to run a piece of Javascript code based on the availability of an element on the page like a button. If the button is present we want to run a method, otherwise we want it to return (stop from executing).
 

@@ -2,7 +2,7 @@
 title: Background image gradient overlay
 summary: Five years ago I made a CodePen to demonstrate how to apply a gradient overlay over a background image. Since then, that pen has been viewed over 294,804 times and hearted 705 times.
 tags:
-  - css
+  - CSS
 ---
 Five years ago I made a [CodePen](https://codepen.io/alexcarpenter/pen/LveDx/) to demonstrate how to apply a gradient overlay over a background image. Since then that pen has been viewed over 294,804 times and hearted 705 times.
 

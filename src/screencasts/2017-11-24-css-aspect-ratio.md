@@ -6,6 +6,6 @@ thumbnail: "/assets/images/thumbnail-css-aspect-ratio.png"
 youtubeId: "iSaBRUgAXnk"
 duration: "5:52"
 tags:
-  - css
+  - CSS
 primaryColor: "#356959"
 ---

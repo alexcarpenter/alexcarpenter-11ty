@@ -2,7 +2,7 @@
 title: Event delegation gotcha
 summary: While making a few small Javascript libraries, I discovered this one small event delegation gotcha and found a one line CSS fix to solve the problem.
 tags:
-  - javascript
+  - JavaScript
 ---
 {% import "components/macros.njk" as components %}
 {{ components.note({
