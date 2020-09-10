@@ -1,6 +1,6 @@
 ---
 title: Work
-summary: "UI Engineer excited about design systems thinking and component API design. Working remotely, floating between design and engineering teams."
+summary: "Helping teams build consistent, high-quality and inclusive user interfaces. Working remotely, floating between design and engineering teams."
 permalink: /work/index.html
 ---
 {% extends "layouts/page.njk" %}
@@ -10,7 +10,7 @@ permalink: /work/index.html
   <section class="u-margin-top-5">
     <h2 class="u-text-uppercase">Case studies</h2>
     <ul class="c-listing c-listing--4 u-margin-top-4">
-      {% for entry in collections.work | favorites %}
+      {% for entry in collections.caseStudies | favorites | take(2) %}
       <li class="c-listing__item">
         <div class="o-grid">
           <div class="o-grid__col u-width-6of12@md">
@@ -34,6 +34,9 @@ permalink: /work/index.html
       </li>
       {% endfor %}
     </ul>
+    {# <div class="u-margin-top-4">
+      {{ components.link({ url: "/case-studies/", text: "View more case studies" }) }}
+    </div> #}
   </section>
 
   {# <section class="u-margin-top-5">
