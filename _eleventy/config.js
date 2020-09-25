@@ -22,9 +22,9 @@ module.exports = function (eleventyConfig) {
   // });
 
   // Paired shortcodes
-  // Object.keys(pairedShortcodes).forEach((shortCodeName) => {
-  //   eleventyConfig.addPairedShortcode(shortCodeName, pairedShortcodes[shortCodeName]);
-  // });
+  Object.keys(pairedShortcodes).forEach((shortCodeName) => {
+    eleventyConfig.addPairedShortcode(shortCodeName, pairedShortcodes[shortCodeName]);
+  });
 
   // Plugins
   eleventyConfig.addPlugin(pluginRss);

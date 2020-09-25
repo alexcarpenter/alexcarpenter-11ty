@@ -14,6 +14,7 @@
   --font-size-2xl: 2.25rem;
   --font-size-3xl: 2.5rem;
   --font-size-4xl: 3rem;
+  --font-size-5xl: 4rem;
 
   --space-0: 0;
   --space-1: .25rem;
@@ -31,7 +32,7 @@
   --color-red-100: #FFD3CC;
   --color-yellow-100: #FFF8CC;
   --color-green-100: #D9EFDE;
-  
+
   --mark: var(--color-yellow-100);
   --outline: 0 0 0 3px var(--color-yellow);
   --gap: var(--space-3);
@@ -262,6 +263,33 @@ kbd {
     height: 100%;
     width: 100%;
   }
+}
+
+
+/**
+ * BREAKOUT
+ */
+.o-breakout {
+  position: relative;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+
+.o-container {
+  max-width: 45rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--space-3);
+  padding-left: var(--space-3);
+}
+
+.o-container--lg {
+  max-width: 75rem;
 }
 
 
@@ -627,7 +655,7 @@ kbd {
     grid-template-rows: repeat(50, min-content);
     grid-column-gap: var(--space-4);
   }
-  
+
   .c-meta__title {
     grid-row-start: 1;
   }
@@ -911,6 +939,16 @@ a.c-pill:hover:after {
 
 
 /**
+ * ORDER
+ */
+@media (min-width: 720px) {
+  .u-order-first\@md {
+    order: -9999;
+  }
+}
+
+
+/**
  * SPACING
  */
 
@@ -950,6 +988,7 @@ a.c-pill:hover:after {
 .u-font-size-2xl  { font-size: var(--font-size-2xl) !important; }
 .u-font-size-3xl  { font-size: var(--font-size-3xl) !important; }
 .u-font-size-4xl  { font-size: var(--font-size-4xl) !important; }
+.u-font-size-5xl  { font-size: var(--font-size-5xl) !important; }
 
 @media (min-width: 720px) {
   .u-font-size-sm\@md   { font-size: 88.8888889% !important; }
@@ -960,6 +999,7 @@ a.c-pill:hover:after {
   .u-font-size-2xl\@md  { font-size: var(--font-size-2xl) !important; }
   .u-font-size-3xl\@md  { font-size: var(--font-size-3xl) !important; }
   .u-font-size-4xl\@md  { font-size: var(--font-size-4xl) !important; }
+  .u-font-size-5xl\@md  { font-size: var(--font-size-5xl) !important; }
 }
 
 

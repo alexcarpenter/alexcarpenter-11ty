@@ -1,6 +1,47 @@
 ---
-layout: layouts/page
 title: "Hey, I'm Alex"
-description: a detail oriented user interface engineer currently interested in CSS architecture, React, TypeScript, design systems, and state machines.
+description: a detail oriented user interface engineer currently interested in CSS architecture, React, TypeScript, design systems, and state&nbsp;machines.
 permalink: /
 ---
+{% extends 'layouts/page.njk' %}
+{% import "components/macros.njk" as components %}
+
+{% block content %}
+  {% Breakout %}
+    {% Container 'lg' %}
+      {% Grid {
+        align: { md: 'center' }
+      } %}
+        {% GridCol {
+          span: { md: '4of12' }
+        } %}
+          {% AspectRatio '1/1' %}
+            <img src="/assets/images/alexcarpenter-avatar-500.jpg" alt="Alex at his home desk">
+          {% endAspectRatio %}
+        {% endGridCol %}
+        {% GridCol {
+          span: { default: '6of12', md: '4of12' },
+          order: { md: 'first' }
+        } %}
+          <div class="u-text-center">
+            <p class="u-font-size-4xl">8+</p>
+            <p><a href="/work" class="u-primary-anchor">Years professional experience</a></p>
+            <p class="u-font-size-4xl u-margin-top-4">MI</p>
+            <p class="u-color-gray">Working remotely–Grand Rapids, MI.</p>
+          </div>
+        {% endGridCol %}
+        {% GridCol {
+          span: { default: '6of12', md: '4of12' }
+        } %}
+          <div class="u-text-center">
+            <p class="u-font-size-4xl">{{ collections.screencasts | length }}</p>
+            <p><a href="/screencasts" class="u-primary-anchor">YouTube development tutorials</a></p>
+            <p class="u-font-size-4xl u-margin-top-4">60K+</p>
+            <p class="u-color-gray">Total YouTube views</p>
+          </div>
+        {% endGridCol %}
+      {% endGrid %}
+    {% endContainer %}
+  {% endBreakout %}
+  {# <p class="u-margin-top-5 u-font-size-md">Outside of work, I am a self-proclaimed serial hobbyist. I enjoy sharing and creating. Lately I've been involved with outdoor cooking and RC cars.</p> #}
+{% endblock %}
