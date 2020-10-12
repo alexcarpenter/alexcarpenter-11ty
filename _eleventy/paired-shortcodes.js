@@ -34,20 +34,20 @@ module.exports = {
   },
 
   Grid: function (children, opts = {}) {
-    const { align, justify } = opts;
+    const { as='div', align, justify } = opts;
     const modifiers = [
       ...responsify(align, 'o-grid--align-'),
       ...responsify(justify, 'o-grid--justify-')
     ];
-    return `<div class="o-grid${modifiers ? ' ' + modifiers.join(' ') : ''}">${children}</div>`
+    return `<${as} class="o-grid${modifiers ? ' ' + modifiers.join(' ') : ''}">${children}</${as}>`
   },
 
   GridCol: function (children, opts = {}) {
-    const { span, order } = opts;
+    const { as='div', span, order } = opts;
     const modifiers = [
       ...responsify(span, 'u-width-'),
       ...responsify(order, 'u-order-')
     ]
-    return `<div class="o-grid__col${modifiers ? ' ' + modifiers.join(' ') : ''}">${children}</div>`
+    return `<${as} class="o-grid__col ${[...modifiers].join(' ')}">${children}</${as}>`
   }
 };

@@ -1113,6 +1113,10 @@ a.c-pill:hover:after {
   border: 0;
 }
 
+.u-shadow {
+  box-shadow: var(--shadow);
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
