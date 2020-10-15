@@ -1,0 +1,18 @@
+{% set collection = type + 's' %}
+{% set previousPost = collections[collection] | getPreviousCollectionItem(page) %}
+{% set nextPost = collections[collection] | getNextCollectionItem(page) %}
+{# <h2 class="u-text-uppercase">Continue reading</h2> #}
+<nav class="">
+  {% if previousPost %}
+  <div class="">
+    <p class="u-text-uppercase u-font-weight-semi-bold">Previous post</p>
+    <a class="text-green-800 hover:underline" href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+  </div>
+  {% endif %}
+  {% if nextPost %}
+  <div class="">
+    <p class="u-text-uppercase u-font-weight-semi-bold">Next post</p>
+    <a class="" href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+  </div>
+  {% endif %}
+</nav>

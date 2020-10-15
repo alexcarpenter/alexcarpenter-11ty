@@ -6,21 +6,25 @@
     <header>
       <p class="u-color-gray u-text-uppercase">Case study</p>
       <h1 class="u-font-size-2xl">{{ title }}</h1>
-      {% if summary %}
-        <p role="doc-subtitle" class="u-font-size-lg u-leading-tight u-margin-top-2">{{ summary | markdownify_inline | safe }}</p>
+      {% if description %}
+        <p role="doc-subtitle" class="u-font-size-lg u-leading-tight u-margin-top-2">{{ description | markdownify_inline | safe }}</p>
       {% endif %}
       {% if link %}
         <div class="u-margin-top-1">{{ components.link({ url: link, external: true }) }}</div>
       {% endif %}
     </header>
     {% if banner %}
-    <div class="u-margin-top-4">
-      {{ components.figure({
-        src: '/assets/images/' + banner,
-        alt: title + ' graphics',
-        bordered: true
-      }) }}
-    </div>
+      {% Breakout %}
+        {% Container 'lg' %}
+          <div class="u-margin-top-4">
+            {{ components.figure({
+              src: '/assets/images/' + banner,
+              alt: title + ' graphics',
+              bordered: true
+            }) }}
+          </div>
+        {% endContainer %}
+      {% endBreakout %}
     {% endif %}
     <div class="u-margin-top-4">
       <dl class="c-meta">

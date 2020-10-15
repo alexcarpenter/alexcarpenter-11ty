@@ -1,6 +1,6 @@
 ---
 title: Work
-summary: "Helping teams build consistent, high-quality and inclusive user interfaces. Working remotely, floating between design and engineering teams."
+description: "Helping teams build consistent, high-quality and inclusive user interfaces. Working remotely, floating between design and engineering teams."
 permalink: /work/index.html
 ---
 {% extends "layouts/page.njk" %}
@@ -12,25 +12,25 @@ permalink: /work/index.html
     <ul class="c-listing c-listing--4 u-margin-top-4">
       {% for entry in collections.caseStudies | favorites | take(2) %}
       <li class="c-listing__item">
-        <div class="o-grid">
-          <div class="o-grid__col u-width-6of12@md">
-          {% if entry.data.thumbnail_sm %}
-            {{ components.figure({
-              src: entry.data.thumbnail_sm,
-              alt: entry.data.title,
-              bordered: true
-            }) }}
-          {% endif %}
-          </div>
+        {% Grid %}
+          {% GridCol { span: { md: '6of12' } } %}
+            {% if entry.data.thumbnail_sm %}
+              {{ components.figure({
+                src: '/assets/images/' + entry.data.thumbnail_sm,
+                alt: entry.data.title,
+                bordered: true
+              }) }}
+            {% endif %}
+          {% endGridCol %}
 
-          <div class="o-grid__col u-width-6of12@md">
+          {% GridCol { span: { md: '6of12' } } %}
             <h3 class="u-font-size-lg u-font-weight-semi-bold"><a class="u-primary-anchor" href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
-            <p class="u-margin-top-2">{{ entry.data.summary | markdownify_inline }}</p>
+            <p class="u-margin-top-2">{{ entry.data.description | markdownify_inline }}</p>
             <div class="u-margin-top-2">
               {{ components.link({ url: entry.data.link, external: true }) }}
             </div>
-          </div>
-        </div>
+          {% endGridCol %}
+        {% endGrid %}
       </li>
       {% endfor %}
     </ul>
@@ -41,17 +41,19 @@ permalink: /work/index.html
 
   {# <section class="u-margin-top-5">
     <h2 class="u-text-uppercase">Interests</h2>
-    <ul class="o-grid u-margin-top-4">
-      {% for interest in resume.interests %}
-      <li class="o-grid__col u-width-6of12@md">
-        <div class="c-card">
-          {{ interest.icon | safe }}
-          <h3 class="u-margin-top-3 u-font-size-lg u-font-weight-semi-bold">{{ interest.name }}</h3>
-          <p class="u-margin-top-5 u-color-gray">{{ interest.description }}</p>
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
+    <div class="u-margin-top-4">
+      {% Grid { as: 'ul' } %}
+        {% for interest in resume.interests %}
+          {% GridCol { as: 'li', span: { md: '6of12' } } %}
+            <div class="c-card">
+              {{ interest.icon | safe }}
+              <h3 class="u-margin-top-3 u-font-size-lg u-font-weight-semi-bold">{{ interest.name }}</h3>
+              <p class="u-margin-top-5 u-color-gray">{{ interest.description | markdownify_inline }}</p>
+            </div>
+          {% endGridCol %}
+        {% endfor %}
+      {% endGrid %}
+    </div>
   </section> #}
 
   <section class="u-margin-top-5">
@@ -75,19 +77,21 @@ permalink: /work/index.html
 
   <section class="u-margin-top-5">
     <h2 class="u-text-uppercase">Recommendations</h2>
-    <ul class="o-grid u-margin-top-4">
-      {% for recommendation in resume.recommendations %}
-        <li class="o-grid__col u-width-6of12@md">
-          {{ components.quote({
-            text: recommendation.text,
-            cite: {
-              avatar: recommendation.avatar,
-              name: recommendation.name,
-              title: recommendation.title
-            }
-          }) }}
-        </li>
-      {% endfor %}
-    </ul>
+    <div class="u-margin-top-4">
+      {% Grid { as: 'ul' } %}
+        {% for recommendation in resume.recommendations %}
+          {% GridCol { as: 'li', span: { md: '6of12' } } %}
+            {{ components.quote({
+              text: recommendation.text,
+              cite: {
+                avatar: recommendation.avatar,
+                name: recommendation.name,
+                title: recommendation.title
+              }
+            }) }}
+          {% endGridCol %}
+        {% endfor %}
+      {% endGrid %}
+    </div>
   </section>
 {% endblock %}
