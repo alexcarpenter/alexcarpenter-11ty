@@ -2,7 +2,7 @@
 order: 1
 title: "Hobbies - Alex Carpenter"
 team: "Personal project"
-summary: "Small media site built with performance and accessibility to share my passions for outdoor cooking, RC cars, gear, and more."
+description: "Small media site built with performance and accessibility to share my passions for outdoor cooking, RC cars, gear, and more."
 year: "2020"
 roles:
   - "Design"

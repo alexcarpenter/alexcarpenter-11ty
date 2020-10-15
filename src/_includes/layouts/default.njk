@@ -8,18 +8,18 @@
   <meta name="robots" content="index,follow" />
 
   <title>{% if type == 'note' %}Note: {{ title | date_time_formatted }}{% else %}{% if title and page.url != '/' %}{{ title }}{% else %}UI Engineer{% endif %}{% endif %} - {{ site.title }}</title>
-  <meta name="description" content="{% if summary %}{{ summary | markdownify_inline | strip_html }}{% elseif description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="description" content="{% if description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.description }}{% endif %}" />
 
   <meta property="og:title" content="{% if type == 'note' %}{{ title | date_time_formatted }}{% else %}{% if title and page.url != '/' %}{{ title }}{% else %}UI Engineer{% endif %}{% endif %} - {{ site.title }}">
-  <meta property="og:description" content="{% if summary %}{{ summary | markdownify_inline | strip_html }}{% elseif description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:description" content="{% if description %}{{ description | markdownify_inline | strip_html }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ page.url | permalink }}">
-  <meta property="og:image" content="{{ site.url }}{%if thumbnail %}{{ thumbnail }}{% else %}/assets/images/meta-logo.png{% endif %}">
+  <meta property="og:image" content="{{ site.url }}{%if thumbnail %}/assets/images/{{ thumbnail }}{% else %}/assets/images/meta-logo.png{% endif %}">
 
   <meta name="twitter:site" content="@hybrid_alex">
   <meta name="twitter:creator" content="@hybrid_alex">
   <meta name="twitter:title" content="{% if title and page.url != '/' %}{{ title }}{% else %}UI Engineer{% endif %} - {{ site.title }}">
-  <meta name="twitter:card" content="{% if thumbnail %}summary_large_image{% else %}summary{% endif %}">
-  <meta name="twitter:image" content="{{ site.url }}{%if thumbnail %}{{ thumbnail }}{% else %}/assets/images/meta-logo.png{% endif %}">
+  <meta name="twitter:card" content="{% if thumbnail %}description_large_image{% else %}description{% endif %}">
+  <meta name="twitter:image" content="{{ site.url }}{%if thumbnail %}/assets/images/{{ thumbnail }}{% else %}/assets/images/meta-logo.png{% endif %}">
 
   <link rel="shortcut icon" href="/assets/images/favicon.ico">
 

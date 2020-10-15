@@ -1,6 +1,6 @@
 ---
 title: Office Hours
-summary: In my continual quest to give back to the community that has provided so much for me, I decided to signup up for a service called Office Hours.
+description: In my continual quest to give back to the community that has provided so much for me, I decided to signup up for a service called Office Hours.
 ---
 {{ description }}
 

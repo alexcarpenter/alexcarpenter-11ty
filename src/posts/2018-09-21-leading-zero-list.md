@@ -1,6 +1,6 @@
 ---
 title: How to make an ordered list with leading zero's using CSS
-summary: How to create an ordered list with leading zero's.
+description: How to create an ordered list with leading zero's.
 tags:
   - CSS
 ---

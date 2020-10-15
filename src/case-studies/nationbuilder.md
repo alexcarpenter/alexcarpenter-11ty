@@ -1,9 +1,8 @@
 ---
-favorite: true
-order: 2
-title: "NationBuilder"
+order: 4
+title: "NationBuilder.com"
 team: "NationBuilder"
-summary: "Developed a new homepage to showcase the leaders who are using NationBuilder and highlight features from the new control&nbsp;panel."
+description: "Developed a new homepage to showcase the leaders who are using NationBuilder and highlight features from the new control&nbsp;panel."
 year: "2019"
 roles:
   - "Front-end development"
@@ -14,8 +13,8 @@ tech:
   - "anime.js"
 link: "https://nationbuilder.com"
 banner: "nationbuilder.png"
-thumbnail: "/assets/images/nationbuilder.png"
-thumbnail_sm: "/assets/images/nationbuilder_sm.png"
+thumbnail: "nationbuilder.png"
+thumbnail_sm: "nationbuilder_sm.png"
 primaryColor: "#D0021B"
 ---
 {% import "components/macros.njk" as components %}

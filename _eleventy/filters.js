@@ -97,5 +97,9 @@ module.exports = {
     return arr;
   },
 
-  hasTag: (arr, str) => arr.includes(str)
+  hasTag: (arr, str) => arr.includes(str),
+
+  getEntriesByName: (arr, names = []) => {
+    return arr.filter((e) => names.includes(e.data.title));
+  }
 };

@@ -1,6 +1,6 @@
 ---
 title: 'How to use flexbox CSS auto margins'
-summary: ''
+description: ''
 youtubeId: 'l5Hckd_V8do'
 duration: '3:58'
 tags:

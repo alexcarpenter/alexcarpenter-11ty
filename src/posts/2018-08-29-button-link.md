@@ -1,6 +1,6 @@
 ---
 title: Unsetting buttons
-summary: One line of CSS to get you to a sane starting point when making button and link elements look visually similar.
+description: One line of CSS to get you to a sane starting point when making button and link elements look visually similar.
 tags:
   - CSS
 ---

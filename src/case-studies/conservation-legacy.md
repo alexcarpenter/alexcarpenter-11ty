@@ -3,7 +3,7 @@ favorite: true
 order: 3
 title: "Conservation Legacy"
 team: "Mighty in the Midwest"
-summary: "Led the development of a platform of websites for Conservation Legacy, an organization that supports local conservation services across the US."
+description: "Led the development of a platform of websites for Conservation Legacy, an organization that supports local conservation services across the US."
 year: "2017"
 roles:
   - "Front-end development"
@@ -13,8 +13,8 @@ tech:
   - "Webpack"
 link: "https://conservationlegacy.org"
 banner: "conservation-legacy.png"
-thumbnail: "/assets/images/conservation-legacy.png"
-thumbnail_sm: "/assets/images/conservation-legacy_sm.png"
+thumbnail: "conservation-legacy.png"
+thumbnail_sm: "conservation-legacy_sm.png"
 primaryColor: "#C46C27"
 ---
 {% import "components/macros.njk" as components %}

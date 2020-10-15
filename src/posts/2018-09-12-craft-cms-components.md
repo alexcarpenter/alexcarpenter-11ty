@@ -1,6 +1,6 @@
 ---
 title: How to build components within Craft CMS
-summary: In this screencast I demonstrate how to move repeatable HTML elements into reusable components for portability.
+description: In this screencast I demonstrate how to move repeatable HTML elements into reusable components for portability.
 tags:
   - Craft CMS
 ---

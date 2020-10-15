@@ -2,7 +2,7 @@
 {
   title: "Learn Eleventy",
   description: "Eleventy has quickly become a popular tool for building static sites. Below you'll find a collection of tutorials to help you become an experienced Eleventy developer.",
-  thumbnail: "/assets/images/thumbnail-learn-eleventy.png",
+  thumbnail: "thumbnail-learn-eleventy.png",
   sections: [
     {
       heading: "Filters",

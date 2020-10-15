@@ -1,6 +1,6 @@
 ---
 title: How to create custom checkbox and radio inputs with CSS
-summary: ""
+description: ""
 youtubeId: "54YeIQ7Eo_g"
 duration: "6:39"
 tags:

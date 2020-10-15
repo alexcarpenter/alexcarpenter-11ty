@@ -2,7 +2,34 @@
 {% import "components/macros.njk" as components %}
 
 {% block content %}
-  {% include "components/listing.njk" %}
+  {% if features and pagination.pageNumber == 0 %}
+    <section>
+      <h2 class="u-text-uppercase">Featured {{ title | lower }}</h2>
+      <ul class="c-listing c-listing--4 u-margin-top-4">
+        {% for entry in collections[title | lower] | getEntriesByName(features) %}
+        <li class="c-listing__item">
+          {% Grid %}
+            {% GridCol { span: { md: '6of12' } } %}
+              {{ components.figure({
+                src: '/assets/images/' + entry.data.thumbnail,
+                alt: entry.data.title,
+                bordered: true
+              }) }}
+            {% endGridCol %}
+
+            {% GridCol { span: { md: '6of12' } } %}
+              <h3 class="u-font-size-lg u-font-weight-normal"><a class="u-primary-anchor" href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
+              <p class="u-margin-top-2">{{ entry.data.description | markdownify_inline }}</p>
+            {% endGridCol %}
+          {% endGrid %}
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+  <div class="u-margin-top-5">
+    {% include "components/listing.njk" %}
+  </div>
   <div class="u-margin-top-5">
     {% include "components/pagination.njk" %}
   </div>

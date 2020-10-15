@@ -5,9 +5,7 @@
   <div class="u-margin-top-2">
     {% if intro %}
       <div class="o-stack o-stack--lead">{{ intro | markdownify | safe }}</div>
-    {% elif summary %}
-      <p role="doc-subtitle" class="u-font-size-lg u-leading-tight">{{ summary | markdownify_inline | safe }}</p>
-    {% elif description %}
+    {% elseif description %}
       <p role="doc-subtitle" class="u-font-size-lg u-leading-tight">{{ description | markdownify_inline | safe }}</p>
     {% endif %}
   </div>

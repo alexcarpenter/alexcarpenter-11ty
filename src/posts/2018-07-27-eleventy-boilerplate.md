@@ -1,6 +1,6 @@
 ---
 title: eleventy-boilerplate
-summary: I figured it was time to create a boilerplate to get up and running quickly for future projects. So I created my slightly opinionated Eleventy boilerplate.
+description: I figured it was time to create a boilerplate to get up and running quickly for future projects. So I created my slightly opinionated Eleventy boilerplate.
 tags:
   - 11ty
 ---

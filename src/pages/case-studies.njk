@@ -1,6 +1,6 @@
 ---
 title: Case studies
-summary: ""
+description: ""
 permalink: /case-studies/
 ---
 {% extends "layouts/page.njk" %}
@@ -12,19 +12,21 @@ permalink: /case-studies/
     {% for entry in collections.caseStudies %}
     <li class="c-listing__item">
       <div class="{{ cn.next() }}">
-        <div class="o-grid__col u-width-6of12@md">
         {% if entry.data.thumbnail_sm %}
-          {{ components.figure({
-            src: entry.data.thumbnail_sm,
-            alt: entry.data.title,
-            bordered: true
-          }) }}
+          <div class="o-grid__col u-width-6of12@md">
+          {% if entry.data.thumbnail_sm %}
+            {{ components.figure({
+              src: '/assets/images/' + entry.data.thumbnail_sm,
+              alt: entry.data.title,
+              bordered: true
+            }) }}
+          {% endif %}
+          </div>
         {% endif %}
-        </div>
 
         <div class="o-grid__col u-width-6of12@md">
           <h3 class="u-font-size-lg u-font-weight-semi-bold"><a class="u-primary-anchor" href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
-          <p class="u-margin-top-2">{{ entry.data.summary | markdownify_inline }}</p>
+          <p class="u-margin-top-2">{{ entry.data.description | markdownify_inline }}</p>
           <div class="u-margin-top-2">
             {{ components.link({ url: entry.data.link, external: true }) }}
           </div>

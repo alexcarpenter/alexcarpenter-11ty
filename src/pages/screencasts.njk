@@ -1,9 +1,13 @@
 ---
 layout: layouts/listing
 title: Screencasts
-summary: "Subscribe on [YouTube](https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg?sub_confirmation=1)."
+description: "Subscribe on [YouTube](https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg?sub_confirmation=1)."
 pagination:
   data: collections.screencasts
   size: 10
 permalink: /screencasts/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}index.html
+features: [
+  'How to create overlapping images with CSS Grid',
+  'Preserve image aspect ratios with CSS',
+]
 ---
