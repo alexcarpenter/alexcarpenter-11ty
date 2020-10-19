@@ -1,5 +1,4 @@
 ---
-layout: layouts/listing
 title: Screencasts
 description: "Subscribe on [YouTube](https://www.youtube.com/channel/UC2jJoQlzvLPvnYfowAEVaOg?sub_confirmation=1)."
 pagination:
@@ -11,3 +10,44 @@ features: [
   'Preserve image aspect ratios with CSS',
 ]
 ---
+{% extends 'layouts/listing.njk' %}
+{% import "components/macros.njk" as components %}
+
+{% block beforeListing %}
+  {% if features and pagination.pageNumber == 0 %}
+    <section>
+      <h2 class="u-text-uppercase">Featured {{ title | lower }}</h2>
+      <ul class="c-listing c-listing--4 u-margin-top-4">
+        {% for entry in collections[title | lower] | getEntriesByName(features) %}
+        <li class="c-listing__item">
+          {% Grid %}
+            {% GridCol { span: { md: '6of12' } } %}
+              {{ components.figure({
+                src: '/assets/images/' + entry.data.thumbnail,
+                alt: entry.data.title,
+                bordered: true
+              }) }}
+            {% endGridCol %}
+
+            {% GridCol { span: { md: '6of12' } } %}
+              <h3 class="u-font-size-lg u-font-weight-normal"><a class="u-primary-anchor" href="{{ entry.url }}">{{ entry.data.title }}</a></h3>
+              <p class="u-margin-top-2">{{ entry.data.description | markdownify_inline }}</p>
+            {% endGridCol %}
+          {% endGrid %}
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    <div class="u-margin-top-5">
+      {{ components.quote({
+        variant: 'feature',
+        text: "Alex's tutorials are direct and to the point, while covering practical topics that can be useful to developers of any skill level.",
+        cite: {
+          avatar: "/assets/images/trey-gordon.jpg",
+          name: "Trey Gordon",
+          title: "Front-end Developer"
+        }
+      }) }}
+    </div>
+  {% endif %}
+{% endblock %}
